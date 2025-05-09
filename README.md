@@ -4,10 +4,14 @@ This is the source code for the GodSVG website. This is a basic website built wi
 
 ## Contributing
 
-1. Clone the repository, then follow the ["Install/run part of Eleventy's docs"](https://www.11ty.dev/docs/#install-eleventy)
+To start working on the project, do the following steps:
 
-    - An extension for Nunjucks syntax highlighting that parses HTML files is also recommended _(for example [Better Nunjucks](https://marketplace.visualstudio.com/items/?itemName=ginfuru.better-nunjucks))_, as this website uses nunjucks syntax inside HTML files as opposed to `njk` files in order to improve JS/HTML/CSS completion for inline scripts.
+1. Clone the repository: `git clone https://github.com/MewPurPur/godsvg-website.git`
 
-2. Install `npx`, and use `npx @11ty/eleventy --serve` to host a development web server, or alternatively `--watch` in order to rebuild the files without a web server.
+2. Open the repository and check whether you have Node.js installed by running `node --version` in a terminal. If the command is not found or it reports a number lower than 18, you will need to download and install Node.js.
 
-    - _Note: The web server is especially useful if you want the website to automatically refresh when file(s) change._
+3. Run `npm install @11ty/eleventy`
+
+4. Use `npx @11ty/eleventy --serve` to host a development web server (useful if you want the website to automatically refresh when files change), or alternatively `--watch` to rebuild the files without a web server.
+
+Using an IDE like VSCode, with an extension for Nunjucks syntax highlighting that parses HTML files, is also recommended, as this website uses nunjucks syntax inside HTML files as opposed to `njk` files in order to improve JS/HTML/CSS completion for inline scripts. For example [Better Nunjucks](https://marketplace.visualstudio.com/items/?itemName=ginfuru.better-nunjucks).
