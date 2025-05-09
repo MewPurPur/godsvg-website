@@ -1,0 +1,19 @@
+{
+	"name": "godsvg-website",
+	"version": "1.0.0",
+	"description": "This is the source code for the GodSVG website. This is a basic website built with Eleventy. It's open source, just like GodSVG, however, potential changes should be discussed in advance by opening an issue on this repository.",
+	"main": "index.js",
+	"scripts": {
+		"build": "eleventy"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"type": "module",
+	"devDependencies": {
+		"@11ty/eleventy": "^3.0.0"
+	},
+	"dependencies": {
+		"sass": "^1.87.0"
+	}
+}

@@ -1,0 +1,27 @@
+<div class="nav-container">
+	<script type="application/javascript">
+		function toggleMenu() {
+			const navLinks = document.getElementById("nav-links");
+			navLinks.classList.toggle("show");
+		}
+	</script>
+	<link rel="stylesheet" type="text/css" href="/styles/templates/navbar.scss">
+	<div class="nav-content">
+		<a href="/" class="nav-logo">
+			<img src="/assets/favicon.ico" alt="GodSVG logo">
+			<span class="nav-logo-text">GodSVG</span>
+		</a>
+		<div class="hamburger" 🍔 onclick="toggleMenu()">
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+		<div class="nav-links" id="nav-links">
+			<a href="https://github.com/MewPurPur/GodSVG" class="nav-link">GitHub</a>
+			<a href="/releases" class="nav-link">Releases</a>
+			<!--a href="/blog" class="nav-link">Blog</a-->
+			<!--a href="/docs" class="nav-link">Docs</a-->
+			<a href="/editor" class="nav-link">Web&nbsp;Editor</a>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,225 @@
+@use "scss/theme" as *;
+
+// TODO: Clean up this scss file.
+
+.carousel-container {
+    position: relative;
+    margin: auto;
+    width: 95%;
+
+    &:hover .carousel-controls {
+        opacity: 1;
+        box-shadow: 0 0 30px rgb(255, 255, 255, 0.2);
+        transition: opacity 0.3s ease-in-out;
+    }
+}
+
+.carousel-images {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 10;
+}
+
+.carousel-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.carousel-image.active {
+    opacity: 1;
+    z-index: 1;
+}
+
+.carousel-controls {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 1;
+    pointer-events: none;
+    transition: opacity 0.2s;
+}
+
+.carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 32px 18px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border: none;
+    cursor: pointer;
+    display: flex;
+    pointer-events: auto;
+}
+
+.carousel-arrow:hover {
+    background-color: rgba(15, 15, 15, 1.0);
+}
+
+.carousel-arrow-left {
+    left: 0;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.carousel-arrow-right {
+    right: 0;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.carousel-dots {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    pointer-events: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px 15px;
+    border-radius: 15px;
+}
+
+.carousel-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+}
+
+.carousel-dot:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.carousel-dot.active {
+    cursor: auto;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.nav-container {
+    background-color: #1a1c1e;
+    width: 100%;
+    padding: 0.5rem 0;
+    margin-bottom: 1rem;
+}
+
+.nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1050px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    position: relative;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.nav-logo:hover {
+    text-decoration: none;
+}
+
+.nav-logo img {
+    width: 2rem;
+    height: 2rem;
+    margin-right: 0.5rem;
+}
+
+.nav-logo-text {
+    font-family: 'Asap', sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #def;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1rem;
+    margin-left: 2rem;
+}
+
+.nav-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-family: 'Asap', sans-serif;
+    padding: 0.3rem 0.5rem;
+    border-radius: 4px;
+}
+
+.nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav-link.active {
+    background-color: rgba(255, 255, 255, 0.2);
+    font-weight: 500;
+    cursor: default;
+}
+
+.nav-link[href~="/editor"] {
+    background-color: darken($accent, 20%);
+    &:hover {
+    background-color: darken(desaturate($accent, 10%), 5%);
+    }
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    cursor: pointer;
+    margin-left: 2em;
+}
+
+.hamburger span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 3px;
+}
+
+@media (max-width: 845px) {
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        flex-direction: column;
+        background-color: #25292e;
+        border-radius: 4px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+        margin: 0;
+        gap: 0;
+    }
+
+    .nav-link {
+        padding: 0.5rem 0.8rem;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+}

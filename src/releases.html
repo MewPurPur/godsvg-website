@@ -1,0 +1,44 @@
+---
+title: Releases
+---
+{% extends "base.njk" %}
+
+{% block body %}
+	<div class="container">
+		<h1 class="page-title">GodSVG Releases</h1>
+
+		{% for version, release in releases %}
+			<div class="release-box">
+				<div class="release-info">
+					<h2 class="release-name">{{version}}</h2>
+					<span class="release-date">{{release.date}}</span>
+				</div>
+				<div class="release-actions">
+					{% if "/release-notes/{{version}}" | pageExists %}
+						<a href="/release-notes/{{version}}" class="btn btn-notes">Release Notes</a>
+					{% endif %}
+					<div class="dropdown">
+						<a href="#" class="btn btn-download release-download" version="{{version}}">Download</a>
+						<div class="dropdown-content">
+							{% for platform in release.platforms %}
+								<a href="{{downloads(version)[platform]}}" platform="{{platform}}" class="platform-option" download>
+									<img src="/assets/platforms_{{platform}}.svg" alt="_" class="platform-icon">
+									{{platformInfo.displayNames[platform]}}
+								</a>
+							{% endfor %}
+						</div>
+					</div>
+				</div>
+			</div>
+		{% endfor %}
+	</div>
+{% endblock %}
+
+{% block style %}
+	<link rel="stylesheet" type="text/css" href="/styles/releases.scss">
+{% endblock %}
+
+{% block script %}
+	{% include "data/downloads.njk" %}
+	<script src="/scripts/releases.js" type="application/javascript"></script>
+{% endblock %}

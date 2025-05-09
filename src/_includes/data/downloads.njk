@@ -1,0 +1,6 @@
+<script type="application/javascript">
+    const downloads = {
+        {% for version, v in releases %} "{{version}}": {{ downloads(version) | dump | safe }},
+        {% endfor %}
+    }
+</script>

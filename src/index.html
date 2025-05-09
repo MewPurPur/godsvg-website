@@ -1,0 +1,219 @@
+{% extends "base.njk" %}
+
+{% block head %}
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "SoftwareApplication",
+		"name": "GodSVG",
+		"description": "GodSVG is a free and open-source vector graphics application for structured SVG editing, available on all major desktop platforms and on web.",
+		"operatingSystem": ["Windows", "Linux", "MacOS", "Android"],
+		"applicationCategory": "GraphicsApplication",
+		"downloadUrl": "https://github.com/MewPurPur/GodSVG/releases/",
+		"softwareVersion": "{{ godsvg.version }}",
+		"author": {
+			"@type": "Person",
+			"name": "MewPurPur"
+		}
+	}
+	</script>
+{% endblock %}
+
+{% block script %}
+	{% include "data/downloads.njk" %}
+	{% include "data/platformInfo.njk" %}
+	{% include "data/releases.njk" %}
+	{% include "data/globalData.njk" %}
+	<script src="/scripts/index.js" type="application/javascript"></script>
+{% endblock script %}
+
+{% block body %}
+	<div style="height: 1rem;"></div>
+	<div style="text-align: center; font-weight: 500">Download GodSVG <b>{{ godsvg.version }}</b></div>
+	
+	<div class="content" id="download-section">
+		<div class="download-buttons-container">
+			<div id="main-download">
+				<!-- Main download button will be populated dynamically -->
+			</div>
+			<details class="dropdown">
+				<summary class="dropbtn">
+					<span id="dropbtn-text">Downloads</span>
+					<img style="margin-left: 8px" alt="" src="/assets/chevron.svg" />
+				</summary>
+				<div class="dropdown-content">
+					{% set release = releases[godsvg.version] %}
+					{% for platform in release.platforms %}
+						<a href="{{downloads()[platform]}}" platform="{{platform}}" class="download-option" download>
+							<img src="/assets/platforms_{{platform}}.svg" class="platform-icon" alt="" />
+							<div class="text-container">
+								<span class="small-text">Download for</span>
+								<span class="big-text">{{platformInfo.displayNames[platform]}}</span>
+							</div>
+						</a>
+					{% endfor %}
+				</div>
+			</details>
+		</div>
+	</div>
+	<div style="height: 0.25rem"></div>
+	<div class="dim-text" style="text-align: center"><p>
+		Note that the Android build is experimental. <br/>
+		You can also find GodSVG on <a href="https://mewpurpur.itch.io/godsvg">itch.io</a>
+	</p></div>
+	
+	<div class="content">
+		<div class="tab-container">
+			<div class="tab selected" onclick="toggleContent(0)">Features</div>
+			<div class="tab" onclick="toggleContent(1)">FAQ</div>
+			<div class="tab donate-tab" onclick="toggleContent(2)">Donate</div>
+		</div>
+
+		<div id="features-content" style="display: block">
+			<div style="margin-top: 1rem"></div>
+			<p class="dim-text">
+				<b>GodSVG is an open-source editor for Scalable Vector Graphics (SVG) files.</b> <br/>
+				Unlike other editors, it represents the SVG code directly, doesn't add any metadata, and even lets you edit the SVG code in real time. GodSVG aims to be an editor for SVG code with low abstraction, producing clean and optimized files.
+			</p>
+
+			<div style="height: 0.5rem"></div>
+			<div class="carousel-container">
+				{% set imageCount = 5 %}
+				<div class="carousel-images">
+					{% for i in range(0, imageCount) %}
+						<img src="/assets/screenshot{{i+1}}.png" class="carousel-image{{' active' if i == 0}}" alt="Screenshot of GodSVG ({{i}})" />
+					{% endfor %}
+				</div>
+				<div class="carousel-controls">
+					<button class="carousel-arrow carousel-arrow-left">
+						<img src="/assets/arrow_left.svg" alt="Previous" />
+					</button>
+					<button class="carousel-arrow carousel-arrow-right">
+						<img src="/assets/arrow_right.svg" alt="Next" />
+					</button>
+					<div class="carousel-dots">
+						{% for i in range(0, imageCount) %}
+							<span class="carousel-dot{{' active' if i == 0}}" data-index="{{i}}"></span>
+						{% endfor %}
+					</div>
+				</div>
+			</div>
+			<div style="height: 0.5rem"></div>
+			<p class="dim-text">
+				<b>• Interactive SVG editing:</b> Modify individual elements of an SVG file using a user-friendly interface.<br />
+				<b>• Real-time code:</b> As you manipulate elements in the UI, code is instantly generated and can be edited.<br />
+				<b>• Optimized SVGs:</b> The generated SVG files are small and efficient, and there are many options to assist with optimization.<br />
+			</p>
+		</div>
+
+		<div id="faq-content" style="display: none">
+			<h2 class="faq-question">Who is making GodSVG?</h2>
+			<p class="dim-text">
+				GodSVG was started in May 2023 by me (MewPurPur) and open-sourced in June 2023. Since the open-sourcing, other people have joined in to help, but I still do the vast majority of the work. Everyone who has made major contributions is listed inside GodSVG's "About" dialog.
+			</p>
+
+			<h2 class="faq-question">GodSVG has been in alpha for so long... Will it ever release?</h2>
+			<p class="dim-text">
+				GodSVG <b>1.0-alpha1</b> released in December 2023. As of May 2025, GodSVG still needs a lot more work. Right now, I don't expect it to release until early 2026, most likely even later.<br />
+				GodSVG is a hobby project that I dedicate a lot of effort and time to try and push to the finish line. But of course, I still need to work 8h a day and spend time on things like sleeping, chores, staying healthy. How long the release will take largely depends on how much support I get.<br />
+				Donations are the best way to help, without them, GodSVG would be way behind where it is now. So if you're able to <a onclick="toggleContent(2)" style="cursor: pointer">donate</a>, I would be very grateful!<br />
+				You can also help by spreading the word, and if you can, implementing features, enhancements, bugfixes, or discussing suggestions.
+			</p>
+
+			<h2 class="faq-question">I tried GodSVG and found bugs and shortcomings.</h2>
+			<p class="dim-text">
+				GodSVG is not even in beta yet, so this is to be expected. Report any issues you have <a href="https://github.com/MewPurPur/GodSVG/issues">on Github</a>.
+			</p>
+
+			<h2 class="faq-question">What's so great about this "free and open source" thing?</h2>
+			<div class="dim-text">GodSVG is Free and Open Source, all of its development happens in the open, developers are in the same communities as everyone else. You can see what's being developed and be sure that nothing shady is happening behind the scenes - because if I do something shady, people would find out in the source code and my project would suffer heavily.
+				GodSVG's source code can be found <a href="https://github.com/MewPurPur/GodSVG">on Github</a>. This website's source code can also be found <a href="https://github.com/MewPurPur/godsvg-website">on Github</a>.
+			</div>
+
+			<h2 class="faq-question">Do you have the social media?</h2>
+			<p class="dim-text">
+				I have accounts on some social media. All of them are owned by multi-billion tech companies! The unofficial ones won't always be on topic.</p>
+			<p class="dim-text">
+				<b>Official:</b>
+			</p>
+			<ul class="dim-text">
+				<li>
+					<img class="social-icon" src="/assets/socials_github.png" alt="Github icon" loading="lazy" />
+					<a href="https://github.com/MewPurPur/GodSVG">Github repository</a> for general surveillance of the developers.
+				</li>
+				<li>
+					<img class="social-icon" src="/assets/socials_discord.png" alt="Discord icon" loading="lazy" />
+					<a href="https://discord.gg/R8pM6vXWTY">Discord server</a> for development and casual chat.
+				</li>
+			</ul>
+
+			<p class="dim-text"><b>Unofficial (personal):</b></p>
+			<ul class="dim-text">
+				<li>
+					<img class="social-icon" src="/assets/socials_twitter.png" alt="Twitter icon" loading="lazy">
+					<a href="https://twitter.com/MewPurPur">tweeter account</a> for hot takes I'll regret later.
+				</li>
+				<!-- YouTube is way too irrelevant, there's nothing GodSVG-related on it right now. I was thinking about tool tutorials, but not at the moment.
+				<li>
+					<img class="social-icon" src="/assets/socials_youtube.png" alt="YouTube icon" loading="lazy">
+					<a href="https://www.youtube.com/@MewPurPur">yuutub channel</a> for Like, comment, and subscribe!
+				</li>
+				-->
+			</ul>
+
+			<h2 class="faq-question">What are your plans for GodSVG?</h2>
+			<p class="dim-text">
+				I have a lot of plans, but only two big things are somewhat blocking first beta release. The most immediate one is a rework of the handle system. The other one is a rework to the inspector.<br/>
+				On a broad level, GodSVG aims to become an assisted SVG code editor that doesn't save anything to the SVGs that's not part of the format itself, like layers. This could change in the future, but I first want to see how far I can push it given this restriction. Also, there are no plans for animation.<br/>
+				In my opinion, GodSVG is most useful for teaching the SVG format, creating simple iconography, optimizing existing SVGs, and creating SVGs with code. If your use cases are different, consider using a more artistically-inclined SVG editor.<br/>
+			</p>
+
+			<h2 class="faq-question">I speak one of Earth's many languages! Do you need help with translation?</h2>
+			<p class="dim-text">
+				Bonjour! GodSVG is community-translated and you can read how to do it <a href="https://github.com/MewPurPur/GodSVG/tree/main/translations">here</a>. Hit me up on Discord if you need help.
+			</p>
+
+			<p class="dim-text">I hope this gave you all the answers you wanted – even the ones you didn't know you needed! Hit me up on Discord if you want to ask anything else.</p>
+		</div>
+		
+		<div id="donate-content" style="display: none">
+			<div style="margin-top: 1rem"></div>
+			<p class="dim-text">
+				Donations will help me push GodSVG through to a stable release. Right now, I have to balance out development with my regular job as I don't get enough from donations.<br />
+				I have a few donation platforms set up, so you can choose the one you prefer:
+			</p>
+			<div style="margin-top: 0.5rem"></div>
+			<ul class="dim-text">
+				<li>
+					<img class="social-icon" src="/assets/donate_github_sponsors.svg" alt="Github logo">
+					<a href="https://github.com/sponsors/MewPurPur" style="font-size:0.75rem">Github Sponsors</a>
+					<ul>
+						<li class="list-pro">Low extra fees</li>
+						<li class="list-pro">Includes all perks</li>
+						<li class="list-pro">Can donate an arbitrary amount</li>
+					</ul>
+				</li>
+				<li>
+					<img class="social-icon" src="/assets/donate_ko_fi.svg" alt="Ko-Fi logo">
+					<a href="https://ko-fi.com/mewpurpur" style="font-size:0.75rem">Ko-Fi</a>
+					<ul>
+						<li class="list-pro">Low extra fees</li>
+						<li class="list-pro">Can donate an arbitrary amount</li>
+						<li class="list-con">No perks</li>
+					</ul>
+				</li>
+				<li>
+					<img class="social-icon" src="/assets/donate_patreon.svg" alt="Patreon logo">
+					<a href="https://www.patreon.com/GodSVG" style="font-size: 0.75rem">Patreon</a>
+					<ul>
+						<li class="list-pro">Includes all perks</li>
+						<li class="list-con">Higher extra fees</li>
+						<li class="list-con">Can only donate fixed amounts</li>
+					</ul>
+				</li>
+				<br />
+				<p class="dim-text">Thank you so much for considering helping out!<br /></p>
+			</ul>
+		</div>
+	</div>
+{% endblock %}

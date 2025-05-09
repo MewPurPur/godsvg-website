@@ -1,0 +1,21 @@
+// Vicki tail colors
+$vicki_red: #f24949ff;
+$vicki_green: #8ff249ff;
+$vicki_blue: #5555f2ff;
+
+// Generic colors
+$background: #212427;
+$accent: #489ae0;
+$button: #2e6cb8;
+$button_hover: #3e84da;
+
+// Font family definitions
+$default_font: "Noto Sans", sans-serif;
+$title_font: "Asap", sans-serif;
+
+// Fallback font to prevent FOUT (https://css-tricks.com/how-to-load-fonts-in-a-way-that-fights-fout-and-makes-lighthouse-happy/)
+@font-face {
+    font-family: "Asap";
+    src: local("sans-serif");
+    font-stretch: 80% 100% !important;
+}
