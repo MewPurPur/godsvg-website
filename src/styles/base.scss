@@ -86,7 +86,7 @@ br {
 .tab-container {
 	display: flex;
 	justify-content: center;
-	margin: 20px 0;
+	margin-top: 30px;
 	gap: 20px;
 
 	.tab {
@@ -103,14 +103,15 @@ br {
 }
 
 .tab {
-	flex: 1; /* Ensure tabs are equal width */
+	flex: 1; // Ensure tabs are equal width.
+	font-size: 0.9rem;
 	display: inline-block;
 	background-color: #333;
 	color: #e0e0e0;
 	padding: 10px 20px;
 	border-radius: 5px;
 	cursor: pointer;
-	text-align: center; /* Center the text inside the tabs */
+	text-align: center; // Center the text inside the tabs.
 
 	&:hover {
 		color: #f4f4f4;
