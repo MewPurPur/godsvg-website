@@ -7,154 +7,153 @@
 /* Common styles across pages. */
 
 a {
-    color: $accent;
-    text-decoration: underline;
-    text-decoration-color: #489ae080;
+	color: $accent;
+	text-decoration: underline;
+	text-decoration-color: #489ae080;
 
-    &:hover {
-        color: color.adjust($accent, $lightness: 20%, $space: hsl);
-        text-decoration: underline;
-    }
+	&:hover {
+		color: color.adjust($accent, $lightness: 20%, $space: hsl);
+		text-decoration: underline;
+	}
 }
 
 html {
-    color: white;
-    font-size: min(9vw, 30px);
-    font-family: $default_font;
+	color: white;
+	font-size: min(9vw, 30px);
+	font-family: $default_font;
 }
 
 body {
-    background-color: $background;
-    margin: 0 auto;
-    padding: 0;
+	background-color: $background;
+	margin: 0 auto;
+	padding: 0;
 }
 
 br {
-    margin-bottom: 0.25rem;
+	margin-bottom: 0.25rem;
 }
 
 .content {
-    width: 90%;
-    max-width: 960px;
-    margin: 0 auto;
+	width: 90%;
+	max-width: 960px;
+	margin: 0 auto;
 }
 
 #top-section {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .faq-question {
-    color: white;
-    font-size: 1rem;
-    font-family: $title_font;
-    margin-bottom: 0.1rem;
-    margin-top: 1rem;
-    margin-bottom: 0.25rem;
+	color: white;
+	font-size: 1rem;
+	font-family: $title_font;
+	margin-bottom: 0.1rem;
+	margin-top: 1rem;
+	margin-bottom: 0.25rem;
 }
 
 .dim-text {
-    font-size: 0.65rem;
-    line-height: 1rem;
-    font-family: $default_font;
-    color: #acacac;
-    margin-top: 0rem;
-    margin-bottom: 0.25rem;
+	font-size: 0.65rem;
+	line-height: 1rem;
+	font-family: $default_font;
+	color: #acacac;
+	margin-top: 0rem;
+	margin-bottom: 0.25rem;
 
-    li {
-        margin-bottom: 0.25rem;
-        list-style-type: none;
-    }
+	li {
+		margin-bottom: 0.25rem;
+		list-style-type: none;
+	}
 }
 
 .social-icon {
-    width: 1rem;
-    height: 1rem;
-    margin-bottom: -0.2rem;
-    margin-right: 0.2rem;
+	width: 1rem;
+	height: 1rem;
+	margin-bottom: -0.2rem;
+	margin-right: 0.2rem;
 }
 
 #footer {
-    text-align: center;
-    color: #686b70;
-    font-size: 0.6rem;
-    padding: 0.25rem 0;
-    margin-top: 0.25rem;
-    border-top: 1px solid #333;
+	text-align: center;
+	color: #686b70;
+	font-size: 0.6rem;
+	margin-top: 1rem;
+	border-top: 1px solid #333;
 }
 
 .tab-container {
-    display: flex;
-    justify-content: center;
-    margin: 20px 0;
-    gap: 20px;
+	display: flex;
+	justify-content: center;
+	margin: 20px 0;
+	gap: 20px;
 
-    .tab {
-        &:nth-child(1) {
-            border-bottom: solid 4px $vicki_blue;
-        }
-        &:nth-child(2) {
-            border-bottom: solid 4px $vicki_green;
-        }
-        &:nth-child(3) {
-            border-bottom: solid 4px $vicki_red;
-        }
-    }
+	.tab {
+		&:nth-child(1) {
+			border-bottom: solid 4px $vicki_blue;
+		}
+		&:nth-child(2) {
+			border-bottom: solid 4px $vicki_green;
+		}
+		&:nth-child(3) {
+			border-bottom: solid 4px $vicki_red;
+		}
+	}
 }
 
 .tab {
-    flex: 1; /* Ensure tabs are equal width */
-    display: inline-block;
-    background-color: #333;
-    color: #e0e0e0;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    text-align: center; /* Center the text inside the tabs */
+	flex: 1; /* Ensure tabs are equal width */
+	display: inline-block;
+	background-color: #333;
+	color: #e0e0e0;
+	padding: 10px 20px;
+	border-radius: 5px;
+	cursor: pointer;
+	text-align: center; /* Center the text inside the tabs */
 
-    &:hover {
-        color: #f4f4f4;
-        background-color: #444;
-    }
-    &.selected {
-        color: white;
-        background-color: #666;
-        cursor: default;
-        font-weight: bold;
-    }
+	&:hover {
+		color: #f4f4f4;
+		background-color: #444;
+	}
+	&.selected {
+		color: white;
+		background-color: #666;
+		cursor: default;
+		font-weight: bold;
+	}
 }
 
 .donate-tab {
-    background-color: #3e2931;
-    color: white;
+	background-color: #3e2931;
+	color: white;
 
-    &:hover {
-        background-color: #533742;
-    }
-    &.selected {
-        background-color: #c8a;
-        cursor: default;
-    }
+	&:hover {
+		background-color: #533742;
+	}
+	&.selected {
+		background-color: #c8a;
+		cursor: default;
+	}
 }
 
 .list-pro {
-    color: #9e9;
+	color: #9e9;
 
-    &::before {
-        content: "+";
-        font-weight: bold;
-        display: inline-block;
-        width: 0.85em;
-    }
+	&::before {
+		content: "+";
+		font-weight: bold;
+		display: inline-block;
+		width: 0.85em;
+	}
 }
 
 .list-con {
-    color: #e99;
-    &::before {
-        content: "–";
-        font-weight: bold;
-        display: inline-block;
-        width: 0.85em;
-    }
+	color: #e99;
+	&::before {
+		content: "–";
+		font-weight: bold;
+		display: inline-block;
+		width: 0.85em;
+	}
 }
