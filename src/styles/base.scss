@@ -87,7 +87,7 @@ br {
 	display: flex;
 	justify-content: center;
 	margin-top: 30px;
-	gap: 20px;
+	gap: min(20px, 2%);
 
 	.tab {
 		&:nth-child(1) {

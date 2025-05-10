@@ -139,7 +139,7 @@
 .download-buttons-container {
 	display: flex;
 	align-items: stretch;
-	gap: 20px;
+	gap: min(20px, 2%);
 	margin: 4px;
 }
 
@@ -159,7 +159,7 @@
 	&:hover {
 		background-color: color.adjust($background, $lightness: 15%, $space: hsl);
 	}
-	&.active {  // Active platform (getOS)
+	&.active {  // Active platform (detectOS)
 		background-color: mix(color.adjust($background, $lightness: 20%, $space: hsl), $accent, 80%);
 		&:hover {
 			background-color: mix(color.adjust($background, $lightness: 20%, $space: hsl), $accent, 60%);
