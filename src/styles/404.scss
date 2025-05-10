@@ -2,33 +2,33 @@
 @use "sass:color";
 
 body {
-    background-color: $background;
-    color: white;
-    font-family: $default_font;
-    text-align: center;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+	background-color: $background;
+	color: white;
+	font-family: $default_font;
+	text-align: center;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
 }
 
 h1 {
-    font-size: min(12vw, 48px);
-    margin: 0.25rem 0 1.25rem 0;
+	font-size: min(12vw, 48px);
+	margin: 0.25rem 0 1.25rem 0;
 }
 
 .panel {
-    background-color: color.adjust($background, $lightness: 5%);
-    border-radius: 10px;
-    padding: 0.75rem;
-    padding-top: 0.5rem;
-    width: 90%;
-    max-width: 400px;
+	background-color: color.adjust($background, $lightness: 5%);
+	border-radius: 10px;
+	padding: 0.75rem;
+	padding-top: 0.5rem;
+	width: 90%;
+	max-width: 400px;
 }
 
 .panel p {
-    font-size: 0.75rem;
-    margin: 0.5rem 0;
+	font-size: 0.75rem;
+	margin: 0.5rem 0;
 }
