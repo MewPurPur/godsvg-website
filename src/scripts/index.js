@@ -1,5 +1,5 @@
 function setDownloadButtons() {
-	const platform = getOS();
+	const platform = detectOS();
 	const mainDownloadDiv = document.getElementById("main-download");
 	const dropBtnText = document.getElementById("dropbtn-text");
 	const dropdownContent = document.querySelector(".download-buttons-container > * > .dropdown-content");

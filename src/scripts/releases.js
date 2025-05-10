@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-	const platform = getOS();
+	const platform = detectOS();
 	
 	const downloadBtns = document.querySelectorAll(".release-download");
 	downloadBtns.forEach(downloadBtn => {
