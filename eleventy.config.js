@@ -40,7 +40,7 @@ export default async function(eleventyConfig) {
 				loadPaths: ["src/styles"]
 			});
 
-			// Map dependencies for incremental builds
+			// Map dependencies for incremental builds.
 			this.addDependencies(inputPath, result.loadedUrls);
 
 			return async (data) => {
