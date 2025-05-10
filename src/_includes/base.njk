@@ -5,18 +5,13 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" type="text/css" href="/styles/base.scss">
 		<link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
-		
-		<!-- I don't know what this does. An LLM gave it to me and it seems to reduce the stutter when loading the font. Or maybe it's the first step of its plan to take over the world? -->
-		<link rel="preload" href="https://fonts.googleapis.com/css2?family=Asap:wght@400;500;700&family=Noto+Sans:wght@400;700&display=swap" as="style" onload="this.rel='stylesheet'">
-		<noscript>
-			<link href="https://fonts.googleapis.com/css2?family=Asap:wght@400;500;700&family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
-		</noscript>
+		<link href="https://fonts.googleapis.com/css2?family=Asap:wght@400;500;700&family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
 	
 		<!-- Title -->
 		{% if title | length == 0 %}
 			<title>GodSVG</title>
 		{% else %}
-			<title>{{ title }} - GodSVG</title>
+			<title>{{ title }}</title>
 		{% endif %}
 
 		{% include "metadata.njk" %}
