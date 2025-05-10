@@ -10,8 +10,8 @@
 .page-title {
     text-align: center;
     font-family: $title_font;
-    font-size: 2rem;
-    margin-bottom: 2rem;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
     color: #fff;
 }
 
@@ -25,14 +25,14 @@
 .release-box {
     background-color: lighten($background, 5%);
     border-radius: 8px;
-    padding: 1rem;
-    margin: 1rem;
+    padding: 0.6rem;
+    margin: 0.6rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     transition: transform 0.2s, box-shadow 0.2s;
     &:hover {
-        box-shadow: 0 5px 8px 8px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 0 8px 8px rgba(0, 0, 0, 0.1);
     }
 }
 
@@ -43,7 +43,7 @@
 
 .release-name {
     font-family: $title_font;
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-weight: 700;
     margin: 0;
     color: #fff;
@@ -51,8 +51,8 @@
 
 .release-date {
     color: #9e9e9e;
-    font-size: 0.9rem;
-    margin-top: 0.5rem;
+    font-size: 0.6rem;
+    margin-top: 0.3rem;
 }
 
 .release-actions {
@@ -62,16 +62,15 @@
 }
 
 .btn {
-    padding: 0.6rem 1.2rem;
-    border-radius: 6px;
+    padding: 0.3rem 0.5rem;
+    border-radius: 5px;
     font-family: $title_font;
     font-weight: 500;
-    font-size: 0.9rem;
+    font-size: 0.75rem;
     cursor: pointer;
     text-decoration: none;
     text-align: center;
     display: inline-block;
-    transition: background-color 0.2s;
 }
 
 .btn-notes {
