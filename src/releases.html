@@ -23,7 +23,7 @@ title: Releases
 							{% for platform in release.platforms %}
 								<a href="{{downloads(version)[platform]}}" platform="{{platform}}" class="platform-option" download>
 									<img src="/assets/platforms_{{platform}}.svg" alt="_" class="platform-icon">
-									{{platformInfo.displayNames[platform]}}
+									<div class="solo-text">{{platformInfo.displayNames[platform]}}</div>
 								</a>
 							{% endfor %}
 						</div>
