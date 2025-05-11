@@ -153,17 +153,14 @@
 	display: flex;
 	align-items: center;
 	padding: 0.7rem 1rem;
-	color: #fff;
+	color: rgb(255, 255, 255, 0.4) !important;
 	text-decoration: none !important;
 
 	&:hover {
 		background-color: color.adjust($background, $lightness: 15%, $space: hsl);
 	}
 	&.active {  // Active platform (detectOS)
-		background-color: mix(color.adjust($background, $lightness: 20%, $space: hsl), $accent, 80%);
-		&:hover {
-			background-color: mix(color.adjust($background, $lightness: 20%, $space: hsl), $accent, 60%);
-		}
+		color: #fff !important;
 	}
 	&:first-child {
 		border-top-left-radius: 6px;
@@ -179,18 +176,4 @@
 	width: 1.2rem;
 	height: 1.2rem;
 	margin-right: 0.8rem;
-
-	&.active {
-		$col: color.adjust($accent, $saturation: 20%, $space: hsl);
-		filter:
-			opacity(0.05)
-			drop-shadow(0 0 0 )
-			drop-shadow(0 0 0 $col)
-			drop-shadow(0 0 0 $col)
-			drop-shadow(0 0 0 $col)
-			drop-shadow(0 0 0 $col)
-			drop-shadow(0 0 0 $col)
-			drop-shadow(0 0 0 $col)
-			!important;
-	}
 }
