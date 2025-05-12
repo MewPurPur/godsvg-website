@@ -1,0 +1,26 @@
+---
+permalink: "article/{{ slugcat | slugify }}/index.html"
+prerelease: false
+---
+{% extends "base.njk" %}
+
+{% block style %}
+	<link rel="stylesheet" type="text/css" href="/styles/blog.scss">
+{% endblock %}
+
+{% block body %}
+    <!-- TODO: Use "date < new Date('2025-05-10')" to compare the date and add a notice if a blog post was made before the website was made. -->
+
+    <div>
+        <h1 class="title">{{ title }}</h1>
+    </div>
+
+    <div class="blog-content">
+        {{ content | safe }}
+    </div>
+
+    <!-- TODO: Add downloads and donation buttons and stuffs here. -->
+    {% if prerelease %}
+        <h3 style="color: yellow">Warning, this is a prerelease!</h3>
+    {% endif %}
+{% endblock %}

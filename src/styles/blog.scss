@@ -1,0 +1,14 @@
+@use "sass:color";
+@use "scss/theme" as *;
+
+.title {
+    color: $accent;
+}
+
+.blog-card {
+    width: 400px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.blog-cover {
+    width: 100%;
+}
