@@ -1,6 +1,6 @@
 ---
 slugcat: 1.0-alpha1
-title: GodSVG first development build is out!
+title: GodSVG's first development build is out!
 tags: release
 date: Created
 release: 1.0-alpha1
