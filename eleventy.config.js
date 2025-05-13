@@ -95,10 +95,10 @@ export default async function(eleventyConfig) {
 			return fs.existsSync(filename) && fs.lstatSync(filename).isDirectory();
 		})
 		.forEach(dir => {
-			const article = path.join(articlesPath, dir);
-			dir = eleventyConfig.getFilter("slugify")(dir);
-			eleventyConfig.addPassthroughCopy({ [path.join(article, "media")]: `/assets/blog/${dir}` });
-			eleventyConfig.addPassthroughCopy({ [path.join(article, "cover.webp")]: `/assets/blog/${dir}/cover.webp` });
+			const inDir = path.join(articlesPath, dir);
+			const outDir = eleventyConfig.getFilter("slugify")(dir);
+			eleventyConfig.addPassthroughCopy({ [path.join(inDir, "media")]: `/assets/blog/${outDir}` });
+			eleventyConfig.addPassthroughCopy({ [path.join(inDir, "cover.webp")]: `/assets/blog/${outDir}/cover.webp` });
 		});
 
 	// Minifying on release (https://github.com/terser/html-minifier-terser?tab=readme-ov-file#options-quick-reference)
