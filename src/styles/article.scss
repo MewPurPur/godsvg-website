@@ -1,0 +1,72 @@
+@use "sass:color";
+@use "scss/theme" as *;
+
+$max-width: 30rem;
+
+.article-header {
+	width: $max-width;
+	margin: auto;
+	background-color: color.adjust($background, $lightness: 2%);
+	padding: 20pt;
+}
+
+.article-title {
+	color: #fff;
+	text-align: center;
+	font-size: 1.4rem;
+}
+
+.article-content {
+	text-align: left;
+	margin: auto;
+	width: $max-width;
+	background-color: color.adjust($background, $lightness: -1.5%);
+	padding: 20pt;
+
+	// Custom markdown styling
+	p {
+		color: color.adjust(#fff, $lightness: -15%);
+		font-size: 0.65rem;
+		line-height: 1.5;
+		margin-top: 0;
+	}
+	h1 {
+		color: color.adjust(#fff, $lightness: -5%);
+		font-family: $title_font;
+		font-size: 1.1rem;
+	}
+	img { width: 100% }
+}
+
+.article-cover {
+	display: block;
+	width: 98%;
+	margin: auto;
+	box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.article-metadata {
+	display: flex;
+	align-items: center;
+	font-weight: bold;
+	color: #acacac;
+	font-size: 0.9rem;
+}
+
+.article-author {
+	display: flex;
+	flex-grow: 1;
+	align-items: center;
+}
+
+.article-image {
+	width: auto;
+	height: auto;
+	margin-top: 0.4rem;
+	margin-bottom: 0.4rem;
+	img {
+		box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+		user-select: none;
+		z-index: 0;
+	}
+}
