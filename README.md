@@ -15,3 +15,13 @@ To start working on the project, do the following steps:
 4. Use `npx @11ty/eleventy --serve` to host a development web server (useful if you want the website to automatically refresh when files change), or alternatively `--watch` to rebuild the files without a web server.
 
 Using an IDE like VSCode, with an extension for Nunjucks syntax highlighting that parses HTML files, is also recommended, as this website uses nunjucks syntax inside HTML files as opposed to `njk` files in order to improve JS/HTML/CSS completion for inline scripts. For example [Better Nunjucks](https://marketplace.visualstudio.com/items/?itemName=ginfuru.better-nunjucks).
+
+## Useful command
+
+Converting PNGs inside src directory to WebP with FFmpeg:
+
+```
+find src -type f -name "*.png" | while read file; do
+    ffmpeg -i "$file" -lossless 1 "${file%.png}.webp"
+done
+```
