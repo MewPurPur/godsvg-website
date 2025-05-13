@@ -73,12 +73,7 @@ export default async function(eleventyConfig) {
 		const url = `/assets/blog/${slug}/${name}`;
 		return `
 			<div class="article-image">
-				<a href="${url}">
-					<img src="${url}" alt="${alt}" />
-				</a>
-				<div class="article-image-metadata">
-					<span>${name}</span>
-				</div>
+				<img src="${url}" alt="${alt}" />
 			</div>
 		`.replaceAll('\t', "").replaceAll("    ", "")
 	});
