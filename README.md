@@ -22,6 +22,6 @@ Converting PNGs inside src directory to WebP with FFmpeg:
 
 ```
 find src -type f -name "*.png" | while read file; do
-    ffmpeg -i "$file" -lossless 1 "${file%.png}.webp"
+	ffmpeg -i "$file" -lossless 1 "${file%.png}.webp" && rm "$file"
 done
 ```

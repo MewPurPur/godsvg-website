@@ -33,6 +33,7 @@ $dim-text: #80858c;
 	.notice-header {
 		color: $title-color;
 		font-weight: 700;
+		font-size: 0.65rem;
 		position: absolute;
 		top: -2px;
 		left: -2px;
@@ -42,8 +43,9 @@ $dim-text: #80858c;
 	}
 
 	.notice-message {
+		font-size: 0.65rem;
 		margin-top: 8px;
-		line-height: 1.4;
+		line-height: 1.0;
 		font-weight: 500;
 	}
 }
