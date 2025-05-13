@@ -20,7 +20,7 @@ $dim-text: #80858c;
 		}
 	}
 	&.warning {
-		$warn-bg: #666918;
+		$warn-bg: #4c4e10;
 		$warn-accent: #b0b83e;
 		background-color: $warn-bg;
 		border: 2px solid $warn-accent;
@@ -39,7 +39,7 @@ $dim-text: #80858c;
 		left: -2px;
 		padding: 2px 10px;
 		border-bottom-right-radius: 6px;
-		border-top-left-radius: 6px;
+		border-top-left-radius: 8px; // Bigger than 6 to avoid anti-aliasing.
 	}
 
 	.notice-message {
