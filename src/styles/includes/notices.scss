@@ -1,0 +1,49 @@
+$title-color: #fff;
+$inner-color: #fffd;
+$dim-text: #80858c;
+
+.notice-panel {
+    color: $inner-color;
+    position: relative;
+    width: 840px;
+    padding: 38px 20px 16px 16px;
+    border-radius: 6px;
+
+    &.info {
+        $info-bg: #0e233d;
+        $info-accent: #437ab1;
+        background-color: $info-bg;
+        border: 2px solid $info-accent;
+        .notice-header {
+            background-color: $info-accent;
+            border: 2px solid $info-accent;
+        }
+    }
+    &.warning {
+        $warn-bg: #666918;
+        $warn-accent: #b0b83e;
+        background-color: $warn-bg;
+        border: 2px solid $warn-accent;
+        .notice-header {
+            background-color: $warn-accent;
+            border: 2px solid $warn-accent;
+        }
+    }
+
+    .notice-header {
+        color: $title-color;
+        font-weight: 700;
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        padding: 2px 10px;
+        border-bottom-right-radius: 6px;
+        border-top-left-radius: 6px;
+    }
+
+    .notice-message {
+        margin-top: 8px;
+        line-height: 1.4;
+        font-weight: 500;
+    }
+}

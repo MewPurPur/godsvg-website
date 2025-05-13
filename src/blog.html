@@ -11,7 +11,7 @@ title: Blog - GodSVG
     {% for post in collections.article %}
         <div class="blog-card">
             <a href="/article/{{post.data.slugcat | slugify}}">
-                <img src="/assets/blog/{{post.data.slugcat}}/cover.webp" class="blog-cover"/>
+                <img src="/assets/blog/{{post.data.slugcat | slugify}}/cover.webp" class="blog-thumbnail"/>
                 <p>{{post.data.title}}</p>
             </a>
         </div>

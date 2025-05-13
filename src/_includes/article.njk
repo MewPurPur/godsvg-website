@@ -1,6 +1,7 @@
 ---
 permalink: "article/{{ slugcat | slugify }}/index.html"
 prerelease: false
+date:
 ---
 {% extends "base.njk" %}
 
@@ -11,16 +12,52 @@ prerelease: false
 {% block body %}
     <!-- TODO: Use "date < new Date('2025-05-10')" to compare the date and add a notice if a blog post was made before the website was made. -->
 
-    <div>
-        <h1 class="title">{{ title }}</h1>
+    <div class="article-header">
+        <img src="/assets/blog/{{slugcat | slugify}}/cover.webp" class="article-cover"/>
+        <h1 class="article-title">{{ title }}</h1>
+        <div class="article-metadata">
+            <span class="article-author">By: MewPurPur</span>
+            <span class="article-date" title="{{page.date.toUTCString()}}">
+                {{page.date.toLocaleString("en-us", { year:"numeric", month:"short", day:"numeric" })}}
+            </span>
+        </div>
     </div>
 
-    <div class="blog-content">
-        {{ content | safe }}
-    </div>
+    <div class="article-content">
+        <div class="article-html">
+            {{ content | safe }}
+        </div>
 
-    <!-- TODO: Add downloads and donation buttons and stuffs here. -->
-    {% if prerelease %}
-        <h3 style="color: yellow">Warning, this is a prerelease!</h3>
-    {% endif %}
+        <div class="article-bottom">
+            {% if release != "" %}
+                <div class="article-downloads">
+                    <h1>Downloads</h1>
+                    {% if prerelease %}
+                        <div class="notice-panel warning">
+                            <div class="notice-header">WARNING:</div>
+                            <div class="notice-message">
+                                This is by definition a pre-release piece of software. <br/>
+                                Be sure to back up your SVGs to preserve them in case of corruption.
+                            </div>
+                        </div>
+                    {% endif %}
+                    
+                    <div style="margin: 15pt">
+                        <h3>{{release}}</h3>
+                        {% include "data/downloads.njk" %}
+                        {% for key, platform in downloads(release) %}
+                            <a href="{{platform}}" style="display: block">Download for {{key | capitalize}}</a>
+                        {% endfor %}
+                    </div>
+                </div>
+            {% endif %}
+
+            <div>
+                <h1>Support</h1>
+                <p>Without donations, GodSVG would be way behind where it is now. If you're able to donate, I would be very grateful!</p>
+                <!-- TODO: Add donation widget -->
+                {% include "donation_widget.njk" %}
+            </div>
+        </div>
+    </div>
 {% endblock %}

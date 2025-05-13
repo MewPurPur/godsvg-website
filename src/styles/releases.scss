@@ -69,7 +69,7 @@
 	font-weight: 500;
 	font-size: 0.75rem;
 	cursor: pointer;
-	text-decoration: none;
+	text-decoration: none !important;
 	text-align: center;
 	display: inline-block;
 	&:hover {

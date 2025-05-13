@@ -2,6 +2,8 @@
 slugcat: 1.0-alpha1
 title: GodSVG first development build is out!
 tags: release
+date: Created
+release: 1.0-alpha1
 prerelease: true
 ---
 
@@ -20,15 +22,3 @@ Aside from the code editor, there is an inspector which allows to edit some attr
 {% blogimg "path_element.webp", "Image of a path element" %}
 
 And of course, there is the viewport, which can be panned and zoomed, and it has handles for adjusting the geometry of paths and other shapes. It has a convenient adaptable grid, a checkerboard pattern, options for hiding the grid and the handles, and for viewing the rasterized SVG.
-
-# Downloads
-
-{Warning: This is by definition a pre-release piece of software. Be sure to back up your SVGs to preserve them in case of corruption.}
-
-[Widget for downloads]
-
-# Support
-
-Without donations, GodSVG would be way behind where it is now. If you're able to donate, I would be very grateful!
-
-[Buttons for donations or widget]
