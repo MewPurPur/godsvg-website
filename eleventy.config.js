@@ -2,7 +2,7 @@ import { HtmlBasePlugin, InputPathToUrlTransformPlugin } from "@11ty/eleventy";
 import path from "node:path";
 import * as sass from "sass";
 import markdownIt from "markdown-it";
-import { readdirSync } from "node:fs";
+import fs from "node:fs";
 
 /** @param {import("@11ty/eleventy").UserConfig} eleventyConfig */
 export default async function(eleventyConfig) {
@@ -89,13 +89,16 @@ export default async function(eleventyConfig) {
 	}));
 	eleventyConfig.amendLibrary("md", (mdLib) => mdLib.enable("code"));
 	const articlesPath = path.join(returnData.dir.input, "articles");
-	readdirSync(articlesPath)  // Moving over media files.
-		.filter(file => file != "articles.json")
-		.forEach(file => {
-			const article = path.join(articlesPath, file);
-			file = eleventyConfig.getFilter("slugify")(file);
-			eleventyConfig.addPassthroughCopy({ [path.join(article, "media")]: `/assets/blog/${file}` });
-			eleventyConfig.addPassthroughCopy({ [path.join(article, "cover.webp")]: `/assets/blog/${file}/cover.webp` });
+	fs.readdirSync(articlesPath)  // Moving over media files.
+		.filter(filename => {
+			filename = path.join(articlesPath, filename);
+			return fs.existsSync(filename) && fs.lstatSync(filename).isDirectory();
+		})
+		.forEach(dir => {
+			const article = path.join(articlesPath, dir);
+			dir = eleventyConfig.getFilter("slugify")(dir);
+			eleventyConfig.addPassthroughCopy({ [path.join(article, "media")]: `/assets/blog/${dir}` });
+			eleventyConfig.addPassthroughCopy({ [path.join(article, "cover.webp")]: `/assets/blog/${dir}/cover.webp` });
 		});
 
 	// Minifying on release (https://github.com/terser/html-minifier-terser?tab=readme-ov-file#options-quick-reference)
