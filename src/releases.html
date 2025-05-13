@@ -14,14 +14,14 @@ title: Releases - GodSVG
 					<span class="release-date">{{release.date}}</span>
 				</div>
 				<div class="release-actions">
-					{% if "/article/{{version}}" | pageExists %}
-						<a href="/article/{{version}}" class="btn btn-notes">Release Notes</a>
+					{% if ("/article/" + (version | slugify)) | pageExists %}
+						<a href="/article/{{version | slugify}}" class="btn btn-notes">Release Notes</a>
 					{% endif %}
 					<div class="dropdown">
-						<div class="btn btn-download release-download" version="{{version}}">
+						<a class="btn btn-download release-download" version="{{version}}">
 							<span id="dropbtn-text">Downloads</span>
 							<img style="margin-left: 8px" alt="" src="/assets/chevron.svg" />
-						</div>
+						</a>
 						<div class="dropdown-content">
 							{% for platform in release.platforms %}
 								<a href="{{downloads(version)[platform]}}" platform="{{platform}}" class="platform-option" download>

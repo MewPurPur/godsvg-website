@@ -1,9 +1,22 @@
 import { HtmlBasePlugin, InputPathToUrlTransformPlugin } from "@11ty/eleventy";
 import path from "node:path";
 import * as sass from "sass";
+import markdownIt from "markdown-it";
+import { readdirSync } from "node:fs";
 
+/** @param {import("@11ty/eleventy").UserConfig} eleventyConfig */
 export default async function(eleventyConfig) {
 	const isDebug = process.argv.some(str => str.includes("serve") || str.includes("watch"));
+	const returnData = {
+		dir: {
+			input: "src",
+      		includes: "_includes",
+			data: "_data",
+			output: "_site"
+		},
+		markdownTemplateEngine: "njk",
+		htmlTemplateEngine: "njk",
+	};
 
 	// Data
 	eleventyConfig.addGlobalData("godsvg.version", "1.0-alpha8")
@@ -13,8 +26,12 @@ export default async function(eleventyConfig) {
 	eleventyConfig.addPlugin(InputPathToUrlTransformPlugin);
 
 	// Filters & Shortcodes
-	eleventyConfig.addFilter("pageExists", function(url) {
-		return this.ctx.collections.all.some(page => page.filePathStem === url);
+	eleventyConfig.addAsyncFilter("pageExists", async function(url) {
+		return this.ctx.collections.all.some(page => {
+			const collectionUrl = page.url.replaceAll('/', ' ').trim();
+			const argUrl = url.replaceAll('/', ' ').trim();
+			return collectionUrl == argUrl;
+		});
 	});
 	
 	// Assets
@@ -49,14 +66,55 @@ export default async function(eleventyConfig) {
 		},
 	});
 
-	return {
-		dir: {
-			input: "src",
-      		includes: "_includes",
-			data: "_data",
-			output: "_site"
-		},
-		markdownTemplateEngine: "njk",
-		htmlTemplateEngine: "njk",
-	};
+	// Blog things
+	eleventyConfig.addShortcode("blogimg", function(name, alt) {
+		const e = this.page.url.split('/').filter(e => e.length > 1);
+		const slug = e[e.length-1];
+		const url = `/assets/blog/${slug}/${name}`;
+		return `
+			<div class="article-image">
+				<a href="${url}">
+					<img src="${url}" alt="${alt}" />
+				</a>
+				<div class="article-image-metadata">
+					<span>${name}</span>
+				</div>
+			</div>
+		`.replaceAll('\t', "").replaceAll("    ", "")
+	});
+	eleventyConfig.setLibrary("md", markdownIt({
+		html: true,
+		breaks: true,
+		linkify: true,
+	}));
+	eleventyConfig.amendLibrary("md", (mdLib) => mdLib.enable("code"));
+	const articlesPath = path.join(returnData.dir.input, "articles");
+	readdirSync(articlesPath)  // Moving over media files.
+		.filter(file => file != "articles.json")
+		.forEach(file => {
+			const article = path.join(articlesPath, file);
+			file = eleventyConfig.getFilter("slugify")(file);
+			eleventyConfig.addPassthroughCopy({ [path.join(article, "media")]: `/assets/blog/${file}` });
+			eleventyConfig.addPassthroughCopy({ [path.join(article, "cover.webp")]: `/assets/blog/${file}/cover.webp` });
+		});
+
+	// Minifying on release (https://github.com/terser/html-minifier-terser?tab=readme-ov-file#options-quick-reference)
+	if (!isDebug) {
+		eleventyConfig.addTransform("htmlmin", function (content) {
+			if ((this.page.outputPath || "").endsWith(".html")) {
+				let minified = htmlmin.minify(content, {
+					useShortDoctype: true,
+					removeComments: true,
+					collapseWhitespace: true,
+					collapseBooleanAttributes: true,
+					minifyCSS: true,
+					minifyJS: true
+				});
+				return minified;
+			}
+			return content;
+		});
+	}
+
+	return returnData;
 };

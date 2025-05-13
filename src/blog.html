@@ -1,0 +1,19 @@
+---
+title: Blog - GodSVG
+---
+{% extends "base.njk" %}
+
+{% block style %}
+	<link rel="stylesheet" type="text/css" href="/styles/blog.scss">
+{% endblock %}
+
+{% block body %}
+    {% for post in collections.article %}
+        <div class="blog-card">
+            <a href="/article/{{post.data.slugcat | slugify}}">
+                <img src="/assets/blog/{{post.data.slugcat | slugify}}/cover.webp" class="blog-thumbnail"/>
+                <p>{{post.data.title}}</p>
+            </a>
+        </div>
+    {% endfor %}
+{% endblock %}
