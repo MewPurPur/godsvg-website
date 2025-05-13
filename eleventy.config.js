@@ -96,6 +96,17 @@ export default async function(eleventyConfig) {
 			eleventyConfig.addPassthroughCopy({ [path.join(inDir, "cover.webp")]: `/assets/blog/${outDir}/cover.webp` });
 		});
 
+	eleventyConfig.addShortcode("gh", function(username) {
+		// Strip any leading "@".
+		const clean = username.replace(/^@/, "");
+		return `<a 
+			href="https://github.com/${clean}" 
+			target="_blank" 
+			rel="noopener noreferrer"
+			class="text-blue-600 hover:underline"
+		>${clean}</a>`;
+	});
+
 	// Minifying on release (https://github.com/terser/html-minifier-terser?tab=readme-ov-file#options-quick-reference)
 	if (!isDebug) {
 		eleventyConfig.addTransform("htmlmin", function (content) {

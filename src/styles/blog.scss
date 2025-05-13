@@ -1,8 +1,6 @@
 @use "sass:color";
 @use "scss/theme" as *;
 
-$max-width: 30rem;
-
 .content-container {
 	max-width: 960px;
 	width: 90%;
