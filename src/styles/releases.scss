@@ -31,7 +31,7 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	transition: transform 0.2s, box-shadow 0.2s;
+	transition: box-shadow 0.2s ease-in-out;
 	&:hover {
 		box-shadow: 0 0 8px 8px rgba(0, 0, 0, 0.1);
 	}

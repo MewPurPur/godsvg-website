@@ -59,11 +59,12 @@ $max-width: min(960px, 90%);
 	align-items: center;
 }
 
-.article-image {
+.article-image, .article-video {
 	margin-top: 0.4rem;
 	margin-bottom: 0.4rem;
 	text-align: center;
-	img {
+	
+	img, video {
 		width: auto;
 		max-width: 98%;
 		box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
