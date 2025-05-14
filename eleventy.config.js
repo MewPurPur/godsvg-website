@@ -101,12 +101,7 @@ export default async function(eleventyConfig) {
 	eleventyConfig.addShortcode("gh", function(username) {
 		// Strip any leading "@".
 		const clean = username.replace(/^@/, "");
-		return `<a 
-			href="https://github.com/${clean}" 
-			target="_blank" 
-			rel="noopener noreferrer"
-			class="text-blue-600 hover:underline"
-		>${clean}</a>`;
+		return `<a href="https://github.com/${clean}" target="_blank" rel="noopener noreferrer">${clean}</a>`;
 	});
 
 	// Minifying on release (https://github.com/terser/html-minifier-terser?tab=readme-ov-file#options-quick-reference)

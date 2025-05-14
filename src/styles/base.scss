@@ -56,7 +56,7 @@ br {
 }
 
 .dim-text {
-	font-size: 0.65rem;
+	font-size: 0.6rem;
 	line-height: 1rem;
 	font-family: $default_font;
 	color: #acacac;
@@ -133,7 +133,7 @@ br {
 		color: white;
 		background-color: #666;
 		cursor: default;
-		font-weight: bold;
+		font-weight: 700;
 	}
 }
 
@@ -155,7 +155,7 @@ br {
 
 	&::before {
 		content: "+";
-		font-weight: bold;
+		font-weight: 700;
 		display: inline-block;
 		width: 0.85em;
 	}
@@ -165,7 +165,7 @@ br {
 	color: #e99;
 	&::before {
 		content: "–";
-		font-weight: bold;
+		font-weight: 700;
 		display: inline-block;
 		width: 0.85em;
 	}

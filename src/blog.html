@@ -4,19 +4,19 @@ title: Blog - GodSVG
 {% extends "base.njk" %}
 
 {% block style %}
-    <link rel="stylesheet" type="text/css" href="/styles/blog.scss">
+	<link rel="stylesheet" type="text/css" href="/styles/blog.scss">
 {% endblock %}
 
 {% block body %}
-    <div class="blog-posts-grid">
-        {% for post in collections.articles %}
-            <div class="blog-card">
-                <a href="/article/{{post.data.slugcat | slugify}}">
-                    <img src="/assets/blog/{{post.data.slugcat | slugify}}/cover.webp" class="blog-thumbnail" alt="{{post.data.title}}"/>
-                    <p>{{post.data.title}}</p>
-                    <p>{{post.data.tagline}}</p>
-                </a>
-            </div>
-        {% endfor %}
-    </div>
+	<div class="blog-posts-grid">
+		{% for post in collections.articles %}
+			<div class="blog-card">
+				<a href="/article/{{post.data.slugcat | slugify}}">
+					<img src="/assets/blog/{{post.data.slugcat | slugify}}/cover.webp" class="blog-thumbnail" alt="{{post.data.title}}"/>
+					<p>{{post.data.title}}</p>
+					<p>{{post.data.tagline}}</p>
+				</a>
+			</div>
+		{% endfor %}
+	</div>
 {% endblock %}
