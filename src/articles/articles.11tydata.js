@@ -1,6 +1,6 @@
 export default {
     layout: "article.njk",
-    tags: "article",
+    tags: "articles",
 	permalink: function ({ slugcat }) {
 		return `/article/${this.slugify(slugcat)}/index.html`;
 	},

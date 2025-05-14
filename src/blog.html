@@ -9,11 +9,12 @@ title: Blog - GodSVG
 
 {% block body %}
     <div class="blog-posts-grid">
-        {% for post in collections.article %}
+        {% for post in collections.articles %}
             <div class="blog-card">
                 <a href="/article/{{post.data.slugcat | slugify}}">
                     <img src="/assets/blog/{{post.data.slugcat | slugify}}/cover.webp" class="blog-thumbnail" alt="{{post.data.title}}"/>
                     <p>{{post.data.title}}</p>
+                    <p>{{post.data.tagline}}</p>
                 </a>
             </div>
         {% endfor %}
