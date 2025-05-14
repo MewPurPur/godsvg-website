@@ -13,7 +13,9 @@ It has only been two weeks since the first development build of GodSVG, but than
 
 # New web editor
 
-With help from {% gh "aladvs" %}, I managed to test out and export GodSVG for web. This enables you to use GodSVG without having to download it. The performance of web is significantly worse and some features are going to be limited, but some users may still find it useful. (When the release was out, the web editor was experimental and on a different URL; now it's on https://godsvg.com/editor)
+With help from {% gh "aladvs" %}, I managed to test out and export GodSVG for web. This enables you to use GodSVG without having to download it. The web version's performance is significantly worse and some features are going to be limited, but I'm sure it will be preferred by some users.
+
+*At the time of the release, the web editor was experimental and on a different URL; now it's stable and can be found at <https://godsvg.com/editor>.*
 
 # New MacOS build
 
@@ -43,4 +45,4 @@ Thanks to {% gh "ilikefrogs101" %}, SVG files can now be opened through the CLI,
 
 # Other improvements
 
-There have also been various improvements to input handling in the viewport thanks to {% gh "Kiisu-Master" %}. Also, I have implemented the ability to convert different types of elements, for example converting a circle into an ellipse or a rounded rectangle. Aside from this, various little bugs and tweaks have been made to improve the experience of using GodSVG.
+There have also been various improvements to input handling in the viewport thanks to {% gh "Kiisu-Master" %}. Also, I have implemented the ability to convert different types of elements, for example converting a circle into an ellipse or a rounded rectangle. Aside from this, various little bugfixes and tweaks have been made to improve the experience of using GodSVG.
