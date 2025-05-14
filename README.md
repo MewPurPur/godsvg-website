@@ -10,7 +10,7 @@ To start working on the project, do the following steps:
 
 2. Open the repository and check whether you have Node.js installed by running `node --version` in a terminal. If the command is not found or it reports a number lower than 18, you will need to download and install Node.js.
 
-3. Run `npm install`.
+3. Run `npm install` to intall dependencies.
 
 4. Run `npx @11ty/eleventy --serve` to host a development web server (useful if you want the website to automatically refresh when files change), or alternatively `--watch` to rebuild the files without a web server.
 

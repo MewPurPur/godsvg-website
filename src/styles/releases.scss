@@ -2,7 +2,7 @@
 @use "scss/theme" as *;
 
 .container {
-	width: 90%;
+	width: 92.5%;
 	max-width: 960px;
 	margin: 0 auto;
 	padding: 0 20px;
@@ -72,6 +72,7 @@
 	text-decoration: none !important;
 	text-align: center;
 	display: inline-block;
+	min-width: 0;
 	&:hover {
 		color: white;
 	}
@@ -89,4 +90,44 @@
 .dropdown {
 	position: relative;
 	display: inline-block;
+}
+
+@media (max-width: 720px) {
+	.release-box {
+		flex-direction: column;
+		align-items: flex-start;
+		padding: 15px;
+	}
+
+	.release-actions {
+		gap: 0.25rem;
+	}
+
+	.release-info {
+		flex-direction: row;
+		align-items: center;
+		width: 100%;
+		justify-content: space-between;
+		margin-bottom: 0.5rem;
+	}
+
+	.release-date {
+		margin-top: 0;
+		margin-right: 0.3rem;
+	}
+
+	.release-actions {
+		width: 100%;
+		justify-content: space-evenly;
+	}
+
+	.btn, .btn-download {
+		justify-content: center;
+	}
+
+	.dropdown-content {
+		width: 100%;
+		left: 0;
+		right: auto;
+	}
 }

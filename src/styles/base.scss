@@ -57,9 +57,9 @@ br {
 
 .dim-text {
 	font-size: 0.6rem;
-	line-height: 1rem;
+	line-height: 1.4;
 	font-family: $default_font;
-	color: #acacac;
+	color: color.adjust($color: #fff, $lightness: -20%);
 	margin-top: 0rem;
 	margin-bottom: 0.25rem;
 

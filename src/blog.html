@@ -8,15 +8,20 @@ title: Blog - GodSVG
 {% endblock %}
 
 {% block body %}
-	<div class="blog-posts-grid">
-		{% for post in collections.articles %}
-			<div class="blog-card">
-				<a href="/article/{{post.data.slugcat | slugify}}">
-					<img src="/assets/blog/{{post.data.slugcat | slugify}}/cover.webp" class="blog-thumbnail" alt="{{post.data.title}}"/>
-					<p>{{post.data.title}}</p>
-					<p>{{post.data.tagline}}</p>
-				</a>
-			</div>
-		{% endfor %}
+	<div class="content-container">
+		<h1 class="blog-title">GodSVG Blog</h1>
+		<div class="blog-posts-grid">
+			{% for post in collections.articles %}
+				<div class="blog-card">
+					<a href="/article/{{post.data.slugcat | slugify}}">
+						<img src="/assets/blog/{{post.data.slugcat | slugify}}/cover.webp" class="blog-thumbnail" alt="{{post.data.title}}"/>
+						<div class="blog-card-text">
+							<p class="title">{{post.data.title}}</p>
+							<p class="tagline">{{post.data.tagline}}</p>
+						</div>
+					</a>
+				</div>
+			{% endfor %}
+		</div>
 	</div>
 {% endblock %}

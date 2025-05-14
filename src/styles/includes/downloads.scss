@@ -55,42 +55,57 @@
 
 	a {
 		color: white;
-		padding: 10px 16px;
+		padding: 10px 12px;
 		text-decoration: none !important;
 		display: flex;
 		align-items: center;
+
 		&:hover {
 			color: white;
 			background-color: #ffffff1a;
 		}
+
 		&:active {
 			background-color: #ffffff40;
 		}
+
 		.platform-icon {
 			margin-right: 10px;
 			height: 1.5rem;
 			width: 1.5rem;
 		}
+
 		.text-container {
 			display: flex;
 			flex-direction: column;
 		}
+
 		.small-text {
 			font-size: 0.45rem;
 		}
+
 		.big-text {
 			font-size: 0.75rem;
-			font-weight: 600;
+			font-weight: 700;
 		}
+
+		.solo-platform-icon {
+			margin-right: 8px;
+			height: 1.2rem;
+			width: 1.2rem;
+		}
+
 		.solo-text {
-			font-size: 0.9rem;
-			font-weight: 600;
+			font-size: 0.7rem;
+			font-weight: 700;
 		}
 	}
 }
+
 .dropdown.active .dropdown-content {
 	display: block;
 }
+
 .dropdown:hover .dropdown-content {
 	display: block;
 }
@@ -152,20 +167,22 @@
 .platform-option {
 	display: flex;
 	align-items: center;
-	padding: 0.7rem 1rem;
 	color: rgb(255, 255, 255, 0.4) !important;
 	text-decoration: none !important;
 
 	&:hover {
 		background-color: color.adjust($background, $lightness: 15%, $space: hsl);
 	}
+
 	&.active {  // Active platform (detectOS)
 		color: #fff !important;
 	}
+
 	&:first-child {
 		border-top-left-radius: 6px;
 		border-top-right-radius: 6px;
 	}
+	
 	&:last-child {
 		border-bottom-left-radius: 6px;
 		border-bottom-right-radius: 6px;

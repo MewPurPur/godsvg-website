@@ -1,7 +1,7 @@
 ---
 slugcat: 1.0-alpha2
 title: "New prerelease: GodSVG 1.0-alpha2"
-tagline: GodSVG is out for web and MacOS!
+tagline: After only two weeks, there are already enough new things for a new alpha build. Most notably, GodSVG is out for web and MacOS!
 author: MewPurPur
 tags: release
 date: Created
