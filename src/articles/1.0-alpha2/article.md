@@ -29,7 +29,7 @@ Some options have been implemented for formatting attributes. They will be expan
 
 In the general settings, a new option was added by {% gh "Kiisu-Master" %}. This option is disabled by default, and it's not available on the web editor as it's impossible to implement there. When enabled, this setting makes it so when you pan in the viewport, the cursor will now teleport when it reaches the edges. See it in action below:
 
-[video of using "Wrap mouse"]
+{% blogvid "wrap_mouse.mp4", "Video showcasing the Wrap Mouse setting" %}
 
 # Handles for adjusting circles and ellipse radii, and rect sides
 

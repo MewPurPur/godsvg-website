@@ -18,10 +18,4 @@ Using an IDE like VSCode, with an extension for Nunjucks syntax highlighting tha
 
 ## Useful command
 
-Converting PNGs inside src directory to WebP with FFmpeg:
-
-```
-find src -type f -name "*.png" | while read file; do
-	ffmpeg -i "$file" -lossless 1 "${file%.png}.webp" && rm "$file"
-done
-```
+The script that can be run from the root folder - `./script-optimize-media` - converts PNG to WebP and MP4 to WebM, this should be run every time new media is added.

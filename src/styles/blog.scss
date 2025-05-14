@@ -28,7 +28,7 @@
 	width: 100%;
 	border-radius: 8px;
 	overflow: hidden;
-	transition: box-shadow 0.3s;
+	transition: box-shadow 0.2s ease-in-out;
 	background-color: color.adjust($background, $lightness: -2%);
 
 	&:hover {
@@ -65,14 +65,24 @@
 	width: 100%;
 	height: auto;
 	display: block;
-	transition: opacity 0.3s;
+	transition: opacity 0.2s ease-in-out;
 }
 
-.blog-card:hover .blog-thumbnail {
+.blog-card .blog-thumbnail {
 	opacity: 0.9;
 }
 
+.blog-card:hover .blog-thumbnail {
+	opacity: 1.0;
+}
+
 @media (max-width: 960px) {
+	.blog-posts-grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media (max-width: 640px) {
 	.blog-posts-grid {
 		grid-template-columns: 1fr;
 	}

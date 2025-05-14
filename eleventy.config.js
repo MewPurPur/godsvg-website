@@ -79,6 +79,21 @@ export default async function(eleventyConfig) {
 			</div>
 		`.replaceAll('\t', "").replaceAll("    ", "")
 	});
+
+	eleventyConfig.addShortcode("blogvid", function(name, alt) {
+		const e = this.page.url.split('/').filter(e => e.length > 1);
+		const slug = e[e.length-1];
+		const url = `/assets/blog/${slug}/${name}`;
+		return `
+			<div class="article-video">
+				<video controls preload="metadata" aria-label="${alt}">
+					<source src="${url}">
+					${alt ? `<p>${alt}</p>` : ''}
+				</video>
+			</div>
+		`.replaceAll('\t', "").replaceAll("    ", "")
+	});
+
 	eleventyConfig.setLibrary("md", markdownIt({
 		html: true,
 		breaks: true,
