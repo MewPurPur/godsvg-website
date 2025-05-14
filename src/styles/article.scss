@@ -1,10 +1,10 @@
 @use "sass:color";
 @use "scss/theme" as *;
 
-$max-width: 30rem;
+$max-width: min(960px, 90%);
 
 .article-header {
-	width: $max-width;
+	max-width: $max-width;
 	margin: auto;
 	background-color: color.adjust($background, $lightness: 2%);
 	padding: 20pt;
@@ -26,7 +26,7 @@ $max-width: 30rem;
 	// Custom markdown styling
 	p {
 		color: color.adjust(#fff, $lightness: -15%);
-		font-size: 0.65rem;
+		font-size: 0.6rem;
 		line-height: 1.5;
 		margin-top: 0;
 	}
@@ -34,8 +34,8 @@ $max-width: 30rem;
 		color: color.adjust(#fff, $lightness: -5%);
 		font-family: $title_font;
 		font-size: 1.1rem;
+		margin-bottom: 0.3rem;
 	}
-	img { width: 100% }
 }
 
 .article-cover {
@@ -48,8 +48,8 @@ $max-width: 30rem;
 .article-metadata {
 	display: flex;
 	align-items: center;
-	font-weight: bold;
-	color: #acacac;
+	font-weight: 700;
+	color: color.adjust(#fff, $lightness: -40%);
 	font-size: 0.9rem;
 }
 
@@ -60,13 +60,31 @@ $max-width: 30rem;
 }
 
 .article-image {
-	width: auto;
-	height: auto;
 	margin-top: 0.4rem;
 	margin-bottom: 0.4rem;
+	text-align: center;
 	img {
+		width: auto;
+		max-width: 98%;
 		box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
 		user-select: none;
-		z-index: 0;
+	}
+}
+
+.support-panel {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 0.75rem;
+	background-color: color.adjust($background, $lightness: +2%);
+	border-radius: 5px;
+	padding: 16px 22px;
+}
+
+@media (max-width: 830px) {
+	.support-panel {
+		flex-direction: column;
+		gap: 0.25rem;
+		padding-bottom: 22px;
 	}
 }

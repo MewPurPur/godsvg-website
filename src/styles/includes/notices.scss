@@ -3,15 +3,15 @@ $inner-color: #fffd;
 $dim-text: #80858c;
 
 .notice-panel {
-	color: $inner-color;
 	position: relative;
-	width: 840px;
 	padding: 38px 20px 16px 16px;
 	border-radius: 6px;
 
 	&.info {
 		$info-bg: #0e233d;
+		$info-text-color: #d0e7fd;
 		$info-accent: #437ab1;
+		color: $info-text-color;
 		background-color: $info-bg;
 		border: 2px solid $info-accent;
 		.notice-header {
@@ -21,7 +21,9 @@ $dim-text: #80858c;
 	}
 	&.warning {
 		$warn-bg: #4c4e10;
+		$warn-text-color: #fffbce;
 		$warn-accent: #b0b83e;
+		color: $warn-text-color;
 		background-color: $warn-bg;
 		border: 2px solid $warn-accent;
 		.notice-header {
@@ -33,19 +35,19 @@ $dim-text: #80858c;
 	.notice-header {
 		color: $title-color;
 		font-weight: 700;
-		font-size: 0.65rem;
+		font-size: 0.6rem;
 		position: absolute;
 		top: -2px;
 		left: -2px;
 		padding: 2px 10px;
 		border-bottom-right-radius: 6px;
-		border-top-left-radius: 8px; // Bigger than 6 to avoid anti-aliasing.
+		border-top-left-radius: 8px; // Bigger than 6 to avoid anti-aliasing overlaps.
 	}
 
 	.notice-message {
-		font-size: 0.65rem;
-		margin-top: 8px;
-		line-height: 1.0;
-		font-weight: 500;
+		font-size: 0.6rem;
+		margin-top: 4px;
+		line-height: 1.25;
+		font-weight: 400;
 	}
 }

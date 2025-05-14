@@ -1,0 +1,125 @@
+@use "sass:color";
+@use "scss/theme" as *;
+
+$frame-color: #2e3236;
+$frame-border: #3a3e42;
+$text-color: #b0b5bc;
+$dim-text: #80858c;
+$btn-bg: #2a2e32;
+$btn-hover: #32373c;
+$btn-active: #3a3f44;
+$tab-bg: #2e3236;
+$pro-color: #9e9;
+$con-color: #e99;
+
+.donation-widget {
+	margin-top: 0.25rem;
+	font-size: 0.55rem;
+	position: relative;
+	min-width: 280px;
+	padding: 24px 20px 16px;
+	border: 2px solid $frame-border;
+	border-radius: 6px;
+	background-color: transparent;
+}
+
+.donation-header {
+	color: $text-color;
+	font-weight: 700;
+	font-size: 14px;
+	white-space: nowrap;
+	position: absolute;
+	top: -12px;
+	left: 50%;
+	transform: translateX(-50%);
+	background-color: $tab-bg;
+	padding: 0px 8px 3px 8px;
+	border: 2px solid $frame-border;
+	border-radius: 4px;
+}
+
+.donation-buttons {
+	display: flex;
+	justify-content: center;
+	gap: 24px;
+	margin: 5px;
+}
+
+.donation-button {
+	width: 64px;
+	height: 64px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: $btn-bg;
+	border: 1px solid $frame-border;
+	border-radius: 8px;
+	cursor: pointer;
+	position: relative;
+
+	&:hover {
+		background-color: $btn-hover;
+	}
+
+	&:active {
+		background-color: $btn-active;
+	}
+
+	& .social-icon {
+		width: 40px;
+		height: 40px;
+		margin: 0;
+	}
+}
+
+.platform-details-container {
+	padding-top: 8px;
+	border-top: 1px solid $frame-border;
+	margin-top: 16px;
+	min-height: 96px;
+}
+
+.platform-details {
+	display: none;
+}
+
+.platform-name {
+	font-weight: bold;
+	margin-bottom: 8px;
+}
+
+.platform-points {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.list-pro {
+	color: $pro-color;
+	margin-bottom: 4px;
+
+	&::before {
+		content: "+";
+		font-weight: bold;
+		display: inline-block;
+		width: 0.85em;
+	}
+}
+
+.list-con {
+	color: $con-color;
+	margin-bottom: 4px;
+
+	&::before {
+		content: "–";
+		font-weight: bold;
+		display: inline-block;
+		width: 0.85em;
+	}
+}
+
+.hover-info {
+	color: $dim-text;
+	text-align: center;
+	margin-top: 8px;
+}

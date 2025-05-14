@@ -7,57 +7,56 @@ date: Created
 
 {% block style %}
 	<link rel="stylesheet" type="text/css" href="/styles/article.scss">
+	<link rel="stylesheet" type="text/css" href="/templates/donation_widget.scss">
 {% endblock %}
 
 {% block body %}
-    <!-- TODO: Use "date < new Date('2025-05-10')" to compare the date and add a notice if a blog post was made before the website was made. -->
+	<!-- TODO: Use "date < new Date('2025-05-10')" to compare the date and add a notice if a blog post was made before the website was made. -->
 
-    <div class="article-header">
-        <img src="/assets/blog/{{slugcat | slugify}}/cover.webp" class="article-cover"/>
-        <h1 class="article-title">{{ title }}</h1>
-        <div class="article-metadata">
-            <span class="article-author">By: {{page.author}}</span>
-            <span class="article-date" title="{{page.date.toUTCString()}}">
-                {{page.date.toLocaleString("en-us", { year:"numeric", month:"short", day:"numeric" })}}
-            </span>
-        </div>
-    </div>
+	<div class="article-header">
+		<img src="/assets/blog/{{slugcat | slugify}}/cover.webp" class="article-cover"/>
+		<h1 class="article-title">{{ title }}</h1>
+		<div class="article-metadata">
+			<span class="article-author">By: {{page.author}}</span>
+			<span class="article-date" title="{{page.date.toUTCString()}}">
+				{{page.date.toLocaleString("en-us", { year:"numeric", month:"short", day:"numeric" })}}
+			</span>
+		</div>
+	</div>
 
-    <div class="article-content">
-        <div class="article-html">
-            {{ content | safe }}
-        </div>
+	<div class="article-content">
+		<div class="article-html">
+			{{ content | safe }}
+		</div>
 
-        <div class="article-bottom">
-            {% if release != "" %}
-                <div class="article-downloads">
-                    <h1>Downloads</h1>
-                    {% if prerelease %}
-                        <div class="notice-panel warning">
-                            <div class="notice-header">WARNING:</div>
-                            <div class="notice-message">
-                                This is by definition a pre-release piece of software. <br/>
-                                Be sure to back up your SVGs to preserve them in case of corruption.
-                            </div>
-                        </div>
-                    {% endif %}
-                    
-                    <div style="margin: 15pt">
-                        <h3>{{release}}</h3>
-                        {% include "data/downloads.njk" %}
-                        {% for key, platform in downloads(release) %}
-                            <a href="{{platform}}" style="display: block">Download for {{key | capitalize}}</a>
-                        {% endfor %}
-                    </div>
-                </div>
-            {% endif %}
+		<div class="article-bottom">
+			{% if release != "" %}
+				<div class="article-downloads">
+					<h1>Downloads</h1>
+					{% if prerelease %}
+						<div class="notice-panel warning">
+							<div class="notice-header">WARNING:</div>
+							<div class="notice-message">
+								This is a prerelease version. Please regularly back up your SVG files to prevent potential data loss.
+							</div>
+						</div>
+					{% endif %}
+					<div style="margin: 1rem">
+						{% include "data/downloads.njk" %}
+						{% for key, platform in downloads(release) %}
+							<a href="{{platform}}" style="display: block">Download for {{key | capitalize}}</a>
+						{% endfor %}
+					</div>
+				</div>
+			{% endif %}
 
-            <div>
-                <h1>Support</h1>
-                <p>Without donations, GodSVG would be way behind where it is now. If you're able to donate, I would be very grateful!</p>
-                <!-- TODO: Add donation widget -->
-                {% include "donation_widget.njk" %}
-            </div>
-        </div>
-    </div>
+			<div>
+				<h1>Support</h1>
+				<div class="support-panel">
+					<p>Many thanks to everyone who has donated to this project! These donations, while currently small, have allowed me to dedicate a lot more time to GodSVG while balancing other responsibilities; the project would be far behind without them. If you find GodSVG valuable and are able to donate, I would be very grateful!</p>
+					{% include "donation_widget.njk" %}
+				</div>
+			</div>
+		</div>
+	</div>
 {% endblock %}

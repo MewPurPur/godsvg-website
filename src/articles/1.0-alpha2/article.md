@@ -21,21 +21,21 @@ With help from {% gh "aaronfranke" %}, I've managed to test out and export GodSV
 
 # Automated attribute formatting
 
-{% blogimg "autoformatting.webp", "Image of the autoformatter" %}
-
 Some options have been implemented for formatting attributes. They will be expanded in the future to allow for optimizing SVGs, by using the most compact formatting options. To access them, click the cog button above the code editor.
+
+{% blogimg "autoformatting.webp", "Image of the autoformatter" %}
 
 # New option for wrap-around panning
 
-[video of using "Wrap mouse"]
+In the general settings, a new option was added by {% gh "Kiisu-Master" %}. This option is disabled by default, and it's not available on the web editor as it's impossible to implement there. When enabled, this setting makes it so when you pan in the viewport, the cursor will now teleport when it reaches the edges. See it in action below:
 
-In the general settings, a new option was added by {% gh "Kiisu-Master" %}. This option is disabled by default, and it's not available on the web editor as it's impossible to implement there. When enabled, this setting makes it so when you pan in the viewport, the cursor will now teleport when it reaches the edges.
+[video of using "Wrap mouse"]
 
 # Handles for adjusting circles and ellipse radii, and rect sides
 
-{% blogimg "auxiliary_handles.webp", "Image that shows off the auxiliary handles of a circle, ellipse, and rectangle" %}
+In alpha 1, you could only move circles, ellipses, and rectangles around using the handles in the viewport. As shown in the image below, this prerelease implemented a few more handles for adjusting their geometry.
 
-In alpha 1, you could only move circles, ellipses, and rectangles around using the handles in the viewport. For this pre-release, I've implemented a few more handles for adjusting their geometry. 
+{% blogimg "auxiliary_handles.webp", "Image that shows off the auxiliary handles of a circle, ellipse, and rectangle" %}
 
 # New ways to open files
 
