@@ -14,6 +14,7 @@ title: Blog - GodSVG
                 <a href="/article/{{post.data.slugcat | slugify}}">
                     <img src="/assets/blog/{{post.data.slugcat | slugify}}/cover.webp" class="blog-thumbnail" alt="{{post.data.title}}"/>
                     <p>{{post.data.title}}</p>
+                    <p>{{post.data.tagline}}</p>
                 </a>
             </div>
         {% endfor %}

@@ -1,7 +1,7 @@
 ---
 permalink: "article/{{ slugcat | slugify }}/index.html"
 prerelease: false
-date:
+date: Created
 ---
 {% extends "base.njk" %}
 
@@ -16,7 +16,7 @@ date:
         <img src="/assets/blog/{{slugcat | slugify}}/cover.webp" class="article-cover"/>
         <h1 class="article-title">{{ title }}</h1>
         <div class="article-metadata">
-            <span class="article-author">By: MewPurPur</span>
+            <span class="article-author">By: {{page.author}}</span>
             <span class="article-date" title="{{page.date.toUTCString()}}">
                 {{page.date.toLocaleString("en-us", { year:"numeric", month:"short", day:"numeric" })}}
             </span>

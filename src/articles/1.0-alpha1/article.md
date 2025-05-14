@@ -1,6 +1,8 @@
 ---
 slugcat: 1.0-alpha1
 title: GodSVG's first development build is out!
+tagline:
+author: MewPurPur
 tags: release
 date: Created
 release: 1.0-alpha1
