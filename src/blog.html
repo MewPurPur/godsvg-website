@@ -11,7 +11,7 @@ title: Blog - GodSVG
 	<div class="content-container">
 		<h1 class="blog-title">GodSVG Blog</h1>
 		<div class="blog-posts-grid">
-			{% for post in collections.articles %}
+			{% for post in collections.articles | reverse %}
 				<div class="blog-card">
 					<a href="/article/{{post.data.slugcat | slugify}}">
 						<img src="/assets/blog/{{post.data.slugcat | slugify}}/cover.webp" class="blog-thumbnail" alt="{{post.data.title}}"/>
