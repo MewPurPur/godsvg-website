@@ -1,4 +1,5 @@
 import { HtmlBasePlugin, InputPathToUrlTransformPlugin } from "@11ty/eleventy";
+import pluginRss from "@11ty/eleventy-plugin-rss";
 import path from "node:path";
 import * as sass from "sass";
 import markdownIt from "markdown-it";
@@ -24,6 +25,7 @@ export default async function(eleventyConfig) {
 	// Plugins
 	eleventyConfig.addPlugin(HtmlBasePlugin);
 	eleventyConfig.addPlugin(InputPathToUrlTransformPlugin);
+	eleventyConfig.addPlugin(pluginRss);
 
 	// Filters & Shortcodes
 	eleventyConfig.addAsyncFilter("pageExists", async function(url) {

@@ -14,6 +14,7 @@
 		"@11ty/eleventy": "^3.0.0"
 	},
 	"dependencies": {
+		"@11ty/eleventy-plugin-rss": "^2.0.4",
 		"html-minifier-terser": "^7.2.0",
 		"markdown-it": "^14.1.0",
 		"sass": "^1.87.0"
