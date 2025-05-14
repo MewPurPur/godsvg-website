@@ -30,7 +30,7 @@
 	img {
 		width: 2rem;
 		height: 2rem;
-		margin-right: 0.5rem;
+		margin-right: 0.35rem;
 	}
 }
 
@@ -38,7 +38,11 @@
 	font-family: 'Asap', sans-serif;
 	font-weight: 700;
 	font-size: 1.5rem;
-	color: #def;
+	color: color.adjust(#def, $lightness: -5%);
+
+	&:hover {
+		color: #def;
+	}
 }
 
 .nav-links {

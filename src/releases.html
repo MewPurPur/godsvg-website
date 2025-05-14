@@ -25,7 +25,7 @@ title: Releases - GodSVG
 						<div class="dropdown-content">
 							{% for platform in release.platforms %}
 								<a href="{{downloads(version)[platform]}}" platform="{{platform}}" class="platform-option" download>
-									<img src="/assets/platforms_{{platform}}.svg" alt="_" class="platform-icon">
+									<img src="/assets/platforms_{{platform}}.svg" alt="_" class="solo-platform-icon">
 									<div class="solo-text">{{platformInfo.displayNames[platform]}}</div>
 								</a>
 							{% endfor %}

@@ -1,7 +1,7 @@
 ---
 slugcat: 1.0-alpha1
 title: GodSVG's first development build is out!
-tagline:
+tagline: After 5 months of hard work and with help from a few contributors, GodSVG is usable and all of the roadblocks to an initial alpha release have been lifted. Time to present GodSVG to the world!
 author: MewPurPur
 tags: release
 date: Created
