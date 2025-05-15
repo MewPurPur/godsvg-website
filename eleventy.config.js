@@ -35,7 +35,7 @@ export default async function(eleventyConfig) {
 			return collectionUrl == argUrl;
 		});
 	});
-	
+
 	// Assets
 	eleventyConfig.addPassthroughCopy("src/assets");
 	eleventyConfig.addPassthroughCopy("src/scripts");

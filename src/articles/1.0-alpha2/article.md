@@ -1,10 +1,10 @@
 ---
 slugcat: 1.0-alpha2
 title: "New prerelease: GodSVG 1.0-alpha2"
-tagline: After only two weeks, there are already enough new things for a new alpha build. Most notably, GodSVG is out for web and MacOS!
+tagline: After only two weeks, there are already enough new things for a new alpha build. GodSVG is now out for web and MacOS!
 author: MewPurPur
 tags: release
-date: Created
+date: 2023-12-21
 release: 1.0-alpha2
 prerelease: true
 ---
@@ -31,7 +31,7 @@ Some options have been implemented for formatting attributes. They will be expan
 
 In the general settings, a new option was added by {% gh "Kiisu-Master" %}. This option is disabled by default, and it's not available on the web editor as it's impossible to implement there. When enabled, this setting makes it so when you pan in the viewport, the cursor will now teleport when it reaches the edges. See it in action below:
 
-{% blogvid "wrap_mouse.mp4", "Video showcasing the Wrap Mouse setting" %}
+{% blogvid "wrap_mouse.webm", "Video showcasing the Wrap Mouse setting" %}
 
 # Handles for adjusting circles and ellipse radii, and rect sides
 

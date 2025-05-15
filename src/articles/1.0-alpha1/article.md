@@ -4,7 +4,7 @@ title: GodSVG's first development build is out!
 tagline: After months of hard work from me and some contributors, GodSVG is finally usable and all roadblocks to an initial alpha release have been lifted. Time to present it to the world!
 author: MewPurPur
 tags: release
-date: Created
+date: 2023-12-05
 release: 1.0-alpha1
 prerelease: true
 ---
@@ -13,9 +13,9 @@ A few months ago in May, I started working on an SVG editor inside Godot called 
 
 # A code-focused SVG editor
 
-{% blogimg "code_selection.webp", "Image of doing a code selection" %}
-
 GodSVG's main goal is to try to be the best SVG editor out there for directly working with the code and structure of SVG files. It represents the SVG hierarchy exactly as it is and allows you to edit the SVG's text and see changes in real time. This should make GodSVG great for creating simple SVGs and for optimizing them, although this potential is not realized yet.
+
+{% blogimg "code_selection.webp", "Image of doing a code selection" %}
 
 # Other editing methods
 

@@ -42,6 +42,14 @@
 
 	.blog-card-text {
 		padding: 0.5rem;
+		padding-top: 0.35rem;
+	}
+
+	.date {
+		color: color.adjust(#fff, $lightness: -50%);
+		margin: 0;
+		margin-bottom: 0.2rem;
+		font-size: 0.5rem;
 	}
 
 	.title {
@@ -54,7 +62,7 @@
 	.tagline {
 		line-height: 1.25;
 		margin: 0;
-		margin-top: 0.5rem;
+		margin-top: 0.4rem;
 		color: color.adjust(#fff, $lightness: -30%);
 		font-weight: 400;
 		font-size: 0.6rem;

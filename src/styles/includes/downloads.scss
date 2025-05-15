@@ -60,10 +60,6 @@
 			background-color: #ffffff1a;
 		}
 
-		&:active {
-			background-color: #ffffff40;
-		}
-
 		.platform-icon {
 			margin-right: 10px;
 			height: 1.5rem;
@@ -120,19 +116,15 @@
 	align-items: center;
 	justify-content: center;
 	background-color: $button;
-	color: white;
+	color: #fff;
 	border-radius: 5px;
 	padding: 10px;
 	text-decoration: none;
 
 	&:hover {
-		color: white;
+		color: #fff;
 		background-color: $button_hover;
 		text-decoration: none;
-	}
-
-	&:active {
-		background-color: #1e4a7c;
 	}
 	
 	.small-text {
@@ -162,7 +154,8 @@
 .platform-option {
 	display: flex;
 	align-items: center;
-	color: rgb(255, 255, 255, 0.4) !important;
+	color: #fff;
+	opacity: 0.5 !important;
 	text-decoration: none !important;
 
 	&:hover {
@@ -170,7 +163,7 @@
 	}
 
 	&.active {  // Active platform (detectOS)
-		color: #fff !important;
+		opacity: 1.0 !important;
 	}
 
 	&:first-child {
