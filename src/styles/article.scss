@@ -39,9 +39,15 @@ $max-width: min(960px, 90%);
 	}
 
 	ul {
+		margin-top: -0.25rem;
 		color: color.adjust(#fff, $lightness: -15%);
 		font-size: 0.6rem;
 		line-height: 1.5;
+	}
+
+	li {
+		margin-top: 0.2rem;
+		line-height: 1.4;
 	}
 }
 

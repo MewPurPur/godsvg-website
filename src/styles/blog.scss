@@ -28,11 +28,11 @@
 	width: 100%;
 	border-radius: 8px;
 	overflow: hidden;
-	transition: box-shadow 0.2s ease-in-out;
+	transition: box-shadow 0.2s;
 	background-color: color.adjust($background, $lightness: -2%);
 
 	&:hover {
-		box-shadow: 0 0px 8px 8px rgba(0, 0, 0, 0.1);
+		box-shadow: 0 0 8px 8px rgba(255, 255, 255, 0.04);
 	}
 
 	a {
@@ -73,7 +73,7 @@
 	width: 100%;
 	height: auto;
 	display: block;
-	transition: opacity 0.2s ease-in-out;
+	transition: opacity 0.2s;
 }
 
 .blog-card .blog-thumbnail {
