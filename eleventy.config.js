@@ -80,6 +80,32 @@ export default async function(eleventyConfig) {
 		`.replaceAll('\t', "").replaceAll("    ", "")
 	});
 
+	eleventyConfig.addShortcode("blogcompare", function() {
+		const args = [...arguments];
+		const e = this.page.url.split('/').filter(e => e.length > 1);
+		const slug = e[e.length-1];
+
+		const items = args.length % 3 === 0 ? args : args.slice(0, args.length - 1);
+		
+		let html = '<div class="article-compare"><div class="article-compare-content">';
+
+		for (let i = 0; i < items.length; i += 3) {
+			const label = items[i];
+			const img = items[i + 1];
+			const alt = items[i + 2];
+			
+			html += `
+				<div class="article-compare-side">
+				<div class="article-compare-label">${label}</div>
+				<img src="/assets/blog/${slug}/${img}" alt="${alt}" />
+				</div>
+			`;
+		}
+
+		html += '</div></div>';
+		return html.replaceAll('\t', "").replaceAll("    ", "");
+	  });
+
 	eleventyConfig.addShortcode("blogvid", function(name, alt) {
 		const e = this.page.url.split('/').filter(e => e.length > 1);
 		const slug = e[e.length-1];
