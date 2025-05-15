@@ -11,20 +11,28 @@ date: Created
 {% endblock %}
 
 {% block body %}
-	<!-- TODO: Use "date < new Date('2025-05-10')" to compare the date and add a notice if a blog post was made before the website was made. -->
 
 	<div class="article-header">
 		<img src="/assets/blog/{{slugcat | slugify}}/cover.webp" class="article-cover"/>
 		<h1 class="article-title">{{ title }}</h1>
 		<div class="article-metadata">
 			<span class="article-author">By: {{ author }}</span>
-			<span class="article-date" title="{{page.date.toUTCString()}}">
+			<span class="article-date">
 				{{page.date.toLocaleString("en-us", { year:"numeric", month:"short", day:"numeric" })}}
 			</span>
 		</div>
 	</div>
 
 	<div class="article-content">
+		{% if isRetroactive %}
+			<div class="notice-panel info" style="margin-bottom: 1rem">
+				<div class="notice-header">NOTE:</div>
+				<div class="notice-message">
+					This blog post was written retroactively to document events from GodSVG's early development history.
+				</div>
+			</div>
+		{% endif %}
+
 		<div class="article-html">
 			{{ content | safe }}
 		</div>
@@ -43,15 +51,17 @@ date: Created
 					{% endif %}
 					<div style="margin: 1rem">
 						{% include "data/downloads.njk" %}
-						{% for platform, release in downloads(release) %}
-							<div style="display: block">
-								<img src="/assets/platforms_{{platform}}.svg" alt="_" class="solo-platform-icon">
-								<span>{{platformInfo.displayNames[platform]}}</span>
-								<a href="{{release}}" class="btn btn-download release-download" version="{{release}}">
-									<span id="dropbtn-text">Download</span>
-								</a>
-							</div>
-						{% endfor %}
+						<div class="downloads-container">
+							{% for platform, release in downloads(release) %}
+								<div class="download-info">
+									<img src="/assets/platforms_{{platform}}.svg" alt="{{platform}} icon">
+									<p>{{platformInfo.displayNames[platform]}}</p>
+									<a href="{{release}}" class="btn btn-download" version="{{release}}">
+										<span id="dropbtn-text">Download</span>
+									</a>
+								</div>
+							{% endfor %}
+						</div>
 					</div>
 				</div>
 			{% endif %}
@@ -59,7 +69,7 @@ date: Created
 			<div>
 				<h1>Support</h1>
 				<div class="support-panel">
-					<p>Many thanks to everyone who has donated to this project! These donations, while currently small, have allowed me to dedicate a lot more time to GodSVG while balancing other responsibilities; the project would be far behind without them. If you find GodSVG valuable and are able to donate, I would be very grateful!</p>
+					<p class="support-panel-paragraph">Many thanks to everyone who has donated to this project! These donations, while currently small, have allowed me to dedicate a lot more time to GodSVG while balancing other responsibilities. Without them, the project would be far behind where it is today. If you find GodSVG valuable and are able to donate, I would be very grateful!</p>
 					{% include "donation_widget.njk" %}
 				</div>
 			</div>

@@ -17,11 +17,11 @@ title: Releases - GodSVG
 					{% if ("/article/" + (version | slugify)) | pageExists %}
 						<a href="/article/{{version | slugify}}" class="btn btn-notes">Release Notes</a>
 					{% endif %}
-					<div class="dropdown">
-						<a class="btn btn-download release-download" version="{{version}}">
+					<details class="dropdown">
+						<summary class="btn btn-download release-download" version="{{version}}">
 							<span id="dropbtn-text">Downloads</span>
 							<img style="margin-left: 8px" alt="" src="/assets/chevron.svg" />
-						</a>
+						</summary>
 						<div class="dropdown-content">
 							{% for platform in release.platforms %}
 								<a href="{{downloads(version)[platform]}}" platform="{{platform}}" class="platform-option" download>
@@ -30,7 +30,7 @@ title: Releases - GodSVG
 								</a>
 							{% endfor %}
 						</div>
-					</div>
+					</detals>
 				</div>
 			</div>
 		{% endfor %}
