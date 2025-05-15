@@ -37,7 +37,7 @@ In the general settings, a new option was added by {% gh "Kiisu-Master" %}. This
 
 In alpha 1, you could only move circles, ellipses, and rectangles around using the handles in the viewport. As shown in the image below, this prerelease implemented a few more handles for adjusting their geometry.
 
-{% blogimg "auxiliary_handles.webp", "Image that shows off the auxiliary handles of a circle, ellipse, and rectangle" %}
+{% blogcompare "Before", "auxiliary_handles_before.webp", "Image before the new auxiliary handles", "After", "auxiliary_handles_after.webp", "Image that shows off the auxiliary handles of a circle, ellipse, and rectangle" %}
 
 # New ways to open files
 
