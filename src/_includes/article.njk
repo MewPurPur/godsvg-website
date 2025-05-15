@@ -7,7 +7,7 @@ date: Created
 
 {% block style %}
 	<link rel="stylesheet" type="text/css" href="/styles/article.scss">
-	<link rel="stylesheet" type="text/css" href="/templates/donation_widget.scss">
+	<link rel="stylesheet" type="text/css" href="/styles/includes/downloads.scss">
 {% endblock %}
 
 {% block body %}
@@ -43,8 +43,14 @@ date: Created
 					{% endif %}
 					<div style="margin: 1rem">
 						{% include "data/downloads.njk" %}
-						{% for key, platform in downloads(release) %}
-							<a href="{{platform}}" style="display: block">Download for {{key | capitalize}}</a>
+						{% for platform, release in downloads(release) %}
+							<div style="display: block">
+								<img src="/assets/platforms_{{platform}}.svg" alt="_" class="solo-platform-icon">
+								<span>{{platformInfo.displayNames[platform]}}</span>
+								<a href="{{release}}" class="btn btn-download release-download" version="{{release}}">
+									<span id="dropbtn-text">Download</span>
+								</a>
+							</div>
 						{% endfor %}
 					</div>
 				</div>
