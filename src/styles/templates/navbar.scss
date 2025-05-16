@@ -1,8 +1,10 @@
 @use "sass:color";
 @use "scss/theme" as *;
 
+$navbar-color: #1a1c1e;
+
 .nav-container {
-	background-color: #1a1c1e;
+	background-color: $navbar-color;
 	width: 100%;
 	padding: 0.5rem 0;
 	margin-bottom: 1rem;
@@ -52,7 +54,7 @@
 }
 
 .nav-link {
-	color: #fff;
+	color: color.adjust(#fff, $lightness: -10%);
 	text-decoration: none;
 	font-size: 0.8rem;
 	font-family: 'Asap', sans-serif;
@@ -60,13 +62,21 @@
 	border-radius: 4px;
 
 	&:hover {
-		background-color: rgba(255, 255, 255, 0.1);
+		background-color: rgba(255, 255, 255, 0.05);
 		color: #fff;
 		text-decoration: none;
 	}
 
+	&:active {
+		background-color: rgba(255, 255, 255, 0.15);
+		color: #fff;
+		text-decoration: none;
+	}
+
+	// Current link
 	&.active {
-		background-color: rgba(255, 255, 255, 0.2);
+		color: #fff;
+		background-color: rgba(255, 255, 255, 0.15);
 	}
 
 	&[href~="/editor"] {
@@ -81,18 +91,31 @@
 .hamburger {
 	display: none;
 	flex-direction: column;
-	justify-content: space-between;
-	width: 30px;
-	height: 21px;
+	justify-content: space-evenly;
+	width: 25px;
+	height: 25px;
 	cursor: pointer;
-	margin-left: 2em;
+	padding: 0.25rem;
+	border-radius: 4px;
+
+	&:hover {
+		background-color: color.adjust($navbar-color, $lightness: +7%);
+
+		span {
+			background-color: #fff;
+		}
+	}
+
+	&:active {
+		background-color: color.adjust($navbar-color, $lightness: +18%);
+	}
 
 	span {
 		display: block;
 		height: 3px;
 		width: 100%;
-		background-color: white;
 		border-radius: 3px;
+		background-color: color.adjust(#fff, $lightness: -10%);
 	}
 }
 
@@ -100,12 +123,12 @@
 	.nav-links {
 		display: none;
 		position: absolute;
-		top: 100%;
-		right: 0;
+		top: 84%;
+		right: 1rem;
 		flex-direction: column;
 		background-color: #25292e;
 		border-radius: 4px;
-		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+		box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.2);
 		z-index: 1;
 		margin: 0;
 		gap: 0;
