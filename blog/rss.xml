@@ -253,7 +253,7 @@
 <p>Elements are the most important type of XML node, but there are a few others: Comments, text, and CDATA. Text and CDATA can affect the SVG in some situations, as they can be used to provide elements such as tspan with text. However, GodSVG didn't parse these XML nodes, and this was a problem. Even though the SVG renderer doesn't support any of the elements that use them, this still meant that if you had an SVG with text elements, and you took it in and out of GodSVG, it would get corrupted.</p>
 <p>Addressing this was my main focus for this alpha release. If the SVG you import or paste into GodSVG has XML nodes other than elements, they will now no longer be omitted. Text, CDATA, and comments can also be converted between each other.</p>
 <div class="article-image">
-<img src="/assets/blog/1-0-alpha6/xml_nodes.png" alt="Image of the three XML nodes" />
+<img src="/assets/blog/1-0-alpha6/xml_nodes.webp" alt="Image of the three XML nodes" />
 </div>
 <h1>Other new things</h1>
 <p>This development cycle had a big emphasis on bugfixing, so there aren't a lot of other new features. Still, a few new features made it in - here's what’s new.</p>
