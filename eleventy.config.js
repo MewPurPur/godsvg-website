@@ -21,6 +21,7 @@ export default async function(eleventyConfig) {
 	};
 
 	// Data
+	eleventyConfig.addGlobalData("site.url", "https://godsvg.com")
 	eleventyConfig.addGlobalData("godsvg.version", "1.0-alpha8")
 
 	// Plugins
