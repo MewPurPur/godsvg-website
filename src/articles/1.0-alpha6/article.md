@@ -17,7 +17,7 @@ Elements are the most important type of XML node, but there are a few others: Co
 
 Addressing this was my main focus for this alpha release. If the SVG you import or paste into GodSVG has XML nodes other than elements, they will now no longer be omitted. Text, CDATA, and comments can also be converted between each other.
 
-{% blogimg "xml_nodes.png", "Image of the three XML nodes" %}
+{% blogimg "xml_nodes.webp", "Image of the three XML nodes" %}
 
 # Other new things
 
