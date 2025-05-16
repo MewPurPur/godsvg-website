@@ -50,7 +50,8 @@ export default async function(eleventyConfig) {
 	// Dynamic collections
 	eleventyConfig.addCollection("webPages", function(collectionsApi) {
 		return collectionsApi.getAll()
-			.filter(item => item.url.endsWith('/') || item.url.endsWith("html"));
+			.filter(item => item.url.endsWith('/') || item.url.endsWith("html"))
+			.filter(item => !["/404.html"].includes(item.url));
 	});
 
 	// Sass / Scss
