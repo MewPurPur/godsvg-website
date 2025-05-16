@@ -271,3 +271,13 @@ br {
 		background-color: rgba(255, 255, 255, 0.9);
 	}
 }
+
+.chevron {
+	opacity: 0.8;
+    border-right: 3px solid;
+    border-bottom: 3px solid;
+	margin-bottom: 1px;
+    width: 7.5px;
+    height: 7.5px;
+    transform: rotate(45deg);
+}
