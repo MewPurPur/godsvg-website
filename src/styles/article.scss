@@ -151,6 +151,7 @@ $max-width: min(960px, calc(100% - 48px));
 	display: flex;
 	flex-direction: column;
 	gap: 0.25rem;
+	max-width: 300px;
 }
 
 .download-info {
@@ -169,6 +170,10 @@ $max-width: min(960px, calc(100% - 48px));
 		font-weight: 700;
 		margin: 0;
 		margin-right: 0.7rem;
+	}
+
+	a {
+		margin-left: auto;
 	}
 }
 
