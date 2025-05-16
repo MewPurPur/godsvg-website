@@ -36,6 +36,10 @@ export default async function(eleventyConfig) {
 			return collectionUrl == argUrl;
 		});
 	});
+	eleventyConfig.addAsyncShortcode("fetch", async function(url, type="text") {
+		const page = await fetch(url);
+		return await page.text();
+	});
 
 	// Assets
 	eleventyConfig.addPassthroughCopy("src/assets");
