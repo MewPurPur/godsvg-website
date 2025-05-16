@@ -4,6 +4,7 @@ import path from "node:path";
 import * as sass from "sass";
 import markdownIt from "markdown-it";
 import fs from "node:fs";
+import htmlmin from "html-minifier-terser";
 
 /** @param {import("@11ty/eleventy").UserConfig} eleventyConfig */
 export default async function(eleventyConfig) {
