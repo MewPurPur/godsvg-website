@@ -47,6 +47,12 @@ export default async function(eleventyConfig) {
 	eleventyConfig.addPassthroughCopy("src/scripts");
 	eleventyConfig.addPassthroughCopy("editor");
 
+	// Dynamic collections
+	eleventyConfig.addCollection("webPages", function(collectionsApi) {
+		return collectionsApi.getAll()
+			.filter(item => item.url.endsWith('/') || item.url.endsWith("html"));
+	});
+
 	// Sass / Scss
 	eleventyConfig.addTemplateFormats("scss")
 	eleventyConfig.addExtension("scss", {
