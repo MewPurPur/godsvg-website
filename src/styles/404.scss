@@ -1,34 +1,45 @@
 @use "scss/theme" as *;
 @use "sass:color";
 
+html, body {
+	box-sizing: border-box;
+}
+
 body {
 	background-color: $background;
-	color: white;
 	font-family: $default_font;
 	text-align: center;
 	margin: 0;
+	padding: 0.5rem;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	height: 100vh;
+	min-height: 100vh;
 }
 
 h1 {
-	font-size: min(48px, 12vw);
-	margin: 0.25rem 0 1.25rem 0;
+	color: #fff;
+	font-size: 1.5rem;
+	margin-top: 0rem;
+}
+
+img {
+	margin: 0.25rem;
 }
 
 .panel {
 	background-color: color.adjust($background, $lightness: 5%);
 	border-radius: 10px;
-	padding: 0.75rem;
-	padding-top: 0.5rem;
+	padding: 0.5rem;
+	padding-top: 0.25rem;
+	margin: 0.25rem;
 	width: 90%;
 	max-width: 400px;
 }
 
 .panel p {
+	color: color.adjust(#fff, $lightness: -10%);
 	font-size: 0.75rem;
 	margin: 0.5rem 0;
 }
