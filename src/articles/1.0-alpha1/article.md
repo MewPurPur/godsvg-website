@@ -9,7 +9,7 @@ release: 1.0-alpha1
 prerelease: true
 ---
 
-A few months ago in May, I started working on an SVG editor inside Godot called GodSVG. In June, I open-sourced it. After five months of hard work and with help from a few contributors, I've made GodSVG usable and lifted all of the roadblocks to an initial alpha release. The last blocker was the lack of Undo and Redo, but now they have been implemented and I'm ready to present GodSVG to the world. 
+A few months ago in May, I started working on an SVG editor inside Godot called GodSVG. In June, I open-sourced it. After five months of hard work and with help from a few contributors, I've made GodSVG usable and lifted all of the roadblocks to an initial alpha release. The last blocker was the lack of Undo and Redo, but now they have been implemented and I'm ready to present GodSVG to the world.
 
 # A code-focused SVG editor
 

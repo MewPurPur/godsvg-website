@@ -1,7 +1,7 @@
 @use "sass:color";
 @use "scss/theme" as *;
 
-$max-width: min(960px, 90%);
+$max-width: min(960px, calc(100% - 48px));
 
 .article-header {
 	max-width: $max-width;
@@ -21,7 +21,7 @@ $max-width: min(960px, 90%);
 	margin: auto;
 	width: $max-width;
 	background-color: color.adjust($background, $lightness: -1.5%);
-	padding: 20pt;
+	padding: 24px;
 
 	// Custom markdown styling
 	p {
@@ -39,6 +39,7 @@ $max-width: min(960px, 90%);
 	}
 
 	ul {
+		padding-left: 1rem;
 		margin-top: -0.25rem;
 		color: color.adjust(#fff, $lightness: -15%);
 		font-size: 0.6rem;
@@ -63,7 +64,7 @@ $max-width: min(960px, 90%);
 	align-items: center;
 	font-weight: 500;
 	color: color.adjust(#fff, $lightness: -40%);
-	font-size: 0.9rem;
+	font-size: 0.85rem;
 }
 
 .article-author {
@@ -121,6 +122,7 @@ $max-width: min(960px, 90%);
 	height: auto;
 	user-select: none;
 	display: block;
+	margin-bottom: 0.25rem;
 }
 
 .article-compare.article-compare-count-3 .article-compare-content {

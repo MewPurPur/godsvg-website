@@ -4,39 +4,39 @@
 			const githubBtn = document.getElementById("github-btn");
 			const kofiBtn = document.getElementById("kofi-btn");
 			const patreonBtn = document.getElementById("patreon-btn");
-			
+
 			const defaultMessage = document.getElementById("default-message");
 			const githubDetails = document.getElementById("github-details");
 			const kofiDetails = document.getElementById("kofi-details");
 			const patreonDetails = document.getElementById("patreon-details");
-			
+
 			function hideAllDetails() {
 				defaultMessage.style.display = "block";
 				githubDetails.style.display = "none";
 				kofiDetails.style.display = "none";
 				patreonDetails.style.display = "none";
 			}
-			
+
 			hideAllDetails();
-			
+
 			githubBtn.addEventListener("mouseenter", function() {
 				hideAllDetails();
 				defaultMessage.style.display = "none";
 				githubDetails.style.display = "block";
 			});
-			
+
 			kofiBtn.addEventListener("mouseenter", function() {
 				hideAllDetails();
 				defaultMessage.style.display = "none";
 				kofiDetails.style.display = "block";
 			});
-			
+
 			patreonBtn.addEventListener("mouseenter", function() {
 				hideAllDetails();
 				defaultMessage.style.display = "none";
 				patreonDetails.style.display = "block";
 			});
-			
+
 			const donateButtons = document.querySelectorAll(".donation-button");
 			donateButtons.forEach(button => {
 				button.addEventListener("mouseleave", function(e) {
@@ -51,26 +51,26 @@
 	<link rel="stylesheet" type="text/css" href="/styles/templates/donation_widget.scss">
 
 	<div class="donation-header">Donation platforms</div>
-	
+
 	<div class="donation-buttons">
 		<a href="https://github.com/sponsors/MewPurPur" class="donation-button" id="github-btn">
 			<img class="social-icon" src="/assets/donate_github_sponsors.svg" alt="Github Sponsors logo">
 		</a>
-		
+
 		<a href="https://ko-fi.com/mewpurpur" class="donation-button" id="kofi-btn">
 			<img class="social-icon" src="/assets/donate_ko_fi.svg" alt="Ko-Fi logo">
 		</a>
-		
+
 		<a href="https://www.patreon.com/GodSVG" class="donation-button" id="patreon-btn">
 			<img class="social-icon" src="/assets/donate_patreon.svg" alt="Patreon logo">
 		</a>
 	</div>
-	
+
 	<div class="platform-details-container">
 		<div id="default-message" class="hover-info" style="display: block">
 			Hover a platform for details
 		</div>
-		
+
 		<div class="platform-details" id="github-details">
 			<div class="platform-name">Github Sponsors:</div>
 			<ul class="platform-points">
@@ -79,7 +79,7 @@
 				<li class="list-pro">Can donate an arbitrary amount</li>
 			</ul>
 		</div>
-		
+
 		<div class="platform-details" id="kofi-details">
 			<div class="platform-name">Ko-Fi:</div>
 			<ul class="platform-points">
@@ -88,7 +88,7 @@
 				<li class="list-con">No perks</li>
 			</ul>
 		</div>
-		
+
 		<div class="platform-details" id="patreon-details">
 			<div class="platform-name">Patreon:</div>
 			<ul class="platform-points">

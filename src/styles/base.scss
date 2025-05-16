@@ -88,7 +88,7 @@ br {
 	flex-direction: column;
 	align-items: center;
 	margin: 0.4rem;
-	
+
 	span {
 		margin: 0.1rem;
 	}
@@ -265,7 +265,7 @@ br {
 	&:hover {
 		background-color: rgba(255, 255, 255, 0.5);
 	}
-	
+
 	&.active {
 		cursor: auto;
 		background-color: rgba(255, 255, 255, 0.9);

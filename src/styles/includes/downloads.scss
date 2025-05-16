@@ -32,7 +32,7 @@
 	border-radius: 5px;
 	height: 70%;
 	display: flex;
-	align-items: center;    
+	align-items: center;
 	list-style: none;
 	min-width: 180px;
 }
@@ -126,7 +126,7 @@
 		background-color: $button_hover;
 		text-decoration: none;
 	}
-	
+
 	.small-text {
 		font-size: 0.45rem;
 		white-space: nowrap;
@@ -170,7 +170,7 @@
 		border-top-left-radius: 6px;
 		border-top-right-radius: 6px;
 	}
-	
+
 	&:last-child {
 		border-bottom-left-radius: 6px;
 		border-bottom-right-radius: 6px;
@@ -209,34 +209,6 @@
 }
 
 @media (max-width: 720px) {
-	.release-box {
-		flex-direction: column;
-		align-items: flex-start;
-		padding: 15px;
-	}
-
-	.release-actions {
-		gap: 0.25rem;
-	}
-
-	.release-info {
-		flex-direction: row;
-		align-items: center;
-		width: 100%;
-		justify-content: space-between;
-		margin-bottom: 0.5rem;
-	}
-
-	.release-date {
-		margin-top: 0;
-		margin-right: 0.3rem;
-	}
-
-	.release-actions {
-		width: 100%;
-		justify-content: space-evenly;
-	}
-
 	.btn, .btn-download {
 		justify-content: center;
 	}

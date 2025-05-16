@@ -21,7 +21,7 @@ Other aspects of GodSVG have not yet been optimized for touch input, so the mobi
 
 As you can imagine, maintaining a mobile build is difficult because of how different touchscreens are. I'm worried that limiting my reliance on hovering and keyboards, even when they seem optimal for a UI, may come at the expense of Desktop builds, so it's possible I will discontinue Android builds in the future. It depends on whether mobile development can proceed without noticeably compromising the desktop experience.
 
-Development for mobile will for now continue on another repository that's not managed by {% gh "syntaxerror247" %} and not me: https://github.com/syntaxerror247/GodSVG-Mobile. Riskier features will be implemented there first, but they may eventually be implemented in the main repository too. This will allow me to focus on the big changes I've planned for Desktop platforms, without worrying about breaking the app on Android. 
+Development for mobile will for now continue on another repository that's not managed by {% gh "syntaxerror247" %} and not me: https://github.com/syntaxerror247/GodSVG-Mobile. Riskier features will be implemented there first, but they may eventually be implemented in the main repository too. This will allow me to focus on the big changes I've planned for Desktop platforms, without worrying about breaking the app on Android.
 
 # Other new things
 
@@ -33,7 +33,7 @@ The export menu was reworked. The preview now accurately reflects how the file w
 
 {% blogcompare "Before", "export_menu_before.webp", "Image of the old export menu", "After", "export_menu_after.webp", "Image of the new export menu" %}
 
-Partial support for the "currentColor" keyword and the "color" attribute has been introduced. Although they can't be added through the GUI yet, they will work fine if the imported SVGs have them or you add them through the code editor.
+Partial support for the "currentColor" keyword and the "color" attribute has been introduced. Although they can't be added through the GUI yet, they will work fine if the imported SVGs have them or if you add them through the code editor.
 
 The robustness of savefiles has been improved. There are now far fewer file operations on startup, which may slightly help with performance and hardware wear (the effects for both seemed minimal, but this is still future-proofing). The changes should also improve the backwards compatibility to alpha 7 from future versions.
 
@@ -43,7 +43,7 @@ I've fixed a lot of bugs in this prerelease. GodSVG is actually becoming quite s
 
 **Major bugfixes:**
 - In the last alpha, I promised that I've fixed precision issues (like coordinates becoming 7.499998 instead of 7.5). But transform attributes could still cause issues. That's now been fully resolved.
-- Fixed issue where a capital exponent "E" wouldn't be parsed correctly, resulting in some broken imported SVGs.
+- Fixed issue where a capital exponent "E" wouldn't be parsed correctly, resulting in some SVGs breaking when imported.
 - Fixed various issues with UI scale. Hopefully everything is now resolved!
 - Tightened up many quirks of how colors are handled and presented.
 - Fixed various usability issues with attribute fields of the root SVG element.

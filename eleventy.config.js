@@ -11,7 +11,7 @@ export default async function(eleventyConfig) {
 	const returnData = {
 		dir: {
 			input: "src",
-      		includes: "_includes",
+			includes: "_includes",
 			data: "_data",
 			output: "_site"
 		},
@@ -86,14 +86,14 @@ export default async function(eleventyConfig) {
 		const slug = e[e.length-1];
 
 		const items = args.length % 3 === 0 ? args : args.slice(0, args.length - 1);
-		
+
 		let html = '<div class="article-compare"><div class="article-compare-content">';
 
 		for (let i = 0; i < items.length; i += 3) {
 			const label = items[i];
 			const img = items[i + 1];
 			const alt = items[i + 2];
-			
+
 			html += `
 				<div class="article-compare-side">
 				<div class="article-compare-label">${label}</div>
@@ -104,7 +104,7 @@ export default async function(eleventyConfig) {
 
 		html += '</div></div>';
 		return html.replaceAll('\t', "").replaceAll("    ", "");
-	  });
+	});
 
 	eleventyConfig.addShortcode("blogvid", function(name, alt) {
 		const e = this.page.url.split('/').filter(e => e.length > 1);
@@ -123,7 +123,7 @@ export default async function(eleventyConfig) {
 	eleventyConfig.setLibrary("md", markdownIt({
 		html: true,
 		breaks: true,
-		linkify: true,
+		linkify: false,
 	}));
 	eleventyConfig.amendLibrary("md", (mdLib) => mdLib.enable("code"));
 	const articlesPath = path.join(returnData.dir.input, "articles");
