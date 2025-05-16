@@ -21,6 +21,7 @@ export default async function(eleventyConfig) {
 	};
 
 	// Data
+	eleventyConfig.addGlobalData("site.url", "https://godsvg.com")
 	eleventyConfig.addGlobalData("godsvg.version", "1.0-alpha8")
 
 	// Plugins
@@ -45,6 +46,13 @@ export default async function(eleventyConfig) {
 	eleventyConfig.addPassthroughCopy("src/assets");
 	eleventyConfig.addPassthroughCopy("src/scripts");
 	eleventyConfig.addPassthroughCopy("editor");
+
+	// Dynamic collections
+	eleventyConfig.addCollection("webPages", function(collectionsApi) {
+		return collectionsApi.getAll()
+			.filter(item => item.url.endsWith('/') || item.url.endsWith("html"))
+			.filter(item => !["/404.html"].includes(item.url));
+	});
 
 	// Sass / Scss
 	eleventyConfig.addTemplateFormats("scss")
@@ -151,22 +159,24 @@ export default async function(eleventyConfig) {
 	});
 
 	// Minifying on release (https://github.com/terser/html-minifier-terser?tab=readme-ov-file#options-quick-reference)
-	if (!isDebug) {
-		eleventyConfig.addTransform("htmlmin", function (content) {
-			if ((this.page.outputPath || "").endsWith(".html")) {
-				let minified = htmlmin.minify(content, {
-					useShortDoctype: true,
-					removeComments: true,
-					collapseWhitespace: true,
-					collapseBooleanAttributes: true,
-					minifyCSS: true,
-					minifyJS: true
-				});
-				return minified;
-			}
-			return content;
-		});
-	}
+	eleventyConfig.addTransform("htmlmin", function (content) {
+		const out = (this.page.outputPath || "");
+		if (out.endsWith(".html") || out.endsWith(".xml")) {
+			const minified = htmlmin.minify(content, {
+				useShortDoctype: true,
+				removeComments: true,
+				collapseWhitespace: !isDebug,
+				collapseInlineTagWhitespace: true,
+				preserveLineBreaks: true,
+				conservativeCollapse: true,
+				collapseBooleanAttributes: true,
+				minifyCSS: true,
+				minifyJS: true,
+			});
+			return minified;
+		}
+		return content;
+	});
 
 	return returnData;
 };
