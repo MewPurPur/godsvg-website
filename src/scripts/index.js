@@ -38,7 +38,7 @@ function toggleContent(tab_idx) {
 	const faqContent = document.getElementById("faq-content");
 	const donateContent = document.getElementById("donate-content");
 	const tabs = document.querySelectorAll(".tab");
-	
+
 	if (tab_idx === 0) {
 		featuresContent.style.display = "block";
 		faqContent.style.display = "none";
@@ -52,7 +52,7 @@ function toggleContent(tab_idx) {
 		faqContent.style.display = "none";
 		donateContent.style.display = "block";
 	}
-	
+
 	tabs.forEach(function(tab, index) {
 		if (index === tab_idx) {
 			tab.classList.add("selected");
@@ -72,7 +72,7 @@ function initCarousel() {
 	const rightArrow = document.querySelector(".carousel-arrow-right");
 	let currentIndex = 0;
 	const totalImages = images.length;
-	
+
 	// Update active image and dot.
 	function updateCarousel(newIndex) {
 		images[currentIndex].classList.remove("active");
@@ -81,15 +81,15 @@ function initCarousel() {
 		images[currentIndex].classList.add("active");
 		dots[currentIndex].classList.add("active");
 	}
-	
+
 	function goNext() {
 		updateCarousel((currentIndex + 1) % totalImages);
 	}
-	
+
 	function goPrev() {
 		updateCarousel((currentIndex + totalImages - 1) % totalImages);
 	}
-	
+
 	leftArrow.addEventListener("click", goPrev);
 	rightArrow.addEventListener("click", goNext);
 	dots.forEach(dot => {
@@ -97,11 +97,11 @@ function initCarousel() {
 			updateCarousel(Number(this.getAttribute("data-index")));
 		});
 	});
-	
+
 	// Touch swipe support for mobile.
 	let touchStartX = 0;
 	let touchEndX = 0;
-	
+
 	const carouselContainer = document.querySelector(".carousel-container");
 	carouselContainer.addEventListener("touchstart", function(e) {
 		touchStartX = e.changedTouches[0].screenX;

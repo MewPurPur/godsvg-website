@@ -27,7 +27,7 @@ UI Scale has been reworked into a single setting that only allows the valid opti
 
 GodSVG is built in Godot Engine, which recently released a new 4.4 version, and we've moved to it. This resulted in significant performance improvements (some of them thanks to my own contributions!). It also updated the SVG renderer (ThorVG), resulting in significant fixes and improvements to SVG rendering and rasterizing.
 
-{% blogcompare "Ground truth", "raster_ground_truth.webp", "Image of an SVG without rasterization", "Before", "raster_before.webp", "Image of the old rasterization", "After", "raster_after.webp", "Image of the new rasterization" %}
+{% blogcompare "Reality", "raster_reality.webp", "Image of an SVG without rasterization", "Before", "raster_before.webp", "Image of the old rasterization", "After", "raster_after.webp", "Image of the new rasterization" %}
 
 **And now for a lightning round:**
 - Implemented a "Show SVG in File Manager" option.
@@ -52,9 +52,9 @@ This prerelease went through an immense bugfixing stage. Let's first go through 
 
 Previously, the "View in List" functionality did nothing with path commands and polygon/polyline points. This has now been fixed.
 
-The "Export" formatter settings used to have no effect, aside from the XML formatting settings (which is why I missed this to begin with). This has now been fixed.
+The "Export" formatter settings used to have no effect, aside from the XML formatting settings (which is why I didn't notice this bug to begin with). This has now been fixed.
 
-Uppercase "E" for exponent notation is a valid syntax in pathdata and transform lists, but GodSVG didn't recognize it, resulting in some imported SVGs getting broken. This will no longer happen. 
+Uppercase "E" for exponent notation is a valid syntax in pathdata and transform lists, but GodSVG didn't recognize it, resulting in some imported SVGs getting broken. This will no longer happen.
 
 When the viewbox of a graphic was different from its width and height, shapes added from the viewport's right-click popup were not using the correct position. This has been fixed.
 
