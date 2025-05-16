@@ -1,4 +1,4 @@
-# Converts PNG to WebP and MP4 to WebM.
+# Converts PNG to WebP and MP4 to WebM. May need to run multiple times if there are errors (but it eventually converts everything).
 
 find src -type f -name "*.png" | while read file; do
 	ffmpeg -hide_banner -stats -i "$file" -lossless 1 "${file%.png}.webp" && rm "$file"
