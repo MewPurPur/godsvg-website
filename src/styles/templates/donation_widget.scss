@@ -21,6 +21,13 @@ $con-color: #e99;
 	border: 2px solid $frame-border;
 	border-radius: 6px;
 	background-color: transparent;
+
+	.platform-points {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
 }
 
 .donation-header {
@@ -88,15 +95,11 @@ $con-color: #e99;
 	margin-bottom: 8px;
 }
 
-.platform-points {
-	margin: 0;
-	padding: 0;
-	list-style: none;
-}
-
 .list-pro {
 	color: $pro-color;
 	margin-bottom: 4px;
+	font-size: 0.55rem;
+	line-height: 1.15;
 
 	&::before {
 		content: "+";
@@ -109,6 +112,8 @@ $con-color: #e99;
 .list-con {
 	color: $con-color;
 	margin-bottom: 4px;
+	font-size: 0.55rem;
+	line-height: 1.15;
 
 	&::before {
 		content: "–";
