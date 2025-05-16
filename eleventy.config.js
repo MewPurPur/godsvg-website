@@ -158,22 +158,24 @@ export default async function(eleventyConfig) {
 	});
 
 	// Minifying on release (https://github.com/terser/html-minifier-terser?tab=readme-ov-file#options-quick-reference)
-	if (!isDebug) {
-		eleventyConfig.addTransform("htmlmin", function (content) {
-			if ((this.page.outputPath || "").endsWith(".html")) {
-				let minified = htmlmin.minify(content, {
-					useShortDoctype: true,
-					removeComments: true,
-					collapseWhitespace: true,
-					collapseBooleanAttributes: true,
-					minifyCSS: true,
-					minifyJS: true
-				});
-				return minified;
-			}
-			return content;
-		});
-	}
+	eleventyConfig.addTransform("htmlmin", function (content) {
+		const out = (this.page.outputPath || "");
+		if (out.endsWith(".html") || out.endsWith(".xml")) {
+			const minified = htmlmin.minify(content, {
+				useShortDoctype: true,
+				removeComments: true,
+				collapseWhitespace: !isDebug,
+				collapseInlineTagWhitespace: true,
+				preserveLineBreaks: true,
+				conservativeCollapse: true,
+				collapseBooleanAttributes: true,
+				minifyCSS: true,
+				minifyJS: true,
+			});
+			return minified;
+		}
+		return content;
+	});
 
 	return returnData;
 };
