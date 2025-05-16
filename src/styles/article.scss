@@ -148,27 +148,27 @@ $max-width: min(960px, calc(100% - 48px));
 }
 
 .downloads-container {
-	display: flex;
-	flex-direction: column;
-	gap: 0.25rem;
-}
+	table {
+		width: 350px;
+		border-spacing: 0.5rem;
+		background-color: color.adjust($background, $lightness: +2%);
+		tr {
+			vertical-align: middle;
+			img {
+				width: 1.25rem;
+				height: 1.25rem;
+				margin: 0;
+				padding: 0;
+			}
 
-.download-info {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-
-	img {
-		width: 1.25rem;
-		height: 1.25rem;
-		margin-right: 0.4rem;
-	}
-
-	p {
-		font-size: 0.7rem;
-		font-weight: 700;
-		margin: 0;
-		margin-right: 0.7rem;
+			p {
+				font-size: 0.7rem;
+				font-weight: 700;
+				margin: 0;
+				padding: 0;
+				margin-right: 0.7rem;
+			}
+		}
 	}
 }
 

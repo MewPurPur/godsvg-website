@@ -52,15 +52,23 @@ date: Created
 					<div style="margin: 1rem">
 						{% include "data/downloads.njk" %}
 						<div class="downloads-container">
-							{% for platform, release in downloads(release) %}
-								<div class="download-info">
-									<img src="/assets/platforms_{{platform}}.svg" alt="{{platform}} icon">
-									<p>{{platformInfo.displayNames[platform]}}</p>
-									<a href="{{release}}" class="btn btn-download" version="{{release}}">
-										<span id="dropbtn-text">Download</span>
-									</a>
-								</div>
-							{% endfor %}
+							<table>
+								{% for platform, release in downloads(release) %}
+									<tr>
+										<th>
+											<img src="/assets/platforms_{{platform}}.svg" alt="{{platform}} icon">
+										</th>
+										<th>
+											<p style="display: inline-block">{{platformInfo.displayNames[platform]}}</p>
+										</th>
+										<th>
+											<a href="{{release}}" class="btn btn-download" version="{{release}}">
+												<span id="dropbtn-text">Download</span>
+											</a>
+										</th>
+									</tr>
+								{% endfor %}
+							</table>
 						</div>
 					</div>
 				</div>
