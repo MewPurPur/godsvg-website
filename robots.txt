@@ -1,3 +1,5 @@
+Sitemap: https://godsvg.com/sitemap.xml
+
 User-agent: AI2Bot
 User-agent: Ai2Bot-Dolma
 User-agent: aiHitBot

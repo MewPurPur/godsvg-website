@@ -1,443 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- https://www.rfc-editor.org/rfc/rfc4287.html -->
 <feed xmlns="http://www.w3.org/2005/Atom">
-	<title>GodSVG Blog</title>
-	<link>https://www.godsvg.com</link>
-	<description>News about GodSVG releases and more</description>
-
-	
-		<entry>
-			<title>GodSVG&#39;s first development build is out!</title>
-			<link href="/article/1-0-alpha1" />
-			<author>MewPurPur</author>
-			<published>2023-12-05T00:00:00Z</published>
-			<summary>After months of hard work from me and some contributors, GodSVG is finally usable and all roadblocks to an initial alpha release have been lifted. Time to present it to the world!</summary>
-			<id>1-0-alpha1</id>
-			<content type="html" xml:lang="en"><![CDATA[ <p>A few months ago in May, I started working on an SVG editor inside Godot called GodSVG. In June, I open-sourced it. After five months of hard work and with help from a few contributors, I've made GodSVG usable and lifted all of the roadblocks to an initial alpha release. The last blocker was the lack of Undo and Redo, but now they have been implemented and I'm ready to present GodSVG to the world.</p>
-<h1>A code-focused SVG editor</h1>
-<p>GodSVG's main goal is to try to be the best SVG editor out there for directly working with the code and structure of SVG files. It represents the SVG hierarchy exactly as it is and allows you to edit the SVG's text and see changes in real time. This should make GodSVG great for creating simple SVGs and for optimizing them, although this potential is not realized yet.</p>
-<div class="article-image">
-<img src="/assets/blog/1-0-alpha1/code_selection.webp" alt="Image of doing a code selection" />
-</div>
-<h1>Other editing methods</h1>
-<p>Aside from the code editor, there is an inspector which allows you to edit some attributes with the help of various widgets. Color fields come with a color wheel widget, as well as palettes that can be adjusted in the settings. The path editor took especially long to get right: It explicitly represents the pathdata as a list of path commands, allowing you to precisely edit the numbers.</p>
-<div class="article-image">
-<img src="/assets/blog/1-0-alpha1/path_element.webp" alt="Image of a path element" />
-</div>
-<p>And of course, there is the viewport, which can be panned and zoomed, and it has handles for adjusting the geometry of paths and other shapes. It has a convenient adaptable grid, a checkerboard pattern, options for hiding the grid and the handles, and for viewing the rasterized SVG.</p>
- ]]></content>
-		</entry>
-	
-		<entry>
-			<title>New prerelease: GodSVG 1.0-alpha2</title>
-			<link href="/article/1-0-alpha2" />
-			<author>MewPurPur</author>
-			<published>2023-12-21T00:00:00Z</published>
-			<summary>After only two weeks, there are already enough new things for a new alpha build. GodSVG is now out for web and MacOS!</summary>
-			<id>1-0-alpha2</id>
-			<content type="html" xml:lang="en"><![CDATA[ <p>It has only been two weeks since the first development build of GodSVG, but thanks to open-source contributions, there are already enough new things for a new alpha build.</p>
-<h1>New web editor</h1>
-<p>With help from <a href="https://github.com/aladvs" target="_blank" rel="noopener noreferrer">aladvs</a>, I managed to test out and export GodSVG for web. This enables you to use GodSVG without having to download it. The web version's performance is significantly worse and some features are going to be limited, but I'm sure it will be preferred by some users.</p>
-<p><em>At the time of the release, the web editor was experimental and on a different URL; now it's stable and can be found at <a href="https://godsvg.com/editor">https://godsvg.com/editor</a>.</em></p>
-<h1>New MacOS build</h1>
-<p>With help from <a href="https://github.com/aaronfranke" target="_blank" rel="noopener noreferrer">aaronfranke</a>, I've managed to test out and export GodSVG for MacOS. So if you wanted to use GodSVG on your Mac, now you can!</p>
-<h1>Automated attribute formatting</h1>
-<p>Some options have been implemented for formatting attributes. They will be expanded in the future to allow for optimizing SVGs, by using the most compact formatting options. To access them, click the cog button above the code editor.</p>
-<div class="article-image">
-<img src="/assets/blog/1-0-alpha2/autoformatting.webp" alt="Image of the autoformatter" />
-</div>
-<h1>New option for wrap-around panning</h1>
-<p>In the general settings, a new option was added by <a href="https://github.com/Kiisu-Master" target="_blank" rel="noopener noreferrer">Kiisu-Master</a>. This option is disabled by default, and it's not available on the web editor as it's impossible to implement there. When enabled, this setting makes it so when you pan in the viewport, the cursor will now teleport when it reaches the edges. See it in action below:</p>
-<div class="article-video">
-<video controls preload="metadata" aria-label="Video showcasing the Wrap Mouse setting">
-<source src="/assets/blog/1-0-alpha2/wrap_mouse.webm">
-<p>Video showcasing the Wrap Mouse setting</p>
-</video>
-</div>
-<h1>Handles for adjusting circles and ellipse radii, and rect sides</h1>
-<p>In alpha 1, you could only move circles, ellipses, and rectangles around using the handles in the viewport. As shown in the image below, this prerelease implemented a few more handles for adjusting their geometry.</p>
-<div class="article-compare"><div class="article-compare-content">
-<div class="article-compare-side">
-<div class="article-compare-label">Before</div>
-<img src="/assets/blog/1-0-alpha2/auxiliary_handles_before.webp" alt="Image before the new auxiliary handles" />
-</div>
-<div class="article-compare-side">
-<div class="article-compare-label">After</div>
-<img src="/assets/blog/1-0-alpha2/auxiliary_handles_after.webp" alt="Image that shows off the auxiliary handles of a circle, ellipse, and rectangle" />
-</div>
-</div></div>
-<h1>New ways to open files</h1>
-<p>Thanks to <a href="https://github.com/ilikefrogs101" target="_blank" rel="noopener noreferrer">ilikefrogs101</a>, SVG files can now be opened through the CLI, which also enables GodSVG to be used in &quot;Open with...&quot; dialogs. Also, thanks to <a href="https://github.com/Kiisu-Master" target="_blank" rel="noopener noreferrer">Kiisu-Master</a>, you can now drag and drop files inside the GodSVG window.</p>
-<h1>Other improvements</h1>
-<p>There have also been various improvements to input handling in the viewport thanks to <a href="https://github.com/Kiisu-Master" target="_blank" rel="noopener noreferrer">Kiisu-Master</a>. Also, I have implemented the ability to convert different types of elements, for example converting a circle into an ellipse or a rounded rectangle. Aside from this, various little bugfixes and tweaks have been made to improve the experience of using GodSVG.</p>
- ]]></content>
-		</entry>
-	
-		<entry>
-			<title>New prerelease: GodSVG 1.0-alpha3</title>
-			<link href="/article/1-0-alpha3" />
-			<author>MewPurPur</author>
-			<published>2024-04-18T00:00:00Z</published>
-			<summary>After four months of development, I&#39;m proud to present GodSVG&#39;s next big step forward, a prerelease with big improvements in all areas.</summary>
-			<id>1-0-alpha3</id>
-			<content type="html" xml:lang="en"><![CDATA[ <p>After four months of development, I'm proud to present GodSVG's next big step forward: Alpha 3. This prerelease has big improvements in all areas.</p>
-<h1>Viewport improvements</h1>
-<p>Finally, I've implemented infinite zoom - something every self-respecting SVG editor should have. Until now, zooming in could easily get very laggy, and big SVGs couldn't even be fully zoomed in. Now SVGs remain crisp at every zoom level and don't cause lag spikes.</p>
-<p>I've also made handles in the viewport far more useful. Right-clicking them now opens the same context popup as in the inspector. Shapes can also now be added at a desired position by right-clicking the empty space of the viewport.</p>
-<div class="article-video">
-<video controls preload="metadata" aria-label="Video of adding and adjusting a shape from the viewport">
-<source src="/assets/blog/1-0-alpha3/viewport_actions.webm">
-<p>Video of adding and adjusting a shape from the viewport</p>
-</video>
-</div>
-<p><a href="https://github.com/Kiisu-Master" target="_blank" rel="noopener noreferrer">Kiisu-Master</a> and I also improved the viewport controls. Zooming can now be centered on the cursor, and middle mouse is now nicer to use.</p>
-<h1>Functional improvements</h1>
-<p>A number of improvements in this prerelease add new powers to GodSVG.</p>
-<p>The ability to drag and drop in the inspector has been implemented by me, <a href="https://github.com/SeremTitus" target="_blank" rel="noopener noreferrer">SeremTitus</a>, and <a href="https://github.com/Kiisu-Master" target="_blank" rel="noopener noreferrer">Kiisu-Master</a>. This finally enables you to adjust the SVG hierarchy without needing the code editor.</p>
-<div class="article-video">
-<video controls preload="metadata" aria-label="Video of using elements drag and drop">
-<source src="/assets/blog/1-0-alpha3/drag_and_drop.webm">
-<p>Video of using elements drag and drop</p>
-</video>
-</div>
-<p>I've added the ability to change the type of path commands. I've also added an initial version of an optimizer, which uses this new ability in some limited ways. Unlike attribute formatting, the &quot;Optimize&quot; action must be triggered manually.</p>
-<p>The important transform attribute has been implemented by me and <a href="https://github.com/DevPoodle" target="_blank" rel="noopener noreferrer">DevPoodle</a>. It comes with its own widget for convenience. Handles for editing it from the viewport are planned for the future.</p>
-<div class="article-image">
-<img src="/assets/blog/1-0-alpha3/transforms.webp" alt="Image of the transform field and its popup" />
-</div>
-<p>New elements can now be added in the inspector by right-clicking the empty space.</p>
-<p>The SVG renderer - <a href="https://github.com/thorvg/thorvg">ThorVG</a> - saw a lot of bugfixes in the last four months, improving the accuracy of the presented graphic and the rasterized PNGs on export.</p>
-<p>GodSVG's performance has been greatly improved. Rebuilding an SVG with a large number of paths is much faster now, as I've sped up the construction of pathdata fields considerably. This is a risky change, so I'll watch out for regressions. <a href="https://github.com/Kiisu-Master" target="_blank" rel="noopener noreferrer">Kiisu-Master</a> also fixed an issue that caused a lot of strain on the GPU on some systems.</p>
-<h1>A lot more configurability</h1>
-<p>I've reworked the UI of the settings menu, which allowed us to expand it with a lot more settings. Attribute formatting settings have been expanded and moved there, and XML formatting settings were added. I've also implemented settings for theming and I made shortcuts configurable (which also serves as documentation!)</p>
-<div class="article-video">
-<video controls preload="metadata" aria-label="Video of the new settings menu">
-<source src="/assets/blog/1-0-alpha3/settings.webm">
-<p>Video of the new settings menu</p>
-</video>
-</div>
-<p>The scaling approach of GodSVG was changed to reduce the blurriness and give the user more control over the size of the layout, thanks to a new UI scale setting implemented by <a href="https://github.com/Kiisu-Master" target="_blank" rel="noopener noreferrer">Kiisu-Master</a>.</p>
-<h1>UX improvements</h1>
-<p>I've improved the color picker by adding numbers next to the sliders for more precise configuration of colors, as well as Undo/Redo functionality.</p>
-<p>I've also improved the fallback file dialog and added an option to set it as the default. If you like it, you can now choose it over the OS file dialog in the settings.</p>
-<p>And finally, <a href="https://github.com/Kiisu-Master" target="_blank" rel="noopener noreferrer">Kiisu-Master</a> has added a Save functionality with a Ctrl+S shortcut. The implementation is a bit awkward at the moment, but it's still a quicker way to save an SVG than exporting.</p>
-<h1>Internal improvements</h1>
-<p><a href="https://github.com/Kiisu-Master" target="_blank" rel="noopener noreferrer">Kiisu-Master</a> helped me a lot with some internal improvements. Translations have been moved to the .po format, which is a much better experience for translators. There are now also workflows for continuous integration with Windows and Linux. If you're logged into Github, you can now test the latest development builds. MacOS workflows will be added soon.</p>
-<h1>Other goodies</h1>
-<ul>
-<li>The &lt;stop&gt; element has been implemented by <a href="https://github.com/RedFurryDemon" target="_blank" rel="noopener noreferrer">RedFurryDemon</a>. Although it can't be added through the GUI, this makes it easier to edit it in imported graphics or ones made through the code editor.</li>
-<li>Translations in Bulgarian and German have been available since the first alpha release, and <a href="https://github.com/Vovkiv" target="_blank" rel="noopener noreferrer">Vovkiv</a> has now also added Russian and Ukrainian.</li>
-<li>I've refined the &quot;About&quot; dialog.</li>
-<li>A lot of smaller improvements and bugfixes by me, <a href="https://github.com/Qainguin" target="_blank" rel="noopener noreferrer">Qainguin</a>, <a href="https://github.com/ilikefrogs101" target="_blank" rel="noopener noreferrer">ilikefrogs101</a>, <a href="https://github.com/Kiisu-Master" target="_blank" rel="noopener noreferrer">Kiisu-Master</a>... too many to list. I'll start listing them when GodSVG becomes more stable.</li>
-</ul>
- ]]></content>
-		</entry>
-	
-		<entry>
-			<title>New prerelease: GodSVG 1.0-alpha4</title>
-			<link href="/article/1-0-alpha4" />
-			<author>MewPurPur</author>
-			<published>2024-06-06T00:00:00Z</published>
-			<summary>A new prerelease focused on quality of life, stability, and performance.</summary>
-			<id>1-0-alpha4</id>
-			<content type="html" xml:lang="en"><![CDATA[ <h1>Rework of attribute defaults</h1>
-<p>Right now, my biggest priority is to massively rework how SVGs are handled internally. I wasn’t able to complete it for this prerelease, but I was able to salvage one small improvement from my attempts: A change to how default values are treated. Attribute fields will no longer have any text if the attribute hasn't been declared. Instead, they will show their default value as dimmed placeholder text.</p>
-<h1>Improved user experience</h1>
-<p>I worked with <a href="https://github.com/Qainguin" target="_blank" rel="noopener noreferrer">Qainguin</a> to improve exporting. Web exports have been fixed, and support for WebP and JPEG formats has been added.</p>
-<p>I've made popups display their keyboard shortcuts. This is pretty unobtrusive and allows for easier learning.</p>
-<div class="article-image">
-<img src="/assets/blog/1-0-alpha4/context_shortcuts.webp" alt="Image of shortcuts in context popups" />
-</div>
-<p>I've also made some speed optimizations for this release, which should make SVGs load ~30% faster on average. Some other changes should allow GodSVG to open much larger SVG files without crashing. <a href="https://github.com/Kiisu-Master" target="_blank" rel="noopener noreferrer">Kiisu-Master</a> and I also worked to fix some memory leaks.</p>
-<h1>Reference image</h1>
-<p>A common workflow in vector graphics is to vectorize over a background reference image. I worked with <a href="https://github.com/Qainguin" target="_blank" rel="noopener noreferrer">Qainguin</a> to implement this feature for GodSVG on all Desktop platforms. The Web implementation will be a little more difficult, the technology is not there yet. It will be implemented at a later point.</p>
-<div class="article-video">
-<video controls preload="metadata" aria-label="Video of the new reference image functionality">
-<source src="/assets/blog/1-0-alpha4/reference.webm">
-<p>Video of the new reference image functionality</p>
-</video>
-</div>
-<h1>Other goodies</h1>
-<ul>
-<li>Improvements to UI scale logic and settings (by <a href="https://github.com/aaronfranke" target="_blank" rel="noopener noreferrer">aaronfranke</a> and <a href="https://github.com/Kiisu-Master" target="_blank" rel="noopener noreferrer">Kiisu-Master</a>)</li>
-<li>Debug information accessible through F3 (by me and <a href="https://github.com/Kiisu-Master" target="_blank" rel="noopener noreferrer">Kiisu-Master</a>)</li>
-<li>&quot;Show in List&quot; functionality when right-clicking handles in the viewport (by <a href="https://github.com/WeaverSong" target="_blank" rel="noopener noreferrer">WeaverSong</a>)</li>
-<li>More shortcuts for convenience, such as Ctrl+Q (by me)</li>
-<li>Translation updates (by <a href="https://github.com/Vovkiv" target="_blank" rel="noopener noreferrer">Vovkiv</a> and <a href="https://github.com/JinEnMok" target="_blank" rel="noopener noreferrer">JinEnMok</a>)</li>
-<li>Improvements to handling SVGs without specified dimensions (by me)</li>
-<li>A lot of smaller improvements and bugfixes by me, <a href="https://github.com/Qainguin" target="_blank" rel="noopener noreferrer">Qainguin</a>, <a href="https://github.com/ilikefrogs101" target="_blank" rel="noopener noreferrer">ilikefrogs101</a>, <a href="https://github.com/Kiisu-Master" target="_blank" rel="noopener noreferrer">Kiisu-Master</a>... too many to list. Maybe I'll start listing them when GodSVG becomes more stable.</li>
-</ul>
- ]]></content>
-		</entry>
-	
-		<entry>
-			<title>New prerelease: GodSVG 1.0-alpha5</title>
-			<link href="/article/1-0-alpha5" />
-			<author>MewPurPur</author>
-			<published>2024-09-01T00:00:00Z</published>
-			<summary>This prerelease adds support for gradients, groups, percentages in numeric attributes, and much more.</summary>
-			<id>1-0-alpha5</id>
-			<content type="html" xml:lang="en"><![CDATA[ <p>GodSVG releases its fifth alpha, which includes a necessary core refactor that enables a lot of important features and bugfixes. This is the next big step towards a stable release!</p>
-<h1>Grand internal rework</h1>
-<p>In the last prerelease, I mentioned how my biggest priority was to massively rework how SVGs are handled internally. I've finally managed to do it, and this unlocked some big features.</p>
-<p>The most important change is that some attributes can now propagate, overriding the default values of nested elements. Also, elements now have a special case for calculating the transform attribute, allowing it to accumulate. These two changes finally made it possible to implement the extremely important &lt;g&gt; element. It can now be added from the &quot;Add new element&quot; popup.</p>
-<div class="article-video">
-<video controls preload="metadata" aria-label="Video of using groups">
-<source src="/assets/blog/1-0-alpha5/g.webm">
-<p>Video of using groups</p>
-</video>
-</div>
-<p>The &lt;svg&gt; element now also correctly propagates attributes when it should - something that wasn’t previously handled - fixing some longstanding issues.</p>
-<p>The data about attributes is now in a central place, which allows even for unrecognized elements to show widgets for familiar SVG attributes. For example, polygon is not implemented yet, but if you have a fill attribute in one, you'll now be able to use the color picker for it.</p>
-<p>These changes also allowed for percentages to be interpreted correctly in numeric attributes. GodSVG will now show the correct contours and handles.</p>
-<p>An attribute type for the id attribute was implemented, and with that, &lt;linearGradient&gt; and &lt;radialGradient&gt; finally became possible to implement. Both &lt;linearGradient&gt; and &lt;radialGradient&gt; can now be added from the &quot;Add new element&quot; popup, along with the &lt;stop&gt; element. Once you define some valid gradients, the palettes tab of color pickers will show them up top.</p>
-<div class="article-video">
-<video controls preload="metadata" aria-label="Video of using gradients">
-<source src="/assets/blog/1-0-alpha5/gradients.webm">
-<p>Video of using gradients</p>
-</video>
-</div>
-<p>Since some of these new elements and attributes can be tricky to use, I’ve added configuration warnings. When hovered, they will show a tooltip explaining the issue with the current configuration. For example, a &lt;stop&gt; element will now show a configuration warning if it's placed outside of a gradient.</p>
-<div class="article-image">
-<img src="/assets/blog/1-0-alpha5/config_warning.webp" alt="Image of a configuration warning tooltip" />
-</div>
-<p>Unfortunately, this internal rework may result in loss of performance and some new bugs. But I've spent so long fixing bugs that I still expect this alpha to be the most stable so far.</p>
-<h1>Formatters</h1>
-<p>SVG formatting is now handled by dedicated formatter profiles, and you can assign different ones for editing and exporting.</p>
-<p>I've also finally implemented a &quot;Pretty formatting&quot; option, which uses newlines and indentation to make editing more convenient. It's enabled by default for the Editor formatter, but not in the Export formatter which uses a compact profile by default.</p>
-<h1>Other goodies</h1>
-<ul>
-<li>When dragging element frames around, the drop indicators will now show a warning color if this is an invalid child (for example, dropping anything other than a &lt;stop&gt; element under a gradient).</li>
-<li>An Eyedropper has been added to the color picker, allowing you to pick any color from within the app.</li>
-<li>Bounding boxes are now shown visually with an animated rectangle.</li>
-<li>Native global menu for MacOS (by <a href="https://github.com/aaronfranke" target="_blank" rel="noopener noreferrer">aaronfranke</a> and me)</li>
-<li>The language options now show their completion percentages</li>
-<li>Added Simplified Chinese translation (by <a href="https://github.com/Hamster5295" target="_blank" rel="noopener noreferrer">Hamster5295</a>)</li>
-<li>Added Dutch translation (by <a href="https://github.com/Racer911dash1" target="_blank" rel="noopener noreferrer">Racer911dash1</a>)</li>
-<li>Updates to existing translations (by <a href="https://github.com/Vovkiv" target="_blank" rel="noopener noreferrer">Vovkiv</a>, <a href="https://github.com/JinEnMok" target="_blank" rel="noopener noreferrer">JinEnMok</a>, and <a href="https://github.com/Swarkin" target="_blank" rel="noopener noreferrer">Swarkin</a>)</li>
-<li>A lot of smaller improvements and bugfixes by me and <a href="https://github.com/Kiisu-Master" target="_blank" rel="noopener noreferrer">Kiisu-Master</a>... too many to list. Maybe I'll start listing them when GodSVG becomes more stable.</li>
-</ul>
- ]]></content>
-		</entry>
-	
-		<entry>
-			<title>GodSVG is now available on Itch</title>
-			<link href="/article/godsvg-is-now-on-itch" />
-			<author>MewPurPur</author>
-			<published>2024-09-02T00:00:00Z</published>
-			<summary>Along with the alpha 5 prerelease, GodSVG was officially published on Itch.</summary>
-			<id>godsvg-is-now-on-itch</id>
-			<content type="html" xml:lang="en"><![CDATA[ <p>Hello everyone!</p>
-<p>Along with the release of <a href="https://godsvg.com/article/1-0-alpha5">GodSVG's fifth alpha</a>, I have another announcement to make.</p>
-<h1>GodSVG on Itch.io</h1>
-<p>I have recently published GodSVG on Itch.io, where you can download it or use it directly from the browser. Users are politely encouraged by Itch.io to purchase GodSVG for $10, but it is available for free. Itch.io will get the same version of GodSVG as all other platforms (alpha 5 currently) and there won't be any delays.</p>
-<p>This means that you can now get GodSVG officially on three different places:</p>
-<ul>
-<li><strong>Github:</strong> <a href="https://github.com/MewPurPur/GodSVG/releases">Downloads</a></li>
-<li><strong>godsvg.com:</strong> <a href="https://godsvg.com/releases">Downloads</a> and <a href="https://godsvg.com/editor">Web editor</a></li>
-<li><strong>Itch.io:</strong> <a href="https://mewpurpur.itch.io/godsvg">Downloads &amp; Web editor</a></li>
-</ul>
-<p>While I’m unfamiliar with digital distribution platforms, I’ve always admired Itch.io, and I thoroughly researched it to make sure I did everything correctly, and that my project is appropriate for it. If you find any issues, please let me know.</p>
- ]]></content>
-		</entry>
-	
-		<entry>
-			<title>New prerelease: GodSVG 1.0-alpha6</title>
-			<link href="/article/1-0-alpha6" />
-			<author>MewPurPur</author>
-			<published>2024-12-07T00:00:00Z</published>
-			<summary>This prerelease focuses on stability, setting the stage for bigger changes in upcoming alphas.</summary>
-			<id>1-0-alpha6</id>
-			<content type="html" xml:lang="en"><![CDATA[ <p>GodSVG releases its sixth alpha! This prerelease focuses on stability, setting the stage for bigger changes in upcoming alphas.</p>
-<h1>XML nodes</h1>
-<p>Elements are the most important type of XML node, but there are a few others: Comments, text, and CDATA. Text and CDATA can affect the SVG in some situations, as they can be used to provide elements such as tspan with text. However, GodSVG didn't parse these XML nodes, and this was a problem. Even though the SVG renderer doesn't support any of the elements that use them, this still meant that if you had an SVG with text elements, and you took it in and out of GodSVG, it would get corrupted.</p>
-<p>Addressing this was my main focus for this alpha release. If the SVG you import or paste into GodSVG has XML nodes other than elements, they will now no longer be omitted. Text, CDATA, and comments can also be converted between each other.</p>
-<div class="article-image">
-<img src="/assets/blog/1-0-alpha6/xml_nodes.webp" alt="Image of the three XML nodes" />
-</div>
-<h1>Other new things</h1>
-<p>This development cycle had a big emphasis on bugfixing, so there aren't a lot of other new features. Still, a few new features made it in - here's what’s new.</p>
-<p>Support for the polygon and polyline elements has been added. These work like a path element with only lines. You can add them from the &quot;Add new element&quot; popup.</p>
-<p>On web, reference images have finally been implemented. Also, one of the biggest issues on web was clipboard checks failing and triggering intrusive popups - this has now been resolved. Another fix for web, exports now properly respect all configuration options.</p>
-<h1>Smaller enhancements</h1>
-<p>Many thanks to <a href="https://github.com/Vovkiv" target="_blank" rel="noopener noreferrer">Vovkiv</a> and <a href="https://github.com/Swarkin" target="_blank" rel="noopener noreferrer">Swarkin</a> for helping with keeping translations up to date.</p>
-<ul>
-<li>You can now open the currently worked on file via the OS image viewer.</li>
-<li>The editing of palettes and formatters has been improved.</li>
-<li>In the settings menu, color fields can now handle syntaxes with alpha channels (&quot;rgba()&quot; and &quot;hsla()&quot;).</li>
-<li>There's some optimization compared to alpha 5.</li>
-<li>Path popups now only disable path commands that would result in an invalid syntax, others are marked as warnings and still allowed.</li>
-</ul>
-<h1>Major bugfixes</h1>
-<p>This release had a lot of bugfixes, so I'm only listing the most important ones.</p>
-<ul>
-<li>Fixed precision-related issues (i.e., you should no longer get 12.399998 instead of 12.4).</li>
-<li>Fixed issues when dragging handles while UI scale is different from 1.0.</li>
-<li>Fixed rasterization of SVGs with fractional size.</li>
-<li>Fixed viewBox not handling exponent syntax (i.e., &quot;2e3&quot;).</li>
-<li>Fixed undefined behavior when color attributes reference a URL other than a &lt;linearGradient&gt; or &lt;radialGradient&gt;.</li>
-<li>Fixed shortcut buttons displacing the UI when the shortcut text is long.</li>
-<li>Fixed bug where camera limits are broken for very small SVG dimensions.</li>
-</ul>
- ]]></content>
-		</entry>
-	
-		<entry>
-			<title>New prerelease: GodSVG 1.0-alpha7</title>
-			<link href="/article/1-0-alpha7" />
-			<author>MewPurPur</author>
-			<published>2025-01-12T00:00:00Z</published>
-			<summary>Introducing an experimental Android build, quality of life changes, and stability.</summary>
-			<id>1-0-alpha7</id>
-			<content type="html" xml:lang="en"><![CDATA[ <p>GodSVG releases its seventh alpha! This prerelease focuses on stability, setting the stage for bigger changes in the upcoming alphas.</p>
-<h1>GodSVG on mobile!</h1>
-<p>GodSVG now has an experimental Android port! <a href="https://github.com/syntaxerror247" target="_blank" rel="noopener noreferrer">syntaxerror247</a> has led the effort to bring it to mobile, with adaptations for touch controls - including a floating shortcut panel designed to replace desktop keyboard shortcuts.</p>
-<div class="article-image">
-<img src="/assets/blog/1-0-alpha7/shortcut_panel.webp" alt="Image of the shortcuts panel on mobile" />
-</div>
-<p>Other aspects of GodSVG have not yet been optimized for touch input, so the mobile port will remain experimental for the time being. In future versions, we want to improve the touch controls further and implement a native file picker.</p>
-<p>As you can imagine, maintaining a mobile build is difficult because of how different touchscreens are. I'm worried that limiting my reliance on hovering and keyboards, even when they seem optimal for a UI, may come at the expense of Desktop builds, so it's possible I will discontinue Android builds in the future. It depends on whether mobile development can proceed without noticeably compromising the desktop experience.</p>
-<p>Development for mobile will for now continue on another repository that's not managed by <a href="https://github.com/syntaxerror247" target="_blank" rel="noopener noreferrer">syntaxerror247</a> and not me: https://github.com/syntaxerror247/GodSVG-Mobile. Riskier features will be implemented there first, but they may eventually be implemented in the main repository too. This will allow me to focus on the big changes I've planned for Desktop platforms, without worrying about breaking the app on Android.</p>
-<h1>Other new things</h1>
-<p>This prerelease has a big emphasis on bugfixes, so there aren't a lot of other new features. Still, there are a few noteworthy additions - let’s take a look.</p>
-<p>The formatters introduced in the last prerelease have been simplified. Now there are just two: an Editor formatter and an Export formatter, each with separate configurations. This should be more convenient and less confusing for nearly everyone.</p>
-<p>The export menu was reworked. The preview now accurately reflects how the file will look after rasterization and lossy compression, if those options are selected. The width and height can also now be inputted manually, if you want to reach specific dimensions, instead of having to do math to choose a perfect scale.</p>
-<div class="article-compare"><div class="article-compare-content">
-<div class="article-compare-side">
-<div class="article-compare-label">Before</div>
-<img src="/assets/blog/1-0-alpha7/export_menu_before.webp" alt="Image of the old export menu" />
-</div>
-<div class="article-compare-side">
-<div class="article-compare-label">After</div>
-<img src="/assets/blog/1-0-alpha7/export_menu_after.webp" alt="Image of the new export menu" />
-</div>
-</div></div>
-<p>Partial support for the &quot;currentColor&quot; keyword and the &quot;color&quot; attribute has been introduced. Although they can't be added through the GUI yet, they will work fine if the imported SVGs have them or if you add them through the code editor.</p>
-<p>The robustness of savefiles has been improved. There are now far fewer file operations on startup, which may slightly help with performance and hardware wear (the effects for both seemed minimal, but this is still future-proofing). The changes should also improve the backwards compatibility to alpha 7 from future versions.</p>
-<h1>Bugfixes</h1>
-<p>I've fixed a lot of bugs in this prerelease. GodSVG is actually becoming quite stable lately, so I think it's time that I start listing the bugfixes thoroughly.</p>
-<p><strong>Major bugfixes:</strong></p>
-<ul>
-<li>In the last alpha, I promised that I've fixed precision issues (like coordinates becoming 7.499998 instead of 7.5). But transform attributes could still cause issues. That's now been fully resolved.</li>
-<li>Fixed issue where a capital exponent &quot;E&quot; wouldn't be parsed correctly, resulting in some SVGs breaking when imported.</li>
-<li>Fixed various issues with UI scale. Hopefully everything is now resolved!</li>
-<li>Tightened up many quirks of how colors are handled and presented.</li>
-<li>Fixed various usability issues with attribute fields of the root SVG element.</li>
-<li>Fixed graphic getting messed up when percentages are used on indirect children of the root SVG element.</li>
-</ul>
-<p><strong>Minor bugfixes:</strong></p>
-<ul>
-<li>Fixed &quot;Open SVG file&quot; functionality not being available if you import an SVG.</li>
-<li>Fixed issue with pixels poking out of the eyedropper frame.</li>
-<li>Fixed issue where pressing Z in the viewport to create a path command didn't create an undo action.</li>
-<li>MacOS: Fixed &quot;About GodSVG&quot; button in the global menu not working.</li>
-</ul>
-<h1>Translations</h1>
-<p>Thanks to <a href="https://github.com/thatoddshade" target="_blank" rel="noopener noreferrer">thatoddshade</a> for translating GodSVG in French!</p>
-<p>Thanks to <a href="https://github.com/Swarkin" target="_blank" rel="noopener noreferrer">Swarkin</a>, <a href="https://github.com/mikelei8291" target="_blank" rel="noopener noreferrer">mikelei8291</a>, and <a href="https://github.com/jas31415" target="_blank" rel="noopener noreferrer">jas31415</a> for keeping existing translations up to date.</p>
- ]]></content>
-		</entry>
-	
-		<entry>
-			<title>New prerelease: GodSVG 1.0-alpha8</title>
-			<link href="/article/1-0-alpha8" />
-			<author>MewPurPur</author>
-			<published>2025-03-15T00:00:00Z</published>
-			<summary>This prerelease implements tabs, improves performance, and delivers an insane number of bugfixes!</summary>
-			<id>1-0-alpha8</id>
-			<content type="html" xml:lang="en"><![CDATA[ <p>The 8th alpha of GodSVG has arrived! This release introduces tabs in GodSVG and massively improves stability and performance. The features and bugfixes below are not attributed because I was responsible for almost the entirety of the release - except <a href="https://github.com/Kiisu-Master" target="_blank" rel="noopener noreferrer">Kiisu-Master</a> who implemented a &quot;Middle mouse button to close tab&quot; option.</p>
-<h1>Implemented tabs</h1>
-<p>One of the most cumbersome aspects of using GodSVG was the inability to edit multiple SVGs at once. I have implemented a tab system to lift this hurdle. This initial implementation is already quite comprehensive and polished, so I don't expect it to change a lot in the future.</p>
-<p>Tabs have all the basic functionalities and some extras, like closing multiple tabs, tooltips, and reasonable UX with many tabs. It also now made more sense to split &quot;Save SVG&quot; into two options, &quot;Save SVG&quot; and &quot;Save SVG as...&quot;, so I've done that too.</p>
-<div class="article-video">
-<video controls preload="metadata" aria-label="Video of using tabs">
-<source src="/assets/blog/1-0-alpha8/tabs.webm">
-<p>Video of using tabs</p>
-</video>
-</div>
-<h1>Other features and improvements</h1>
-<p>GodSVG used to be unusable for some Windows users because of a warning. This has been addressed in this prerelease.</p>
-<p>UI Scale has been reworked into a single setting that only allows the valid options. The UI is now prevented from getting too small. This was a common problem, especially on Web, and unavoidable on itch.io with the old implementation. There is now an &quot;Auto&quot; option (same as &quot;Auto UI Scale&quot; used with the &quot;1.0&quot; UI scale before), a range of appropriate hard-coded values that should be safe, and a &quot;Max&quot; option. For example, if the maximum determined UI scale is 145%, you can now use that instead of being limited to 125%. Custom UI scale will be implemented in the future.</p>
-<p>GodSVG is built in Godot Engine, which recently released a new 4.4 version, and we've moved to it. This resulted in significant performance improvements (some of them thanks to my own contributions!). It also updated the SVG renderer (ThorVG), resulting in significant fixes and improvements to SVG rendering and rasterizing.</p>
-<div class="article-compare"><div class="article-compare-content">
-<div class="article-compare-side">
-<div class="article-compare-label">Reality</div>
-<img src="/assets/blog/1-0-alpha8/raster_reality.webp" alt="Image of an SVG without rasterization" />
-</div>
-<div class="article-compare-side">
-<div class="article-compare-label">Before</div>
-<img src="/assets/blog/1-0-alpha8/raster_before.webp" alt="Image of the old rasterization" />
-</div>
-<div class="article-compare-side">
-<div class="article-compare-label">After</div>
-<img src="/assets/blog/1-0-alpha8/raster_after.webp" alt="Image of the new rasterization" />
-</div>
-</div></div>
-<p><strong>And now for a lightning round:</strong></p>
-<ul>
-<li>Implemented a &quot;Show SVG in File Manager&quot; option.</li>
-<li>Palettes now have a &quot;Save as XML&quot; option. The &quot;Paste XML&quot; option was quite destructive, so now it's only available when creating a new palette.</li>
-<li>The &quot;About&quot; dialog was likely not comprehensive enough to comply with some third-party licenses; this has now been addressed.</li>
-<li>Redundant transforms in the transform popup are now grayed out.</li>
-<li>Repeated shortcuts for the same action are now tinted as warnings.</li>
-<li>Improved rect-&gt;path conversion for rounded rectangles with only vertical or horizontal segments.</li>
-<li>The window's minimum size was increased by exactly 1.5625%, I hope that's okay with everyone.</li>
-</ul>
-<h1>Translations</h1>
-<p>A big regression from the last prerelease was fixed, where the language didn't persist between sessions.</p>
-<p>Thanks to <a href="https://github.com/Felipe-Sena" target="_blank" rel="noopener noreferrer">Felipe-Sena</a> for translating GodSVG in Brazilian Portuguese!</p>
-<p>Thanks to <a href="https://github.com/Swarkin" target="_blank" rel="noopener noreferrer">Swarkin</a>, <a href="https://github.com/thatoddshade" target="_blank" rel="noopener noreferrer">thatoddshade</a>, <a href="https://github.com/JinEnMok" target="_blank" rel="noopener noreferrer">JinEnMok</a> for keeping existing translations up to date.</p>
-<h1>A whole new level of stability</h1>
-<p>This prerelease went through an immense bugfixing stage. Let's first go through the most important ones.</p>
-<p>Previously, the &quot;View in List&quot; functionality did nothing with path commands and polygon/polyline points. This has now been fixed.</p>
-<p>The &quot;Export&quot; formatter settings used to have no effect, aside from the XML formatting settings (which is why I didn't notice this bug to begin with). This has now been fixed.</p>
-<p>Uppercase &quot;E&quot; for exponent notation is a valid syntax in pathdata and transform lists, but GodSVG didn't recognize it, resulting in some imported SVGs getting broken. This will no longer happen.</p>
-<p>When the viewbox of a graphic was different from its width and height, shapes added from the viewport's right-click popup were not using the correct position. This has been fixed.</p>
-<p><strong>Undefined behavior has been fixed for the following scenarios:</strong></p>
-<ul>
-<li>When removing a directory from which you've recently imported a file.</li>
-<li>When importing an invalid SVG.</li>
-<li>When making rect-&gt;polygon and line-&gt;polyline conversions.</li>
-<li>When opening the popup to insert a path command after the last one.</li>
-<li>When using your keyboard to add path commands to a newly created path in certain situations.</li>
-</ul>
-<p><strong>Functional fixes:</strong></p>
-<ul>
-<li>Improved the viewport's stability.</li>
-<li>Fixed issues with text selection in the SVG text editor.</li>
-<li>Fixed issue where after importing or pasting a palette XML, subsequent edits to that palette didn't get saved.</li>
-<li>Fixed selection not updating when clicking a handle of an already selected path/polygon/ polyline.</li>
-<li>Fixed issue where changing an &quot;id&quot; attribute didn't create an Undo action.</li>
-<li>Fixed shortcuts handled incorrectly in the savedata.</li>
-<li>Removed &quot;Convert To&quot; option from unrecognized XML nodes.</li>
-<li>Fixed issue with wrong undo/redo state if the Undo action was created on the same frame that a continuous change to an attribute was started.</li>
-<li>Fixed issue where clicking outside of read-only single line text fields didn't deselect the text.</li>
-<li>Fixed edge cases with the &quot;Show handles&quot; setting.</li>
-<li>Fixed selection remaining the same when editing attribute fields of the root element.</li>
-<li>Fixed several usability issues with the custom file dialog.</li>
-<li>Fixed text fields unfocusing when you scroll outside of their area.</li>
-<li>Fixed &quot;Convert To&quot; option erroneously appearing for multi-selections.</li>
-<li>Fixed export menu not handling certain configurations (gigantic or miniature dimensions) correctly.</li>
-<li>Fixed undo/redo options of single line text fields not being disabled when they should be.</li>
-<li>Fixed element not getting selected when clicking unrecognized attribute fields.</li>
-<li>Fixed &quot;Copy path&quot; of the built-in file dialog not working correctly with directories.</li>
-</ul>
-<p><strong>Visual fixes:</strong></p>
-<ul>
-<li>Fixed tooltips being blurry</li>
-<li>Fixed some UI elements sometimes being blurry even at 1.0 scale.</li>
-<li>Fixed visual issues when adding another Z path command before an existing one.</li>
-<li>Fixed various issues where hover indication for handles would not update, or fail to work correctly.</li>
-<li>Fixed several visual issues with the animated bounding boxes.</li>
-<li>Fixed selected element frames becoming translucent when initiating a Drag &amp; Drop action anywhere in the editor.</li>
-<li>Fixed &quot;currentColor&quot; inside gradients resulting in wrong previews.</li>
-<li>Fixed warning for solid color gradients being unreliable in some edge cases.</li>
-<li>Invalid shortcuts no longer appear in context popups.</li>
-</ul>
-<h1>Known regressions</h1>
-<p>Be careful when updating to this release from a previous one, as your savefiles will be corrupted (because one of my three config classes was named exactly like a new Godot Engine class - what are the odds!). You can find your savedata by clicking &quot;View savedata&quot; from the three dots at the top left. Palettes can also be copied as XML from the UI and then pasted back after updating</p>
-<p>For MacOS users, this update isn't recommended, because shortcuts and the native bar are known not to work on it. I still don't know if the issue is new to this prerelease.</p>
- ]]></content>
-		</entry>
-	
+<title>GodSVG Blog</title>
+<link>https://www.godsvg.com
+<description>News about GodSVG releases and more</description>
+<entry>
+<title>GodSVG&#39;s first development build is out!</title>
+<link href="/article/1-0-alpha1">
+<author>MewPurPur</author>
+<published>2023-12-05T00:00:00Z</published>
+<summary>After months of hard work from me and some contributors, GodSVG is finally usable and all roadblocks to an initial alpha release have been lifted. Time to present it to the world!</summary>
+<id>1-0-alpha1</id>
+<content type="html" xml:lang="en"></content>
+</entry>
+<entry>
+<title>New prerelease: GodSVG 1.0-alpha2</title>
+<link href="/article/1-0-alpha2">
+<author>MewPurPur</author>
+<published>2023-12-21T00:00:00Z</published>
+<summary>After only two weeks, there are already enough new things for a new alpha build. GodSVG is now out for web and MacOS!</summary>
+<id>1-0-alpha2</id>
+<content type="html" xml:lang="en"></content>
+</entry>
+<entry>
+<title>New prerelease: GodSVG 1.0-alpha3</title>
+<link href="/article/1-0-alpha3">
+<author>MewPurPur</author>
+<published>2024-04-18T00:00:00Z</published>
+<summary>After four months of development, I&#39;m proud to present GodSVG&#39;s next big step forward, a prerelease with big improvements in all areas.</summary>
+<id>1-0-alpha3</id>
+<content type="html" xml:lang="en"></content>
+</entry>
+<entry>
+<title>New prerelease: GodSVG 1.0-alpha4</title>
+<link href="/article/1-0-alpha4">
+<author>MewPurPur</author>
+<published>2024-06-06T00:00:00Z</published>
+<summary>A new prerelease focused on quality of life, stability, and performance.</summary>
+<id>1-0-alpha4</id>
+<content type="html" xml:lang="en"></content>
+</entry>
+<entry>
+<title>New prerelease: GodSVG 1.0-alpha5</title>
+<link href="/article/1-0-alpha5">
+<author>MewPurPur</author>
+<published>2024-09-01T00:00:00Z</published>
+<summary>This prerelease adds support for gradients, groups, percentages in numeric attributes, and much more.</summary>
+<id>1-0-alpha5</id>
+<content type="html" xml:lang="en"></content>
+</entry>
+<entry>
+<title>GodSVG is now available on Itch</title>
+<link href="/article/godsvg-is-now-on-itch">
+<author>MewPurPur</author>
+<published>2024-09-02T00:00:00Z</published>
+<summary>Along with the alpha 5 prerelease, GodSVG was officially published on Itch.</summary>
+<id>godsvg-is-now-on-itch</id>
+<content type="html" xml:lang="en"></content>
+</entry>
+<entry>
+<title>New prerelease: GodSVG 1.0-alpha6</title>
+<link href="/article/1-0-alpha6">
+<author>MewPurPur</author>
+<published>2024-12-07T00:00:00Z</published>
+<summary>This prerelease focuses on stability, setting the stage for bigger changes in upcoming alphas.</summary>
+<id>1-0-alpha6</id>
+<content type="html" xml:lang="en"></content>
+</entry>
+<entry>
+<title>New prerelease: GodSVG 1.0-alpha7</title>
+<link href="/article/1-0-alpha7">
+<author>MewPurPur</author>
+<published>2025-01-12T00:00:00Z</published>
+<summary>Introducing an experimental Android build, quality of life changes, and stability.</summary>
+<id>1-0-alpha7</id>
+<content type="html" xml:lang="en"></content>
+</entry>
+<entry>
+<title>New prerelease: GodSVG 1.0-alpha8</title>
+<link href="/article/1-0-alpha8">
+<author>MewPurPur</author>
+<published>2025-03-15T00:00:00Z</published>
+<summary>This prerelease implements tabs, improves performance, and delivers an insane number of bugfixes!</summary>
+<id>1-0-alpha8</id>
+<content type="html" xml:lang="en"></content>
+</entry>
 </feed>
