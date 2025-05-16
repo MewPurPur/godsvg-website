@@ -8,10 +8,6 @@
 	margin-top: 20px;
 }
 
-#main-download {
-	margin-right: 10px;
-}
-
 .btn-download {
 	background-color: #2e6cb8;
 	color: #fff;
@@ -141,7 +137,7 @@
 .download-buttons-container {
 	display: flex;
 	align-items: stretch;
-	gap: min(20px, 2%);
+	gap: min(20px, 3vw);
 	margin: 4px;
 }
 
