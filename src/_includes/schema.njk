@@ -1,3 +1,5 @@
+{%- set reviews = 6 -%}
+{%- set rating = 5.0 -%}
 {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
@@ -19,25 +21,9 @@
     },
     "aggregateRating": {
         "@type": "AggregateRating",
-        "ratingValue": {{ reviews.rating }},
-        "ratingCount": {{ reviews.count }},
+        "ratingValue": {{ ratings }},
+        "ratingCount": {{ reviews }},
         "bestRating": 5,
         "worstRating": 0
-    },
-    "review": [
-        {% for i in range(0, reviews.posts.length) -%}
-        {
-            {%- set review = reviews.posts[i] %}
-            "@type": "Review",
-            "reviewRating": {
-                "@type": "Rating",
-                "ratingValue": {{ review.rating }}
-            },
-            "author": {
-                "@type": "Person",
-                "name": "{{ review.userName }}"
-            }
-        }{{- (',' if i != reviews.posts.length-1) | safe }}
-        {% endfor %}
-    ]
+    }
 }
