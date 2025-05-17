@@ -13,8 +13,8 @@ $pro-color: #9e9;
 $con-color: #e99;
 
 .donation-widget {
-	margin-top: 0.25rem;
-	font-size: 0.55rem;
+	margin-top: 0.4rem;
+	font-size: 0.9rem;
 	position: relative;
 	min-width: 280px;
 	padding: 24px 20px 16px;
@@ -98,28 +98,30 @@ $con-color: #e99;
 .list-pro {
 	color: $pro-color;
 	margin-bottom: 4px;
-	font-size: 0.55rem;
+	font-size: 0.9rem;
 	line-height: 1.15 !important;
+	padding-left: 6px;
 
 	&::before {
 		content: "+";
 		font-weight: bold;
 		display: inline-block;
-		width: 0.85em;
+		width: 0.85rem;
 	}
 }
 
 .list-con {
 	color: $con-color;
 	margin-bottom: 4px;
-	font-size: 0.55rem;
+	font-size: 0.9rem;
 	line-height: 1.15 !important;
+	padding-left: 6px;
 
 	&::before {
 		content: "–";
 		font-weight: bold;
 		display: inline-block;
-		width: 0.85em;
+		width: 0.85rem;
 	}
 }
 
