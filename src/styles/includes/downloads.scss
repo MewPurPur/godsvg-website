@@ -22,16 +22,15 @@
 .dropbtn {
 	background-color: #333;
 	color: #e0e0e0;
-	padding: 10px;
 	font-size: 1.05rem;
 	border: none;
 	cursor: pointer;
 	border-radius: 5px;
-	height: 70%;
 	display: flex;
 	align-items: center;
 	list-style: none;
-	min-width: 180px;
+	min-width: 10rem;
+	height: 100%;
 }
 
 .dropdown-content {
@@ -137,9 +136,7 @@
 
 .download-buttons-container {
 	display: flex;
-	align-items: stretch;
 	gap: min(20px, 3vw);
-	margin: 4px;
 }
 
 .dropdown .dropbtn {
