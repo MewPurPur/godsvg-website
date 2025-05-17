@@ -1,0 +1,43 @@
+{
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "GodSVG",
+    "description": "GodSVG is a free and open-source vector graphics application for structured SVG editing, available on all major desktop platforms and on web.",
+    "operatingSystem": ["Windows", "Linux", "MacOS", "Android"],
+    "applicationCategory": "GraphicsApplication",
+    "url": "{{ site.url }}",
+    "downloadUrl": "{{ site.url }}/releases",
+    "image": "{{ site.url }}/assets/card.webp",
+    "softwareVersion": "{{ godsvg.version }}",
+    "author": {
+        "@type": "Person",
+        "name": "MewPurPur"
+    },
+    "offers": {
+        "@type": "Offer",
+        "price": 0
+    },
+    "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": {{ reviews.rating }},
+        "ratingCount": {{ reviews.count }},
+        "bestRating": 5,
+        "worstRating": 0
+    },
+    "review": [
+        {% for i in range(0, reviews.posts.length) -%}
+        {
+            {%- set review = reviews.posts[i] %}
+            "@type": "Review",
+            "reviewRating": {
+                "@type": "Rating",
+                "ratingValue": {{ review.rating }}
+            },
+            "author": {
+                "@type": "Person",
+                "name": "{{ review.userName }}"
+            }
+        }{{- (',' if i != reviews.posts.length-1) | safe }}
+        {% endfor %}
+    ]
+}
