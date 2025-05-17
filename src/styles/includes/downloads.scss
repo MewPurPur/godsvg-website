@@ -13,6 +13,7 @@
 	color: #fff;
 	min-width: 180px;
 	text-decoration: none !important;
+
 	&:hover {
 		background-color: #3579cf;
 	}
@@ -185,6 +186,7 @@
 	text-align: center;
 	display: inline-block;
 	min-width: 0;
+
 	&:hover {
 		color: white;
 	}
@@ -193,6 +195,7 @@
 .btn-notes {
 	background-color: color.adjust($background, $lightness: 15%);
 	color: #fff;
+
 	&:hover {
 		color: #fff;
 		background-color: color.adjust($background, $lightness: 20%);
