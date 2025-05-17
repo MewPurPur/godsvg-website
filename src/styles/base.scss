@@ -5,7 +5,7 @@
 @use "includes/notices";
 @use "scss/theme" as *;
 
-/* Common styles across pages. */
+// Common styles across pages.
 
 a {
 	color: $accent;
@@ -16,6 +16,15 @@ a {
 		color: color.adjust($accent, $lightness: 20%, $space: hsl);
 		text-decoration: underline;
 	}
+}
+
+.page-title {
+	color: #fff;
+	text-align: center;
+	font-family: $title_font;
+	font-size: 1.4rem;
+	font-weight: 700;
+	margin: 0.65rem 0;
 }
 
 html {

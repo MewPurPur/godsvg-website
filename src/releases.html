@@ -5,8 +5,8 @@ title: Releases - GodSVG
 
 {% block body %}
 	<div class="container">
-		<h1 class="page-title">GodSVG Releases</h1>
-
+		<div class="page-title">GodSVG Releases</div>
+		<div class="releases-container">
 		{% for version, release in releases %}
 			<div class="release-box">
 				<div class="release-info">
@@ -34,6 +34,7 @@ title: Releases - GodSVG
 				</div>
 			</div>
 		{% endfor %}
+		</div>
 	</div>
 {% endblock %}
 
