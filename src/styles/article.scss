@@ -22,34 +22,6 @@ $max-width: min(960px, calc(100% - 48px));
 	width: $max-width;
 	background-color: color.adjust($background, $lightness: -1.5%);
 	padding: 24px;
-
-	// Custom markdown styling
-	p {
-		color: color.adjust(#fff, $lightness: -15%);
-		font-size: 0.6rem;
-		line-height: 1.5;
-		margin-top: 0;
-	}
-
-	h1 {
-		color: color.adjust(#fff, $lightness: -5%);
-		font-family: $title_font;
-		font-size: 1.1rem;
-		margin-bottom: 0.3rem;
-	}
-
-	ul {
-		padding-left: 1rem;
-		margin-top: -0.25rem;
-		color: color.adjust(#fff, $lightness: -15%);
-		font-size: 0.6rem;
-		line-height: 1.5;
-	}
-
-	li {
-		margin-top: 0.2rem;
-		line-height: 1.4;
-	}
 }
 
 .article-cover {
