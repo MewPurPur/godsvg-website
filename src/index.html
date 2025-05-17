@@ -1,24 +1,12 @@
 ---
 title: GodSVG - SVG Editor
+metaTitle: GodSVG - Free and Open Source SVG editor
 ---
 {% extends "base.njk" %}
 
 {% block head %}
 	<script type="application/ld+json">
-	{
-		"@context": "https://schema.org",
-		"@type": "SoftwareApplication",
-		"name": "GodSVG",
-		"description": "GodSVG is a free and open-source vector graphics application for structured SVG editing, available on all major desktop platforms and on web.",
-		"operatingSystem": ["Windows", "Linux", "MacOS", "Android"],
-		"applicationCategory": "GraphicsApplication",
-		"downloadUrl": "https://github.com/MewPurPur/GodSVG/releases/",
-		"softwareVersion": "{{ godsvg.version }}",
-		"author": {
-			"@type": "Person",
-			"name": "MewPurPur"
-		}
-	}
+		{% include "schema.njk" %}
 	</script>
 {% endblock %}
 
