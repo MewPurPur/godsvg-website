@@ -46,32 +46,43 @@ br {
 	justify-content: center;
 }
 
-.faq-question {
-	color: white;
-	font-size: 1rem;
+h1 {
+	color: color.adjust(#fff, $lightness: -5%);
 	font-family: $title_font;
-	margin-bottom: 0.1rem;
-	margin-top: 1rem;
-	margin-bottom: 0.25rem;
+	font-size: 1.05rem;
+	margin-bottom: 0.3rem;
 }
 
-.dim-text {
+p {
+	color: color.adjust(#fff, $lightness: -20%);
 	font-size: 0.6rem;
 	line-height: 1.4;
-	font-family: $default_font;
-	color: color.adjust($color: #fff, $lightness: -20%);
-	margin-top: 0rem;
-	margin-bottom: 0.25rem;
-
-	li {
-		margin-bottom: 0.25rem;
-		list-style-type: none;
-	}
+	margin-top: 0;
+	margin-bottom: 0.3rem;
 }
 
-.social-icon {
-	width: 1rem;
-	height: 1rem;
+ul {
+	padding-left: 1rem;
+	margin-top: 0rem;
+	margin-bottom: 0.5rem;
+	color: color.adjust(#fff, $lightness: -20%);
+	font-size: 0.6rem;
+	line-height: 1.5;
+}
+
+li {
+	margin-top: 0.2rem;
+	line-height: 1.4;
+}
+
+.no-bullet-point {
+	list-style: none;
+}
+
+.img-bullet-point {
+	width: 0.9rem;
+	height: 0.9rem;
+	margin-left: -0.4rem;
 	margin-bottom: -0.2rem;
 	margin-right: 0.2rem;
 }
