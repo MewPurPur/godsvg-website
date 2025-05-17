@@ -23,7 +23,7 @@
 	background-color: #333;
 	color: #e0e0e0;
 	padding: 10px;
-	font-size: 0.65rem;
+	font-size: 1.05rem;
 	border: none;
 	cursor: pointer;
 	border-radius: 5px;
@@ -59,8 +59,8 @@
 
 		.platform-icon {
 			margin-right: 10px;
-			height: 1.5rem;
-			width: 1.5rem;
+			height: 2.5rem;
+			width: 2.5rem;
 		}
 
 		.text-container {
@@ -79,12 +79,12 @@
 
 		.solo-platform-icon {
 			margin-right: 8px;
-			height: 1.2rem;
-			width: 1.2rem;
+			height: 2rem;
+			width: 2rem;
 		}
 
 		.solo-text {
-			font-size: 0.7rem;
+			font-size: 1.15rem;
 			font-weight: 700;
 		}
 	}
@@ -104,8 +104,8 @@
 
 .download-option .platform-icon {
 	margin-right: 10px;
-	height: 1.5rem;
-	width: 1.5rem;
+	height: 2.5rem;
+	width: 2.5rem;
 }
 
 .download-button {
@@ -125,12 +125,12 @@
 	}
 
 	.small-text {
-		font-size: 0.45rem;
+		font-size: 0.75rem;
 		white-space: nowrap;
 	}
 
 	.big-text {
-		font-size: 0.75rem;
+		font-size: 1.25rem;
 		font-weight: 700;
 	}
 }
@@ -175,11 +175,11 @@
 }
 
 .btn {
-	padding: 0.3rem 0.5rem;
+	padding: 0.5rem 0.75rem;
 	border-radius: 5px;
 	font-family: $title_font;
 	font-weight: 500;
-	font-size: 0.75rem;
+	font-size: 1.25rem;
 	cursor: pointer;
 	user-select: none;
 	text-decoration: none !important;
@@ -220,7 +220,7 @@
 }
 
 .platform-icon {
-	width: 1.2rem;
-	height: 1.2rem;
-	margin-right: 0.8rem;
+	width: 2rem;
+	height: 2rem;
+	margin-right: 1.3rem;
 }

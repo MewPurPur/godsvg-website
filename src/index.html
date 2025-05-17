@@ -31,8 +31,8 @@ title: GodSVG - SVG Editor
 {% endblock script %}
 
 {% block body %}
-	<div style="height: 1rem;"></div>
-	<div style="text-align: center; font-weight: 500; font-size: 0.9rem">Download GodSVG <b>{{ godsvg.version }}</b></div>
+	<div class="big-gap"></div>
+	<div style="text-align: center; font-weight: 500; font-size: 1.5rem">Download GodSVG <b>{{ godsvg.version }}</b></div>
 
 	<div class="content" id="download-section">
 		<div class="download-buttons-container">
@@ -59,7 +59,7 @@ title: GodSVG - SVG Editor
 			</details>
 		</div>
 	</div>
-	<div style="height: 0.5rem"></div>
+	<div class="small-gap"></div>
 	<div style="text-align: center">
 		<p>Note that the Android build is experimental.</p>
 		<p>You can also find GodSVG on <a href="https://mewpurpur.itch.io/godsvg">itch.io</a></p>
@@ -73,11 +73,11 @@ title: GodSVG - SVG Editor
 		</div>
 
 		<div id="features-content" style="display: block">
-			<div style="margin-top: 1rem"></div>
+			<div class="big-gap"></div>
 			<p><b>GodSVG is an open-source editor for Scalable Vector Graphics (SVG) files.</b></p>
 			<p>Unlike other editors, it represents the SVG code directly, doesn't add any metadata, and even lets you edit the SVG code in real time. GodSVG aims to be an editor for SVG code with low abstraction, producing clean and optimized files.</p>
 
-			<div style="height: 0.5rem"></div>
+			<div class="small-gap"></div>
 			<div class="carousel-container">
 				{% set imageCount = 5 %}
 				<div class="carousel-images">
@@ -99,7 +99,7 @@ title: GodSVG - SVG Editor
 					</div>
 				</div>
 			</div>
-			<div style="height: 0.5rem"></div>
+			<div class="small-gap"></div>
 			<ul>
 				<li><b>Interactive SVG editing:</b> Modify individual elements of an SVG file using a user-friendly interface.</li>
 				<li><b>Real-time code:</b> As you manipulate elements in the UI, code is instantly generated and can be edited.</li>
@@ -160,21 +160,21 @@ title: GodSVG - SVG Editor
 			<h1>I speak one of Earth's many languages! Do you need help with translation?</h1>
 			<p>Bonjour! GodSVG is community-translated and you can <a href="https://github.com/MewPurPur/GodSVG/tree/main/translations" target="_blank" rel="noopener noreferrer">find how to do it here</a>. Hit me up on Discord if you need help.</p>
 
-			<div style="margin-top: 0.75rem"></div>
+			<div class="medium-gap"></div>
 			<p>I hope this gave you all the answers you wanted - even the ones you didn't know you needed! Hit me up on Discord if you want to ask anything else.</p>
 		</div>
 
 		<div id="donate-content" style="display: none">
-			<div style="margin-top: 1rem"></div>
+			<div class="big-gap"></div>
 			<p>
 				Donations will help me push GodSVG through to a stable release. Right now, I have to balance out development with my regular job as I don't get enough from donations.<br />
 				I have a few donation platforms set up, so you can choose the one you prefer:
 			</p>
-			<div style="margin-top: 0.5rem"></div>
+			<div class="small-gap"></div>
 			<ul class="no-bullet-point">
 				<li>
 					<img class="img-bullet-point" src="/assets/donate_github_sponsors.svg" alt="Github logo">
-					<a href="https://github.com/sponsors/MewPurPur" target="_blank" rel="noopener noreferrer" style="font-size:0.75rem">Github Sponsors</a>
+					<a href="https://github.com/sponsors/MewPurPur" target="_blank" rel="noopener noreferrer" style="font-size: 1.25rem">Github Sponsors</a>
 					<ul class="no-bullet-point">
 						<li class="list-pro">Low extra fees</li>
 						<li class="list-pro">Includes all perks</li>
@@ -183,7 +183,7 @@ title: GodSVG - SVG Editor
 				</li>
 				<li>
 					<img class="img-bullet-point" src="/assets/donate_ko_fi.svg" alt="Ko-Fi logo">
-					<a href="https://ko-fi.com/mewpurpur" target="_blank" rel="noopener noreferrer" style="font-size:0.75rem">Ko-Fi</a>
+					<a href="https://ko-fi.com/mewpurpur" target="_blank" rel="noopener noreferrer" style="font-size: 1.25rem">Ko-Fi</a>
 					<ul class="no-bullet-point">
 						<li class="list-pro">Low extra fees</li>
 						<li class="list-pro">Can donate an arbitrary amount</li>
@@ -192,14 +192,14 @@ title: GodSVG - SVG Editor
 				</li>
 				<li>
 					<img class="img-bullet-point" src="/assets/donate_patreon.svg" alt="Patreon logo">
-					<a href="https://www.patreon.com/GodSVG" target="_blank" rel="noopener noreferrer" style="font-size: 0.75rem">Patreon</a>
+					<a href="https://www.patreon.com/GodSVG" target="_blank" rel="noopener noreferrer" style="font-size: 1.25rem">Patreon</a>
 					<ul class="no-bullet-point">
 						<li class="list-pro">Includes all perks</li>
 						<li class="list-con">Higher extra fees</li>
 						<li class="list-con">Can only donate fixed amounts</li>
 					</ul>
 				</li>
-				<div style="margin-top: 0.75rem"></div>
+				<div class="medium-gap"></div>
 				<p>Thank you so much for considering helping out!<br /></p>
 			</ul>
 		</div>

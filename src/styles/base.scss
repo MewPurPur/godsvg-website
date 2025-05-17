@@ -22,14 +22,14 @@ a {
 	color: #fff;
 	text-align: center;
 	font-family: $title_font;
-	font-size: 1.4rem;
+	font-size: 2.3rem;
 	font-weight: 700;
-	margin: 0.65rem 0;
+	margin: 1.05rem 0;
 }
 
 html {
-	color: white;
-	font-size: min(9vw, 30px);
+	color: #fff;
+	font-size: clamp(14px, 4vw, 18px);
 	font-family: $default_font;
 }
 
@@ -40,7 +40,7 @@ body {
 }
 
 br {
-	margin-bottom: 0.25rem;
+	margin-bottom: 0.4rem;
 }
 
 .content {
@@ -58,29 +58,29 @@ br {
 h1 {
 	color: color.adjust(#fff, $lightness: -5%);
 	font-family: $title_font;
-	font-size: 1.05rem;
-	margin-bottom: 0.3rem;
+	font-size: 1.75rem;
+	margin-bottom: 0.5rem;
 }
 
 p {
 	color: color.adjust(#fff, $lightness: -20%);
-	font-size: 0.6rem;
+	font-size: 1rem;
 	line-height: 1.4;
 	margin-top: 0;
-	margin-bottom: 0.3rem;
+	margin-bottom: 0.5rem;
 }
 
 ul {
-	padding-left: 1rem;
+	padding-left: 1.65rem;
 	margin-top: 0;
-	margin-bottom: 0.5rem;
+	margin-bottom: 0.85rem;
 	color: color.adjust(#fff, $lightness: -20%);
-	font-size: 0.6rem;
+	font-size: 1rem;
 	line-height: 1.5;
 }
 
 li {
-	margin-top: 0.2rem;
+	margin-top: 0.35rem;
 	line-height: 1.4;
 }
 
@@ -89,17 +89,17 @@ li {
 }
 
 .img-bullet-point {
-	width: 0.9rem;
-	height: 0.9rem;
-	margin-left: -0.4rem;
-	margin-bottom: -0.2rem;
-	margin-right: 0.2rem;
+	width: 1.5rem;
+	height: 1.5rem;
+	margin-left: -0.6rem;
+	margin-bottom: -0.3rem;
+	margin-right: 0.3rem;
 }
 
 #footer {
 	color: #686b70;
-	font-size: 0.55rem;
-	margin-top: 1rem;
+	font-size: 0.9rem;
+	margin-top: 1.65rem;
 	border-top: 1px solid #333;
 }
 
@@ -107,10 +107,10 @@ li {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	margin: 0.4rem;
+	margin: 0.65rem;
 
 	span {
-		margin: 0.1rem;
+		margin: 0.15rem;
 	}
 }
 
@@ -118,7 +118,7 @@ li {
 .tab-container {
 	display: flex;
 	justify-content: center;
-	margin-top: 30px;
+	margin-top: 1.65rem;
 	gap: min(20px, 2%);
 
 	.tab {
@@ -136,11 +136,11 @@ li {
 
 .tab {
 	flex: 1; // Ensure tabs are equal width.
-	font-size: 0.85rem;
+	font-size: 1.4rem;
 	display: inline-block;
 	background-color: #333;
 	color: #e0e0e0;
-	padding: 8px 16px;
+	padding: 0.4rem 0.9rem;
 	border-radius: 5px;
 	cursor: pointer;
 	text-align: center; // Center the text inside the tabs.
@@ -177,7 +177,7 @@ li {
 		content: "+";
 		font-weight: 700;
 		display: inline-block;
-		width: 0.85em;
+		width: 1rem;
 	}
 }
 
@@ -188,7 +188,7 @@ li {
 		content: "–";
 		font-weight: 700;
 		display: inline-block;
-		width: 0.85em;
+		width: 1rem;
 	}
 }
 
@@ -301,4 +301,18 @@ li {
     width: 7.5px;
     height: 7.5px;
     transform: rotate(45deg);
+}
+
+div {
+	.big-gap {
+		height: 1.5rem;
+	}
+
+	.medium-gap {
+		height: 1.125rem;
+	}
+
+	.small-gap {
+		height: 0.75rem;
+	}
 }

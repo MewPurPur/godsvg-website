@@ -10,7 +10,7 @@
 .blog-posts-grid {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
-	gap: 1rem;
+	gap: 1.5rem;
 	width: 100%;
 }
 
@@ -31,31 +31,31 @@
 	}
 
 	.blog-card-text {
-		padding: 0.5rem;
-		padding-top: 0.35rem;
+		padding: 0.8rem;
+		padding-top: 0.55rem;
 	}
 
 	.date {
 		color: color.adjust(#fff, $lightness: -50%);
 		margin: 0;
-		margin-bottom: 0.2rem;
-		font-size: 0.5rem;
+		margin-bottom: 0.3rem;
+		font-size: 0.8rem;
 	}
 
 	.title {
 		margin: 0;
 		color: color.adjust(#fff, $lightness: -10%);
 		font-weight: 700;
-		font-size: 0.8rem;
+		font-size: 1.3rem;
 	}
 
 	.tagline {
 		line-height: 1.25;
 		margin: 0;
-		margin-top: 0.4rem;
+		margin-top: 0.65rem;
 		color: color.adjust(#fff, $lightness: -30%);
 		font-weight: 400;
-		font-size: 0.6rem;
+		font-size: 0.95rem;
 	}
 }
 
