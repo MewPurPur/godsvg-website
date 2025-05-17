@@ -1,13 +1,15 @@
 @use "sass:color";
 @use "scss/theme" as *;
 
-$max-width: min(960px, calc(100% - 48px));
+$max-width: 960px;
+$padding-size: min(1rem, 4vw);
+$content-width: min($max-width, calc(100% - $padding-size * 2));
 
 .article-header {
-	max-width: $max-width;
+	max-width: $content-width;
 	margin: auto;
+	padding: $padding-size;
 	background-color: color.adjust($background, $lightness: 2%);
-	padding: 1rem;
 	border-top-right-radius: 6px;
 	border-top-left-radius: 6px;
 }
@@ -19,18 +21,18 @@ $max-width: min(960px, calc(100% - 48px));
 }
 
 .article-content {
-	text-align: left;
+	max-width: $content-width;
 	margin: auto;
-	width: $max-width;
+	padding: $padding-size;
+	text-align: left;
 	background-color: color.adjust($background, $lightness: -1.5%);
-	padding: 1rem;
 	border-bottom-right-radius: 6px;
 	border-bottom-left-radius: 6px;
 }
 
 .article-cover {
 	display: block;
-	width: 80%;
+	width: min($max-width * 0.8, 90vw);
 	margin: auto;
 	box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
 }
