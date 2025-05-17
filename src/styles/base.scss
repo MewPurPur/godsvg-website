@@ -72,7 +72,7 @@ p {
 
 ul {
 	padding-left: 1rem;
-	margin-top: 0rem;
+	margin-top: 0;
 	margin-bottom: 0.5rem;
 	color: color.adjust(#fff, $lightness: -20%);
 	font-size: 0.6rem;
@@ -183,6 +183,7 @@ li {
 
 .list-con {
 	color: #e99;
+
 	&::before {
 		content: "–";
 		font-weight: 700;
