@@ -5,6 +5,60 @@
 	<link rel="alternate" type="text/html" href="https://godsvg.com" hreflang="en" />
 	<link rel="self" type="application/atom+xml" href="https://godsvg.com/blog/atom.xml" />
 	<entry>
+		<title>New prerelease: GodSVG 1.0-alpha9</title>
+		<summary>The calm before the storm! This prerelease makes the layout configurable, implements an update checker, and significantly improves stability.</summary>
+		<author>MewPurPur</author>
+		<published>2025-03-15T00:00:00Z</published>
+		<id>1-0-alpha9</id>
+		<link href="/article/1-0-alpha9" />
+		<content type="html" xml:lang="en"> <![CDATA[
+			<link rel="stylesheet" type="text/css" href="https://godsvg.com/styles/article.css" /><p>The 9th alpha of GodSVG has arrived! This prerelease makes the layout configurable, implements an update checker, and implements a lot of small features, improvements, and bugfixes.</p>
+            <h1>The layout is finally configurable!</h1>
+            <p>One of the most cumbersome aspects of using GodSVG was the inability to change the layout. Most people didn't want the inspector and code editor to be visible at the same time, and some didn't want to use one or the other at all. I have implemented a layout configuration widget to solve this. For now, you can change the positions of the code editor and the inspector, make them into separate tabs, or completely hide them. This is all done through a new popup to avoid cluttering the general UI. This should make it much easier to get comfortable with GodSVG.</p>
+            <div class="article-video">
+            <video controls preload="metadata" aria-label="Video demonstrating how the layout can be configured">
+            <source src="/assets/blog/1-0-alpha9/layouts.webm">
+            <p>Video demonstrating how the layout can be configured</p>
+            </video>
+            </div>
+            <p>The new default layout has the inspector and the code editor in two separate tabs, which can always be toggled between. If you prefer the old UI, you can easily change back to it through this system.</p>
+            <p>Not related to this feature, but on the topic of layouts, I've added a 250% UI scale option, and also made it so GodSVG can go fullscreen. Fullscreen mode can currently only be activated via shortcuts (like F11).</p>
+            <h1>Update Checker</h1>
+            <p>All the way back in alpha 4, <a href="https://github.com/Swarkin" target="_blank" rel="noopener noreferrer">Swarkin</a> implemented an update checker, but it was unfinished until now. Me and him have done a lot of back and forth on it, and now it's finally functional!</p>
+            <p>The update checker can be accessed from the three dots at the top left of the window. Right now, it can only be run manually. So don't forget to do that every now and then to check easily for new updates!</p>
+            <h1>Other goodies</h1>
+            <p>The tab bar from the previous prerelease got some small refinements. <a href="https://github.com/FlooferLand" target="_blank" rel="noopener noreferrer">FlooferLand</a> and I made it so unsaved tabs will now also display their graphic in their tooltip. And I fixed an issue where upon first starting GodSVG, the active tab would be marked &quot;Unsaved&quot; rather than empty.</p>
+            <p><a href="https://github.com/FlooferLand" target="_blank" rel="noopener noreferrer">FlooferLand</a> added support for opening multiple SVGs at once via the CLI, which used to crash. This also means that GodSVG can once again work as a default app for opening SVG files!</p>
+            <p>For the experimental Android build, <a href="https://github.com/syntaxerror247" target="_blank" rel="noopener noreferrer">syntaxerror247</a> added support for arm32.</p>
+            <p>A button for copying the export SVG or image was implemented in the export menu by <a href="https://github.com/FlooferLand" target="_blank" rel="noopener noreferrer">FlooferLand</a>. This isn't implemented natively in Godot, so the implementation is awkward and may not work everywhere. We hope it's still useful for some of you.</p>
+            <p>I've also added a new setting for configuring the viewport's grid color. Aside from this, there are some other small enhancements and features to improve your experience with GodSVG.</p>
+            <h1>Translations</h1>
+            <p>Thanks to <a href="https://github.com/jas31415" target="_blank" rel="noopener noreferrer">jas31415</a>, <a href="https://github.com/JinEnMok" target="_blank" rel="noopener noreferrer">JinEnMok</a>, <a href="https://github.com/Swarkin" target="_blank" rel="noopener noreferrer">Swarkin</a>, and <a href="https://github.com/Kiisu-Master" target="_blank" rel="noopener noreferrer">Kiisu-Master</a> for keeping existing translations up to date!</p>
+            <p>I've added translation comments to the localization files that help clear up what some strings refer to. So if you wanted to <a href="https://github.com/MewPurPur/GodSVG/tree/main/translations">translate GodSVG to your own language</a>, now's a better time than ever!</p>
+            <h1>Bugfixes</h1>
+            <p>The biggest bugfixes were to the shortcut system. On MacOS, shortcuts didn't work and the native menu had broken at some point, which has been fixed. An issue where multiple shortcuts could be triggered at once was also fixed (e.g. how Ctrl+Shift+Tab didn't work before, because Ctrl+Tab would activate at the same time). And buttons can now show their shortcut in the tooltip, as shown below:</p>
+            <div class="article-image">
+            <img src="/assets/blog/1-0-alpha9/button_shortcut.webp" alt="Image of a button showing its tooltip" />
+            </div>
+            <p>I fixed two issues that could compromise SVGs. The bigger one is a parsing issue of exponents with decimal dot in pathdata and transform lists. The other was an off-by-one error when parsing colors in the &quot;hsl()&quot; format.</p>
+            <p><strong>Other bugfixes:</strong></p>
+            <ul>
+            <li>Fixed undefined behavior and broken highlighting when non-ASCII characters are entered into the code editor.</li>
+            <li>Fixed undefined behavior and other bugs that could happen when clicking to edit a shortcut with some keys already being pressed.</li>
+            <li>Fixed inspector layout not always handling deeply nested elements well.</li>
+            <li>Fixed &quot;Select all&quot; shortcut not working on text if changed to something other than Ctrl+A.</li>
+            <li>TextEdit and LineEdit no longer swallow &quot;Ctrl+[Key]&quot; inputs.</li>
+            <li>Fixed rare edge cases where color picker values were off by one.</li>
+            <li>Fixed color fields with alpha enabled not parsing the rgba(r, g, b, a) and hsla(h, s, l, a) formats correctly.</li>
+            <li>Fixes and tweaks in the &quot;About&quot; menu.</li>
+            <li>Fixed file dialog always having &quot;Save SVG&quot; as its title, even if you're saving a different format.</li>
+            <li>Fixed pasting palette XML not being available if the XML starts with text or comments.</li>
+            <li>Fixed caret display on top of tabs in code editor's overtype mode.</li>
+            <li>Read-only shortcuts are no longer blocked from working if a duplicate exists.</li>
+            </ul>
+            ]]> </content>
+	</entry>
+	<entry>
 		<title>New prerelease: GodSVG 1.0-alpha8</title>
 		<summary>This prerelease implements tabs, improves performance, and delivers an insane number of bugfixes!</summary>
 		<author>MewPurPur</author>
