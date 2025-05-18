@@ -17,7 +17,7 @@ $con-color: #e99;
 	font-size: 0.9rem;
 	position: relative;
 	min-width: 280px;
-	padding: 24px 20px 16px;
+	padding: 1.4rem 1.1rem 0.9rem;
 	border: 2px solid $frame-border;
 	border-radius: 6px;
 	background-color: transparent;
@@ -27,7 +27,6 @@ $con-color: #e99;
 		padding: 0;
 		list-style: none;
 	}
-
 }
 
 .donation-header {
@@ -40,7 +39,7 @@ $con-color: #e99;
 	left: 50%;
 	transform: translateX(-50%);
 	background-color: $tab-bg;
-	padding: 0px 8px 3px 8px;
+	padding: 0 0.4rem 0.2rem 0.4rem;
 	border: 2px solid $frame-border;
 	border-radius: 4px;
 }
