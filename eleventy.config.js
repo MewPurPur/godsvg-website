@@ -21,8 +21,8 @@ export default async function(eleventyConfig) {
 	};
 
 	// Data
-	eleventyConfig.addGlobalData("site.url", "https://godsvg.com")
 	eleventyConfig.addGlobalData("godsvg.version", "1.0-alpha9")
+	eleventyConfig.addGlobalData("site.url", isDebug ? "" : "https://godsvg.com")
 
 	// Plugins
 	eleventyConfig.addPlugin(HtmlBasePlugin);
@@ -161,7 +161,7 @@ export default async function(eleventyConfig) {
 	// Minifying on release (https://github.com/terser/html-minifier-terser?tab=readme-ov-file#options-quick-reference)
 	eleventyConfig.addTransform("htmlmin", function (content) {
 		const out = (this.page.outputPath || "");
-		if (out.endsWith(".html") || out.endsWith(".xml")) {
+		if (out.endsWith(".html")) {
 			const minified = htmlmin.minify(content, {
 				useShortDoctype: true,
 				removeComments: true,
