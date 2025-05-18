@@ -49,7 +49,7 @@ I've added translation comments to the localization files that help clear up wha
 
 The biggest bugfixes were to the shortcut system. On MacOS, shortcuts didn't work and the native menu had broken at some point, which has been fixed. An issue where multiple shortcuts could be triggered at once was also fixed (e.g. how Ctrl+Shift+Tab didn't work before, because Ctrl+Tab would activate at the same time). And buttons can now show their shortcut in the tooltip, as shown below:
 
-{% blogimg "button_shortcut.webp" "Image of a button showing its tooltip" %}
+{% blogimg "button_shortcut.webp", "Image of a button showing its tooltip" %}
 
 I fixed two issues that could compromise SVGs. The bigger one is a parsing issue of exponents with decimal dot in pathdata and transform lists. The other was an off-by-one error when parsing colors in the "hsl()" format.
 
