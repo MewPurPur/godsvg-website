@@ -2,7 +2,7 @@
 @use "scss/theme" as *;
 
 $max-width: 960px;
-$padding-size: min(1.65rem, 2rem);
+$padding-size: min(1.65rem, 4vw);
 $content-width: min($max-width, calc(100% - $padding-size * 2));
 
 .article-header {
