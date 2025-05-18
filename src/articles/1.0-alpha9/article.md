@@ -4,7 +4,7 @@ title: "New prerelease: GodSVG 1.0-alpha9"
 tagline: The calm before the storm! This prerelease makes the layout configurable, implements an update checker, and significantly improves stability.
 author: MewPurPur
 tags: release
-date: 2025-03-15
+date: 2025-05-19
 release: 1.0-alpha9
 prerelease: true
 ---
