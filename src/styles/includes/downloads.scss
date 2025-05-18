@@ -135,6 +135,7 @@
 }
 
 .download-buttons-container {
+	min-height: 3rem;
 	display: flex;
 	gap: min(20px, 3vw);
 }
