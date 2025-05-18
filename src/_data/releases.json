@@ -1,4 +1,8 @@
 {
+	"1.0-alpha9": {
+		"date": "May 18, 2025",
+		"platforms": ["windows", "macos", "linux", "android"]
+	},
 	"1.0-alpha8": {
 		"date": "March 15, 2025",
 		"platforms": ["windows", "macos", "linux", "android"]

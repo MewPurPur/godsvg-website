@@ -21,8 +21,8 @@ export default async function(eleventyConfig) {
 	};
 
 	// Data
+	eleventyConfig.addGlobalData("godsvg.version", "1.0-alpha9")
 	eleventyConfig.addGlobalData("site.url", isDebug ? "" : "https://godsvg.com")
-	eleventyConfig.addGlobalData("godsvg.version", "1.0-alpha8")
 
 	// Plugins
 	eleventyConfig.addPlugin(HtmlBasePlugin);
