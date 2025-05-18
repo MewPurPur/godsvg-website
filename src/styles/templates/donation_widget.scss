@@ -16,8 +16,8 @@ $con-color: #e99;
 	margin-top: 0.4rem;
 	font-size: 0.9rem;
 	position: relative;
-	min-width: 280px;
-	padding: 24px 20px 16px;
+	min-width: 15.5rem;
+	padding: 1.5rem 1.1rem 0.8rem;
 	border: 2px solid $frame-border;
 	border-radius: 6px;
 	background-color: transparent;
@@ -27,20 +27,19 @@ $con-color: #e99;
 		padding: 0;
 		list-style: none;
 	}
-
 }
 
 .donation-header {
 	color: $text-color;
 	font-weight: 700;
-	font-size: 14px;
+	font-size: 0.8rem;
 	white-space: nowrap;
 	position: absolute;
 	top: -12px;
 	left: 50%;
 	transform: translateX(-50%);
 	background-color: $tab-bg;
-	padding: 0px 8px 3px 8px;
+	padding: 0 0.4rem 0.1rem 0.4rem;
 	border: 2px solid $frame-border;
 	border-radius: 4px;
 }
@@ -48,13 +47,13 @@ $con-color: #e99;
 .donation-buttons {
 	display: flex;
 	justify-content: center;
-	gap: 24px;
-	margin: 5px;
+	gap: 1.3rem;
+	margin: 0.2rem;
 }
 
 .donation-button {
-	width: 64px;
-	height: 64px;
+	width: 3.55rem;
+	height: 3.55rem;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -73,17 +72,17 @@ $con-color: #e99;
 	}
 
 	& .donation-platform-icon {
-		width: 40px;
-		height: 40px;
+		width: 2.2rem;
+		height: 2.2rem;
 		margin: 0;
 	}
 }
 
 .platform-details-container {
-	padding-top: 8px;
-	border-top: 1px solid $frame-border;
-	margin-top: 16px;
-	min-height: 96px;
+	padding-top: 0.5rem;
+	border-top: 0.1rem solid $frame-border;
+	margin-top: 0.9rem;
+	min-height: 5.2rem;
 }
 
 .platform-details {
@@ -92,15 +91,15 @@ $con-color: #e99;
 
 .platform-name {
 	font-weight: bold;
-	margin-bottom: 8px;
+	margin-bottom: 0.5rem;
 }
 
 .list-pro {
 	color: $pro-color;
-	margin-bottom: 4px;
+	margin-bottom: 0.2rem;
 	font-size: 0.9rem;
 	line-height: 1.15 !important;
-	padding-left: 6px;
+	padding-left: 0.4rem;
 
 	&::before {
 		content: "+";
@@ -112,10 +111,10 @@ $con-color: #e99;
 
 .list-con {
 	color: $con-color;
-	margin-bottom: 4px;
+	margin-bottom: 0.3rem;
 	font-size: 0.9rem;
 	line-height: 1.15 !important;
-	padding-left: 6px;
+	padding-left: 0.4rem;
 
 	&::before {
 		content: "–";
@@ -128,5 +127,5 @@ $con-color: #e99;
 .hover-info {
 	color: $dim-text;
 	text-align: center;
-	margin-top: 8px;
+	margin-top: 0.45rem;
 }
