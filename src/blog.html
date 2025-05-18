@@ -9,7 +9,10 @@ title: Blog - GodSVG
 
 {% block body %}
 	<div class="content-container">
-		<div class="page-title">GodSVG Blog</div>
+		<div class="page-title">
+			GodSVG Blog
+			<a href="/blog/rss.xml" id="blog-feed-btn"><img src="/assets/feed.svg" />RSS</a>
+		</div>
 		<div class="blog-posts-grid">
 			{% for post in collections.articles | reverse %}
 				<div class="blog-card">
