@@ -1,63 +1,124 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url>
-<loc>https://godsvg.com/article/1-0-alpha1/</loc>
-<lastmod>2023-12-05</lastmod>
-<priority>0.5</priority>
-</url>
-<url>
-<loc>https://godsvg.com/article/1-0-alpha2/</loc>
-<lastmod>2023-12-21</lastmod>
-<priority>0.5</priority>
-</url>
-<url>
-<loc>https://godsvg.com/article/1-0-alpha3/</loc>
-<lastmod>2024-04-18</lastmod>
-<priority>0.5</priority>
-</url>
-<url>
-<loc>https://godsvg.com/article/1-0-alpha4/</loc>
-<lastmod>2024-06-06</lastmod>
-<priority>0.5</priority>
-</url>
-<url>
-<loc>https://godsvg.com/article/1-0-alpha5/</loc>
-<lastmod>2024-09-01</lastmod>
-<priority>0.5</priority>
-</url>
-<url>
-<loc>https://godsvg.com/article/1-0-alpha6/</loc>
-<lastmod>2024-12-07</lastmod>
-<priority>0.5</priority>
-</url>
-<url>
-<loc>https://godsvg.com/article/1-0-alpha7/</loc>
-<lastmod>2025-01-12</lastmod>
-<priority>0.5</priority>
-</url>
-<url>
-<loc>https://godsvg.com/article/1-0-alpha8/</loc>
-<lastmod>2025-03-15</lastmod>
-<priority>0.5</priority>
-</url>
-<url>
-<loc>https://godsvg.com/article/godsvg-is-now-on-itch/</loc>
-<lastmod>2024-09-02</lastmod>
-<priority>0.5</priority>
-</url>
-<url>
-<loc>https://godsvg.com/blog/</loc>
-<lastmod>2025-05-18</lastmod>
-<priority>0.5</priority>
-</url>
-<url>
-<loc>https://godsvg.com/</loc>
-<lastmod>2025-05-18</lastmod>
-<priority>1.0</priority>
-</url>
-<url>
-<loc>https://godsvg.com/releases/</loc>
-<lastmod>2025-05-18</lastmod>
-<priority>0.5</priority>
-</url>
+    
+        <url>
+            
+            <loc>https://godsvg.com/article/1-0-alpha1/</loc>
+            <lastmod>2023-12-05</lastmod>
+            
+            
+                <priority>0.5</priority>
+            
+        </url>
+    
+        <url>
+            
+            <loc>https://godsvg.com/article/1-0-alpha2/</loc>
+            <lastmod>2023-12-21</lastmod>
+            
+            
+                <priority>0.5</priority>
+            
+        </url>
+    
+        <url>
+            
+            <loc>https://godsvg.com/article/1-0-alpha3/</loc>
+            <lastmod>2024-04-18</lastmod>
+            
+            
+                <priority>0.5</priority>
+            
+        </url>
+    
+        <url>
+            
+            <loc>https://godsvg.com/article/1-0-alpha4/</loc>
+            <lastmod>2024-06-06</lastmod>
+            
+            
+                <priority>0.5</priority>
+            
+        </url>
+    
+        <url>
+            
+            <loc>https://godsvg.com/article/1-0-alpha5/</loc>
+            <lastmod>2024-09-01</lastmod>
+            
+            
+                <priority>0.5</priority>
+            
+        </url>
+    
+        <url>
+            
+            <loc>https://godsvg.com/article/1-0-alpha6/</loc>
+            <lastmod>2024-12-07</lastmod>
+            
+            
+                <priority>0.5</priority>
+            
+        </url>
+    
+        <url>
+            
+            <loc>https://godsvg.com/article/1-0-alpha7/</loc>
+            <lastmod>2025-01-12</lastmod>
+            
+            
+                <priority>0.5</priority>
+            
+        </url>
+    
+        <url>
+            
+            <loc>https://godsvg.com/article/1-0-alpha8/</loc>
+            <lastmod>2025-03-15</lastmod>
+            
+            
+                <priority>0.5</priority>
+            
+        </url>
+    
+        <url>
+            
+            <loc>https://godsvg.com/article/godsvg-is-now-on-itch/</loc>
+            <lastmod>2024-09-02</lastmod>
+            
+            
+                <priority>0.5</priority>
+            
+        </url>
+    
+        <url>
+            
+            <loc>https://godsvg.com/blog/</loc>
+            <lastmod>2025-05-18</lastmod>
+            
+            
+                <priority>0.5</priority>
+            
+        </url>
+    
+        <url>
+            
+            <loc>https://godsvg.com/</loc>
+            <lastmod>2025-05-18</lastmod>
+            
+            
+                <priority>1.0</priority>
+            
+        </url>
+    
+        <url>
+            
+            <loc>https://godsvg.com/releases/</loc>
+            <lastmod>2025-05-18</lastmod>
+            
+            
+                <priority>0.5</priority>
+            
+        </url>
+    
 </urlset>
