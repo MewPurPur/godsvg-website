@@ -1,8 +1,8 @@
 @use "sass:color";
 @use "scss/theme" as *;
 
-$max-width: 960px;
-$padding-size: min(1.65rem, 4vw);
+$max-width: 950px;
+$padding-size: min(2rem, 4vw);
 $content-width: min($max-width, 100% - $padding-size * 2);
 
 .article-header {
