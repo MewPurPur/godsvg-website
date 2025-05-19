@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="/styles/blog.xsl"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
 	<title>GodSVG Blog</title>
 	<subtitle>News about GodSVG releases and more</subtitle>
@@ -15,7 +16,7 @@
 		<published>2025-05-19T00:00:00Z</published>
 		<updated>2025-05-19T00:00:00Z</updated>
 		<id>tag:godsvg.com,2025:1-0-alpha9</id>
-		<link href="/article/1-0-alpha9" />
+		<link rel="alternate" href="/article/1-0-alpha9" />
 		<link rel="enclosure" type="image/webp" href="https://godsvg.com/assets/blog/1-0-alpha9/cover.webp" />
 		<content type="html">
 			&lt;p&gt;The 9th alpha of GodSVG has arrived! This prerelease makes the layout configurable, implements an update checker, and brings in a lot of small features, improvements, and bugfixes. The prerelease also gears us up for a big upcoming prerelease.&lt;/p&gt;
@@ -72,7 +73,7 @@
 		<published>2025-03-15T00:00:00Z</published>
 		<updated>2025-03-15T00:00:00Z</updated>
 		<id>tag:godsvg.com,2025:1-0-alpha8</id>
-		<link href="/article/1-0-alpha8" />
+		<link rel="alternate" href="/article/1-0-alpha8" />
 		<link rel="enclosure" type="image/webp" href="https://godsvg.com/assets/blog/1-0-alpha8/cover.webp" />
 		<content type="html">
 			&lt;p&gt;The 8th alpha of GodSVG has arrived! This release introduces tabs in GodSVG and massively improves stability and performance. The features and bugfixes below are not attributed because I was responsible for almost the entirety of the release - except &lt;a href=&quot;https://github.com/Kiisu-Master&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Kiisu-Master&lt;/a&gt; who implemented a &amp;quot;Middle mouse button to close tab&amp;quot; option.&lt;/p&gt;
@@ -177,7 +178,7 @@
 		<published>2025-01-12T00:00:00Z</published>
 		<updated>2025-01-12T00:00:00Z</updated>
 		<id>tag:godsvg.com,2025:1-0-alpha7</id>
-		<link href="/article/1-0-alpha7" />
+		<link rel="alternate" href="/article/1-0-alpha7" />
 		<link rel="enclosure" type="image/webp" href="https://godsvg.com/assets/blog/1-0-alpha7/cover.webp" />
 		<content type="html">
 			&lt;p&gt;GodSVG releases its seventh alpha! This prerelease focuses on stability, setting the stage for bigger changes in the upcoming alphas.&lt;/p&gt;
@@ -236,7 +237,7 @@
 		<published>2024-12-07T00:00:00Z</published>
 		<updated>2024-12-07T00:00:00Z</updated>
 		<id>tag:godsvg.com,2024:1-0-alpha6</id>
-		<link href="/article/1-0-alpha6" />
+		<link rel="alternate" href="/article/1-0-alpha6" />
 		<link rel="enclosure" type="image/webp" href="https://godsvg.com/assets/blog/1-0-alpha6/cover.webp" />
 		<content type="html">
 			&lt;p&gt;GodSVG releases its sixth alpha! This prerelease focuses on stability, setting the stage for bigger changes in upcoming alphas.&lt;/p&gt;
@@ -280,7 +281,7 @@
 		<published>2024-09-02T00:00:00Z</published>
 		<updated>2024-09-02T00:00:00Z</updated>
 		<id>tag:godsvg.com,2024:godsvg-is-now-on-itch</id>
-		<link href="/article/godsvg-is-now-on-itch" />
+		<link rel="alternate" href="/article/godsvg-is-now-on-itch" />
 		<link rel="enclosure" type="image/webp" href="https://godsvg.com/assets/blog/godsvg-is-now-on-itch/cover.webp" />
 		<content type="html">
 			&lt;p&gt;Hello everyone!&lt;/p&gt;
@@ -304,7 +305,7 @@
 		<published>2024-09-01T00:00:00Z</published>
 		<updated>2024-09-01T00:00:00Z</updated>
 		<id>tag:godsvg.com,2024:1-0-alpha5</id>
-		<link href="/article/1-0-alpha5" />
+		<link rel="alternate" href="/article/1-0-alpha5" />
 		<link rel="enclosure" type="image/webp" href="https://godsvg.com/assets/blog/1-0-alpha5/cover.webp" />
 		<content type="html">
 			&lt;p&gt;GodSVG releases its fifth alpha, which includes a necessary core refactor that enables a lot of important features and bugfixes. This is the next big step towards a stable release!&lt;/p&gt;
@@ -357,7 +358,7 @@
 		<published>2024-06-06T00:00:00Z</published>
 		<updated>2024-06-06T00:00:00Z</updated>
 		<id>tag:godsvg.com,2024:1-0-alpha4</id>
-		<link href="/article/1-0-alpha4" />
+		<link rel="alternate" href="/article/1-0-alpha4" />
 		<link rel="enclosure" type="image/webp" href="https://godsvg.com/assets/blog/1-0-alpha4/cover.webp" />
 		<content type="html">
 			&lt;h2&gt;Rework of attribute defaults&lt;/h2&gt;
@@ -397,7 +398,7 @@
 		<published>2024-04-18T00:00:00Z</published>
 		<updated>2024-04-18T00:00:00Z</updated>
 		<id>tag:godsvg.com,2024:1-0-alpha3</id>
-		<link href="/article/1-0-alpha3" />
+		<link rel="alternate" href="/article/1-0-alpha3" />
 		<link rel="enclosure" type="image/webp" href="https://godsvg.com/assets/blog/1-0-alpha3/cover.webp" />
 		<content type="html">
 			&lt;p&gt;After four months of development, I&#39;m proud to present GodSVG&#39;s next big step forward: Alpha 3. This prerelease has big improvements in all areas.&lt;/p&gt;
@@ -460,7 +461,7 @@
 		<published>2023-12-21T00:00:00Z</published>
 		<updated>2023-12-21T00:00:00Z</updated>
 		<id>tag:godsvg.com,2023:1-0-alpha2</id>
-		<link href="/article/1-0-alpha2" />
+		<link rel="alternate" href="/article/1-0-alpha2" />
 		<link rel="enclosure" type="image/webp" href="https://godsvg.com/assets/blog/1-0-alpha2/cover.webp" />
 		<content type="html">
 			&lt;p&gt;It has only been two weeks since the first development build of GodSVG, but thanks to open-source contributions, there are already enough new things for a new alpha build.&lt;/p&gt;
@@ -508,7 +509,7 @@
 		<published>2023-12-05T00:00:00Z</published>
 		<updated>2023-12-05T00:00:00Z</updated>
 		<id>tag:godsvg.com,2023:1-0-alpha1</id>
-		<link href="/article/1-0-alpha1" />
+		<link rel="alternate" href="/article/1-0-alpha1" />
 		<link rel="enclosure" type="image/webp" href="https://godsvg.com/assets/blog/1-0-alpha1/cover.webp" />
 		<content type="html">
 			&lt;p&gt;A few months ago in May, I started working on an SVG editor inside Godot called GodSVG. In June, I open-sourced it. After five months of hard work and with help from a few contributors, I&#39;ve made GodSVG usable and lifted all of the roadblocks to an initial alpha release. The last blocker was the lack of Undo and Redo, but now they have been implemented and I&#39;m ready to present GodSVG to the world.&lt;/p&gt;
