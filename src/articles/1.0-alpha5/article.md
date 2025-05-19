@@ -11,7 +11,7 @@ prerelease: true
 
 GodSVG releases its fifth alpha, which includes a necessary core refactor that enables a lot of important features and bugfixes. This is the next big step towards a stable release!
 
-# Grand internal rework
+## Grand internal rework
 
 In the last prerelease, I mentioned how my biggest priority was to massively rework how SVGs are handled internally. I've finally managed to do it, and this unlocked some big features.
 
@@ -35,13 +35,13 @@ Since some of these new elements and attributes can be tricky to use, I’ve add
 
 Unfortunately, this internal rework may result in loss of performance and some new bugs. But I've spent so long fixing bugs that I still expect this alpha to be the most stable so far.
 
-# Formatters
+## Formatters
 
 SVG formatting is now handled by dedicated formatter profiles, and you can assign different ones for editing and exporting.
 
 I've also finally implemented a "Pretty formatting" option, which uses newlines and indentation to make editing more convenient. It's enabled by default for the Editor formatter, but not in the Export formatter which uses a compact profile by default.
 
-# Other goodies
+## Other goodies
 
 - When dragging element frames around, the drop indicators will now show a warning color if this is an invalid child (for example, dropping anything other than a &lt;stop&gt; element under a gradient).
 - An Eyedropper has been added to the color picker, allowing you to pick any color from within the app.

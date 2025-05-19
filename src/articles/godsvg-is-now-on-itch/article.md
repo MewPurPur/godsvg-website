@@ -11,7 +11,7 @@ Hello everyone!
 
 Along with the release of [GodSVG's fifth alpha](https://godsvg.com/article/1-0-alpha5), I have another announcement to make.
 
-# GodSVG on Itch.io
+## GodSVG on Itch.io
 
 I have recently published GodSVG on Itch.io, where you can download it or use it directly from the browser. Users are politely encouraged by Itch.io to purchase GodSVG for $10, but it is available for free. Itch.io will get the same version of GodSVG as all other platforms (alpha 5 currently) and there won't be any delays.
 

@@ -14,7 +14,7 @@ date: Created
 
 	<div class="article-header">
 		<img src="/assets/blog/{{slugcat | slugify}}/cover.webp" class="article-cover"/>
-		<h1 class="article-title">{{ title }}</h1>
+		<h2 class="article-title">{{ title }}</h2>
 		<div class="article-metadata">
 			<span class="article-author">By: {{ author }}</span>
 			<span class="article-date">
@@ -40,7 +40,7 @@ date: Created
 		<div class="article-bottom">
 			{% if release != "" %}
 				<div class="article-downloads">
-					<h1>Downloads</h1>
+					<h2>Downloads</h2>
 					{% if prerelease %}
 						<div class="notice-panel warning">
 							<div class="notice-header">WARNING:</div>
@@ -67,7 +67,7 @@ date: Created
 			{% endif %}
 
 			<div>
-				<h1>Support</h1>
+				<h2>Support</h2>
 				<div class="support-panel">
 					<p class="support-panel-paragraph">Many thanks to everyone who has donated to this project! These donations, while currently small, have allowed me to dedicate a lot more time to GodSVG while balancing other responsibilities. Without them, the project would be far behind where it is today. If you find GodSVG valuable and are able to donate, I would be very grateful!</p>
 					{% include "donation_widget.njk" %}

@@ -11,7 +11,7 @@ prerelease: true
 
 GodSVG releases its sixth alpha! This prerelease focuses on stability, setting the stage for bigger changes in upcoming alphas.
 
-# XML nodes
+## XML nodes
 
 Elements are the most important type of XML node, but there are a few others: Comments, text, and CDATA. Text and CDATA can affect the SVG in some situations, as they can be used to provide elements such as tspan with text. However, GodSVG didn't parse these XML nodes, and this was a problem. Even though the SVG renderer doesn't support any of the elements that use them, this still meant that if you had an SVG with text elements, and you took it in and out of GodSVG, it would get corrupted.
 
@@ -19,7 +19,7 @@ Addressing this was my main focus for this alpha release. If the SVG you import 
 
 {% blogimg "xml_nodes.webp", "Image of the three XML nodes" %}
 
-# Other new things
+## Other new things
 
 This development cycle had a big emphasis on bugfixing, so there aren't a lot of other new features. Still, a few new features made it in - here's what’s new.
 
@@ -27,7 +27,7 @@ Support for the polygon and polyline elements has been added. These work like a 
 
 On web, reference images have finally been implemented. Also, one of the biggest issues on web was clipboard checks failing and triggering intrusive popups - this has now been resolved. Another fix for web, exports now properly respect all configuration options.
 
-# Smaller enhancements
+## Smaller enhancements
 
 Many thanks to {% gh "Vovkiv" %} and {% gh "Swarkin" %} for helping with keeping translations up to date.
 
@@ -37,7 +37,7 @@ Many thanks to {% gh "Vovkiv" %} and {% gh "Swarkin" %} for helping with keeping
 - There's some optimization compared to alpha 5.
 - Path popups now only disable path commands that would result in an invalid syntax, others are marked as warnings and still allowed.
 
-# Major bugfixes
+## Major bugfixes
 
 This release had a lot of bugfixes, so I'm only listing the most important ones.
 

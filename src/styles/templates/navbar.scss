@@ -7,7 +7,6 @@ $navbar-color: #1a1c1e;
 	background-color: $navbar-color;
 	width: 100%;
 	padding: 0.8rem 0;
-	margin-bottom: 1rem;
 }
 
 .nav-content {
@@ -67,12 +66,6 @@ $navbar-color: #1a1c1e;
 		text-decoration: none;
 	}
 
-	&:active {
-		background-color: rgba(255, 255, 255, 0.15);
-		color: #fff;
-		text-decoration: none;
-	}
-
 	// Current link
 	&.active {
 		color: #fff;
@@ -123,7 +116,7 @@ $navbar-color: #1a1c1e;
 	.nav-links {
 		display: none;
 		position: absolute;
-		top: 84%;
+		top: 2.7rem;
 		right: 1.65rem;
 		flex-direction: column;
 		background-color: #25292e;
