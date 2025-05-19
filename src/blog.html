@@ -4,7 +4,7 @@ title: Blog - GodSVG
 {% extends "base.njk" %}
 
 {% block head %}
-	<link rel="alternate" type="application/atom+xml" title="GodSVG Blog" href="/blog/feed.xml" />
+	<link rel="alternate" type="application/atom+xml" title="GodSVG Blog" href="{{site.url}}/blog/feed.xml" />
 {% endblock %}
 
 {% block style %}
@@ -13,7 +13,7 @@ title: Blog - GodSVG
 
 {% block body %}
 	<div class="content-container">
-		<div class="page-title">
+		<h1>
 			GodSVG Blog
 			<a href="/blog/atom.xml" id="blog-feed-btn" title="ATOM feed for ATOM/RSS feed readers"><img src="/assets/feed.svg"/></a>
 		</div>
