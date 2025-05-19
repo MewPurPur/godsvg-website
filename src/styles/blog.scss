@@ -2,7 +2,7 @@
 @use "scss/theme" as *;
 
 .content-container {
-	width: 960px;
+	width: 1120px;
 	max-width: 90%;
 	margin: 0 auto;
 }
@@ -74,13 +74,13 @@
 	opacity: 1.0;
 }
 
-@media (max-width: 960px) {
+@media (max-width: 1080px) {
 	.blog-posts-grid {
 		grid-template-columns: repeat(2, 1fr);
 	}
 }
 
-@media (max-width: 640px) {
+@media (max-width: 680px) {
 	.blog-posts-grid {
 		grid-template-columns: 1fr;
 	}
