@@ -32,7 +32,7 @@ $con-color: #e99;
 .donation-header {
 	color: $text-color;
 	font-weight: 700;
-	font-size: 0.8rem;
+	font-size: 0.85rem;
 	white-space: nowrap;
 	position: absolute;
 	top: -12px;
@@ -47,13 +47,13 @@ $con-color: #e99;
 .donation-buttons {
 	display: flex;
 	justify-content: center;
-	gap: 1.3rem;
-	margin: 0.2rem;
+	gap: 1.2rem;
+	margin: 0.1rem;
 }
 
 .donation-button {
-	width: 3.55rem;
-	height: 3.55rem;
+	width: 3.25rem;
+	height: 3.25rem;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -80,9 +80,9 @@ $con-color: #e99;
 
 .platform-details-container {
 	padding-top: 0.5rem;
-	border-top: 0.1rem solid $frame-border;
+	border-top: 2px solid $frame-border;
 	margin-top: 0.9rem;
-	min-height: 5.2rem;
+	min-height: 5.5rem;
 }
 
 .platform-details {
@@ -91,7 +91,7 @@ $con-color: #e99;
 
 .platform-name {
 	font-weight: bold;
-	margin-bottom: 0.5rem;
+	margin-bottom: 0.4rem;
 }
 
 .list-pro {
