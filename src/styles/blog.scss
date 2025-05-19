@@ -87,43 +87,30 @@
 }
 
 #blog-feed-btn {
-	$bg: #e67a21;
-	$text: #fff;
+	$bg: #d06915;
 	$size: 1rem;
-	$max-width: 480px;
 
 	position: absolute;
 	margin-left: 1rem;
 	background-color: $bg;
-	color: $text;
 
-	padding: 0.2rem 0.35rem;
+	padding: 0.2rem 0.2rem;
 	border-radius: 5px;
 	cursor: pointer;
 	user-select: none;
 	text-decoration: none !important;
-	text-align: center;
-	font-size: $size;
-	@media (max-width: $max-width) {
-		font-size: $size * 0.7;
-	}
 
 	display: inline-flex;
 	align-items: start;
 	gap: 4px;
 
 	&:hover {
-		color: color.adjust($text, $lightness: 10%);
-		background-color: color.adjust($bg, $lightness: 10%);
+		background-color: color.adjust($bg, $lightness: -5%);
 	}
 
 	img {
 		margin: auto;
 		width: $size;
 		height: $size;
-		@media (max-width: $max-width) {
-			width: $size * 0.7;
-			height: $size * 0.7;
-		}
 	}
 }
