@@ -27,7 +27,6 @@ export default async function(eleventyConfig) {
 	// Plugins
 	eleventyConfig.addPlugin(HtmlBasePlugin);
 	eleventyConfig.addPlugin(InputPathToUrlTransformPlugin);
-	eleventyConfig.addPlugin(pluginRss);
 
 	// Filters & Shortcodes
 	eleventyConfig.addAsyncFilter("pageExists", async function(url) {
@@ -156,6 +155,19 @@ export default async function(eleventyConfig) {
 		// Strip any leading "@".
 		const clean = username.replace(/^@/, "");
 		return `<a href="https://github.com/${clean}" target="_blank" rel="noopener noreferrer">${clean}</a>`;
+	});
+
+	// XML / RSS things
+	eleventyConfig.addPlugin(pluginRss);
+	eleventyConfig.addTemplateFormats("xsl");
+	eleventyConfig.addWatchTarget("**/*.xsl");
+	eleventyConfig.addExtension("xsl", {
+		outputFileExtension: "xsl",
+		compile: function (inputContent, inputPath) {
+			return function (data) {
+				return inputContent;
+			};
+		},
 	});
 
 	// Minifying on release (https://github.com/terser/html-minifier-terser?tab=readme-ov-file#options-quick-reference)
