@@ -9,6 +9,7 @@ permalink: /blog/atom.xml
 	we CANNOT risk IDs changing as it breaks links for all RSS readers.
 -#}
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="/styles/blog.xsl"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
 	<title>GodSVG Blog</title>
 	<subtitle>News about GodSVG releases and more</subtitle>
@@ -28,7 +29,7 @@ permalink: /blog/atom.xml
 		<published>{{ post.date | dateToRfc3339 }}</published>
 		<updated>{{ post.date | dateToRfc3339 }}</updated>
 		<id>tag:godsvg.com,{{post.date.getFullYear()}}:{{post.data.slugcat | slugify}}</id>
-		<link href="/article/{{postSlug}}" />
+		<link rel="alternate" href="/article/{{postSlug}}" />
 		<link rel="enclosure" type="image/webp" href="{{ site.url }}/assets/blog/{{postSlug}}/cover.webp" />
 		<content type="html">
 			{{ post.content | renderTransforms(post.data.page, metadata.base) }}
