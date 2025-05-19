@@ -49,7 +49,7 @@
 </div>
 <div class="article-header">
 <img src="/assets/blog/1-0-alpha3/cover.webp" class="article-cover">
-<h1 class="article-title">New prerelease: GodSVG 1.0-alpha3</h1>
+<h2 class="article-title">New prerelease: GodSVG 1.0-alpha3</h2>
 <div class="article-metadata">
 <span class="article-author">By: MewPurPur</span>
 <span class="article-date">
@@ -66,7 +66,7 @@ This blog post was written retroactively to document events from GodSVG's early 
 </div>
 <div class="article-html">
 <p>After four months of development, I'm proud to present GodSVG's next big step forward: Alpha 3. This prerelease has big improvements in all areas.</p>
-<h1>Viewport improvements</h1>
+<h2>Viewport improvements</h2>
 <p>Finally, I've implemented infinite zoom - something every self-respecting SVG editor should have. Until now, zooming in could easily get very laggy, and big SVGs couldn't even be fully zoomed in. Now SVGs remain crisp at every zoom level and don't cause lag spikes.</p>
 <p>I've also made handles in the viewport far more useful. Right-clicking them now opens the same context popup as in the inspector. Shapes can also now be added at a desired position by right-clicking the empty space of the viewport.</p>
 <div class="article-video">
@@ -76,7 +76,7 @@ This blog post was written retroactively to document events from GodSVG's early 
 </video>
 </div>
 <p><a href="https://github.com/Kiisu-Master" target="_blank" rel="noopener noreferrer">Kiisu-Master</a> and I also improved the viewport controls. Zooming can now be centered on the cursor, and middle mouse is now nicer to use.</p>
-<h1>Functional improvements</h1>
+<h2>Functional improvements</h2>
 <p>A number of improvements in this prerelease add new powers to GodSVG.</p>
 <p>The ability to drag and drop in the inspector has been implemented by me, <a href="https://github.com/SeremTitus" target="_blank" rel="noopener noreferrer">SeremTitus</a>, and <a href="https://github.com/Kiisu-Master" target="_blank" rel="noopener noreferrer">Kiisu-Master</a>. This finally enables you to adjust the SVG hierarchy without needing the code editor.</p>
 <div class="article-video">
@@ -93,7 +93,7 @@ This blog post was written retroactively to document events from GodSVG's early 
 <p>New elements can now be added in the inspector by right-clicking the empty space.</p>
 <p>The SVG renderer - <a href="https://github.com/thorvg/thorvg">ThorVG</a> - saw a lot of bugfixes in the last four months, improving the accuracy of the presented graphic and the rasterized PNGs on export.</p>
 <p>GodSVG's performance has been greatly improved. Rebuilding an SVG with a large number of paths is much faster now, as I've sped up the construction of pathdata fields considerably. This is a risky change, so I'll watch out for regressions. <a href="https://github.com/Kiisu-Master" target="_blank" rel="noopener noreferrer">Kiisu-Master</a> also fixed an issue that caused a lot of strain on the GPU on some systems.</p>
-<h1>A lot more configurability</h1>
+<h2>A lot more configurability</h2>
 <p>I've reworked the UI of the settings menu, which allowed us to expand it with a lot more settings. Attribute formatting settings have been expanded and moved there, and XML formatting settings were added. I've also implemented settings for theming and I made shortcuts configurable (which also serves as documentation!)</p>
 <div class="article-video">
 <video controls preload="metadata" aria-label="Video of the new settings menu">
@@ -102,13 +102,13 @@ This blog post was written retroactively to document events from GodSVG's early 
 </video>
 </div>
 <p>The scaling approach of GodSVG was changed to reduce the blurriness and give the user more control over the size of the layout, thanks to a new UI scale setting implemented by <a href="https://github.com/Kiisu-Master" target="_blank" rel="noopener noreferrer">Kiisu-Master</a>.</p>
-<h1>UX improvements</h1>
+<h2>UX improvements</h2>
 <p>I've improved the color picker by adding numbers next to the sliders for more precise configuration of colors, as well as Undo/Redo functionality.</p>
 <p>I've also improved the fallback file dialog and added an option to set it as the default. If you like it, you can now choose it over the OS file dialog in the settings.</p>
 <p>And finally, <a href="https://github.com/Kiisu-Master" target="_blank" rel="noopener noreferrer">Kiisu-Master</a> has added a Save functionality with a Ctrl+S shortcut. The implementation is a bit awkward at the moment, but it's still a quicker way to save an SVG than exporting.</p>
-<h1>Internal improvements</h1>
+<h2>Internal improvements</h2>
 <p><a href="https://github.com/Kiisu-Master" target="_blank" rel="noopener noreferrer">Kiisu-Master</a> helped me a lot with some internal improvements. Translations have been moved to the .po format, which is a much better experience for translators. There are now also workflows for continuous integration with Windows and Linux. If you're logged into Github, you can now test the latest development builds. MacOS workflows will be added soon.</p>
-<h1>Other goodies</h1>
+<h2>Other goodies</h2>
 <ul>
 <li>The &lt;stop&gt; element has been implemented by <a href="https://github.com/RedFurryDemon" target="_blank" rel="noopener noreferrer">RedFurryDemon</a>. Although it can't be added through the GUI, this makes it easier to edit it in imported graphics or ones made through the code editor.</li>
 <li>Translations in Bulgarian and German have been available since the first alpha release, and <a href="https://github.com/Vovkiv" target="_blank" rel="noopener noreferrer">Vovkiv</a> has now also added Russian and Ukrainian.</li>
@@ -118,7 +118,7 @@ This blog post was written retroactively to document events from GodSVG's early 
 </div>
 <div class="article-bottom">
 <div class="article-downloads">
-<h1>Downloads</h1>
+<h2>Downloads</h2>
 <div class="notice-panel warning">
 <div class="notice-header">WARNING:</div>
 <div class="notice-message">
@@ -131,29 +131,23 @@ This is a prerelease version. Please regularly back up your SVG files to prevent
 <div class="download-info">
 <img src="/assets/platforms_windows.svg" alt="windows icon">
 <p>Windows</p>
-<a href="https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha3/GodSVG.Windows.zip" class="btn btn-download" version="https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha3/GodSVG.Windows.zip">
-<span id="dropbtn-text">Download</span>
-</a>
+<a href="https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha3/GodSVG.Windows.zip" class="btn btn-download" version="https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha3/GodSVG.Windows.zip">Download</a>
 </div>
 <div class="download-info">
 <img src="/assets/platforms_macos.svg" alt="macos icon">
 <p>MacOS</p>
-<a href="https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha3/GodSVG.MacOS.zip" class="btn btn-download" version="https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha3/GodSVG.MacOS.zip">
-<span id="dropbtn-text">Download</span>
-</a>
+<a href="https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha3/GodSVG.MacOS.zip" class="btn btn-download" version="https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha3/GodSVG.MacOS.zip">Download</a>
 </div>
 <div class="download-info">
 <img src="/assets/platforms_linux.svg" alt="linux icon">
 <p>Linux</p>
-<a href="https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha3/GodSVG.Linux.zip" class="btn btn-download" version="https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha3/GodSVG.Linux.zip">
-<span id="dropbtn-text">Download</span>
-</a>
+<a href="https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha3/GodSVG.Linux.zip" class="btn btn-download" version="https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha3/GodSVG.Linux.zip">Download</a>
 </div>
 </div>
 </div>
 </div>
 <div>
-<h1>Support</h1>
+<h2>Support</h2>
 <div class="support-panel">
 <p class="support-panel-paragraph">Many thanks to everyone who has donated to this project! These donations, while currently small, have allowed me to dedicate a lot more time to GodSVG while balancing other responsibilities. Without them, the project would be far behind where it is today. If you find GodSVG valuable and are able to donate, I would be very grateful!</p>
 <div class="donation-widget">

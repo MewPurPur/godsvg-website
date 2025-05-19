@@ -49,7 +49,7 @@
 </div>
 <div class="article-header">
 <img src="/assets/blog/1-0-alpha6/cover.webp" class="article-cover">
-<h1 class="article-title">New prerelease: GodSVG 1.0-alpha6</h1>
+<h2 class="article-title">New prerelease: GodSVG 1.0-alpha6</h2>
 <div class="article-metadata">
 <span class="article-author">By: MewPurPur</span>
 <span class="article-date">
@@ -66,17 +66,17 @@ This blog post was written retroactively to document events from GodSVG's early 
 </div>
 <div class="article-html">
 <p>GodSVG releases its sixth alpha! This prerelease focuses on stability, setting the stage for bigger changes in upcoming alphas.</p>
-<h1>XML nodes</h1>
+<h2>XML nodes</h2>
 <p>Elements are the most important type of XML node, but there are a few others: Comments, text, and CDATA. Text and CDATA can affect the SVG in some situations, as they can be used to provide elements such as tspan with text. However, GodSVG didn't parse these XML nodes, and this was a problem. Even though the SVG renderer doesn't support any of the elements that use them, this still meant that if you had an SVG with text elements, and you took it in and out of GodSVG, it would get corrupted.</p>
 <p>Addressing this was my main focus for this alpha release. If the SVG you import or paste into GodSVG has XML nodes other than elements, they will now no longer be omitted. Text, CDATA, and comments can also be converted between each other.</p>
 <div class="article-image">
 <img src="/assets/blog/1-0-alpha6/xml_nodes.webp" alt="Image of the three XML nodes">
 </div>
-<h1>Other new things</h1>
+<h2>Other new things</h2>
 <p>This development cycle had a big emphasis on bugfixing, so there aren't a lot of other new features. Still, a few new features made it in - here's what’s new.</p>
 <p>Support for the polygon and polyline elements has been added. These work like a path element with only lines. You can add them from the &quot;Add new element&quot; popup.</p>
 <p>On web, reference images have finally been implemented. Also, one of the biggest issues on web was clipboard checks failing and triggering intrusive popups - this has now been resolved. Another fix for web, exports now properly respect all configuration options.</p>
-<h1>Smaller enhancements</h1>
+<h2>Smaller enhancements</h2>
 <p>Many thanks to <a href="https://github.com/Vovkiv" target="_blank" rel="noopener noreferrer">Vovkiv</a> and <a href="https://github.com/Swarkin" target="_blank" rel="noopener noreferrer">Swarkin</a> for helping with keeping translations up to date.</p>
 <ul>
 <li>You can now open the currently worked on file via the OS image viewer.</li>
@@ -85,7 +85,7 @@ This blog post was written retroactively to document events from GodSVG's early 
 <li>There's some optimization compared to alpha 5.</li>
 <li>Path popups now only disable path commands that would result in an invalid syntax, others are marked as warnings and still allowed.</li>
 </ul>
-<h1>Major bugfixes</h1>
+<h2>Major bugfixes</h2>
 <p>This release had a lot of bugfixes, so I'm only listing the most important ones.</p>
 <ul>
 <li>Fixed precision-related issues (i.e., you should no longer get 12.399998 instead of 12.4).</li>
@@ -99,7 +99,7 @@ This blog post was written retroactively to document events from GodSVG's early 
 </div>
 <div class="article-bottom">
 <div class="article-downloads">
-<h1>Downloads</h1>
+<h2>Downloads</h2>
 <div class="notice-panel warning">
 <div class="notice-header">WARNING:</div>
 <div class="notice-message">
@@ -112,29 +112,23 @@ This is a prerelease version. Please regularly back up your SVG files to prevent
 <div class="download-info">
 <img src="/assets/platforms_windows.svg" alt="windows icon">
 <p>Windows</p>
-<a href="https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha6/GodSVG.Windows.zip" class="btn btn-download" version="https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha6/GodSVG.Windows.zip">
-<span id="dropbtn-text">Download</span>
-</a>
+<a href="https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha6/GodSVG.Windows.zip" class="btn btn-download" version="https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha6/GodSVG.Windows.zip">Download</a>
 </div>
 <div class="download-info">
 <img src="/assets/platforms_macos.svg" alt="macos icon">
 <p>MacOS</p>
-<a href="https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha6/GodSVG.MacOS.zip" class="btn btn-download" version="https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha6/GodSVG.MacOS.zip">
-<span id="dropbtn-text">Download</span>
-</a>
+<a href="https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha6/GodSVG.MacOS.zip" class="btn btn-download" version="https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha6/GodSVG.MacOS.zip">Download</a>
 </div>
 <div class="download-info">
 <img src="/assets/platforms_linux.svg" alt="linux icon">
 <p>Linux</p>
-<a href="https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha6/GodSVG.Linux.zip" class="btn btn-download" version="https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha6/GodSVG.Linux.zip">
-<span id="dropbtn-text">Download</span>
-</a>
+<a href="https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha6/GodSVG.Linux.zip" class="btn btn-download" version="https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha6/GodSVG.Linux.zip">Download</a>
 </div>
 </div>
 </div>
 </div>
 <div>
-<h1>Support</h1>
+<h2>Support</h2>
 <div class="support-panel">
 <p class="support-panel-paragraph">Many thanks to everyone who has donated to this project! These donations, while currently small, have allowed me to dedicate a lot more time to GodSVG while balancing other responsibilities. Without them, the project would be far behind where it is today. If you find GodSVG valuable and are able to donate, I would be very grateful!</p>
 <div class="donation-widget">

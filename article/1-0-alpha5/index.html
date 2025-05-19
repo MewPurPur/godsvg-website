@@ -49,7 +49,7 @@
 </div>
 <div class="article-header">
 <img src="/assets/blog/1-0-alpha5/cover.webp" class="article-cover">
-<h1 class="article-title">New prerelease: GodSVG 1.0-alpha5</h1>
+<h2 class="article-title">New prerelease: GodSVG 1.0-alpha5</h2>
 <div class="article-metadata">
 <span class="article-author">By: MewPurPur</span>
 <span class="article-date">
@@ -66,7 +66,7 @@ This blog post was written retroactively to document events from GodSVG's early 
 </div>
 <div class="article-html">
 <p>GodSVG releases its fifth alpha, which includes a necessary core refactor that enables a lot of important features and bugfixes. This is the next big step towards a stable release!</p>
-<h1>Grand internal rework</h1>
+<h2>Grand internal rework</h2>
 <p>In the last prerelease, I mentioned how my biggest priority was to massively rework how SVGs are handled internally. I've finally managed to do it, and this unlocked some big features.</p>
 <p>The most important change is that some attributes can now propagate, overriding the default values of nested elements. Also, elements now have a special case for calculating the transform attribute, allowing it to accumulate. These two changes finally made it possible to implement the extremely important &lt;g&gt; element. It can now be added from the &quot;Add new element&quot; popup.</p>
 <div class="article-video">
@@ -90,10 +90,10 @@ This blog post was written retroactively to document events from GodSVG's early 
 <img src="/assets/blog/1-0-alpha5/config_warning.webp" alt="Image of a configuration warning tooltip">
 </div>
 <p>Unfortunately, this internal rework may result in loss of performance and some new bugs. But I've spent so long fixing bugs that I still expect this alpha to be the most stable so far.</p>
-<h1>Formatters</h1>
+<h2>Formatters</h2>
 <p>SVG formatting is now handled by dedicated formatter profiles, and you can assign different ones for editing and exporting.</p>
 <p>I've also finally implemented a &quot;Pretty formatting&quot; option, which uses newlines and indentation to make editing more convenient. It's enabled by default for the Editor formatter, but not in the Export formatter which uses a compact profile by default.</p>
-<h1>Other goodies</h1>
+<h2>Other goodies</h2>
 <ul>
 <li>When dragging element frames around, the drop indicators will now show a warning color if this is an invalid child (for example, dropping anything other than a &lt;stop&gt; element under a gradient).</li>
 <li>An Eyedropper has been added to the color picker, allowing you to pick any color from within the app.</li>
@@ -108,7 +108,7 @@ This blog post was written retroactively to document events from GodSVG's early 
 </div>
 <div class="article-bottom">
 <div class="article-downloads">
-<h1>Downloads</h1>
+<h2>Downloads</h2>
 <div class="notice-panel warning">
 <div class="notice-header">WARNING:</div>
 <div class="notice-message">
@@ -121,29 +121,23 @@ This is a prerelease version. Please regularly back up your SVG files to prevent
 <div class="download-info">
 <img src="/assets/platforms_windows.svg" alt="windows icon">
 <p>Windows</p>
-<a href="https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha5/GodSVG.Windows.zip" class="btn btn-download" version="https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha5/GodSVG.Windows.zip">
-<span id="dropbtn-text">Download</span>
-</a>
+<a href="https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha5/GodSVG.Windows.zip" class="btn btn-download" version="https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha5/GodSVG.Windows.zip">Download</a>
 </div>
 <div class="download-info">
 <img src="/assets/platforms_macos.svg" alt="macos icon">
 <p>MacOS</p>
-<a href="https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha5/GodSVG.MacOS.zip" class="btn btn-download" version="https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha5/GodSVG.MacOS.zip">
-<span id="dropbtn-text">Download</span>
-</a>
+<a href="https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha5/GodSVG.MacOS.zip" class="btn btn-download" version="https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha5/GodSVG.MacOS.zip">Download</a>
 </div>
 <div class="download-info">
 <img src="/assets/platforms_linux.svg" alt="linux icon">
 <p>Linux</p>
-<a href="https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha5/GodSVG.Linux.zip" class="btn btn-download" version="https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha5/GodSVG.Linux.zip">
-<span id="dropbtn-text">Download</span>
-</a>
+<a href="https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha5/GodSVG.Linux.zip" class="btn btn-download" version="https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha5/GodSVG.Linux.zip">Download</a>
 </div>
 </div>
 </div>
 </div>
 <div>
-<h1>Support</h1>
+<h2>Support</h2>
 <div class="support-panel">
 <p class="support-panel-paragraph">Many thanks to everyone who has donated to this project! These donations, while currently small, have allowed me to dedicate a lot more time to GodSVG while balancing other responsibilities. Without them, the project would be far behind where it is today. If you find GodSVG valuable and are able to donate, I would be very grateful!</p>
 <div class="donation-widget">

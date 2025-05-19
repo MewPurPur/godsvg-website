@@ -49,7 +49,7 @@
 </div>
 <div class="article-header">
 <img src="/assets/blog/1-0-alpha8/cover.webp" class="article-cover">
-<h1 class="article-title">New prerelease: GodSVG 1.0-alpha8</h1>
+<h2 class="article-title">New prerelease: GodSVG 1.0-alpha8</h2>
 <div class="article-metadata">
 <span class="article-author">By: MewPurPur</span>
 <span class="article-date">
@@ -66,7 +66,7 @@ This blog post was written retroactively to document events from GodSVG's early 
 </div>
 <div class="article-html">
 <p>The 8th alpha of GodSVG has arrived! This release introduces tabs in GodSVG and massively improves stability and performance. The features and bugfixes below are not attributed because I was responsible for almost the entirety of the release - except <a href="https://github.com/Kiisu-Master" target="_blank" rel="noopener noreferrer">Kiisu-Master</a> who implemented a &quot;Middle mouse button to close tab&quot; option.</p>
-<h1>Implemented tabs</h1>
+<h2>Implemented tabs</h2>
 <p>One of the most cumbersome aspects of using GodSVG was the inability to edit multiple SVGs at once. I have implemented a tab system to lift this hurdle. This initial implementation is already quite comprehensive and polished, so I don't expect it to change a lot in the future.</p>
 <p>Tabs have all the basic functionalities and some extras, like closing multiple tabs, tooltips, and reasonable UX with many tabs. It also now made more sense to split &quot;Save SVG&quot; into two options, &quot;Save SVG&quot; and &quot;Save SVG as...&quot;, so I've done that too.</p>
 <div class="article-video">
@@ -75,7 +75,7 @@ This blog post was written retroactively to document events from GodSVG's early 
 <p>Video of using tabs</p>
 </video>
 </div>
-<h1>Other features and improvements</h1>
+<h2>Other features and improvements</h2>
 <p>GodSVG used to be unusable for some Windows users because of a warning. This has been addressed in this prerelease.</p>
 <p>UI Scale has been reworked into a single setting that only allows the valid options. The UI is now prevented from getting too small. This was a common problem, especially on Web, and unavoidable on itch.io with the old implementation. There is now an &quot;Auto&quot; option (same as &quot;Auto UI Scale&quot; used with the &quot;1.0&quot; UI scale before), a range of appropriate hard-coded values that should be safe, and a &quot;Max&quot; option. For example, if the maximum determined UI scale is 145%, you can now use that instead of being limited to 125%. Custom UI scale will be implemented in the future.</p>
 <p>GodSVG is built in Godot Engine, which recently released a new 4.4 version, and we've moved to it. This resulted in significant performance improvements (some of them thanks to my own contributions!). It also updated the SVG renderer (ThorVG), resulting in significant fixes and improvements to SVG rendering and rasterizing.</p>
@@ -103,12 +103,9 @@ This blog post was written retroactively to document events from GodSVG's early 
 <li>Improved rect-&gt;path conversion for rounded rectangles with only vertical or horizontal segments.</li>
 <li>The window's minimum size was increased by exactly 1.5625%, I hope that's okay with everyone.</li>
 </ul>
-<h1>Translations</h1>
-<p>A big regression from the last prerelease was fixed, where the language didn't persist between sessions.</p>
-<p>Thanks to <a href="https://github.com/Felipe-Sena" target="_blank" rel="noopener noreferrer">Felipe-Sena</a> for translating GodSVG in Brazilian Portuguese!</p>
-<p>Thanks to <a href="https://github.com/Swarkin" target="_blank" rel="noopener noreferrer">Swarkin</a>, <a href="https://github.com/thatoddshade" target="_blank" rel="noopener noreferrer">thatoddshade</a>, <a href="https://github.com/JinEnMok" target="_blank" rel="noopener noreferrer">JinEnMok</a> for keeping existing translations up to date.</p>
-<h1>A whole new level of stability</h1>
+<h2>A whole new level of stability</h2>
 <p>This prerelease went through an immense bugfixing stage. Let's first go through the most important ones.</p>
+<p>A big regression from the last prerelease was fixed, where the language didn't persist between sessions.</p>
 <p>Previously, the &quot;View in List&quot; functionality did nothing with path commands and polygon/polyline points. This has now been fixed.</p>
 <p>The &quot;Export&quot; formatter settings used to have no effect, aside from the XML formatting settings (which is why I didn't notice this bug to begin with). This has now been fixed.</p>
 <p>Uppercase &quot;E&quot; for exponent notation is a valid syntax in pathdata and transform lists, but GodSVG didn't recognize it, resulting in some imported SVGs getting broken. This will no longer happen.</p>
@@ -154,13 +151,16 @@ This blog post was written retroactively to document events from GodSVG's early 
 <li>Fixed warning for solid color gradients being unreliable in some edge cases.</li>
 <li>Invalid shortcuts no longer appear in context popups.</li>
 </ul>
-<h1>Known regressions</h1>
+<h2>Translations</h2>
+<p>Thanks to <a href="https://github.com/Felipe-Sena" target="_blank" rel="noopener noreferrer">Felipe-Sena</a> for translating GodSVG in Brazilian Portuguese!</p>
+<p>Thanks to <a href="https://github.com/Swarkin" target="_blank" rel="noopener noreferrer">Swarkin</a>, <a href="https://github.com/thatoddshade" target="_blank" rel="noopener noreferrer">thatoddshade</a>, <a href="https://github.com/JinEnMok" target="_blank" rel="noopener noreferrer">JinEnMok</a> for keeping existing translations up to date.</p>
+<h2>Known regressions</h2>
 <p>Be careful when updating to this release from a previous one, as your savefiles will be corrupted (because one of my three config classes was named exactly like a new Godot Engine class - what are the odds!). You can find your savedata by clicking &quot;View savedata&quot; from the three dots at the top left. Palettes can also be copied as XML from the UI and then pasted back after updating</p>
 <p>For MacOS users, this update isn't recommended, because shortcuts and the native bar are known not to work on it. I still don't know if the issue is new to this prerelease.</p>
 </div>
 <div class="article-bottom">
 <div class="article-downloads">
-<h1>Downloads</h1>
+<h2>Downloads</h2>
 <div class="notice-panel warning">
 <div class="notice-header">WARNING:</div>
 <div class="notice-message">
@@ -173,36 +173,28 @@ This is a prerelease version. Please regularly back up your SVG files to prevent
 <div class="download-info">
 <img src="/assets/platforms_windows.svg" alt="windows icon">
 <p>Windows</p>
-<a href="https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha8/GodSVG.Windows.zip" class="btn btn-download" version="https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha8/GodSVG.Windows.zip">
-<span id="dropbtn-text">Download</span>
-</a>
+<a href="https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha8/GodSVG.Windows.zip" class="btn btn-download" version="https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha8/GodSVG.Windows.zip">Download</a>
 </div>
 <div class="download-info">
 <img src="/assets/platforms_macos.svg" alt="macos icon">
 <p>MacOS</p>
-<a href="https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha8/GodSVG.MacOS.zip" class="btn btn-download" version="https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha8/GodSVG.MacOS.zip">
-<span id="dropbtn-text">Download</span>
-</a>
+<a href="https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha8/GodSVG.MacOS.zip" class="btn btn-download" version="https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha8/GodSVG.MacOS.zip">Download</a>
 </div>
 <div class="download-info">
 <img src="/assets/platforms_linux.svg" alt="linux icon">
 <p>Linux</p>
-<a href="https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha8/GodSVG.Linux.zip" class="btn btn-download" version="https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha8/GodSVG.Linux.zip">
-<span id="dropbtn-text">Download</span>
-</a>
+<a href="https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha8/GodSVG.Linux.zip" class="btn btn-download" version="https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha8/GodSVG.Linux.zip">Download</a>
 </div>
 <div class="download-info">
 <img src="/assets/platforms_android.svg" alt="android icon">
 <p>Android</p>
-<a href="https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha8/GodSVG.Android.apk" class="btn btn-download" version="https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha8/GodSVG.Android.apk">
-<span id="dropbtn-text">Download</span>
-</a>
+<a href="https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha8/GodSVG.Android.apk" class="btn btn-download" version="https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha8/GodSVG.Android.apk">Download</a>
 </div>
 </div>
 </div>
 </div>
 <div>
-<h1>Support</h1>
+<h2>Support</h2>
 <div class="support-panel">
 <p class="support-panel-paragraph">Many thanks to everyone who has donated to this project! These donations, while currently small, have allowed me to dedicate a lot more time to GodSVG while balancing other responsibilities. Without them, the project would be far behind where it is today. If you find GodSVG valuable and are able to donate, I would be very grateful!</p>
 <div class="donation-widget">

@@ -49,7 +49,7 @@
 </div>
 <div class="article-header">
 <img src="/assets/blog/1-0-alpha7/cover.webp" class="article-cover">
-<h1 class="article-title">New prerelease: GodSVG 1.0-alpha7</h1>
+<h2 class="article-title">New prerelease: GodSVG 1.0-alpha7</h2>
 <div class="article-metadata">
 <span class="article-author">By: MewPurPur</span>
 <span class="article-date">
@@ -66,7 +66,7 @@ This blog post was written retroactively to document events from GodSVG's early 
 </div>
 <div class="article-html">
 <p>GodSVG releases its seventh alpha! This prerelease focuses on stability, setting the stage for bigger changes in the upcoming alphas.</p>
-<h1>GodSVG on mobile!</h1>
+<h2>GodSVG on mobile!</h2>
 <p>GodSVG now has an experimental Android port! <a href="https://github.com/syntaxerror247" target="_blank" rel="noopener noreferrer">syntaxerror247</a> has led the effort to bring it to mobile, with adaptations for touch controls - including a floating shortcut panel designed to replace desktop keyboard shortcuts.</p>
 <div class="article-image">
 <img src="/assets/blog/1-0-alpha7/shortcut_panel.webp" alt="Image of the shortcuts panel on mobile">
@@ -74,7 +74,7 @@ This blog post was written retroactively to document events from GodSVG's early 
 <p>Other aspects of GodSVG have not yet been optimized for touch input, so the mobile port will remain experimental for the time being. In future versions, we want to improve the touch controls further and implement a native file picker.</p>
 <p>As you can imagine, maintaining a mobile build is difficult because of how different touchscreens are. I'm worried that limiting my reliance on hovering and keyboards, even when they seem optimal for a UI, may come at the expense of Desktop builds, so it's possible I will discontinue Android builds in the future. It depends on whether mobile development can proceed without noticeably compromising the desktop experience.</p>
 <p>Development for mobile will for now continue on another repository that's not managed by <a href="https://github.com/syntaxerror247" target="_blank" rel="noopener noreferrer">syntaxerror247</a> and not me: https://github.com/syntaxerror247/GodSVG-Mobile. Riskier features will be implemented there first, but they may eventually be implemented in the main repository too. This will allow me to focus on the big changes I've planned for Desktop platforms, without worrying about breaking the app on Android.</p>
-<h1>Other new things</h1>
+<h2>Other new things</h2>
 <p>This prerelease has a big emphasis on bugfixes, so there aren't a lot of other new features. Still, there are a few noteworthy additions - let’s take a look.</p>
 <p>The formatters introduced in the last prerelease have been simplified. Now there are just two: an Editor formatter and an Export formatter, each with separate configurations. This should be more convenient and less confusing for nearly everyone.</p>
 <p>The export menu was reworked. The preview now accurately reflects how the file will look after rasterization and lossy compression, if those options are selected. The width and height can also now be inputted manually, if you want to reach specific dimensions, instead of having to do math to choose a perfect scale.</p>
@@ -90,7 +90,7 @@ This blog post was written retroactively to document events from GodSVG's early 
 </div></div>
 <p>Partial support for the &quot;currentColor&quot; keyword and the &quot;color&quot; attribute has been introduced. Although they can't be added through the GUI yet, they will work fine if the imported SVGs have them or if you add them through the code editor.</p>
 <p>The robustness of savefiles has been improved. There are now far fewer file operations on startup, which may slightly help with performance and hardware wear (the effects for both seemed minimal, but this is still future-proofing). The changes should also improve the backwards compatibility to alpha 7 from future versions.</p>
-<h1>Bugfixes</h1>
+<h2>Bugfixes</h2>
 <p>I've fixed a lot of bugs in this prerelease. GodSVG is actually becoming quite stable lately, so I think it's time that I start listing the bugfixes thoroughly.</p>
 <p><strong>Major bugfixes:</strong></p>
 <ul>
@@ -108,13 +108,13 @@ This blog post was written retroactively to document events from GodSVG's early 
 <li>Fixed issue where pressing Z in the viewport to create a path command didn't create an undo action.</li>
 <li>MacOS: Fixed &quot;About GodSVG&quot; button in the global menu not working.</li>
 </ul>
-<h1>Translations</h1>
+<h2>Translations</h2>
 <p>Thanks to <a href="https://github.com/thatoddshade" target="_blank" rel="noopener noreferrer">thatoddshade</a> for translating GodSVG in French!</p>
 <p>Thanks to <a href="https://github.com/Swarkin" target="_blank" rel="noopener noreferrer">Swarkin</a>, <a href="https://github.com/mikelei8291" target="_blank" rel="noopener noreferrer">mikelei8291</a>, and <a href="https://github.com/jas31415" target="_blank" rel="noopener noreferrer">jas31415</a> for keeping existing translations up to date.</p>
 </div>
 <div class="article-bottom">
 <div class="article-downloads">
-<h1>Downloads</h1>
+<h2>Downloads</h2>
 <div class="notice-panel warning">
 <div class="notice-header">WARNING:</div>
 <div class="notice-message">
@@ -127,36 +127,28 @@ This is a prerelease version. Please regularly back up your SVG files to prevent
 <div class="download-info">
 <img src="/assets/platforms_windows.svg" alt="windows icon">
 <p>Windows</p>
-<a href="https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha7/GodSVG.Windows.zip" class="btn btn-download" version="https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha7/GodSVG.Windows.zip">
-<span id="dropbtn-text">Download</span>
-</a>
+<a href="https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha7/GodSVG.Windows.zip" class="btn btn-download" version="https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha7/GodSVG.Windows.zip">Download</a>
 </div>
 <div class="download-info">
 <img src="/assets/platforms_macos.svg" alt="macos icon">
 <p>MacOS</p>
-<a href="https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha7/GodSVG.MacOS.zip" class="btn btn-download" version="https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha7/GodSVG.MacOS.zip">
-<span id="dropbtn-text">Download</span>
-</a>
+<a href="https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha7/GodSVG.MacOS.zip" class="btn btn-download" version="https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha7/GodSVG.MacOS.zip">Download</a>
 </div>
 <div class="download-info">
 <img src="/assets/platforms_linux.svg" alt="linux icon">
 <p>Linux</p>
-<a href="https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha7/GodSVG.Linux.zip" class="btn btn-download" version="https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha7/GodSVG.Linux.zip">
-<span id="dropbtn-text">Download</span>
-</a>
+<a href="https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha7/GodSVG.Linux.zip" class="btn btn-download" version="https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha7/GodSVG.Linux.zip">Download</a>
 </div>
 <div class="download-info">
 <img src="/assets/platforms_android.svg" alt="android icon">
 <p>Android</p>
-<a href="https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha7/GodSVG.Android.apk" class="btn btn-download" version="https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha7/GodSVG.Android.apk">
-<span id="dropbtn-text">Download</span>
-</a>
+<a href="https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha7/GodSVG.Android.apk" class="btn btn-download" version="https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha7/GodSVG.Android.apk">Download</a>
 </div>
 </div>
 </div>
 </div>
 <div>
-<h1>Support</h1>
+<h2>Support</h2>
 <div class="support-panel">
 <p class="support-panel-paragraph">Many thanks to everyone who has donated to this project! These donations, while currently small, have allowed me to dedicate a lot more time to GodSVG while balancing other responsibilities. Without them, the project would be far behind where it is today. If you find GodSVG valuable and are able to donate, I would be very grateful!</p>
 <div class="donation-widget">

@@ -49,7 +49,7 @@
 </div>
 <div class="article-header">
 <img src="/assets/blog/1-0-alpha9/cover.webp" class="article-cover">
-<h1 class="article-title">New prerelease: GodSVG 1.0-alpha9</h1>
+<h2 class="article-title">New prerelease: GodSVG 1.0-alpha9</h2>
 <div class="article-metadata">
 <span class="article-author">By: MewPurPur</span>
 <span class="article-date">
@@ -59,8 +59,8 @@ May 19, 2025
 </div>
 <div class="article-content">
 <div class="article-html">
-<p>The 9th alpha of GodSVG has arrived! This prerelease makes the layout configurable, implements an update checker, and implements a lot of small features, improvements, and bugfixes.</p>
-<h1>The layout is finally configurable!</h1>
+<p>The 9th alpha of GodSVG has arrived! This prerelease makes the layout configurable, implements an update checker, and brings in a lot of small features, improvements, and bugfixes. The prerelease also gears us up for a big upcoming prerelease.</p>
+<h2>The layout is finally configurable!</h2>
 <p>One of the most cumbersome aspects of using GodSVG was the inability to change the layout. Most people didn't want the inspector and code editor to be visible at the same time, and some didn't want to use one or the other at all. I have implemented a layout configuration widget to solve this. For now, you can change the positions of the code editor and the inspector, make them into separate tabs, or completely hide them. This is all done through a new popup to avoid cluttering the general UI. This should make it much easier to get comfortable with GodSVG.</p>
 <div class="article-video">
 <video controls preload="metadata" aria-label="Video demonstrating how the layout can be configured">
@@ -70,20 +70,17 @@ May 19, 2025
 </div>
 <p>The new default layout has the inspector and the code editor in two separate tabs, which can always be toggled between. If you prefer the old UI, you can easily change back to it through this system.</p>
 <p>Not related to this feature, but on the topic of layouts, I've added a 250% UI scale option, and also made it so GodSVG can go fullscreen. Fullscreen mode can currently only be activated via shortcuts (like F11).</p>
-<h1>Update Checker</h1>
+<h2>Update Checker</h2>
 <p>All the way back in alpha 4, <a href="https://github.com/Swarkin" target="_blank" rel="noopener noreferrer">Swarkin</a> implemented an update checker, but it was unfinished until now. Me and him have done a lot of back and forth on it, and now it's finally functional!</p>
 <p>The update checker can be accessed from the three dots at the top left of the window. Right now, it can only be run manually. So don't forget to do that every now and then to check easily for new updates!</p>
-<h1>Other goodies</h1>
+<h2>Other goodies</h2>
 <p>The tab bar from the previous prerelease got some small refinements. <a href="https://github.com/FlooferLand" target="_blank" rel="noopener noreferrer">FlooferLand</a> and I made it so unsaved tabs will now also display their graphic in their tooltip. And I fixed an issue where upon first starting GodSVG, the active tab would be marked &quot;Unsaved&quot; rather than empty.</p>
 <p><a href="https://github.com/FlooferLand" target="_blank" rel="noopener noreferrer">FlooferLand</a> added support for opening multiple SVGs at once via the CLI, which used to crash. This also means that GodSVG can once again work as a default app for opening SVG files!</p>
 <p>For the experimental Android build, <a href="https://github.com/syntaxerror247" target="_blank" rel="noopener noreferrer">syntaxerror247</a> added support for arm32.</p>
 <p>A button for copying the export SVG or image was implemented in the export menu by <a href="https://github.com/FlooferLand" target="_blank" rel="noopener noreferrer">FlooferLand</a>. This isn't implemented natively in Godot, so the implementation is awkward and may not work everywhere. We hope it's still useful for some of you.</p>
 <p>I've also added a new setting for configuring the viewport's grid color. Aside from this, there are some other small enhancements and features to improve your experience with GodSVG.</p>
-<h1>Translations</h1>
-<p>Thanks to <a href="https://github.com/jas31415" target="_blank" rel="noopener noreferrer">jas31415</a>, <a href="https://github.com/JinEnMok" target="_blank" rel="noopener noreferrer">JinEnMok</a>, <a href="https://github.com/Swarkin" target="_blank" rel="noopener noreferrer">Swarkin</a>, and <a href="https://github.com/Kiisu-Master" target="_blank" rel="noopener noreferrer">Kiisu-Master</a> for keeping existing translations up to date!</p>
-<p>I've added translation comments to the localization files that help clear up what some strings refer to. So if you wanted to <a href="https://github.com/MewPurPur/GodSVG/tree/main/translations">translate GodSVG to your own language</a>, now's a better time than ever!</p>
-<h1>Bugfixes</h1>
-<p>The biggest bugfixes were to the shortcut system. On MacOS, shortcuts didn't work and the native menu had broken at some point, which has been fixed. An issue where multiple shortcuts could be triggered at once was also fixed (e.g. how Ctrl+Shift+Tab didn't work before, because Ctrl+Tab would activate at the same time). And buttons can now show their shortcut in the tooltip, as shown below:</p>
+<h2>Bugfixes</h2>
+<p>The biggest bugfixes were to the shortcut system. On MacOS, shortcuts didn't work and the native menu had broken at some point - both of these issues have been fixed. An issue where multiple shortcuts could be triggered at once was also fixed (e.g. how Ctrl+Shift+Tab didn't work before, because Ctrl+Tab would activate at the same time). And buttons can now show their shortcut in the tooltip, as shown below:</p>
 <div class="article-image">
 <img src="/assets/blog/1-0-alpha9/button_shortcut.webp" alt="Image of a button showing its tooltip">
 </div>
@@ -103,10 +100,13 @@ May 19, 2025
 <li>Fixed caret display on top of tabs in code editor's overtype mode.</li>
 <li>Read-only shortcuts are no longer blocked from working if a duplicate exists.</li>
 </ul>
+<h2>Translations</h2>
+<p>Thanks to <a href="https://github.com/jas31415" target="_blank" rel="noopener noreferrer">jas31415</a>, <a href="https://github.com/JinEnMok" target="_blank" rel="noopener noreferrer">JinEnMok</a>, <a href="https://github.com/Swarkin" target="_blank" rel="noopener noreferrer">Swarkin</a>, and <a href="https://github.com/Kiisu-Master" target="_blank" rel="noopener noreferrer">Kiisu-Master</a> for keeping existing translations up to date!</p>
+<p>I've added translation comments to the localization files that help clear up what some strings refer to. So if you wanted to <a href="https://github.com/MewPurPur/GodSVG/tree/main/translations">translate GodSVG to your own language</a>, now's a better time than ever!</p>
 </div>
 <div class="article-bottom">
 <div class="article-downloads">
-<h1>Downloads</h1>
+<h2>Downloads</h2>
 <div class="notice-panel warning">
 <div class="notice-header">WARNING:</div>
 <div class="notice-message">
@@ -119,36 +119,28 @@ This is a prerelease version. Please regularly back up your SVG files to prevent
 <div class="download-info">
 <img src="/assets/platforms_windows.svg" alt="windows icon">
 <p>Windows</p>
-<a href="https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha9/GodSVG.Windows.zip" class="btn btn-download" version="https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha9/GodSVG.Windows.zip">
-<span id="dropbtn-text">Download</span>
-</a>
+<a href="https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha9/GodSVG.Windows.zip" class="btn btn-download" version="https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha9/GodSVG.Windows.zip">Download</a>
 </div>
 <div class="download-info">
 <img src="/assets/platforms_macos.svg" alt="macos icon">
 <p>MacOS</p>
-<a href="https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha9/GodSVG.MacOS.zip" class="btn btn-download" version="https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha9/GodSVG.MacOS.zip">
-<span id="dropbtn-text">Download</span>
-</a>
+<a href="https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha9/GodSVG.MacOS.zip" class="btn btn-download" version="https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha9/GodSVG.MacOS.zip">Download</a>
 </div>
 <div class="download-info">
 <img src="/assets/platforms_linux.svg" alt="linux icon">
 <p>Linux</p>
-<a href="https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha9/GodSVG.Linux.zip" class="btn btn-download" version="https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha9/GodSVG.Linux.zip">
-<span id="dropbtn-text">Download</span>
-</a>
+<a href="https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha9/GodSVG.Linux.zip" class="btn btn-download" version="https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha9/GodSVG.Linux.zip">Download</a>
 </div>
 <div class="download-info">
 <img src="/assets/platforms_android.svg" alt="android icon">
 <p>Android</p>
-<a href="https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha9/GodSVG.Android.apk" class="btn btn-download" version="https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha9/GodSVG.Android.apk">
-<span id="dropbtn-text">Download</span>
-</a>
+<a href="https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha9/GodSVG.Android.apk" class="btn btn-download" version="https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha9/GodSVG.Android.apk">Download</a>
 </div>
 </div>
 </div>
 </div>
 <div>
-<h1>Support</h1>
+<h2>Support</h2>
 <div class="support-panel">
 <p class="support-panel-paragraph">Many thanks to everyone who has donated to this project! These donations, while currently small, have allowed me to dedicate a lot more time to GodSVG while balancing other responsibilities. Without them, the project would be far behind where it is today. If you find GodSVG valuable and are able to donate, I would be very grateful!</p>
 <div class="donation-widget">
