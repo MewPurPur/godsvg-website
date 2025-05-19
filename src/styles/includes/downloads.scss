@@ -5,13 +5,13 @@
 	display: flex;
 	justify-content: center;
 	align-items: stretch;
-	margin-top: 20px;
+	margin-top: 1.1rem;
 }
 
 .btn-download {
 	background-color: #2e6cb8;
 	color: #fff;
-	min-width: 180px;
+	min-width: 10rem;
 	text-decoration: none !important;
 
 	&:hover {
@@ -21,7 +21,7 @@
 
 .dropbtn {
 	background-color: #333;
-	color: #e0e0e0;
+	color: #ddd;
 	font-size: 1.05rem;
 	border: none;
 	cursor: pointer;
