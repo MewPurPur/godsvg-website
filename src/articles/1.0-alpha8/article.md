@@ -11,7 +11,7 @@ prerelease: true
 
 The 8th alpha of GodSVG has arrived! This release introduces tabs in GodSVG and massively improves stability and performance. The features and bugfixes below are not attributed because I was responsible for almost the entirety of the release - except {% gh "Kiisu-Master" %} who implemented a "Middle mouse button to close tab" option.
 
-# Implemented tabs
+## Implemented tabs
 
 One of the most cumbersome aspects of using GodSVG was the inability to edit multiple SVGs at once. I have implemented a tab system to lift this hurdle. This initial implementation is already quite comprehensive and polished, so I don't expect it to change a lot in the future.
 
@@ -19,7 +19,7 @@ Tabs have all the basic functionalities and some extras, like closing multiple t
 
 {% blogvid "tabs.webm", "Video of using tabs" %}
 
-# Other features and improvements
+## Other features and improvements
 
 GodSVG used to be unusable for some Windows users because of a warning. This has been addressed in this prerelease.
 
@@ -38,17 +38,11 @@ GodSVG is built in Godot Engine, which recently released a new 4.4 version, and 
 - Improved rect->path conversion for rounded rectangles with only vertical or horizontal segments.
 - The window's minimum size was increased by exactly 1.5625%, I hope that's okay with everyone.
 
-# Translations
-
-A big regression from the last prerelease was fixed, where the language didn't persist between sessions.
-
-Thanks to {% gh "Felipe-Sena" %} for translating GodSVG in Brazilian Portuguese!
-
-Thanks to {% gh "Swarkin" %}, {% gh "thatoddshade" %}, {% gh "JinEnMok" %} for keeping existing translations up to date.
-
-# A whole new level of stability
+## A whole new level of stability
 
 This prerelease went through an immense bugfixing stage. Let's first go through the most important ones.
+
+A big regression from the last prerelease was fixed, where the language didn't persist between sessions.
 
 Previously, the "View in List" functionality did nothing with path commands and polygon/polyline points. This has now been fixed.
 
@@ -96,7 +90,13 @@ When the viewbox of a graphic was different from its width and height, shapes ad
 - Fixed warning for solid color gradients being unreliable in some edge cases.
 - Invalid shortcuts no longer appear in context popups.
 
-# Known regressions
+## Translations
+
+Thanks to {% gh "Felipe-Sena" %} for translating GodSVG in Brazilian Portuguese!
+
+Thanks to {% gh "Swarkin" %}, {% gh "thatoddshade" %}, {% gh "JinEnMok" %} for keeping existing translations up to date.
+
+## Known regressions
 
 Be careful when updating to this release from a previous one, as your savefiles will be corrupted (because one of my three config classes was named exactly like a new Godot Engine class - what are the odds!). You can find your savedata by clicking "View savedata" from the three dots at the top left. Palettes can also be copied as XML from the UI and then pasted back after updating
 

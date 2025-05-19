@@ -3,11 +3,12 @@
 
 $max-width: 960px;
 $padding-size: min(1.65rem, 4vw);
-$content-width: min($max-width, calc(100% - $padding-size * 2));
+$content-width: min($max-width, 100% - $padding-size * 2);
 
 .article-header {
 	max-width: $content-width;
 	margin: auto;
+	margin-top: min(1.25rem, (100vw - $content-width) / 2.0 - $padding-size);
 	padding: $padding-size;
 	background-color: color.adjust($background, $lightness: 2%);
 	border-top-right-radius: 6px;
@@ -17,7 +18,7 @@ $content-width: min($max-width, calc(100% - $padding-size * 2));
 .article-title {
 	color: #fff;
 	text-align: center;
-	font-size: 2.3rem;
+	font-size: 2.25rem;
 }
 
 .article-content {
@@ -42,7 +43,7 @@ $content-width: min($max-width, calc(100% - $padding-size * 2));
 	align-items: center;
 	font-weight: 500;
 	color: color.adjust(#fff, $lightness: -40%);
-	font-size: 1.4rem;
+	font-size: 1.25rem;
 }
 
 .article-author {
@@ -129,7 +130,7 @@ $content-width: min($max-width, calc(100% - $padding-size * 2));
 	display: flex;
 	flex-direction: column;
 	gap: 0.4rem;
-	max-width: 300px;
+	max-width: 16.5px;
 }
 
 .download-info {

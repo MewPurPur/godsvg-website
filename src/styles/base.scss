@@ -7,26 +7,6 @@
 
 // Common styles across pages.
 
-a {
-	color: $accent;
-	text-decoration: underline;
-	text-decoration-color: #489ae080;
-
-	&:hover {
-		color: color.adjust($accent, $lightness: 20%, $space: hsl);
-		text-decoration: underline;
-	}
-}
-
-.page-title {
-	color: #fff;
-	text-align: center;
-	font-family: $title_font;
-	font-size: 2.3rem;
-	font-weight: 700;
-	margin: 1.05rem 0;
-}
-
 html {
 	color: #fff;
 	font-size: clamp(14px, 4vw, 18px);
@@ -39,8 +19,55 @@ body {
 	padding: 0;
 }
 
-br {
-	margin-bottom: 0.4rem;
+a {
+	color: $accent;
+	text-decoration: underline;
+	text-decoration-color: #489ae080;
+
+	&:hover {
+		color: color.adjust($accent, $lightness: 20%, $space: hsl);
+		text-decoration: underline;
+	}
+}
+
+h1 {
+	color: #fff;
+	text-align: center;
+	font-family: $title_font;
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin: 0;
+	margin-top: 1.25rem;
+	margin-bottom: 0.75rem
+}
+
+h2 {
+	color: #eee;
+	font-family: $title_font;
+	font-size: 1.75rem;
+	margin-bottom: 0.5rem;
+}
+
+p {
+	color: #ccc;
+	font-size: 1rem;
+	line-height: 1.4;
+	margin-top: 0;
+	margin-bottom: 0.5rem;
+}
+
+ul {
+	padding-left: 1.65rem;
+	margin-top: 0;
+	margin-bottom: 0.85rem;
+	color: #ccc;
+	font-size: 1rem;
+	line-height: 1.5;
+}
+
+li {
+	margin-top: 0.35rem;
+	line-height: 1.4;
 }
 
 .content {
@@ -53,35 +80,6 @@ br {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-}
-
-h1 {
-	color: color.adjust(#fff, $lightness: -5%);
-	font-family: $title_font;
-	font-size: 1.75rem;
-	margin-bottom: 0.5rem;
-}
-
-p {
-	color: color.adjust(#fff, $lightness: -20%);
-	font-size: 1rem;
-	line-height: 1.4;
-	margin-top: 0;
-	margin-bottom: 0.5rem;
-}
-
-ul {
-	padding-left: 1.65rem;
-	margin-top: 0;
-	margin-bottom: 0.85rem;
-	color: color.adjust(#fff, $lightness: -20%);
-	font-size: 1rem;
-	line-height: 1.5;
-}
-
-li {
-	margin-top: 0.35rem;
-	line-height: 1.4;
 }
 
 .no-bullet-point {

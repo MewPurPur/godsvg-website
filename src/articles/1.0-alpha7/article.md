@@ -11,7 +11,7 @@ prerelease: true
 
 GodSVG releases its seventh alpha! This prerelease focuses on stability, setting the stage for bigger changes in the upcoming alphas.
 
-# GodSVG on mobile!
+## GodSVG on mobile!
 
 GodSVG now has an experimental Android port! {% gh "syntaxerror247" %} has led the effort to bring it to mobile, with adaptations for touch controls - including a floating shortcut panel designed to replace desktop keyboard shortcuts.
 
@@ -23,7 +23,7 @@ As you can imagine, maintaining a mobile build is difficult because of how diffe
 
 Development for mobile will for now continue on another repository that's not managed by {% gh "syntaxerror247" %} and not me: https://github.com/syntaxerror247/GodSVG-Mobile. Riskier features will be implemented there first, but they may eventually be implemented in the main repository too. This will allow me to focus on the big changes I've planned for Desktop platforms, without worrying about breaking the app on Android.
 
-# Other new things
+## Other new things
 
 This prerelease has a big emphasis on bugfixes, so there aren't a lot of other new features. Still, there are a few noteworthy additions - let’s take a look.
 
@@ -37,7 +37,7 @@ Partial support for the "currentColor" keyword and the "color" attribute has bee
 
 The robustness of savefiles has been improved. There are now far fewer file operations on startup, which may slightly help with performance and hardware wear (the effects for both seemed minimal, but this is still future-proofing). The changes should also improve the backwards compatibility to alpha 7 from future versions.
 
-# Bugfixes
+## Bugfixes
 
 I've fixed a lot of bugs in this prerelease. GodSVG is actually becoming quite stable lately, so I think it's time that I start listing the bugfixes thoroughly.
 
@@ -55,7 +55,7 @@ I've fixed a lot of bugs in this prerelease. GodSVG is actually becoming quite s
 - Fixed issue where pressing Z in the viewport to create a path command didn't create an undo action.
 - MacOS: Fixed "About GodSVG" button in the global menu not working.
 
-# Translations
+## Translations
 
 Thanks to {% gh "thatoddshade" %} for translating GodSVG in French!
 
