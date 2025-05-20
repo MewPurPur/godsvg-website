@@ -3,6 +3,36 @@
     
         <url>
             
+            <loc>https://godsvg.com/blog/</loc>
+            <lastmod>2025-05-20</lastmod>
+            
+            
+                <priority>0.5</priority>
+            
+        </url>
+    
+        <url>
+            
+            <loc>https://godsvg.com/</loc>
+            <lastmod>2025-05-20</lastmod>
+            
+            
+                <priority>1.0</priority>
+            
+        </url>
+    
+        <url>
+            
+            <loc>https://godsvg.com/releases/</loc>
+            <lastmod>2025-05-20</lastmod>
+            
+            
+                <priority>0.5</priority>
+            
+        </url>
+    
+        <url>
+            
             <loc>https://godsvg.com/article/1-0-alpha1/</loc>
             <lastmod>2023-12-05</lastmod>
             
@@ -95,36 +125,6 @@
             
             <loc>https://godsvg.com/article/godsvg-is-now-on-itch/</loc>
             <lastmod>2024-09-02</lastmod>
-            
-            
-                <priority>0.5</priority>
-            
-        </url>
-    
-        <url>
-            
-            <loc>https://godsvg.com/blog/</loc>
-            <lastmod>2025-05-20</lastmod>
-            
-            
-                <priority>0.5</priority>
-            
-        </url>
-    
-        <url>
-            
-            <loc>https://godsvg.com/</loc>
-            <lastmod>2025-05-20</lastmod>
-            
-            
-                <priority>1.0</priority>
-            
-        </url>
-    
-        <url>
-            
-            <loc>https://godsvg.com/releases/</loc>
-            <lastmod>2025-05-20</lastmod>
             
             
                 <priority>0.5</priority>
