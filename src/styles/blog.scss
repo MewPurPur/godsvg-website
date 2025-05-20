@@ -102,7 +102,7 @@
 
 	display: inline-flex;
 	align-items: start;
-	gap: 4px;
+	gap: 0.3rem;
 
 	&:hover {
 		background-color: color.adjust($bg, $lightness: -5%);
