@@ -1,15 +1,15 @@
 ---
 slugcat: 1.0-alpha9
 title: "New prerelease: GodSVG 1.0-alpha9"
-tagline: The calm before the storm! This prerelease makes the layout configurable, implements an update checker, and significantly improves stability.
+tagline: The calm before the storm! This prerelease makes the layout configurable, fixes the update checker, and significantly improves stability.
 author: MewPurPur
 tags: release
-date: 2025-05-19
+date: 2025-05-18
 release: 1.0-alpha9
 prerelease: true
 ---
 
-The 9th alpha of GodSVG has arrived! This prerelease makes the layout configurable, implements an update checker, and brings in a lot of small features, improvements, and bugfixes. The prerelease also gears us up for a big upcoming prerelease.
+The 9th alpha of GodSVG has arrived! This prerelease makes the layout configurable, fixes the update checker, and brings in a lot of small features, improvements, and bugfixes. This alpha also gears us up for a big upcoming prerelease.
 
 ## The layout is finally configurable!
 
