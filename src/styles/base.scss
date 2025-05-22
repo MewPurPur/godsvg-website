@@ -71,9 +71,13 @@ li {
 }
 
 .content {
-	width: 90%;
+	background-color: color.adjust($background, $lightness: -2%);
+	border-radius: 6px;
+	width: 94%;
 	max-width: 960px;
 	margin: 0 auto;
+	margin-top: 1.75rem;
+	padding: min(1.5rem, 3vw);
 }
 
 #top-section {
@@ -95,17 +99,18 @@ li {
 }
 
 #footer {
-	color: #686b70;
+	color: #777;
+	background-color: color.adjust($background, $lightness: -2%);
 	font-size: 0.9rem;
-	margin-top: 1.65rem;
-	border-top: 1px solid #333;
+	margin-top: 1rem;
+	border-top: 1px solid color.adjust($background, $lightness: +5%);
 }
 
 .footer-container {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	margin: 0.65rem;
+	padding: 0.5rem;
 
 	span {
 		margin: 0.15rem;
@@ -116,8 +121,7 @@ li {
 .tab-container {
 	display: flex;
 	justify-content: center;
-	margin-top: 1.65rem;
-	gap: min(20px, 2%);
+	gap: min(1rem, 2%);
 
 	.tab {
 		&:nth-child(1) {
@@ -137,18 +141,18 @@ li {
 	font-size: 1.4rem;
 	display: inline-block;
 	background-color: #333;
-	color: #e0e0e0;
-	padding: 0.4rem 0.9rem;
+	color: #ddd;
+	padding: 0.4rem 0.8rem;
 	border-radius: 5px;
 	cursor: pointer;
 	text-align: center; // Center the text inside the tabs.
 
 	&:hover {
-		color: #f4f4f4;
+		color: #eee;
 		background-color: #444;
 	}
 	&.selected {
-		color: white;
+		color: #fff;
 		background-color: #666;
 		cursor: default;
 		font-weight: 700;
@@ -157,7 +161,7 @@ li {
 
 .donate-tab {
 	background-color: #3e2931;
-	color: white;
+	color: #fff;
 
 	&:hover {
 		background-color: #533742;

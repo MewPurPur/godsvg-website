@@ -105,6 +105,10 @@
 	gap: 0.3rem;
 
 	&:hover {
+		background-color: color.adjust($bg, $lightness: +7.5%);
+	}
+
+	&:active {
 		background-color: color.adjust($bg, $lightness: -5%);
 	}
 

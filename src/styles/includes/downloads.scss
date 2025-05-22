@@ -220,5 +220,17 @@
 .platform-icon {
 	width: 2rem;
 	height: 2rem;
-	margin-right: 1rem;
+	margin-right: 0.6rem;
+}
+
+.distributor-button {
+	background-color: #fff2;
+
+	&:hover {
+		background-color: #fff3;
+	}
+
+	&:active {
+		background-color: #fff5;
+	}
 }
