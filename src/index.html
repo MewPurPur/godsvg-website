@@ -89,7 +89,7 @@ metaTitle: GodSVG - Free and Open Source SVG editor
 				{% set imageCount = 5 %}
 				<div class="carousel-images">
 					{% for i in range(0, imageCount) %}
-						<img src="/assets/screenshot{{i+1}}.webp" class="carousel-image{{' active' if i == 0}}" alt="Screenshot of GodSVG ({{i}})" {{ 'loading="lazy"' if i > 0 }} />
+						<img src="/assets/screenshot{{i+1}}.webp" class="carousel-image{{' active' if i == 0}}" alt="Screenshot of GodSVG ({{i}})" {% if i > 0 %}loading="lazy"{% endif %} />
 					{% endfor %}
 				</div>
 				<div class="carousel-controls">
