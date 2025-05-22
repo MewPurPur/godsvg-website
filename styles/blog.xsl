@@ -50,23 +50,15 @@
 		</p>    
 		<ul>
 			<li>
-				<strong>Lightweight</strong>. There is no CSS styling or any fancy rendering required when using RSS feeds.
+				<strong>Lightweight.</strong> There is no CSS styling or any fancy rendering required when using RSS feeds.
 			</li>
 			<li>
-				<strong>View everything</strong>. Unlike mailing lists, past entries will always be available to you.
+				<strong>View everything.</strong> Unlike mailing lists, past entries will always be available to you.
 			</li>
 			<li>
-				<strong>Privacy-first</strong>. While we do no data-collecting, ads, or any fancy JavaScript framework wizardry,
-				other websites do collect your data and web feeds are a great way to read blogs while avoiding them doing so, as feeds only download XML files and never send anything away from your device.
+				<strong>Privacy-first.</strong> While the GodSVG website does no data-collecting, other websites do it. Web feeds are a great way to read blogs while avoiding it, as they only download XML files and never send anything away from your device.
 			</li>
 		</ul>
-		
-		<!--
-			Leaving this for GodSVG 2, when we inevitably get bought out by Microsoft - FlooferLand
-		 -->
-		<!--p>
-			We use JavaScript and collect private user information on https://godsvg.com industries, so this is a great alternative to viewing our posts for the odd viewers that don't wish us to send their Real Name, Phone Number, Email Address, Public IP Address, and more identifiable information to our partners.
-		</p-->
 	</xsl:template>
 
 	<!-- Tiny blog post previews -->
@@ -84,7 +76,7 @@
 				<xsl:value-of select="atom:summary" disable-output-escaping="yes" />
 			</p>
 			<small>
-				Published: <xsl:value-of select="atom:updated" />
+				Published: <xsl:value-of select="atom:published" />
 			</small>
 		</div>
 	</xsl:template>

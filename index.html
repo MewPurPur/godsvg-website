@@ -82,7 +82,7 @@
 <div class="big-gap"></div>
 <div class="big-gap"></div>
 <div style="text-align:center;font-weight:500;font-size:1.5rem">Download GodSVG <b>1.0-alpha9</b></div>
-<div class="content" id="download-section">
+<div id="download-section">
 <div class="download-buttons-container">
 <div id="main-download">
 </div>
@@ -124,10 +124,22 @@
 </details>
 </div>
 </div>
-<div class="small-gap"></div>
-<div style="text-align:center">
-<p>Note that the Android build is experimental.</p>
-<p>You can also find GodSVG on <a href="https://mewpurpur.itch.io/godsvg">itch.io</a></p>
+<div class="big-gap"></div>
+<div style="margin:0 .5rem;display:flex;flex-direction:column;align-items:center">
+<p>GodSVG is officially on the following platforms:</p>
+<div class="download-buttons-container">
+<a href="https://mewpurpur.itch.io/godsvg" target="_blank" rel="noopener noreferrer" class="download-button distributor-button">
+<img src="assets/distributor_itch.svg" class="platform-icon" alt="Itch.io logo">
+<div>
+<div class="small-text">Available on</div>
+<div class="big-text">itch.io</div>
+</div>
+</a>
+<a href="https://github.com/MewPurPur/GodSVG" target="_blank" rel="noopener noreferrer" class="download-button distributor-button">
+<img src="assets/donate_github_sponsors.svg" class="platform-icon" alt="Github logo">
+<div class="big-text">Github</div>
+</a>
+</div>
 </div>
 <div class="content">
 <div class="tab-container">
@@ -136,9 +148,14 @@
 <div class="tab donate-tab" onclick="toggleContent(2)">Donate</div>
 </div>
 <div id="features-content" style="display:block">
-<div class="big-gap"></div>
-<p><b>GodSVG is an open-source editor for Scalable Vector Graphics (SVG) files.</b></p>
-<p>Unlike other editors, it represents the SVG code directly, doesn't add any metadata, and even lets you edit the SVG code in real time. GodSVG aims to be an editor for SVG code with low abstraction, producing clean and optimized files.</p>
+<h2>A structured SVG editor</h2>
+<p>Unlike other editors, GodSVG represents the SVG code directly, doesn't add any metadata, and even lets you edit the code in real time. It aims to be a structured SVG editor with low abstraction, producing clean, precise, optimized files.</p>
+<ul>
+<li><b>Interactive SVG editing:</b> Modify individual elements of an SVG file using a user-friendly interface.</li>
+<li><b>Real-time code:</b> As you manipulate elements in the UI, code is instantly generated and can be edited. Generated code is human-readable, since no metadata is added.</li>
+<li><b>Optimized SVGs:</b> The generated SVG files are small and efficient, and GodSVG provides various options to assist with optimization.</li>
+</ul>
+<p>Hover the image to click through screenshots.</p>
 <div class="small-gap"></div>
 <div class="carousel-container">
 <div class="carousel-images">
@@ -164,26 +181,22 @@
 </div>
 </div>
 </div>
-<div class="small-gap"></div>
-<ul>
-<li><b>Interactive SVG editing:</b> Modify individual elements of an SVG file using a user-friendly interface.</li>
-<li><b>Real-time code:</b> As you manipulate elements in the UI, code is instantly generated and can be edited.</li>
-<li><b>Optimized SVGs:</b> The generated SVG files are small and efficient, and GodSVG provides options to assist with optimization.</li>
-</ul>
+<h2>Completely free and open source</h2>
+<p>I don't tolerate user-hostile nonsense. You won't find ads, spyware, data collection, unwanted notifications, subscription models, external dependencies, forced updates, or anything like that in GodSVG.</p>
+<p>Just a tool for you to use when you need it.</p>
+<p>All of GodSVG's development happens in the open and developers are in the same communities as everyone else. This means you can be assured nothing shady is going on. The license also allows you to modify GodSVG for yourself, in case you have specific needs.</p>
+<p>If you find GodSVG valuable, consider <a href="https://github.com/MewPurPur/GodSVG">giving it a star on Github</a>. This is an easy way to signal that the project is respected and useful.</p>
 </div>
 <div id="faq-content" style="display:none">
 <h2>Who is making GodSVG?</h2>
 <p>GodSVG was started in May 2023 by me (MewPurPur) and open-sourced in June 2023. Since the open-sourcing, other people have joined in to help, but I still do the vast majority of the work. Everyone who has made major contributions is listed inside GodSVG's "About" dialog.</p>
 <h2>GodSVG has been in alpha for so long... Will it ever release?</h2>
-<p>GodSVG's first development build released in December 2023. As of May 2025, GodSVG still needs a lot more work. Right now, I don't expect it to release until early 2026, most likely even later.</p>
-<p>GodSVG is a hobby project that I dedicate a lot of effort and time to try and push to the finish line. But of course, I still need to work 8h a day and spend time on things like sleeping, chores, staying healthy. How long the release will take largely depends on how much support I get.</p>
-<p>Donations are the best way to help, without them, GodSVG would be way behind where it is now. So if you're able to <a onclick="toggleContent(2)" style="cursor:pointer">donate</a>, I would be very grateful!</p>
-<p>You can also help by spreading the word, and if you can, implementing features, enhancements, bugfixes, or discussing suggestions.</p>
+<p>GodSVG's first development build released in December 2023. As of May 2025, GodSVG still needs a lot more work. Right now, I don't expect a beta until early 2026, most likely even later.</p>
+<p>GodSVG is a hobby project that I dedicate a lot of effort and time to try and push to the finish line. But of course, I still need to work 8h a day and spend time on things like sleeping, chores, staying healthy. How long the release will take mainly depends on things largely out of my control, including how much support I get.</p>
+<p>Donations are the best way to help; without them, GodSVG would be far behind where it is now. So if you're able to <a onclick="toggleContent(2)" style="cursor:pointer">donate</a>, I would be very grateful!</p>
+<p>You can also help by spreading the word, <a href="https://github.com/MewPurPur/GodSVG">giving a star on Github</a> and if you can, implementing features, enhancements, bugfixes, or discussing suggestions.</p>
 <h2>I tried GodSVG and found bugs and shortcomings.</h2>
 <p>GodSVG is not even in beta yet, so this is to be expected. Report any issues you have <a href="https://github.com/MewPurPur/GodSVG/issues" target="_blank" rel="noopener noreferrer">on Github</a>.</p>
-<h2>What's so great about this "free and open source" thing?</h2>
-<p>GodSVG is Free and Open Source, all of its development happens in the open, developers are in the same communities as everyone else. You can see what's being developed and be sure that nothing shady is happening behind the scenes - because if I do something shady, people would find out in the source code and my project would suffer heavily.</p>
-<p>GodSVG's source code can be found <a href="https://github.com/MewPurPur/GodSVG" target="_blank" rel="noopener noreferrer">on Github</a>. This website's source code can also be found <a href="https://github.com/MewPurPur/godsvg-website" target="_blank" rel="noopener noreferrer">on Github</a>.</p>
 <h2>Do you have the social media?</h2>
 <p>I have accounts on some social media. All of them are owned by multi-billion tech companies! The unofficial ones won't always be on topic.</p>
 <p><b>Official:</b></p>
@@ -215,10 +228,8 @@
 </div>
 <div id="donate-content" style="display:none">
 <div class="big-gap"></div>
-<p>
-Donations will help me push GodSVG through to a stable release. Right now, I have to balance out development with my regular job as I don't get enough from donations.<br>
-I have a few donation platforms set up, so you can choose the one you prefer:
-</p>
+<p>Donations will help me push GodSVG through to a stable release. Right now, I have to balance out development with my regular job as I don't get enough from donations.</p>
+<p>I have a few donation platforms set up, so you can choose the one you prefer:</p>
 <div class="small-gap"></div>
 <ul class="no-bullet-point">
 <li>
@@ -248,15 +259,15 @@ I have a few donation platforms set up, so you can choose the one you prefer:
 <li class="list-con">Can only donate fixed amounts</li>
 </ul>
 </li>
-<div class="medium-gap"></div>
+<div class="small-gap"></div>
 </ul>
-<p>Thank you so much for considering helping out!<br></p>
+<p>Thank you so much for considering helping out!</p>
 </div>
 </div>
 <div id="footer">
 <div class="footer-container">
 <span>&copy; 2025-present MewPurPur and FlooferLand</span>
-<span>Website <a href="https://github.com/MewPurPur/godsvg-website">source code on Github</a></span>
+<span><a href="https://github.com/MewPurPur/godsvg-website">Website source code on Github</a></span>
 </div>
 </div>
 </body>

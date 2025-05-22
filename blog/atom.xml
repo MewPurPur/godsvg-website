@@ -6,20 +6,20 @@
 	<link rel="alternate" type="text/html" href="https://godsvg.com" />
 	<link rel="self" type="application/atom+xml" href="https://godsvg.com/blog/atom.xml" />
 	<id>https://godsvg.com/</id>
-	<updated>2025-05-19T00:00:00Z</updated>
+	<updated>2025-05-18T00:00:00Z</updated>
 	<author><name>MewPurPur</name></author>
 	<contributor><name>FlooferLand</name></contributor>
 	<entry>
 		<title>New prerelease: GodSVG 1.0-alpha9</title>
-		<summary>The calm before the storm! This prerelease makes the layout configurable, implements an update checker, and significantly improves stability.</summary>
+		<summary>The calm before the storm! This prerelease makes the layout configurable, fixes the update checker, and significantly improves stability.</summary>
 		<author><name>MewPurPur</name></author>
-		<published>2025-05-19T00:00:00Z</published>
-		<updated>2025-05-19T00:00:00Z</updated>
+		<published>2025-05-18T00:00:00Z</published>
+		<updated>2025-05-18T00:00:00Z</updated>
 		<id>tag:godsvg.com,2025:1-0-alpha9</id>
 		<link rel="alternate" href="/article/1-0-alpha9" />
 		<link rel="enclosure" type="image/webp" href="https://godsvg.com/assets/blog/1-0-alpha9/cover.webp" />
 		<content type="html">
-			&lt;p&gt;The 9th alpha of GodSVG has arrived! This prerelease makes the layout configurable, implements an update checker, and brings in a lot of small features, improvements, and bugfixes. The prerelease also gears us up for a big upcoming prerelease.&lt;/p&gt;
+			&lt;p&gt;The 9th alpha of GodSVG has arrived! This prerelease makes the layout configurable, fixes the update checker, and brings in a lot of small features, improvements, and bugfixes. This alpha also gears us up for a big upcoming prerelease.&lt;/p&gt;
 &lt;h2&gt;The layout is finally configurable!&lt;/h2&gt;
 &lt;p&gt;One of the most cumbersome aspects of using GodSVG was the inability to change the layout. Most people didn&#39;t want the inspector and code editor to be visible at the same time, and some didn&#39;t want to use one or the other at all. I have implemented a layout configuration widget to solve this. For now, you can change the positions of the code editor and the inspector, make them into separate tabs, or completely hide them. This is all done through a new popup to avoid cluttering the general UI. This should make it much easier to get comfortable with GodSVG.&lt;/p&gt;
 &lt;div class=&quot;article-video&quot;&gt;
