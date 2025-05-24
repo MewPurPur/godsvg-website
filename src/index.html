@@ -82,30 +82,17 @@ metaTitle: GodSVG - Free and Open Source SVG editor
 				<li><b>Real-time code:</b> As you manipulate elements in the UI, code is instantly generated and can be edited. Generated code is human-readable, since no metadata is added.</li>
 				<li><b>Optimized SVGs:</b> The generated SVG files are small and efficient, and GodSVG provides various options to assist with optimization.</li>
 			</ul>
-			<p>Hover the image to click through screenshots.</p>
+
 			<div class="small-gap"></div>
-			<!-- The images must be named screenshot0 to screenshot<imageCount>. -->
-			<div class="carousel-container">
-				{% set imageCount = 5 %}
-				<div class="carousel-images">
-					{% for i in range(0, imageCount) %}
-						<img src="/assets/screenshot{{i+1}}.webp" class="carousel-image{{' active' if i == 0}}" alt="Screenshot of GodSVG ({{i}})" {% if i > 0 %}loading="lazy"{% endif %} />
-					{% endfor %}
-				</div>
-				<div class="carousel-controls">
-					<button class="carousel-arrow carousel-arrow-left">
-						<img src="/assets/arrow_left.svg" alt="Previous" />
-					</button>
-					<button class="carousel-arrow carousel-arrow-right">
-						<img src="/assets/arrow_right.svg" alt="Next" />
-					</button>
-					<div class="carousel-dots">
-						{% for i in range(0, imageCount) %}
-							<span class="carousel-dot{{' active' if i == 0}}" data-index="{{i}}"></span>
-						{% endfor %}
-					</div>
-				</div>
-			</div>
+			{% set images = [
+				{ src: "/assets/screenshot1.webp", alt: "Screenshot of GodSVG (0)" },
+				{ src: "/assets/screenshot2.webp", alt: "Screenshot of GodSVG (1)" },
+				{ src: "/assets/screenshot3.webp", alt: "Screenshot of GodSVG (2)" },
+				{ src: "/assets/screenshot4.webp", alt: "Screenshot of GodSVG (3)" },
+				{ src: "/assets/screenshot5.webp", alt: "Screenshot of GodSVG (4)" }
+			] %}
+			{% include "carousel.njk" %}
+
 			<h2>Completely free and open source</h2>
 			<p>I don't tolerate user-hostile nonsense. You won't find ads, spyware, data collection, unwanted notifications, subscription models, external dependencies, forced updates, or anything like that in GodSVG.</p>
 			<p>Just a tool for you to use when you need it.</p>
