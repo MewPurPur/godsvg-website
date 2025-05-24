@@ -26,24 +26,23 @@
 .footer-socials {
 	display: flex;
 	align-items: center;
-	padding: 0.25rem;
+	gap: 0.5rem;
 	padding-left: 1rem;
 
 	a {
-		margin: 0.25rem;
+		opacity: 0.6;
+
+		&:hover {
+			opacity: 0.8;
+		}
+
+		&:active {
+			opacity: 1.0;
+		}
 
 		img {
 			width: 2rem;
 			height: 2rem;
-			opacity: 0.6;
-
-			&:hover {
-				opacity: 0.8;
-			}
-
-			&:active {
-				opacity: 1.0;
-			}
 		}
 	}
 }

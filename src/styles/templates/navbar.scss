@@ -6,7 +6,7 @@ $navbar-color: #1a1c1e;
 .nav-container {
 	background-color: $navbar-color;
 	width: 100%;
-	padding: 0.8rem 0;
+	padding: 0.5rem 0;
 }
 
 .nav-content {
@@ -15,7 +15,7 @@ $navbar-color: #1a1c1e;
 	align-items: center;
 	max-width: 1050px;
 	margin: 0 auto;
-	padding: 0 1.65rem;
+	padding: 0 1.5rem;
 	position: relative;
 }
 
@@ -29,8 +29,8 @@ $navbar-color: #1a1c1e;
 	}
 
 	img {
-		width: 3.25rem;
-		height: 3.25rem;
+		width: 3rem;
+		height: 3rem;
 		margin-right: 0.5rem;
 	}
 }
@@ -38,7 +38,7 @@ $navbar-color: #1a1c1e;
 .nav-logo-text {
 	font-family: 'Asap', sans-serif;
 	font-weight: 700;
-	font-size: 2.5rem;
+	font-size: 2.25rem;
 	color: color.adjust(#def, $lightness: -5%);
 
 	&:hover {
@@ -48,14 +48,14 @@ $navbar-color: #1a1c1e;
 
 .nav-links {
 	display: flex;
-	gap: 1.65rem;
-	margin-left: 3.25rem;
+	gap: 1.5rem;
+	margin-left: 3rem;
 }
 
 .nav-link {
 	color: color.adjust(#fff, $lightness: -10%);
 	text-decoration: none;
-	font-size: 1.3rem;
+	font-size: 1.25rem;
 	font-family: 'Asap', sans-serif;
 	padding: 0.5rem 0.75rem;
 	border-radius: 4px;
