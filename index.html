@@ -155,9 +155,11 @@
 <li><b>Real-time code:</b> As you manipulate elements in the UI, code is instantly generated and can be edited. Generated code is human-readable, since no metadata is added.</li>
 <li><b>Optimized SVGs:</b> The generated SVG files are small and efficient, and GodSVG provides various options to assist with optimization.</li>
 </ul>
-<p>Hover the image to click through screenshots.</p>
 <div class="small-gap"></div>
-<div class="carousel-container">
+<div class="carousel">
+<script>document.addEventListener("DOMContentLoaded",(function(){const e=document.querySelectorAll(".carousel-image"),t=document.querySelectorAll(".carousel-dot"),c=document.querySelector(".carousel-arrow-left"),n=document.querySelector(".carousel-arrow-right");let o=0;const s=e.length;function r(c){e[o].classList.remove("active"),t[o].classList.remove("active"),o=c,e[o].classList.add("active"),t[o].classList.add("active")}function a(){r((o+1)%s)}function i(){r((o+s-1)%s)}c.addEventListener("click",i),n.addEventListener("click",a),t.forEach((e=>{e.addEventListener("click",(function(){r(Number(this.getAttribute("data-index")))}))}));let d=0,u=0;const l=document.querySelector(".carousel-container");l.addEventListener("touchstart",(function(e){d=e.changedTouches[0].screenX}),{passive:!0}),l.addEventListener("touchend",(function(e){u=e.changedTouches[0].screenX,u<d-50?a():u>d+50&&i()}),{passive:!0})}))</script>
+<link rel="stylesheet" type="text/css" href="/styles/templates/carousel.css">
+<p>Hover the image to click through screenshots.</p>
 <div class="carousel-images">
 <img src="/assets/screenshot1.webp" class="carousel-image active" alt="Screenshot of GodSVG (0)">
 <img src="/assets/screenshot2.webp" class="carousel-image" alt="Screenshot of GodSVG (1)" loading="lazy">
