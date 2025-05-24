@@ -1,0 +1,77 @@
+{% set imageCount = images.length %}
+<div class="carousel">
+	<script>
+		document.addEventListener("DOMContentLoaded", function() {
+			const images = document.querySelectorAll(".carousel-image");
+			const dots = document.querySelectorAll(".carousel-dot");
+			const leftArrow = document.querySelector(".carousel-arrow-left");
+			const rightArrow = document.querySelector(".carousel-arrow-right");
+			let currentIndex = 0;
+			const totalImages = images.length;
+
+			// Update active image and dot.
+			function updateCarousel(newIndex) {
+				images[currentIndex].classList.remove("active");
+				dots[currentIndex].classList.remove("active");
+				currentIndex = newIndex;
+				images[currentIndex].classList.add("active");
+				dots[currentIndex].classList.add("active");
+			}
+
+			function goNext() {
+				updateCarousel((currentIndex + 1) % totalImages);
+			}
+
+			function goPrev() {
+				updateCarousel((currentIndex + totalImages - 1) % totalImages);
+			}
+
+			leftArrow.addEventListener("click", goPrev);
+			rightArrow.addEventListener("click", goNext);
+			dots.forEach(dot => {
+				dot.addEventListener("click", function() {
+					updateCarousel(Number(this.getAttribute("data-index")));
+				});
+			});
+
+			// Touch swipe support for mobile.
+			let touchStartX = 0;
+			let touchEndX = 0;
+
+			const carouselContainer = document.querySelector(".carousel-container");
+			carouselContainer.addEventListener("touchstart", function(e) {
+				touchStartX = e.changedTouches[0].screenX;
+			}, { passive: true });
+			carouselContainer.addEventListener("touchend", function(e) {
+				touchEndX = e.changedTouches[0].screenX;
+				if (touchEndX < touchStartX - 50) {
+					goNext();
+				} else if (touchEndX > touchStartX + 50) {
+					goPrev();
+				}
+			}, { passive: true });
+		});
+	</script>
+	<link rel="stylesheet" type="text/css" href="/styles/templates/carousel.scss">
+	<p>Hover the image to click through screenshots.</p>
+	<div class="carousel-images">
+		{% for image in images %}
+			<img src="{{ image.src }}" class="carousel-image{{ ' active' if loop.index0 == 0 }}" alt="{{ image.alt }}" {% if loop.index0 > 0 %}loading="lazy"{% endif %} />
+		{% endfor %}
+	</div>
+
+	<div class="carousel-controls">
+		<button class="carousel-arrow carousel-arrow-left">
+			<img src="/assets/arrow_left.svg" alt="Previous" />
+		</button>
+		<button class="carousel-arrow carousel-arrow-right">
+			<img src="/assets/arrow_right.svg" alt="Next" />
+		</button>
+
+		<div class="carousel-dots">
+			{% for image in images %}
+				<span class="carousel-dot{{ ' active' if loop.index0 == 0 }}" data-index="{{ loop.index0 }}"></span>
+			{% endfor %}
+		</div>
+	</div>
+</div>

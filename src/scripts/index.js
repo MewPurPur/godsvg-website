@@ -65,59 +65,7 @@ function toggleContent(tab_idx) {
 	});
 }
 
-function initCarousel() {
-	const images = document.querySelectorAll(".carousel-image");
-	const dots = document.querySelectorAll(".carousel-dot");
-	const leftArrow = document.querySelector(".carousel-arrow-left");
-	const rightArrow = document.querySelector(".carousel-arrow-right");
-	let currentIndex = 0;
-	const totalImages = images.length;
-
-	// Update active image and dot.
-	function updateCarousel(newIndex) {
-		images[currentIndex].classList.remove("active");
-		dots[currentIndex].classList.remove("active");
-		currentIndex = newIndex;
-		images[currentIndex].classList.add("active");
-		dots[currentIndex].classList.add("active");
-	}
-
-	function goNext() {
-		updateCarousel((currentIndex + 1) % totalImages);
-	}
-
-	function goPrev() {
-		updateCarousel((currentIndex + totalImages - 1) % totalImages);
-	}
-
-	leftArrow.addEventListener("click", goPrev);
-	rightArrow.addEventListener("click", goNext);
-	dots.forEach(dot => {
-		dot.addEventListener("click", function() {
-			updateCarousel(Number(this.getAttribute("data-index")));
-		});
-	});
-
-	// Touch swipe support for mobile.
-	let touchStartX = 0;
-	let touchEndX = 0;
-
-	const carouselContainer = document.querySelector(".carousel-container");
-	carouselContainer.addEventListener("touchstart", function(e) {
-		touchStartX = e.changedTouches[0].screenX;
-	}, { passive: true });
-	carouselContainer.addEventListener("touchend", function(e) {
-		touchEndX = e.changedTouches[0].screenX;
-		if (touchEndX < touchStartX - 50) {
-			goNext();
-		} else if (touchEndX > touchStartX + 50) {
-			goPrev();
-		}
-	}, { passive: true });
-}
-
 // Initialize when DOM is loaded.
 document.addEventListener("DOMContentLoaded", function() {
 	setDownloadButtons();
-	initCarousel();
 });
