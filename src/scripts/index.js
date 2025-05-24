@@ -2,7 +2,7 @@ function setDownloadButtons() {
 	const platform = detectOS();
 	const mainDownloadDiv = document.getElementById("main-download");
 	const dropBtnText = document.getElementById("dropbtn-text");
-	const dropdownContent = document.querySelector(".download-buttons-container > * > .dropdown-content");
+	const dropdownContent = document.querySelector(".tall-buttons-container > * > .dropdown-content");
 
 	if (platform) {
 		mainDownloadDiv.innerHTML = `
