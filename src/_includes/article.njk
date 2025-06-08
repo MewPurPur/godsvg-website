@@ -5,13 +5,21 @@ date: Created
 ---
 {% extends "base.njk" %}
 
+{% block metadata %}
+	{% from "macros.njk" import metadata with context %}
+	{{ metadata(
+		title=title,
+		description=tagline,
+		cover=site.url + "/assets/blog/" + (slugcat | slugify) + "/cover.webp")
+	}}
+{% endblock %}
+
 {% block style %}
 	<link rel="stylesheet" type="text/css" href="/styles/article.scss">
 	<link rel="stylesheet" type="text/css" href="/styles/includes/downloads.scss">
 {% endblock %}
 
 {% block body %}
-
 	<div class="article-header">
 		<img src="/assets/blog/{{slugcat | slugify}}/cover.webp" class="article-cover"/>
 		<h2 class="article-title">{{ title }}</h2>
