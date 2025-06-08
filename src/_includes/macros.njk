@@ -1,0 +1,29 @@
+<!-- Page metadata -->
+{% macro metadata(
+    title=(metaTitle or title or "GodSVG - Free and Open Source SVG editor"),
+    description=(metaDescription or "A free, open-source, low-level vector graphics editor, available on all major desktop platforms and on web."),
+    cover=(site.url + "/assets/card.webp")
+) %}
+    <!-- Primary meta tags -->
+    <meta name="title" content="{{ title }}" />
+    <meta name="description" content="{{ description }}" />
+    <meta content="#489ae0" data-react-helmet="true" name="theme-color" />
+
+    <!-- Open Graph -->
+    <meta property="og:image" content="{{cover}}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{{ site.url }}" />
+    <meta property="og:title" content="{{ title }}" />
+    <meta property="og:description" content="{{ description }}" />
+    <meta property="og:icon" content="{{ site.url }}/assets/favicon.ico" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="GodSVG" />
+
+    <!-- Tweeter -->
+    <meta property="twitter:url" content="{{ site.url }}" />
+    <meta property="twitter:title" content="{{ title }}" />
+    <meta property="twitter:description" content="{{ description }}" />
+    <meta property="twitter:image" content="{{cover}}" />
+    <meta property="twitter:card" content="summary_large_image" />    
+{% endmacro %}

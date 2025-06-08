@@ -15,31 +15,8 @@
 		{% endif %}
 
 		{% block metadata %}
-			{% set metaTitle = (metaTitle or title or "GodSVG - Free and Open Source SVG editor") %}
-			{% set metaDescription = (metaDescription or "A free, open-source, low-level vector graphics editor, available on all major desktop platforms and on web.") %}
-
-			<!-- Primary meta tags -->
-			<meta name="title" content="{{ metaTitle }}" />
-			<meta name="description" content="{{ metaDescription }}" />
-			<meta content="#489ae0" data-react-helmet="true" name="theme-color" />
-
-			<!-- Open Graph -->
-			<meta property="og:image" content="{{ site.url }}/assets/card.webp" />
-			<meta property="og:type" content="website" />
-			<meta property="og:url" content="{{ site.url }}" />
-			<meta property="og:title" content="{{ metaTitle }}" />
-			<meta property="og:description" content="{{ metaDescription }}" />
-			<meta property="og:icon" content="{{ site.url }}/assets/favicon.ico" />
-			<meta property="og:type" content="website" />
-			<meta property="og:locale" content="en_US" />
-			<meta property="og:site_name" content="GodSVG" />
-
-			<!-- Tweeter -->
-			<meta property="twitter:url" content="{{ site.url }}" />
-			<meta property="twitter:title" content="{{ metaTitle }}" />
-			<meta property="twitter:description" content="{{ metaDescription }}" />
-			<meta property="twitter:image" content="{{ site.url }}/assets/card.webp" />
-			<meta property="twitter:card" content="summary_large_image" />
+			{% from "macros.njk" import metadata with context %}
+			{{ metadata() }}
 		{% endblock %}
 
 		{% block head %}{% endblock %}
