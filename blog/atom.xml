@@ -6,9 +6,63 @@
 	<link rel="alternate" type="text/html" href="https://godsvg.com" />
 	<link rel="self" type="application/atom+xml" href="https://godsvg.com/blog/atom.xml" />
 	<id>https://godsvg.com/</id>
-	<updated>2025-05-18T00:00:00Z</updated>
+	<updated>2025-06-08T00:00:00Z</updated>
 	<author><name>MewPurPur</name></author>
 	<contributor><name>FlooferLand</name></contributor>
+	<entry>
+		<title>New prerelease: GodSVG 1.0-alpha10</title>
+		<summary>A smaller prerelease as I gear up for big reworks. This prerelease introduces the ability to import multiple SVGs at once and fixes some major bugs.</summary>
+		<author><name>MewPurPur</name></author>
+		<published>2025-06-08T00:00:00Z</published>
+		<updated>2025-06-08T00:00:00Z</updated>
+		<id>tag:godsvg.com,2025:1-0-alpha10</id>
+		<link rel="alternate" href="/article/1-0-alpha10" />
+		<link rel="enclosure" type="image/webp" href="https://godsvg.com/assets/blog/1-0-alpha10/cover.webp" />
+		<content type="html">
+			&lt;p&gt;The 10th alpha of GodSVG has arrived! This prerelease introduces the ability to import multiple SVGs at once, improves tab management, brings some enhancements and fixes several major bugs.&lt;/p&gt;
+&lt;h2&gt;Changes to file importing and tabs&lt;/h2&gt;
+&lt;p&gt;Wanting to import a few SVGs at once is common, for example with icon sets. But in GodSVG, you had to do it one by one. I&#39;ve now added functionalities for importing multiple SVGs at once. This works for all scenarios I&#39;m aware of:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Dragging multiple SVGs into the window. This would previously only check the first file, resulting in some unexpected behaviors.&lt;/li&gt;
+&lt;li&gt;Selecting multiple SVGs in a file dialog. Both the native and the built-in file dialogs would previously only allow selecting one when importing SVGs.&lt;/li&gt;
+&lt;li&gt;&amp;quot;Open with...&amp;quot; types of options when right-clicking multiple SVGs, which was added in the previous alpha, but had edge cases that didn&#39;t work well.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;All three of these cases now use the same standardized robust system, and file dialogs allow selecting multiple files when you&#39;re importing SVGs. For convenience, dragging files into GodSVG now also focuses the window. And all non-SVG files are discarded right away, so you can drop files even from folders with a lot of clutter.&lt;/p&gt;
+&lt;div class=&quot;article-video&quot;&gt;
+&lt;video controls preload=&quot;metadata&quot; aria-label=&quot;Video demonstrating the ability to import multiple files at once&quot;&gt;
+&lt;source src=&quot;/assets/blog/1-0-alpha10/multi_import.webm&quot;&gt;
+&lt;p&gt;Video demonstrating the ability to import multiple files at once&lt;/p&gt;
+&lt;/video&gt;
+&lt;/div&gt;
+&lt;p&gt;The custom file dialog went through a rewrite and received some minor enhancements and bugfixes.&lt;/p&gt;
+&lt;p&gt;Surrounding this change, I investigated whether it&#39;s a good idea to allow unlimited tabs, as previously, the limit was 50. I&#39;ve decided to lift this restriction. To make it easier to manage tabs, I&#39;ve added new actions for closing all empty or all saved tabs, and &lt;a href=&quot;https://github.com/Kiisu-Master&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Kiisu-Master&lt;/a&gt; made scrolling through a lot of tabs work better.&lt;/p&gt;
+&lt;h2&gt;Other improvements&lt;/h2&gt;
+&lt;p&gt;The default layout has been changed, the inspector is now the first tab by default as I meant it to be. Max UI scale is no longer rounded down to a multiple of 5%, as this was counterproductive.&lt;/p&gt;
+&lt;p&gt;The &amp;lt;use&amp;gt; element is now somewhat supported. It will show its &amp;quot;x&amp;quot; and &amp;quot;y&amp;quot; attributes in the inspector, and they also add a handle to the viewport. This element isn&#39;t available in the GUI, since it&#39;s not that well-supported yet, but if you type it in the code editor or encounter it in existing SVGs, you can now have a smoother experience with it. This was implemented by &lt;a href=&quot;https://github.com/Jordyfel&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Jordyfel&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I&#39;ve made it so incorrectly nested elements no longer affect aspects of the GUI. For example, incorrectly nested shapes won&#39;t show their handles in the editor, and unavailable gradients won&#39;t be presented in color pickers.&lt;/p&gt;
+&lt;h2&gt;Bugfixes&lt;/h2&gt;
+&lt;p&gt;This prerelease&#39;s main goal was to quickly address some major bugs:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Fixed an issue where some transform lists with commas could parse incorrectly, resulting in imported SVGs being broken&lt;/li&gt;
+&lt;li&gt;Fixed an issue that could result in corrupted tabs in various situations&lt;/li&gt;
+&lt;li&gt;Fixed an issue where upon first opening GodSVG, the first tab&#39;s contents wouldn&#39;t save&lt;/li&gt;
+&lt;li&gt;Fixed a regression where dimensionless SVGs would crash when edited&lt;/li&gt;
+&lt;li&gt;Fixed occasional glitchy handle movement on Android and Web (by &lt;a href=&quot;https://github.com/Jordyfel&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Jordyfel&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Fixed various stability issues at high zoom levels and large coordinates&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Other smaller bugfixes:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Fixed a rare visual issue with elliptical arc path commands&lt;/li&gt;
+&lt;li&gt;Fixed an edge case where &amp;lt;rect&amp;gt; elements were drawn as rounded when they shouldn&#39;t be&lt;/li&gt;
+&lt;li&gt;Fixed code editor&#39;s scrollbar placement&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Translations&lt;/h2&gt;
+&lt;p&gt;The source comments have been tweaked a bit so they can work around a bug in POEdit, thanks to a discovery made by &lt;a href=&quot;https://github.com/Kiisu-Master&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Kiisu-Master&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Thanks to &lt;a href=&quot;https://github.com/AlejandroMoc&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;AlejandroMoc&lt;/a&gt; for adding a Spanish translation!&lt;/p&gt;
+&lt;p&gt;Thanks to &lt;a href=&quot;https://github.com/Kiisu-Master&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Kiisu-Master&lt;/a&gt;, &lt;a href=&quot;https://github.com/freeducks-debug&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;freeducks-debug&lt;/a&gt;, &lt;a href=&quot;https://github.com/Swarkin&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Swarkin&lt;/a&gt;, and &lt;a href=&quot;https://github.com/Felipe-Sena&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Felipe-Sena&lt;/a&gt; for keeping existing translations up to date!&lt;/p&gt;
+
+		</content>
+	</entry>
 	<entry>
 		<title>New prerelease: GodSVG 1.0-alpha9</title>
 		<summary>The calm before the storm! This prerelease makes the layout configurable, fixes the update checker, and significantly improves stability.</summary>
