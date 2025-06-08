@@ -16,6 +16,8 @@ To start working on the project, do the following steps:
 
 Using an IDE like VSCode, with an extension for Nunjucks syntax highlighting that parses HTML files, is also recommended, as this website uses nunjucks syntax inside HTML files as opposed to `njk` files in order to improve JS/HTML/CSS completion for inline scripts. For example [Better Nunjucks](https://marketplace.visualstudio.com/items/?itemName=ginfuru.better-nunjucks).
 
+The site is set to be built manually, rather than after each PR, so don't worry if you don't see your changes right away.
+
 ## Useful command
 
-The script that can be run from the root folder - `./script-optimize-media` - converts PNG to WebP and MP4 to WebM, this should be run every time new media is added.
+The script that can be run from the root folder - `./script-optimize-media.sh` - converts PNG to WebP and MP4 to WebM, this should be run every time new media is added.
