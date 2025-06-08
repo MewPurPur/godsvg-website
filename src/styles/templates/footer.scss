@@ -48,6 +48,11 @@
 }
 
 @media (max-width: 640px) {
+	.footer-socials {
+		padding-left: 0;
+		padding-bottom: 0.25rem;
+	}
+
 	.footer-container {
 		flex-direction: column;
 	}
