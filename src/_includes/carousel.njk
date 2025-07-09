@@ -58,20 +58,20 @@
 		{% for image in images %}
 			<img src="{{ image.src }}" class="carousel-image{{ ' active' if loop.index0 == 0 }}" alt="{{ image.alt }}" {% if loop.index0 > 0 %}loading="lazy"{% endif %} />
 		{% endfor %}
-	</div>
+		<div class="carousel-controls">
+			<button class="carousel-arrow carousel-arrow-left">
+				<img src="/assets/arrow_left.svg" alt="Previous" />
+			</button>
+			<button class="carousel-arrow carousel-arrow-right">
+				<img src="/assets/arrow_right.svg" alt="Next" />
+			</button>
 
-	<div class="carousel-controls">
-		<button class="carousel-arrow carousel-arrow-left">
-			<img src="/assets/arrow_left.svg" alt="Previous" />
-		</button>
-		<button class="carousel-arrow carousel-arrow-right">
-			<img src="/assets/arrow_right.svg" alt="Next" />
-		</button>
-
-		<div class="carousel-dots">
-			{% for image in images %}
-				<span class="carousel-dot{{ ' active' if loop.index0 == 0 }}" data-index="{{ loop.index0 }}"></span>
-			{% endfor %}
+			<div class="carousel-dots">
+				{% for image in images %}
+					<span class="carousel-dot{{ ' active' if loop.index0 == 0 }}" data-index="{{ loop.index0 }}"></span>
+				{% endfor %}
+			</div>
 		</div>
 	</div>
+
 </div>
