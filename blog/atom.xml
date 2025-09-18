@@ -6,9 +6,133 @@
 	<link rel="alternate" type="text/html" href="https://godsvg.com" />
 	<link rel="self" type="application/atom+xml" href="https://godsvg.com/blog/atom.xml" />
 	<id>https://godsvg.com/</id>
-	<updated>2025-06-08T00:00:00Z</updated>
+	<updated>2025-09-18T00:00:00Z</updated>
 	<author><name>MewPurPur</name></author>
 	<contributor><name>FlooferLand</name></contributor>
+	<entry>
+		<title>New prerelease: GodSVG 1.0-alpha11</title>
+		<summary>Introducing themes! Choose between the default dark, light, and black/OLED themes, or make your custom theme.</summary>
+		<author><name>MewPurPur</name></author>
+		<published>2025-09-18T00:00:00Z</published>
+		<updated>2025-09-18T00:00:00Z</updated>
+		<id>tag:godsvg.com,2025:1-0-alpha11</id>
+		<link rel="alternate" href="/article/1-0-alpha11" />
+		<link rel="enclosure" type="image/webp" href="https://godsvg.com/assets/blog/1-0-alpha11/cover.webp" />
+		<content type="html">
+			&lt;p&gt;The 11th alpha of GodSVG introduces themes, with &amp;quot;Dark&amp;quot;, &amp;quot;Light&amp;quot;, and &amp;quot;Black (OLED)&amp;quot; presets. There are also many new options, enhancements, and major bugfixes.&lt;/p&gt;
+&lt;h2&gt;Configurable themes&lt;/h2&gt;
+&lt;p&gt;GodSVG can now be themed through two new settings, &amp;quot;Base color&amp;quot; and &amp;quot;Accent color&amp;quot;. They craft a theme for the whole application. The old default theme is now called the dark theme. Defining themes with just two colors required major changes to the theming logic, so GodSVG&#39;s looks have changed slightly across the board, even in the dark theme. In my opinion these changes are all for the better, but you can see a comparison here:&lt;/p&gt;
+&lt;script&gt;window.toggleSwitch||(window.toggleSwitch=function(t){const e=document.getElementById(&quot;switch-title-&quot;+t),n=document.getElementById(&quot;switch-img1-&quot;+t),l=document.getElementById(&quot;switch-img2-&quot;+t);&quot;none&quot;===n.style.display?(n.style.display=&quot;&quot;,l.style.display=&quot;none&quot;,e.textContent=&quot;Old theme&quot;):(n.style.display=&quot;none&quot;,l.style.display=&quot;&quot;,e.textContent=&quot;New dark theme&quot;)})&lt;/script&gt;
+&lt;div class=&quot;article-switch&quot;&gt;
+&lt;div class=&quot;article-switch-header&quot;&gt;
+&lt;div class=&quot;article-switch-title&quot; id=&quot;switch-title-f2d4igwzn&quot;&gt;Old theme&lt;/div&gt;
+&lt;button class=&quot;article-switch-toggle&quot; onclick=&#39;toggleSwitch(&quot;f2d4igwzn&quot;)&#39;&gt;Switch&lt;/button&gt;
+&lt;/div&gt;
+&lt;div class=&quot;article-switch-content&quot;&gt;
+&lt;img id=&quot;switch-img1-f2d4igwzn&quot; src=&quot;/assets/blog/1-0-alpha11/old_theme.webp&quot; alt=&quot;Image of the old default theme&quot;&gt;
+&lt;img id=&quot;switch-img2-f2d4igwzn&quot; src=&quot;/assets/blog/1-0-alpha11/new_dark_theme.webp&quot; alt=&quot;Image of the new dark theme&quot; loading=&quot;lazy&quot; style=&quot;display:none&quot;&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;There is also a new black theme and a light theme. The light theme was particularly challenging, it required me to implement highlighter presets, because the SVG text had to be dark for it. I think it turned out amazing in the end. Here&#39;s how both of them look:&lt;/p&gt;
+&lt;div class=&quot;article-compare&quot;&gt;&lt;div class=&quot;article-compare-content&quot;&gt;
+&lt;div class=&quot;article-compare-side&quot;&gt;
+&lt;div class=&quot;article-compare-label&quot;&gt;Black (OLED)&lt;/div&gt;
+&lt;img src=&quot;/assets/blog/1-0-alpha11/black_theme_example.webp&quot; alt=&quot;Image demonstrating the black theme&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;article-compare-side&quot;&gt;
+&lt;div class=&quot;article-compare-label&quot;&gt;Light&lt;/div&gt;
+&lt;img src=&quot;/assets/blog/1-0-alpha11/light_theme_example.webp&quot; alt=&quot;Image demonstrating the light theme&quot;&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;These are the main presets, but you can configure the base and accent colors to fine-tune the interface to your liking. Here&#39;s some footage of the possibilities:&lt;/p&gt;
+&lt;div class=&quot;article-video&quot;&gt;
+&lt;video controls preload=&quot;metadata&quot; aria-label=&quot;Video showcasing the ability to configure your own theme&quot;&gt;
+&lt;source src=&quot;/assets/blog/1-0-alpha11/custom_theming.webm&quot;&gt;
+&lt;p&gt;Video showcasing the ability to configure your own theme&lt;/p&gt;
+&lt;/video&gt;
+&lt;/div&gt;
+&lt;p&gt;Aside from aesthetic preferences, themes serve important functional purposes. Light themes are useful in bright places, like under direct sunlight - GodSVG being so dark made it practically unusable when you&#39;re outside. Dark themes are more appropriate in dark places and help extend battery life. The black theme helps battery life even more, and it is particularly useful for OLED screens.&lt;/p&gt;
+&lt;h2&gt;Settings menu improvements&lt;/h2&gt;
+&lt;p&gt;The description panel is now more persistent and doesn&#39;t hide when dropdowns or color pickers are active. This is very useful, given that in this update I&#39;ve also added several preview types in the settings menu to instantly show you the effect of each setting.&lt;/p&gt;
+&lt;p&gt;For example, the basic description is now a preview type. I&#39;ve improved it by adding warnings to some descriptions, to communicate when the setting has no effect in the current configuration, or when it can&#39;t be changed because of your platform.&lt;/p&gt;
+&lt;p&gt;Another preview type displays a code sample to demonstrate syntax highlighting colors. Yet another type of preview shows a colored label, which is used to demonstrate the valid, warning, and error text colors.&lt;/p&gt;
+&lt;p&gt;A more complex type is the formatter type, which shows how a curated SVG would be affected by the hovered formatter setting. I&#39;ve wanted to add this for a long time, which is why these settings didn&#39;t have descriptions before (&amp;quot;Show, don&#39;t tell&amp;quot; as they say... wait, does this even apply to creative software?)&lt;/p&gt;
+&lt;p&gt;The coolest type of preview is easily the one that simulates a custom viewport, it is used to preview handle configs, selection rectangle settings, and the canvas and grid colors.&lt;/p&gt;
+&lt;div class=&quot;article-video&quot;&gt;
+&lt;video controls preload=&quot;metadata&quot; aria-label=&quot;Video demonstrating setting previews&quot;&gt;
+&lt;source src=&quot;/assets/blog/1-0-alpha11/setting_previews.webm&quot;&gt;
+&lt;p&gt;Video demonstrating setting previews&lt;/p&gt;
+&lt;/video&gt;
+&lt;/div&gt;
+&lt;p&gt;There&#39;s one other improvement. In the shortcuts tab, you can now undo your changes (unless, of course, you brick the &amp;quot;Undo&amp;quot; shortcut while you&#39;re inside it, then it won&#39;t be of any help). For other tabs, this hasn&#39;t been implemented yet.&lt;/p&gt;
+&lt;h2&gt;More configuration options&lt;/h2&gt;
+&lt;p&gt;This update adds a lot more configurability than just themes. You can now also change the appearance of the animated selection rectangle - its thickness, speed, granularity, and colors.&lt;/p&gt;
+&lt;p&gt;Moreover, display settings are now in their own dedicated section, and there are a few new ones. You can now configure VSync and cap the max FPS of the application. You can also make it so GodSVG always keeps the screen on despite inactivity, preventing the screensaver from activating.&lt;/p&gt;
+&lt;p&gt;The panning speed in the viewport was too fast, especially with how inconsistent the sensitivity of touchpads is between devices. I&#39;ve made it configurable with a new setting, and the default is now slightly slower.&lt;/p&gt;
+&lt;div class=&quot;article-video&quot;&gt;
+&lt;video controls preload=&quot;metadata&quot; aria-label=&quot;Video demonstrating selection rectangle configuration settings&quot;&gt;
+&lt;source src=&quot;/assets/blog/1-0-alpha11/selection_rect.webm&quot;&gt;
+&lt;p&gt;Video demonstrating selection rectangle configuration settings&lt;/p&gt;
+&lt;/video&gt;
+&lt;/div&gt;
+&lt;h2&gt;Other improvements&lt;/h2&gt;
+&lt;p&gt;I&#39;ve added line numbers to the code editor.&lt;/p&gt;
+&lt;p&gt;The &amp;lt;radialGradient&amp;gt; element finally has support for &amp;quot;fx&amp;quot; and &amp;quot;fy&amp;quot; attributes. They were implemented alongside an improvement to the gradient previews, which improves its accuracy and takes all attributes into account.&lt;/p&gt;
+&lt;div class=&quot;article-image&quot;&gt;
+&lt;img src=&quot;/assets/blog/1-0-alpha11/focal_gradient.webp&quot; alt=&quot;Image demonstrating a radial gradient with a focal point&quot;&gt;
+&lt;/div&gt;
+&lt;p&gt;When you press &lt;code&gt;Ctrl&lt;/code&gt; while dragging a bezier curve handle, it will now align itself smoothly to the previous curve or line. This new utility was implemented by &lt;a href=&quot;https://github.com/Jordyfel&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Jordyfel&lt;/a&gt;. Note that this currently doesn&#39;t work around the ends of subpaths.&lt;/p&gt;
+&lt;p&gt;Godot Engine, the tool we use to make GodSVG, just had a new version that we&#39;ve migrated to. This new version finally made it possible to address the blurriness of icons at high UI scales.&lt;/p&gt;
+&lt;div class=&quot;article-compare&quot;&gt;&lt;div class=&quot;article-compare-content&quot;&gt;
+&lt;div class=&quot;article-compare-side&quot;&gt;
+&lt;div class=&quot;article-compare-label&quot;&gt;Before&lt;/div&gt;
+&lt;img src=&quot;/assets/blog/1-0-alpha11/blurry_icons.webp&quot; alt=&quot;Image of the old blurry icons&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;article-compare-side&quot;&gt;
+&lt;div class=&quot;article-compare-label&quot;&gt;After&lt;/div&gt;
+&lt;img src=&quot;/assets/blog/1-0-alpha11/sharp_icons.webp&quot; alt=&quot;Image of the new sharp icons&quot;&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;The new Godot Engine update also added options that allowed me to reduce the executable size a little bit - despite all the new features, alpha 11 has a smaller executable size on all platforms.&lt;/p&gt;
+&lt;p&gt;The camera is now saved individually for each tab. When you open a tab for the first time, it&#39;ll be centered like before, but if you switch to another time and then back, the camera will be the same way you left it. This is session-based, nothing is preserved after closing GodSVG.&lt;/p&gt;
+&lt;p&gt;The custom file dialog got a few small improvements. Undo and Redo buttons were added. The &amp;quot;Folder up&amp;quot; button and directory path field were changed into a more readable widget. Right-clicking now has a new option to show files and folders in the file manager.&lt;/p&gt;
+&lt;div class=&quot;article-video&quot;&gt;
+&lt;video controls preload=&quot;metadata&quot; aria-label=&quot;Video demonstrating the new file dialog navigation&quot;&gt;
+&lt;source src=&quot;/assets/blog/1-0-alpha11/new_file_dialog_nav.webm&quot;&gt;
+&lt;p&gt;Video demonstrating the new file dialog navigation&lt;/p&gt;
+&lt;/video&gt;
+&lt;/div&gt;
+&lt;p&gt;The logic for handling unstable markup (markup that can&#39;t be parsed) has been improved. If you import an SVG with a small parsing mistake, it won&#39;t automatically reset to an empty SVG anymore, instead it will focus on the code editor and prompt you to solve the issue. It won&#39;t reset to an empty SVG unless you make actions outside of the code editor.&lt;/p&gt;
+&lt;h2&gt;Fixed formatters and parsers&lt;/h2&gt;
+&lt;p&gt;GodSVG&#39;s formatters and parsers have had their issues addressed in this release.&lt;/p&gt;
+&lt;p&gt;The two most complex parsers - for pathdata and transform lists - had many edge cases, and if an imported SVG had those edge cases, it could get corrupted. This shouldn&#39;t happen with compliant SVGs anymore thanks to a rewrite to these parsers. The new implementations are very elaborate and should finally be fully robust.&lt;/p&gt;
+&lt;p&gt;The option to remove unrecognized XML structures wasn&#39;t working correctly and was removed for now. Formatting an XML with spaces instead of tabs was not working correctly for closing tags, which has now been fixed. Shortening numbers using exponents was not working correctly for small negative numbers - also fixed.&lt;/p&gt;
+&lt;h2&gt;Other bugfixes&lt;/h2&gt;
+&lt;p&gt;In the viewport, the graphic was displayed incorrectly when percentages were used in SVGs with a different width and height from the viewbox. When exporting the graphic, elements would be misplaced. This has now been addressed.&lt;/p&gt;
+&lt;p&gt;On the experimental Android build, immersive mode was disabled, which basically means it&#39;s not forced to fullscreen anymore. Phones usually have rounded corners and camera cutouts, which made things around the edges hard, if not impossible to click, and this has now been addressed by this change.&lt;/p&gt;
+&lt;p&gt;I reworked the shortcut system, which should result in shortcuts no longer triggering erroneously when dialogs or popups are around. Buttons that are bound to a shortcut also received some fixes - their highlight no longer triggers if the shortcut isn&#39;t accessible, and it triggers properly if the button is hovered. Also, the highlight duration now updates if the shortcut is pressed again during it.&lt;/p&gt;
+&lt;p&gt;Smaller bugfixes:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Fixed undefined behavior with tab tooltips in rare scenarios (by &lt;a href=&quot;https://github.com/HuntJSparra&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;HuntJSparra&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Various fixes to the selection rectangle&lt;/li&gt;
+&lt;li&gt;Fixed tab navigation not working in the &amp;quot;About&amp;quot; menu and the settings menu&lt;/li&gt;
+&lt;li&gt;Fixed equal sign in the wrong place within an element not triggering error syntax highlighting immediately&lt;/li&gt;
+&lt;li&gt;Fixed &amp;quot;Show savedata folder&amp;quot; option showing even if it can&#39;t be used&lt;/li&gt;
+&lt;li&gt;Fixed color picker not synchronizing when using a color keyword and then changing to the old color&lt;/li&gt;
+&lt;li&gt;Fixed issue where the rotation of elliptical path commands uses different precision in the element than the field representing it&lt;/li&gt;
+&lt;li&gt;Various small fixes and tweaks to UI elements throughout the application&lt;/li&gt;
+&lt;li&gt;Fixed various issues with reference images&lt;/li&gt;
+&lt;li&gt;Fixed built-in file dialog not hiding the search field when you start typing the file name&lt;/li&gt;
+&lt;li&gt;Small fixes to the nametoken validation logic with foreign characters&lt;/li&gt;
+&lt;li&gt;MacOS: Fixed GodSVG not showing up when choosing &amp;quot;Open With...&amp;quot; on SVG files&lt;/li&gt;
+&lt;li&gt;Web: Asterisks for unsaved tabs are now removed (since tabs aren&#39;t bound to files on web)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Translations&lt;/h2&gt;
+&lt;p&gt;In the &amp;quot;About&amp;quot; menu in the app, you can now easily copy translators&#39; emails as you hover them.&lt;/p&gt;
+&lt;p&gt;Thanks to &lt;a href=&quot;https://github.com/freeducks-debug&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;freeducks-debug&lt;/a&gt;, &lt;a href=&quot;https://github.com/williamchange&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;williamchange&lt;/a&gt;, &lt;a href=&quot;https://github.com/Kiisu-Master&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Kiisu-Master&lt;/a&gt;, &lt;a href=&quot;https://github.com/JinEnMok&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;JinEnMok&lt;/a&gt;, and &lt;a href=&quot;https://github.com/jas31415&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;jas31415&lt;/a&gt; for keeping existing translations up to date!&lt;/p&gt;
+
+		</content>
+	</entry>
 	<entry>
 		<title>New prerelease: GodSVG 1.0-alpha10</title>
 		<summary>A smaller prerelease as I gear up for big reworks. This prerelease introduces the ability to import multiple SVGs at once and fixes some major bugs.</summary>
