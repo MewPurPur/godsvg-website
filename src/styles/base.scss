@@ -56,6 +56,14 @@ p {
 	margin-bottom: 0.5rem;
 }
 
+code {
+	color: #fdc;
+	font-size: 0.8rem;
+	border-radius: 4px;
+	background-color: color.adjust($background, $lightness: -5%);
+	padding: 2px 4px;
+}
+
 ul {
 	padding-left: 1.65rem;
 	margin-top: 0;

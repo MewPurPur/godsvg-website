@@ -53,7 +53,7 @@
 		});
 	</script>
 	<link rel="stylesheet" type="text/css" href="/styles/templates/carousel.scss">
-	<p>Hover the image to click through screenshots.</p>
+	<p>Hover to navigate through screenshots.</p>
 	<div class="carousel-images">
 		{% for image in images %}
 			<img src="{{ image.src }}" class="carousel-image{{ ' active' if loop.index0 == 0 }}" alt="{{ image.alt }}" {% if loop.index0 > 0 %}loading="lazy"{% endif %} />

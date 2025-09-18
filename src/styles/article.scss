@@ -36,6 +36,7 @@ $content-width: min($max-width, 100% - $padding-size * 2);
 	width: min($max-width * 0.8, 90vw);
 	margin: auto;
 	box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+	user-select: none;
 }
 
 .article-metadata {
@@ -110,6 +111,71 @@ $content-width: min($max-width, 100% - $padding-size * 2);
 
 .article-compare.article-compare-count-3 .article-compare-side {
 	flex: 1;
+}
+
+.article-switch {
+	width: 100%;
+	margin: 0.65rem 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.article-switch-header {
+	width: 98%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background-color: color.adjust($background, $lightness: +2%);
+	border-radius: 6px 6px 0 0;
+}
+
+.article-switch-title {
+	font-weight: 700;
+	font-size: 1.5rem;
+	color: color.adjust(#fff, $lightness: -15%);
+	padding: 0.5rem 1rem;
+}
+
+.article-switch-toggle {
+	background-color: color.adjust($background, $lightness: +8%);
+	color: color.adjust(#fff, $lightness: -5%);
+	border: none;
+	padding: 0.25rem 0.5rem;
+	border-radius: 4px;
+	cursor: pointer;
+	font-weight: 600;
+	font-size: 1rem;
+	margin-right: 1rem;
+
+	&:hover {
+		background-color: color.adjust($background, $lightness: +15%);
+	}
+	&:active {
+		background-color: color.adjust($background, $lightness: +25%);
+	}
+}
+
+.article-switch-content {
+	width: 98%;
+	display: flex;
+	position: relative;
+	overflow: hidden;
+
+	img {
+		width: 100%;
+		height: auto;
+		user-select: none;
+		display: block;
+		box-shadow: none;
+		position: absolute;
+		top: 0;
+		left: 0;
+
+		&:not([style*="display: none"]) {
+			position: relative;
+		}
+	}
 }
 
 .support-panel {
