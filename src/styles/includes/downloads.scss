@@ -3,9 +3,23 @@
 
 #download-section {
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
-	align-items: stretch;
-	margin-top: 1.1rem;
+	align-items: center;
+	margin-top: 1rem;
+}
+
+.vicki-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	.vicki-jump {
+		user-select: none;
+		width: min(95vw, 34rem);
+		height: auto;
+		margin-bottom: min(calc(-0.04 * 34rem + ((34rem - min(95vw, 34rem)) * 0.2)), 0rem);
+	}
 }
 
 .btn-download {

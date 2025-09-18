@@ -21,7 +21,7 @@ export default async function(eleventyConfig) {
 	};
 
 	// Data
-	eleventyConfig.addGlobalData("godsvg.version", "1.0-alpha10")
+	eleventyConfig.addGlobalData("godsvg.version", "1.0-alpha11")
 	eleventyConfig.addGlobalData("site.url", isDebug ? "" : "https://godsvg.com")
 
 	// Plugins
@@ -116,6 +116,45 @@ export default async function(eleventyConfig) {
 
 		html += '</div></div>';
 		return html.replaceAll('\t', "").replaceAll("    ", "");
+	});
+
+	eleventyConfig.addShortcode("blogswitch", function(label1, img1, alt1, label2, img2, alt2) {
+		const e = this.page.url.split('/').filter(e => e.length > 1);
+		const slug = e[e.length-1];
+		const uniqueId = Math.random().toString(36).substr(2, 9);
+
+		const html = `
+		<script>
+		if (!window.toggleSwitch) {
+			window.toggleSwitch = function(id) {
+				const title = document.getElementById('switch-title-' + id);
+				const img1 = document.getElementById('switch-img1-' + id);
+				const img2 = document.getElementById('switch-img2-' + id);
+
+				if (img1.style.display === 'none') {
+					img1.style.display = '';
+					img2.style.display = 'none';
+					title.textContent = '${label1}';
+				} else {
+					img1.style.display = 'none';
+					img2.style.display = '';
+					title.textContent = '${label2}';
+				}
+			};
+		}
+		</script>
+		<div class="article-switch">
+			<div class="article-switch-header">
+				<div class="article-switch-title" id="switch-title-${uniqueId}">${label1}</div>
+				<button class="article-switch-toggle" onclick="toggleSwitch('${uniqueId}')">Switch</button>
+			</div>
+			<div class="article-switch-content">
+				<img id="switch-img1-${uniqueId}" src="/assets/blog/${slug}/${img1}" alt="${alt1}" />
+				<img id="switch-img2-${uniqueId}" src="/assets/blog/${slug}/${img2}" alt="${alt2}" loading="lazy" style="display: none;" />
+			</div>
+		</div>
+		`;
+		return html.replaceAll('\t', "");
 	});
 
 	eleventyConfig.addShortcode("blogvid", function(name, alt) {
