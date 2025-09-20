@@ -61,7 +61,7 @@ The &lt;radialGradient&gt; element finally has support for "fx" and "fy" attribu
 
 {% blogimg "focal_gradient.webp", "Image demonstrating a radial gradient with a focal point" %}
 
-When you press `Ctrl` while dragging a bezier curve handle, it will now align itself smoothly to the previous curve or line. This new utility was implemented by {% gh "Jordyfel" %}. Note that this currently doesn't work around the ends of subpaths.
+When you press `Ctrl` while dragging a bezier curve handle, it will now align itself smoothly to an adjacent curve or line. This new utility was implemented by {% gh "Jordyfel" %}. Note that this currently doesn't work around the ends of subpaths.
 
 Godot Engine, the tool we use to make GodSVG, just had a new version that we've migrated to. This new version finally made it possible to address the blurriness of icons at high UI scales.
 
@@ -69,7 +69,7 @@ Godot Engine, the tool we use to make GodSVG, just had a new version that we've 
 
 The new Godot Engine update also added options that allowed me to reduce the executable size a little bit - despite all the new features, alpha 11 has a smaller executable size on all platforms.
 
-The camera is now saved individually for each tab. When you open a tab for the first time, it'll be centered like before, but if you switch to another time and then back, the camera will be the same way you left it. This is session-based, nothing is preserved after closing GodSVG.
+The camera is now saved individually for each tab. When you open a tab for the first time, it'll be centered like before, but if you switch to another tab and then back, the camera will be the same way you left it. This is session-based, nothing is preserved after closing GodSVG.
 
 The custom file dialog got a few small improvements. Undo and Redo buttons were added. The "Folder up" button and directory path field were changed into a more readable widget. Right-clicking now has a new option to show files and folders in the file manager.
 
