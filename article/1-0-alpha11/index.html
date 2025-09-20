@@ -65,12 +65,12 @@ Sep 18, 2025
 <script>window.toggleSwitch||(window.toggleSwitch=function(t){const e=document.getElementById("switch-title-"+t),n=document.getElementById("switch-img1-"+t),l=document.getElementById("switch-img2-"+t);"none"===n.style.display?(n.style.display="",l.style.display="none",e.textContent="Old theme"):(n.style.display="none",l.style.display="",e.textContent="New dark theme")})</script>
 <div class="article-switch">
 <div class="article-switch-header">
-<div class="article-switch-title" id="switch-title-rtypbdda8">Old theme</div>
-<button class="article-switch-toggle" onclick='toggleSwitch("rtypbdda8")'>Switch</button>
+<div class="article-switch-title" id="switch-title-8e4im6c5j">Old theme</div>
+<button class="article-switch-toggle" onclick='toggleSwitch("8e4im6c5j")'>Switch</button>
 </div>
 <div class="article-switch-content">
-<img id="switch-img1-rtypbdda8" src="/assets/blog/1-0-alpha11/old_theme.webp" alt="Image of the old default theme">
-<img id="switch-img2-rtypbdda8" src="/assets/blog/1-0-alpha11/new_dark_theme.webp" alt="Image of the new dark theme" loading="lazy" style="display:none">
+<img id="switch-img1-8e4im6c5j" src="/assets/blog/1-0-alpha11/old_theme.webp" alt="Image of the old default theme">
+<img id="switch-img2-8e4im6c5j" src="/assets/blog/1-0-alpha11/new_dark_theme.webp" alt="Image of the new dark theme" loading="lazy" style="display:none">
 </div>
 </div>
 <p>There is also a new black theme and a light theme. The light theme was particularly challenging, it required me to implement highlighter presets, because the SVG text had to be dark for it. I think it turned out amazing in the end. Here's how both of them look:</p>
@@ -121,7 +121,7 @@ Sep 18, 2025
 <div class="article-image">
 <img src="/assets/blog/1-0-alpha11/focal_gradient.webp" alt="Image demonstrating a radial gradient with a focal point">
 </div>
-<p>When you press <code>Ctrl</code> while dragging a bezier curve handle, it will now align itself smoothly to the previous curve or line. This new utility was implemented by <a href="https://github.com/Jordyfel" target="_blank" rel="noopener noreferrer">Jordyfel</a>. Note that this currently doesn't work around the ends of subpaths.</p>
+<p>When you press <code>Ctrl</code> while dragging a bezier curve handle, it will now align itself smoothly to an adjacent curve or line. This new utility was implemented by <a href="https://github.com/Jordyfel" target="_blank" rel="noopener noreferrer">Jordyfel</a>. Note that this currently doesn't work around the ends of subpaths.</p>
 <p>Godot Engine, the tool we use to make GodSVG, just had a new version that we've migrated to. This new version finally made it possible to address the blurriness of icons at high UI scales.</p>
 <div class="article-compare"><div class="article-compare-content">
 <div class="article-compare-side">
@@ -134,7 +134,7 @@ Sep 18, 2025
 </div>
 </div></div>
 <p>The new Godot Engine update also added options that allowed me to reduce the executable size a little bit - despite all the new features, alpha 11 has a smaller executable size on all platforms.</p>
-<p>The camera is now saved individually for each tab. When you open a tab for the first time, it'll be centered like before, but if you switch to another time and then back, the camera will be the same way you left it. This is session-based, nothing is preserved after closing GodSVG.</p>
+<p>The camera is now saved individually for each tab. When you open a tab for the first time, it'll be centered like before, but if you switch to another tab and then back, the camera will be the same way you left it. This is session-based, nothing is preserved after closing GodSVG.</p>
 <p>The custom file dialog got a few small improvements. Undo and Redo buttons were added. The &quot;Folder up&quot; button and directory path field were changed into a more readable widget. Right-clicking now has a new option to show files and folders in the file manager.</p>
 <div class="article-video">
 <video controls preload="metadata" aria-label="Video demonstrating the new file dialog navigation">
