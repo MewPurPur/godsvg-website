@@ -37,13 +37,13 @@ The optimizer is now configurable in a new tab in the settings menu. The options
 
 The new optimizer settings and the old formatter settings are now explained with a brief paragraph before the settings themselves. The optimizer settings have info buttons that show an info popup, instead of descriptions, since they are too complex for the small description box.
 
-Right-clicking when editing text now shows two new options, "Select all" (which was already accessible via shortcuts), and "Evaluate". Previously, evaluation only worked on the full text when pressing [code]Enter[/code] in numeric fields, but now you can select any text, and if it can be evaluated, the option will be presented.
+Right-clicking when editing text now shows two new options, "Select all" (which was already accessible via shortcuts), and "Evaluate". Previously, evaluation only worked on the full text when pressing `Enter` in numeric fields, but now you can select any text, and if it can be evaluated, the option will be presented.
 
 Also, the evaluator was improved a bit, clearing errors and adding constants "pi", "tau", "e", and "phi" and their capitalized and uppercase versions. Previously, only "PI" and "TAU" were recognized, which was unconventional. To be honest, I can't think of any good uses for Euler's number or the golden ratio in SVGs, so let us know if you come up with any!
 
 Setting names were sometimes cut off when internationalized, which is unavoidable. In this new alpha, if a setting's text is too long and it gets cut off, it gets a tooltip with the full text.
 
-The little widget for changing relativity of path commands in the "Insert after" popup is now activated by the [code]Shift[/code] key.
+The little widget for changing relativity of path commands in the "Insert after" popup is now activated by the `Shift` key.
 
 The color picker's alpha slider is now 0-255 instead of 0-100.
 
