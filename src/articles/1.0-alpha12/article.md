@@ -68,4 +68,4 @@ Other than that, there have been some minor UI/visual tweaks and fixes.
 
 ## Translations
 
-Thanks to {% gh "williamchange" %}, {% gh "Kiisu-Master" %}, and {% gh "Felipe-Sena" %} for helping to keep existing translations up to date.
+Thanks to {% gh "williamchange" %}, {% gh "Kiisu-Master" %}, {% gh "JinEnMok" %} and {% gh "Felipe-Sena" %} for helping to keep existing translations up to date.
