@@ -3,6 +3,36 @@
     
         <url>
             
+            <loc>https://godsvg.com/blog/</loc>
+            <lastmod>2025-10-31</lastmod>
+            
+            
+                <priority>0.5</priority>
+            
+        </url>
+    
+        <url>
+            
+            <loc>https://godsvg.com/</loc>
+            <lastmod>2025-10-31</lastmod>
+            
+            
+                <priority>1.0</priority>
+            
+        </url>
+    
+        <url>
+            
+            <loc>https://godsvg.com/releases/</loc>
+            <lastmod>2025-10-31</lastmod>
+            
+            
+                <priority>0.5</priority>
+            
+        </url>
+    
+        <url>
+            
             <loc>https://godsvg.com/article/1-0-alpha1/</loc>
             <lastmod>2023-12-05</lastmod>
             
@@ -25,6 +55,16 @@
             
             <loc>https://godsvg.com/article/1-0-alpha11/</loc>
             <lastmod>2025-09-18</lastmod>
+            
+            
+                <priority>0.5</priority>
+            
+        </url>
+    
+        <url>
+            
+            <loc>https://godsvg.com/article/1-0-alpha12/</loc>
+            <lastmod>2025-10-31</lastmod>
             
             
                 <priority>0.5</priority>
@@ -115,36 +155,6 @@
             
             <loc>https://godsvg.com/article/godsvg-is-now-on-itch/</loc>
             <lastmod>2024-09-02</lastmod>
-            
-            
-                <priority>0.5</priority>
-            
-        </url>
-    
-        <url>
-            
-            <loc>https://godsvg.com/blog/</loc>
-            <lastmod>2025-09-20</lastmod>
-            
-            
-                <priority>0.5</priority>
-            
-        </url>
-    
-        <url>
-            
-            <loc>https://godsvg.com/</loc>
-            <lastmod>2025-09-20</lastmod>
-            
-            
-                <priority>1.0</priority>
-            
-        </url>
-    
-        <url>
-            
-            <loc>https://godsvg.com/releases/</loc>
-            <lastmod>2025-09-20</lastmod>
             
             
                 <priority>0.5</priority>
