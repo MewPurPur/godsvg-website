@@ -1,7 +1,7 @@
 ---
 slugcat: 1.0-alpha13
 title: "New prerelease: GodSVG 1.0-alpha13"
-tagline: A small prerelease to fix a few bugs.
+tagline: This prerelease fixes a regression that prevented users from exporting their SVGs to other image formats.
 author: MewPurPur
 tags: release
 date: 2025-11-04
