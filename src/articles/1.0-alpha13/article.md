@@ -9,7 +9,7 @@ release: 1.0-alpha13
 prerelease: true
 ---
 
-This prerelease fixes a major regression from the previous alpha. The rework to the dropdown widget broke it the export configuration dialog, making it impossible to choose an image format for exporting other than SVG. Now this has been fixed and you can once again export as PNG, JPEG, or WebP.
+This prerelease fixes a major regression from the previous alpha. The rework to the dropdown widget broke it inside the export configuration dialog, making it impossible to choose an image format for exporting other than SVG. Now this has been fixed and you can once again export as PNG, JPEG, or WebP.
 
 When this bug was reported, I was already starting to work on some other things, so I decided to include those too. Popups can now have submenus, which may be utilized more in the UI in the future, but for now it's only used for the tab actions popup.
 
