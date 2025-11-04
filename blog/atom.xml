@@ -11,7 +11,7 @@
 	<contributor><name>FlooferLand</name></contributor>
 	<entry>
 		<title>New prerelease: GodSVG 1.0-alpha13</title>
-		<summary>A small prerelease to fix a few bugs.</summary>
+		<summary>This prerelease fixes a regression that prevented users from exporting their SVGs to other image formats.</summary>
 		<author><name>MewPurPur</name></author>
 		<published>2025-11-04T00:00:00Z</published>
 		<updated>2025-11-04T00:00:00Z</updated>
@@ -105,12 +105,12 @@
 &lt;script&gt;window.toggleSwitch||(window.toggleSwitch=function(t){const e=document.getElementById(&quot;switch-title-&quot;+t),n=document.getElementById(&quot;switch-img1-&quot;+t),l=document.getElementById(&quot;switch-img2-&quot;+t);&quot;none&quot;===n.style.display?(n.style.display=&quot;&quot;,l.style.display=&quot;none&quot;,e.textContent=&quot;Old theme&quot;):(n.style.display=&quot;none&quot;,l.style.display=&quot;&quot;,e.textContent=&quot;New dark theme&quot;)})&lt;/script&gt;
 &lt;div class=&quot;article-switch&quot;&gt;
 &lt;div class=&quot;article-switch-header&quot;&gt;
-&lt;div class=&quot;article-switch-title&quot; id=&quot;switch-title-b6kibgngj&quot;&gt;Old theme&lt;/div&gt;
-&lt;button class=&quot;article-switch-toggle&quot; onclick=&#39;toggleSwitch(&quot;b6kibgngj&quot;)&#39;&gt;Switch&lt;/button&gt;
+&lt;div class=&quot;article-switch-title&quot; id=&quot;switch-title-aunheugyg&quot;&gt;Old theme&lt;/div&gt;
+&lt;button class=&quot;article-switch-toggle&quot; onclick=&#39;toggleSwitch(&quot;aunheugyg&quot;)&#39;&gt;Switch&lt;/button&gt;
 &lt;/div&gt;
 &lt;div class=&quot;article-switch-content&quot;&gt;
-&lt;img id=&quot;switch-img1-b6kibgngj&quot; src=&quot;/assets/blog/1-0-alpha11/old_theme.webp&quot; alt=&quot;Image of the old default theme&quot;&gt;
-&lt;img id=&quot;switch-img2-b6kibgngj&quot; src=&quot;/assets/blog/1-0-alpha11/new_dark_theme.webp&quot; alt=&quot;Image of the new dark theme&quot; loading=&quot;lazy&quot; style=&quot;display:none&quot;&gt;
+&lt;img id=&quot;switch-img1-aunheugyg&quot; src=&quot;/assets/blog/1-0-alpha11/old_theme.webp&quot; alt=&quot;Image of the old default theme&quot;&gt;
+&lt;img id=&quot;switch-img2-aunheugyg&quot; src=&quot;/assets/blog/1-0-alpha11/new_dark_theme.webp&quot; alt=&quot;Image of the new dark theme&quot; loading=&quot;lazy&quot; style=&quot;display:none&quot;&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;There is also a new black theme and a light theme. The light theme was particularly challenging, it required me to implement highlighter presets, because the SVG text had to be dark for it. I think it turned out amazing in the end. Here&#39;s how both of them look:&lt;/p&gt;
