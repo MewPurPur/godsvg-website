@@ -19,7 +19,7 @@
 		<link rel="alternate" href="/article/1-0-alpha13" />
 		<link rel="enclosure" type="image/webp" href="https://godsvg.com/assets/blog/1-0-alpha13/cover.webp" />
 		<content type="html">
-			&lt;p&gt;This prerelease fixes a major regression from the previous alpha. The rework to the dropdown widget broke it the export configuration dialog, making it impossible to choose an image format for exporting other than SVG. Now this has been fixed and you can once again export as PNG, JPEG, or WebP.&lt;/p&gt;
+			&lt;p&gt;This prerelease fixes a major regression from the previous alpha. The rework to the dropdown widget broke it inside the export configuration dialog, making it impossible to choose an image format for exporting other than SVG. Now this has been fixed and you can once again export as PNG, JPEG, or WebP.&lt;/p&gt;
 &lt;p&gt;When this bug was reported, I was already starting to work on some other things, so I decided to include those too. Popups can now have submenus, which may be utilized more in the UI in the future, but for now it&#39;s only used for the tab actions popup.&lt;/p&gt;
 &lt;div class=&quot;article-image&quot;&gt;
 &lt;img src=&quot;/assets/blog/1-0-alpha13/submenu.webp&quot; alt=&quot;A submenu with various options to close multiple tabs.&quot;&gt;
@@ -105,12 +105,12 @@
 &lt;script&gt;window.toggleSwitch||(window.toggleSwitch=function(t){const e=document.getElementById(&quot;switch-title-&quot;+t),n=document.getElementById(&quot;switch-img1-&quot;+t),l=document.getElementById(&quot;switch-img2-&quot;+t);&quot;none&quot;===n.style.display?(n.style.display=&quot;&quot;,l.style.display=&quot;none&quot;,e.textContent=&quot;Old theme&quot;):(n.style.display=&quot;none&quot;,l.style.display=&quot;&quot;,e.textContent=&quot;New dark theme&quot;)})&lt;/script&gt;
 &lt;div class=&quot;article-switch&quot;&gt;
 &lt;div class=&quot;article-switch-header&quot;&gt;
-&lt;div class=&quot;article-switch-title&quot; id=&quot;switch-title-u3cih27u8&quot;&gt;Old theme&lt;/div&gt;
-&lt;button class=&quot;article-switch-toggle&quot; onclick=&#39;toggleSwitch(&quot;u3cih27u8&quot;)&#39;&gt;Switch&lt;/button&gt;
+&lt;div class=&quot;article-switch-title&quot; id=&quot;switch-title-b6kibgngj&quot;&gt;Old theme&lt;/div&gt;
+&lt;button class=&quot;article-switch-toggle&quot; onclick=&#39;toggleSwitch(&quot;b6kibgngj&quot;)&#39;&gt;Switch&lt;/button&gt;
 &lt;/div&gt;
 &lt;div class=&quot;article-switch-content&quot;&gt;
-&lt;img id=&quot;switch-img1-u3cih27u8&quot; src=&quot;/assets/blog/1-0-alpha11/old_theme.webp&quot; alt=&quot;Image of the old default theme&quot;&gt;
-&lt;img id=&quot;switch-img2-u3cih27u8&quot; src=&quot;/assets/blog/1-0-alpha11/new_dark_theme.webp&quot; alt=&quot;Image of the new dark theme&quot; loading=&quot;lazy&quot; style=&quot;display:none&quot;&gt;
+&lt;img id=&quot;switch-img1-b6kibgngj&quot; src=&quot;/assets/blog/1-0-alpha11/old_theme.webp&quot; alt=&quot;Image of the old default theme&quot;&gt;
+&lt;img id=&quot;switch-img2-b6kibgngj&quot; src=&quot;/assets/blog/1-0-alpha11/new_dark_theme.webp&quot; alt=&quot;Image of the new dark theme&quot; loading=&quot;lazy&quot; style=&quot;display:none&quot;&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;There is also a new black theme and a light theme. The light theme was particularly challenging, it required me to implement highlighter presets, because the SVG text had to be dark for it. I think it turned out amazing in the end. Here&#39;s how both of them look:&lt;/p&gt;
