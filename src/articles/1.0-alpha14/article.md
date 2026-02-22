@@ -1,7 +1,7 @@
 ---
 slugcat: 1.0-alpha14
 title: "New prerelease: GodSVG 1.0-alpha14"
-tagline: Better keyboard controls, neutral gray theme, bugfixes.
+tagline: Better keyboard controls, neutral gray theme, more grid configurability, bugfixes.
 author: MewPurPur
 tags: release
 date: 2026-02-22
@@ -55,4 +55,4 @@ There have also been some minor UI/visual tweaks and fixes.
 
 ## Translations
 
-Thanks to {% gh "williamchange" %} and {% gh "Kiisu-Master "%} for helping to keep existing translations up to date.
+Thanks to {% gh "williamchange" %} and {% gh "Kiisu-Master" %} for helping to keep existing translations up to date.
