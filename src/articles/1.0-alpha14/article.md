@@ -46,12 +46,12 @@ GodSVG's SVG renderer, ThorVG, has been updated to a newer version, fixing a cou
 Besides that, here's a list of bugfixes in this verison:
 
 - Fixed issue where character entity references (such as `&lt;` which is used to represent the `<` symbol) were wrongly translated by GodSVG, which broke valid SVGs
-- Fixed an issue with transform list parsing issue which broke some valid imported SVGs
+- Fixed an issue with transform list parsing which broke some valid SVGs
 - GodSVG now follows the convention of treating file extensions with all types of casing the same (like "PnG" and "png")
 - Fixed a couple of issues with deleting tiles in the previews widget
 - Fixed regression with middle mouse button leaving behind "ghost" tabs
 - Fixed issues with the button for copying translator emails being hard to press
-- Windows: Fixed usage of backslashes in file paths leading to some issues
+- Windows: Fixed backslashes in file paths causing problems
 
 There have also been some minor UI/visual tweaks and fixes.
 
