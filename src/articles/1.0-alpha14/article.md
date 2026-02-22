@@ -9,6 +9,8 @@ release: 1.0-alpha14
 prerelease: true
 ---
 
+The cover artwork for this blog post was drawn by [DotMouse](https://bsky.app/profile/dotmouse.bsky.social).
+
 This prerelease tightens the experience of using GodSVG a little more by improving keyboard controls, adding a neutral gray theme, and fixing a few bugs.
 
 ## Focus keyboard navigation
