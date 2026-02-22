@@ -19,7 +19,8 @@
 		<link rel="alternate" href="/article/1-0-alpha14" />
 		<link rel="enclosure" type="image/webp" href="https://godsvg.com/assets/blog/1-0-alpha14/cover.webp" />
 		<content type="html">
-			&lt;p&gt;This prerelease tightens the experience of using GodSVG a little more by improving keyboard controls, adding a neutral gray theme, and fixing a few bugs.&lt;/p&gt;
+			&lt;p&gt;The cover artwork for this blog post was drawn by &lt;a href=&quot;https://bsky.app/profile/dotmouse.bsky.social&quot;&gt;DotMouse&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;This prerelease tightens the experience of using GodSVG a little more by improving keyboard controls, adding a neutral gray theme, and fixing a few bugs.&lt;/p&gt;
 &lt;h2&gt;Focus keyboard navigation&lt;/h2&gt;
 &lt;p&gt;Focus navigation with &lt;code&gt;Tab&lt;/code&gt;, &lt;code&gt;Shift+Tab&lt;/code&gt;, and arrow keys has been added to some parts of GodSVG&#39;s interface. To avoid confusing users who don&#39;t use this feature, the focus highlights are hidden until you start navigating with your keyboard.&lt;/p&gt;
 &lt;p&gt;Context popups needed to be reworked to accommodate these changes. Aside from the added ability to navigate them with the arrow keys, there were some other changes to make them behave conventionally.&lt;/p&gt;
@@ -161,12 +162,12 @@
 &lt;script&gt;window.toggleSwitch||(window.toggleSwitch=function(t){const e=document.getElementById(&quot;switch-title-&quot;+t),n=document.getElementById(&quot;switch-img1-&quot;+t),l=document.getElementById(&quot;switch-img2-&quot;+t);&quot;none&quot;===n.style.display?(n.style.display=&quot;&quot;,l.style.display=&quot;none&quot;,e.textContent=&quot;Old theme&quot;):(n.style.display=&quot;none&quot;,l.style.display=&quot;&quot;,e.textContent=&quot;New dark theme&quot;)})&lt;/script&gt;
 &lt;div class=&quot;article-switch&quot;&gt;
 &lt;div class=&quot;article-switch-header&quot;&gt;
-&lt;div class=&quot;article-switch-title&quot; id=&quot;switch-title-s7omufjvt&quot;&gt;Old theme&lt;/div&gt;
-&lt;button class=&quot;article-switch-toggle&quot; onclick=&#39;toggleSwitch(&quot;s7omufjvt&quot;)&#39;&gt;Switch&lt;/button&gt;
+&lt;div class=&quot;article-switch-title&quot; id=&quot;switch-title-2k3i0dk9x&quot;&gt;Old theme&lt;/div&gt;
+&lt;button class=&quot;article-switch-toggle&quot; onclick=&#39;toggleSwitch(&quot;2k3i0dk9x&quot;)&#39;&gt;Switch&lt;/button&gt;
 &lt;/div&gt;
 &lt;div class=&quot;article-switch-content&quot;&gt;
-&lt;img id=&quot;switch-img1-s7omufjvt&quot; src=&quot;/assets/blog/1-0-alpha11/old_theme.webp&quot; alt=&quot;Image of the old default theme&quot;&gt;
-&lt;img id=&quot;switch-img2-s7omufjvt&quot; src=&quot;/assets/blog/1-0-alpha11/new_dark_theme.webp&quot; alt=&quot;Image of the new dark theme&quot; loading=&quot;lazy&quot; style=&quot;display:none&quot;&gt;
+&lt;img id=&quot;switch-img1-2k3i0dk9x&quot; src=&quot;/assets/blog/1-0-alpha11/old_theme.webp&quot; alt=&quot;Image of the old default theme&quot;&gt;
+&lt;img id=&quot;switch-img2-2k3i0dk9x&quot; src=&quot;/assets/blog/1-0-alpha11/new_dark_theme.webp&quot; alt=&quot;Image of the new dark theme&quot; loading=&quot;lazy&quot; style=&quot;display:none&quot;&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;There is also a new black theme and a light theme. The light theme was particularly challenging, it required me to implement highlighter presets, because the SVG text had to be dark for it. I think it turned out amazing in the end. Here&#39;s how both of them look:&lt;/p&gt;
