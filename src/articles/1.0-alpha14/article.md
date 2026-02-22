@@ -13,7 +13,7 @@ This prerelease tightens the experience of using GodSVG a little more by improvi
 
 ## Focus keyboard navigation
 
-Focus navigation with <key>Tab</key>, <key>Shift+Tab</key>, and arrow keys has been added to some parts of GodSVG's interface. To avoid confusing users who don't use this feature, the focus highlights are hidden until you start navigating with your keyboard.
+Focus navigation with `Tab`, `Shift+Tab`, and arrow keys has been added to some parts of GodSVG's interface. To avoid confusing users who don't use this feature, the focus highlights are hidden until you start navigating with your keyboard.
 
 Context popups needed to be reworked to accommodate these changes. Aside from the added ability to navigate them with the arrow keys, there were some other changes to make them behave conventionally.
 
