@@ -4,7 +4,7 @@ title: "New prerelease: GodSVG 1.0-alpha14"
 tagline: Better keyboard controls, neutral gray theme, bugfixes.
 author: MewPurPur
 tags: release
-date: 2026-02-08
+date: 2026-02-22
 release: 1.0-alpha14
 prerelease: true
 ---
