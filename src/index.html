@@ -70,7 +70,7 @@ metaTitle: GodSVG - Free and Open Source SVG editor
 	</div>
 
 	<div class="content">
-		<div class="tab-container">
+		<div class="tab-container" id="tab-container">
 			<div class="tab selected" onclick="toggleContent(0)">Features</div>
 			<div class="tab" onclick="toggleContent(1)">FAQ</div>
 			<div class="tab donate-tab" onclick="toggleContent(2)">Donate</div>
@@ -78,9 +78,9 @@ metaTitle: GodSVG - Free and Open Source SVG editor
 
 		<div id="features-content" style="display: block">
 			<h2>A structured SVG editor</h2>
-			<p>Unlike other editors, GodSVG represents the SVG code directly, doesn't add any metadata, and even lets you edit the code in real time. It aims to be a structured SVG editor with low abstraction, producing clean, precise, optimized files.</p>
+			<p>Unlike most vector graphics editors, GodSVG represents the SVG code directly and lets you edit it in real time, without adding any metadata to it. It aims to be a structured SVG editor with low abstraction, producing clean, precise, optimized files.</p>
 			<ul>
-				<li><b>Interactive SVG editing:</b> Modify individual elements of an SVG file using a user-friendly interface.</li>
+				<li><b>Interactive SVG editing:</b> Modify individual elements of an SVG vector graphic using a user-friendly interface.</li>
 				<li><b>Real-time code:</b> As you manipulate elements in the UI, code is instantly generated and can be edited. Generated code is human-readable, since no metadata is added.</li>
 				<li><b>Optimized SVGs:</b> The generated SVG files are small and efficient, and GodSVG provides various options to assist with optimization.</li>
 			</ul>

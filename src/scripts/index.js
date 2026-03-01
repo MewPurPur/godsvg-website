@@ -65,7 +65,23 @@ function toggleContent(tab_idx) {
 	});
 }
 
+function activateTab(tabIndex) {
+	toggleContent(tabIndex);
+	const container = document.getElementById("tab-container");
+	if (container) {
+		container.scrollIntoView({ behavior: "smooth", block: "start" });
+	}
+}
+
 // Initialize when DOM is loaded.
 document.addEventListener("DOMContentLoaded", function() {
 	setDownloadButtons();
+	const hash = window.location.hash.toLowerCase();
+	if (hash === "#faq") {
+		activateTab(1);
+	} else if (hash === "#donate") {
+		activateTab(2);
+	} else {
+		activateTab(0);
+	}
 });
