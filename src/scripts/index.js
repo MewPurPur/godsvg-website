@@ -77,11 +77,10 @@ function activateTab(tabIndex) {
 document.addEventListener("DOMContentLoaded", function() {
 	setDownloadButtons();
 	const hash = window.location.hash.toLowerCase();
-	if (hash === "#faq") {
+	if (hash === "#features") {
+		activateTab(0);
+	} else if (hash === "#faq") {
 		activateTab(1);
 	} else if (hash === "#donate") {
 		activateTab(2);
-	} else {
-		activateTab(0);
-	}
 });
