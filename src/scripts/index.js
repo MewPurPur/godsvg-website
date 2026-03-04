@@ -83,4 +83,5 @@ document.addEventListener("DOMContentLoaded", function() {
 		activateTab(1);
 	} else if (hash === "#donate") {
 		activateTab(2);
+	}
 });
