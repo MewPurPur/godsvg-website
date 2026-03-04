@@ -50,9 +50,9 @@
 &lt;p&gt;A new theme preset has been added, &amp;quot;Gray&amp;quot;. It&#39;s a dark theme, but a little less dark than the default. Colored themes create white balance bias, for example the default blue theme makes neutral grays appear yellowish, so this preset is a quick shortcut for people who want to avoid this problem.&lt;/p&gt;
 &lt;h2&gt;Bugfixes&lt;/h2&gt;
 &lt;p&gt;GodSVG&#39;s SVG renderer, ThorVG, has been updated to a newer version, fixing a couple of issues with displaying trickier SVGs.&lt;/p&gt;
-&lt;p&gt;Besides that, here&#39;s a list of bugfixes in this verison:&lt;/p&gt;
+&lt;p&gt;Besides that, here&#39;s a list of bugfixes in this version:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Fixed issue where character entity references (such as &lt;code&gt;&amp;amp;lt;&lt;/code&gt; which is used to represent the &lt;code&gt;&amp;lt;&lt;/code&gt; symbol) were wrongly translated by GodSVG, which broke valid SVGs&lt;/li&gt;
+&lt;li&gt;Fixed issue where character entity references (such as &lt;code&gt;&amp;amp;lt;&lt;/code&gt; which is used to represent the &lt;code&gt;&amp;lt;&lt;/code&gt; symbol) were wrongly translated by GodSVG, breaking valid SVGs&lt;/li&gt;
 &lt;li&gt;Fixed an issue with transform list parsing which broke some valid SVGs&lt;/li&gt;
 &lt;li&gt;GodSVG now follows the convention of treating file extensions with all types of casing the same (like &amp;quot;PnG&amp;quot; and &amp;quot;png&amp;quot;)&lt;/li&gt;
 &lt;li&gt;Fixed a couple of issues with deleting tiles in the previews widget&lt;/li&gt;
@@ -162,12 +162,12 @@
 &lt;script&gt;window.toggleSwitch||(window.toggleSwitch=function(t){const e=document.getElementById(&quot;switch-title-&quot;+t),n=document.getElementById(&quot;switch-img1-&quot;+t),l=document.getElementById(&quot;switch-img2-&quot;+t);&quot;none&quot;===n.style.display?(n.style.display=&quot;&quot;,l.style.display=&quot;none&quot;,e.textContent=&quot;Old theme&quot;):(n.style.display=&quot;none&quot;,l.style.display=&quot;&quot;,e.textContent=&quot;New dark theme&quot;)})&lt;/script&gt;
 &lt;div class=&quot;article-switch&quot;&gt;
 &lt;div class=&quot;article-switch-header&quot;&gt;
-&lt;div class=&quot;article-switch-title&quot; id=&quot;switch-title-uz8vamnhg&quot;&gt;Old theme&lt;/div&gt;
-&lt;button class=&quot;article-switch-toggle&quot; onclick=&#39;toggleSwitch(&quot;uz8vamnhg&quot;)&#39;&gt;Switch&lt;/button&gt;
+&lt;div class=&quot;article-switch-title&quot; id=&quot;switch-title-kk5z9bmqo&quot;&gt;Old theme&lt;/div&gt;
+&lt;button class=&quot;article-switch-toggle&quot; onclick=&#39;toggleSwitch(&quot;kk5z9bmqo&quot;)&#39;&gt;Switch&lt;/button&gt;
 &lt;/div&gt;
 &lt;div class=&quot;article-switch-content&quot;&gt;
-&lt;img id=&quot;switch-img1-uz8vamnhg&quot; src=&quot;/assets/blog/1-0-alpha11/old_theme.webp&quot; alt=&quot;Image of the old default theme&quot;&gt;
-&lt;img id=&quot;switch-img2-uz8vamnhg&quot; src=&quot;/assets/blog/1-0-alpha11/new_dark_theme.webp&quot; alt=&quot;Image of the new dark theme&quot; loading=&quot;lazy&quot; style=&quot;display:none&quot;&gt;
+&lt;img id=&quot;switch-img1-kk5z9bmqo&quot; src=&quot;/assets/blog/1-0-alpha11/old_theme.webp&quot; alt=&quot;Image of the old default theme&quot;&gt;
+&lt;img id=&quot;switch-img2-kk5z9bmqo&quot; src=&quot;/assets/blog/1-0-alpha11/new_dark_theme.webp&quot; alt=&quot;Image of the new dark theme&quot; loading=&quot;lazy&quot; style=&quot;display:none&quot;&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;There is also a new black theme and a light theme. The light theme was particularly challenging, it required me to implement highlighter presets, because the SVG text had to be dark for it. I think it turned out amazing in the end. Here&#39;s how both of them look:&lt;/p&gt;
