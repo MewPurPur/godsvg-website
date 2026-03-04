@@ -43,9 +43,9 @@ A new theme preset has been added, "Gray". It's a dark theme, but a little less 
 
 GodSVG's SVG renderer, ThorVG, has been updated to a newer version, fixing a couple of issues with displaying trickier SVGs.
 
-Besides that, here's a list of bugfixes in this verison:
+Besides that, here's a list of bugfixes in this version:
 
-- Fixed issue where character entity references (such as `&lt;` which is used to represent the `<` symbol) were wrongly translated by GodSVG, which broke valid SVGs
+- Fixed issue where character entity references (such as `&lt;` which is used to represent the `<` symbol) were wrongly translated by GodSVG, breaking valid SVGs
 - Fixed an issue with transform list parsing which broke some valid SVGs
 - GodSVG now follows the convention of treating file extensions with all types of casing the same (like "PnG" and "png")
 - Fixed a couple of issues with deleting tiles in the previews widget
