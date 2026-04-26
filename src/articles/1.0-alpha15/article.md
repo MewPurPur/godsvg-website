@@ -55,7 +55,7 @@ Executables now include the GodSVG version in their filenames to avoid confusion
 
 For Linux, I've updated the .desktop file and added a .metainfo file. These files are relevant for integration and distribution.
 
-GodSVG now also provides AppImages builds on Linux, which are downloaded by default. AppImages are self-contained application packages that run on most Linux distributions without installation. Traditional raw executables are still available, but only via GitHub.
+GodSVG now also provides AppImage builds on Linux, which are downloaded by default. AppImages are self-contained application packages that run on most Linux distributions without installation. It's a common format on Linux, but if you're unfamiliar, you can think of them as executables with makeup. Traditional raw executables are still available, but only via GitHub.
 
 ## Bugfixes
 
