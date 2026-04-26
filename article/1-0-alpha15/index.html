@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" type="text/css" href="/styles/base.css">
+<link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
+<link href="https://fonts.googleapis.com/css2?family=Asap:wght@400;500;700&family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
+<title>New prerelease: GodSVG 1.0-alpha15</title>
+<meta name="title" content="New prerelease: GodSVG 1.0-alpha15">
+<meta name="description" content="This prerelease improves several areas of GodSVG, especially the color picker. It also refines the logo and branding of the application.">
+<meta content="#489ae0" data-react-helmet="true" name="theme-color">
+<meta property="og:image" content="https://godsvg.com/assets/blog/1-0-alpha15/cover.webp">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://godsvg.com">
+<meta property="og:title" content="New prerelease: GodSVG 1.0-alpha15">
+<meta property="og:description" content="This prerelease improves several areas of GodSVG, especially the color picker. It also refines the logo and branding of the application.">
+<meta property="og:icon" content="https://godsvg.com/assets/favicon.ico">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="GodSVG">
+<meta property="twitter:url" content="https://godsvg.com">
+<meta property="twitter:title" content="New prerelease: GodSVG 1.0-alpha15">
+<meta property="twitter:description" content="This prerelease improves several areas of GodSVG, especially the color picker. It also refines the logo and branding of the application.">
+<meta property="twitter:image" content="https://godsvg.com/assets/blog/1-0-alpha15/cover.webp">
+<meta property="twitter:card" content="summary_large_image">
+<link rel="stylesheet" type="text/css" href="/styles/article.css">
+<link rel="stylesheet" type="text/css" href="/styles/includes/downloads.css">
+<script src="/scripts/base.js" type="application/javascript"></script>
+</head>
+<body>
+<div class="nav-container">
+<script type="application/javascript">function toggleMenu(){document.getElementById("nav-links").classList.toggle("show")}</script>
+<link rel="stylesheet" type="text/css" href="/styles/templates/navbar.css">
+<div class="nav-content">
+<a href="/" class="nav-logo">
+<img src="/assets/favicon.ico" alt="GodSVG logo">
+<span class="nav-logo-text">GodSVG</span>
+</a>
+<div class="hamburger" onclick="toggleMenu()">
+<span></span><span></span><span></span>
+</div>
+<div class="nav-links" id="nav-links">
+<a href="/releases" class="nav-link">Releases</a>
+<a href="/blog" class="nav-link">Blog</a>
+<a href="/editor" class="nav-link">Web&nbsp;Editor</a>
+</div>
+</div>
+</div>
+<div class="article-header">
+<img src="/assets/blog/1-0-alpha15/cover.webp" class="article-cover">
+<h2 class="article-title">New prerelease: GodSVG 1.0-alpha15</h2>
+<div class="article-metadata">
+<span class="article-author">By: MewPurPur</span>
+<span class="article-date">
+Apr 26, 2026
+</span>
+</div>
+</div>
+<div class="article-content">
+<div class="article-html">
+<p>In this prerelease, GodSVG is receiving significant improvements to its color picker, with an implementation of the HSL color model and multiple picker shape options. Besides that, a few smaller features have been added and some bugfixes and regressions have been fixed, especially around the recent implementation of keyboard focus navigation.</p>
+<h2>New logo</h2>
+<p>I've refined GodSVG's logo and I hope you like the new look!</p>
+<script>window.toggleSwitch||(window.toggleSwitch=function(t){const e=document.getElementById("switch-title-"+t),n=document.getElementById("switch-img1-"+t),l=document.getElementById("switch-img2-"+t);"none"===n.style.display?(n.style.display="",l.style.display="none",e.textContent="Old logo"):(n.style.display="none",l.style.display="",e.textContent="New logo")})</script>
+<div class="article-switch">
+<div class="article-switch-inner">
+<div class="article-switch-header">
+<div class="article-switch-title" id="switch-title-twv0bqw8w">Old logo</div>
+<button class="article-switch-toggle" onclick='toggleSwitch("twv0bqw8w")'>Switch</button>
+</div>
+<div class="article-switch-content">
+<img id="switch-img1-twv0bqw8w" src="/assets/blog/1-0-alpha15/splash_before.webp" alt="Image showing the old splash">
+<img id="switch-img2-twv0bqw8w" src="/assets/blog/1-0-alpha15/splash_after.webp" alt="Image showing the new splash" loading="lazy" style="display:none">
+</div>
+</div>
+</div>
+<p>There are no plans to update this logo for the foreseeable future, so this may remain GodSVG's logo until the end of time.</p>
+<p>A monochrome icon has also been added for Android:</p>
+<div class="article-image">
+<img src="/assets/blog/1-0-alpha15/monochrome_logo.webp" alt="Image showcasing GodSVG's new monochrome icon.">
+</div>
+<h2>Color picker rework</h2>
+<p>The color picker lacked configurability and was often criticized as unintuitive. I wanted to finalize this widget once and for all. Overall, the UI was improved, the color picker is shown first, and I made everything fully able to be navigated with the keyboard.</p>
+<p>In the color picker area, I've added configurability. There's a new popup you can open that lets you configure it by choosing which color models you see (RGB, HSV, and the newly added HSL model). It also allows you to choose a picker type, with several picker types already implemented. More color models and picker types may be implemented in the future.</p>
+<div class="article-video">
+<video controls preload="metadata" aria-label="Video showcasing the new abilities of the color picker.">
+<source src="/assets/blog/1-0-alpha15/color_picker.webm">
+<p>Video showcasing the new abilities of the color picker.</p>
+</video>
+</div>
+<p>In the utilities area, clicking on a swatch no longer instantly picks the color, and the search bar in the palettes view is now always visible. Undo and redo work across the widget.</p>
+<h2>Other improvements</h2>
+<p>Focus navigation with the keyboard has been brought back to the widgets for editing pathdata and points.</p>
+<p>The exporting menu was improved in a number of ways. The final size of the image is now always shown or estimated, thanks to an implementation by me and <a href="https://github.com/sockeye-d" target="_blank" rel="noopener noreferrer">sockeye-d</a>. I've added the ability to add a background color in raster formats (PNG, JPEG, WebP). This color is forced opaque on JPEG, fixing an old issue as JPEGs don't support transparency.</p>
+<p>SVGs can now be exported with the DDS format, a format used by videogame developers for optimizations.</p>
+<p>The font customization settings now have visuals.</p>
+<div class="article-image">
+<img src="/assets/blog/1-0-alpha15/font_presentation.webp" alt="Image showcasing how fonts are presented in the description box.">
+</div>
+<p>Syntax highlighter text colors have been tweaked, with a new color added for XML entities (<code>&amp;amp;</code> <code>&amp;lt;</code>, etc.)</p>
+<p>A &quot;Spacious&quot; formatting style has been added, which formats the SVG such that every attribute is on a new line.</p>
+<h2>Build system</h2>
+<p>Executables now include the GodSVG version in their filenames to avoid confusion. For example, this release's Windows build is named <strong>GodSVG_v1.0-alpha15.exe</strong>.</p>
+<p>For Linux, I've updated the .desktop file and added a .metainfo file. These files are relevant for integration and distribution.</p>
+<p>GodSVG now also provides AppImages builds on Linux, which are downloaded by default. AppImages are self-contained application packages that run on most Linux distributions without installation. Traditional raw executables are still available, but only via GitHub.</p>
+<h2>Bugfixes</h2>
+<ul>
+<li>Fixed bug where undo in newly created tabs would set the text to empty</li>
+<li>Fixed centered popups not behaving well when resized</li>
+<li>Fixed various regressions from the new keyboard focus navigation</li>
+<li>Fixed some visual bugs and regressions</li>
+<li>.jfif, .jpe, .jfi, .jif extensions now recognized as JPEG images</li>
+<li>Android: Fixed regression in large context popups</li>
+<li>Android: Improved UI scale calculations</li>
+<li>A lot of other small fixes</li>
+</ul>
+<h2>Translations</h2>
+<p>The .desktop file for Linux is now automatically generated and doesn't need to be translated separately. Creating a full translation for a locale is once again as simple as finishing its .po file.</p>
+<p>Thanks to <a href="https://github.com/williamchange" target="_blank" rel="noopener noreferrer">williamchange</a>, <a href="https://github.com/JinEnMok" target="_blank" rel="noopener noreferrer">JinEnMok</a>, and <a href="https://github.com/Kiisu-Master" target="_blank" rel="noopener noreferrer">Kiisu-Master</a> for helping to keep existing translations up to date.</p>
+</div>
+<div class="article-bottom">
+<div class="article-downloads">
+<h2>Downloads</h2>
+<div class="notice-panel warning">
+<div class="notice-header">WARNING:</div>
+<div class="notice-message">
+This is a prerelease version. Please regularly back up your SVG files to prevent potential data loss.
+</div>
+</div>
+<div style="margin:1.5rem">
+<script type="application/javascript">const downloads={"1.0-alpha15":{windows:"https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha15/GodSVG.Windows.zip",macos:"https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha15/GodSVG.MacOS.zip",linux:"https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha15/GodSVG.Linux.AppData.zip",android:"https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha15/GodSVG.Android.apk"},"1.0-alpha14":{windows:"https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha14/GodSVG.Windows.zip",macos:"https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha14/GodSVG.MacOS.zip",linux_old:"https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha14/GodSVG.Linux.zip",android:"https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha14/GodSVG.Android.apk"},"1.0-alpha13":{windows:"https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha13/GodSVG.Windows.zip",macos:"https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha13/GodSVG.MacOS.zip",linux_old:"https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha13/GodSVG.Linux.zip",android:"https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha13/GodSVG.Android.apk"},"1.0-alpha12":{windows:"https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha12/GodSVG.Windows.zip",macos:"https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha12/GodSVG.MacOS.zip",linux_old:"https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha12/GodSVG.Linux.zip",android:"https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha12/GodSVG.Android.apk"},"1.0-alpha11":{windows:"https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha11/GodSVG.Windows.zip",macos:"https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha11/GodSVG.MacOS.zip",linux_old:"https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha11/GodSVG.Linux.zip",android:"https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha11/GodSVG.Android.apk"},"1.0-alpha10":{windows:"https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha10/GodSVG.Windows.zip",macos:"https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha10/GodSVG.MacOS.zip",linux_old:"https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha10/GodSVG.Linux.zip",android:"https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha10/GodSVG.Android.apk"},"1.0-alpha9":{windows:"https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha9/GodSVG.Windows.zip",macos:"https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha9/GodSVG.MacOS.zip",linux_old:"https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha9/GodSVG.Linux.zip",android:"https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha9/GodSVG.Android.apk"},"1.0-alpha8":{windows:"https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha8/GodSVG.Windows.zip",macos:"https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha8/GodSVG.MacOS.zip",linux_old:"https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha8/GodSVG.Linux.zip",android:"https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha8/GodSVG.Android.apk"},"1.0-alpha7":{windows:"https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha7/GodSVG.Windows.zip",macos:"https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha7/GodSVG.MacOS.zip",linux_old:"https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha7/GodSVG.Linux.zip",android:"https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha7/GodSVG.Android.apk"},"1.0-alpha6":{windows:"https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha6/GodSVG.Windows.zip",macos:"https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha6/GodSVG.MacOS.zip",linux_old:"https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha6/GodSVG.Linux.zip"},"1.0-alpha5":{windows:"https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha5/GodSVG.Windows.zip",macos:"https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha5/GodSVG.MacOS.zip",linux_old:"https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha5/GodSVG.Linux.zip"},"1.0-alpha4":{windows:"https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha4/GodSVG.Windows.zip",macos:"https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha4/GodSVG.MacOS.zip",linux_old:"https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha4/GodSVG.Linux.zip"},"1.0-alpha3":{windows:"https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha3/GodSVG.Windows.zip",macos:"https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha3/GodSVG.MacOS.zip",linux_old:"https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha3/GodSVG.Linux.zip"},"1.0-alpha2":{windows:"https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha2/GodSVG.Windows.zip",macos:"https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha2/GodSVG.MacOS.zip",linux_old:"https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha2/GodSVG.Linux.zip"},"1.0-alpha1":{windows:"https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha1/GodSVG.Windows.zip",linux_old:"https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha1/GodSVG.Linux.zip"}}</script>
+<div class="downloads-container">
+<div class="download-info">
+<img src="/assets/platforms_windows.svg" alt="windows icon">
+<p>Windows</p>
+<a href="https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha15/GodSVG.Windows.zip" class="btn btn-download" version="https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha15/GodSVG.Windows.zip">Download</a>
+</div>
+<div class="download-info">
+<img src="/assets/platforms_macos.svg" alt="macos icon">
+<p>MacOS</p>
+<a href="https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha15/GodSVG.MacOS.zip" class="btn btn-download" version="https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha15/GodSVG.MacOS.zip">Download</a>
+</div>
+<div class="download-info">
+<img src="/assets/platforms_linux.svg" alt="linux icon">
+<p>Linux</p>
+<a href="https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha15/GodSVG.Linux.AppData.zip" class="btn btn-download" version="https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha15/GodSVG.Linux.AppData.zip">Download</a>
+</div>
+<div class="download-info">
+<img src="/assets/platforms_android.svg" alt="android icon">
+<p>Android</p>
+<a href="https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha15/GodSVG.Android.apk" class="btn btn-download" version="https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha15/GodSVG.Android.apk">Download</a>
+</div>
+</div>
+</div>
+</div>
+<div>
+<h2>Support</h2>
+<div class="support-panel">
+<p class="support-panel-paragraph">Many thanks to everyone who donates to this project! Donations have allowed me to dedicate a lot more time to GodSVG while balancing other responsibilities, and without them, the project would be far behind where it is today. If you find GodSVG valuable and are able to donate, I would be very grateful!</p>
+<div class="donation-widget">
+<script>document.addEventListener("DOMContentLoaded",(function(){const e=document.getElementById("github-btn"),t=document.getElementById("kofi-btn"),n=document.getElementById("patreon-btn"),o=document.getElementById("default-message"),d=document.getElementById("github-details"),l=document.getElementById("kofi-details"),s=document.getElementById("patreon-details");function i(){o.style.display="block",d.style.display="none",l.style.display="none",s.style.display="none"}i(),e.addEventListener("mouseenter",(function(){i(),o.style.display="none",d.style.display="block"})),t.addEventListener("mouseenter",(function(){i(),o.style.display="none",l.style.display="block"})),n.addEventListener("mouseenter",(function(){i(),o.style.display="none",s.style.display="block"}));document.querySelectorAll(".donation-button").forEach((e=>{e.addEventListener("mouseleave",(function(e){const t=e.relatedTarget;t&&t.classList.contains("donation-button")||i()}))}))}))</script>
+<link rel="stylesheet" type="text/css" href="/styles/templates/donation_widget.css">
+<div class="donation-header">Donation platforms</div>
+<div class="donation-buttons">
+<a href="https://github.com/sponsors/MewPurPur" target="_blank" rel="noopener noreferrer" class="donation-button" id="github-btn">
+<img class="donation-platform-icon" src="/assets/logo_github.svg" alt="Github Sponsors logo">
+</a>
+<a href="https://ko-fi.com/mewpurpur" target="_blank" rel="noopener noreferrer" class="donation-button" id="kofi-btn">
+<img class="donation-platform-icon" src="/assets/logo_ko_fi.svg" alt="Ko-Fi logo">
+</a>
+<a href="https://www.patreon.com/GodSVG" target="_blank" rel="noopener noreferrer" class="donation-button" id="patreon-btn">
+<img class="donation-platform-icon" src="/assets/logo_patreon.svg" alt="Patreon logo">
+</a>
+</div>
+<div class="platform-details-container">
+<div id="default-message" class="hover-info" style="display:block">
+Hover a platform for details
+</div>
+<div class="platform-details" id="github-details">
+<div class="platform-name">Github Sponsors:</div>
+<ul class="platform-points">
+<li class="list-pro">Low extra fees</li>
+<li class="list-pro">Can donate arbitrary amounts</li>
+</ul>
+</div>
+<div class="platform-details" id="kofi-details">
+<div class="platform-name">Ko-Fi:</div>
+<ul class="platform-points">
+<li class="list-pro">Low extra fees</li>
+<li class="list-pro">Can donate arbitrary amounts</li>
+</ul>
+</div>
+<div class="platform-details" id="patreon-details">
+<div class="platform-name">Patreon:</div>
+<ul class="platform-points">
+<li class="list-con">High extra fees</li>
+<li class="list-con">Can't donate arbitrary amounts</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="footer-container">
+<link rel="stylesheet" type="text/css" href="/styles/templates/footer.css">
+<div class="footer">
+<span>&copy; 2025-present MewPurPur and FlooferLand</span>
+<span><a href="https://github.com/MewPurPur/godsvg-website">Website source code on Github</a></span>
+</div>
+<div class="footer-socials">
+<a href="https://github.com/MewPurPur/GodSVG" target="_blank" rel="noopener noreferrer">
+<img src="/assets/logo_github.svg">
+</a>
+<a href="https://discord.gg/R8pM6vXWTY" target="_blank" rel="noopener noreferrer">
+<img src="/assets/logo_discord.svg">
+</a>
+</div>
+</div>
+</body>
+</html>
