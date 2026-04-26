@@ -12,10 +12,10 @@ export default function(configData) {
             linux_old: `${base}/GodSVG.Linux.zip`,
             macos_old: `${base}/GodSVG.MacOS.zip`,
             windows_old: `${base}/GodSVG.Windows.zip`,
-            android: `${base}/GodSVG.Android_v`+version+`.zip`,
-            linux: `${base}/GodSVG.Linux_v`+version+`.AppData.zip`,
-            macos: `${base}/GodSVG.MacOS_v`+version+`.zip`,
-            windows: `${base}/GodSVG.Windows_v`+version+`.zip`,
+            android: `${base}/GodSVG_v`+version+`.Android.zip`,
+            linux: `${base}/GodSVG_v`+version+`.LinuxAppImage.zip`,
+            macos: `${base}/GodSVG_v`+version+`.MacOS.zip`,
+            windows: `${base}/GodSVG_v`+version+`.Windows.zip`,
         }
 
         // Reading release data.
