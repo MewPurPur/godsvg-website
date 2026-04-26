@@ -8,11 +8,14 @@ export default function(configData) {
         if (version == null) version = configData.godsvg.version;
         const base = `https://github.com/MewPurPur/GodSVG/releases/download/${version != "latest" ? "v"+version : version}`;
         const platformToDownload = {
-            android: `${base}/GodSVG.Android.apk`,
-            linux: `${base}/GodSVG.Linux.AppData.zip`,
+            android_old: `${base}/GodSVG.Android.apk`,
             linux_old: `${base}/GodSVG.Linux.zip`,
-            macos: `${base}/GodSVG.MacOS.zip`,
-            windows: `${base}/GodSVG.Windows.zip`
+            macos_old: `${base}/GodSVG.MacOS.zip`,
+            windows_old: `${base}/GodSVG.Windows.zip`,
+            android: `${base}/GodSVG.Android_v`+version+`.zip`,
+            linux: `${base}/GodSVG.Linux_v`+version+`.AppData.zip`,
+            macos: `${base}/GodSVG.MacOS_v`+version+`.zip`,
+            windows: `${base}/GodSVG.Windows_v`+version+`.zip`,
         }
 
         // Reading release data.
