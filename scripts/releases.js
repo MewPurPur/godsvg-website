@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 	const platformOption = document.querySelectorAll(".platform-option");
 	platformOption.forEach(optionBtn => {
-		if (optionBtn.getAttribute("platform") == platform) {
+		if (optionBtn.getAttribute("platform").split("_")[0] == platform) {
 			optionBtn.classList.add("active");
 		}
 	});
