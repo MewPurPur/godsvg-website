@@ -103,6 +103,7 @@ $content-width: min($max-width, 100% - $padding-size * 2);
 	user-select: none;
 	display: block;
 	margin-bottom: 0.4rem;
+	box-shadow: 0 0 12px rgba(0, 0, 0, 0.24);
 }
 
 .article-compare.article-compare-count-3 .article-compare-content {
@@ -115,10 +116,17 @@ $content-width: min($max-width, 100% - $padding-size * 2);
 
 .article-switch {
 	width: 100%;
-	margin: 0.65rem 0;
+	margin: 0.75rem 0;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+}
+
+.article-switch-inner {
+	display: flex;
+	flex-direction: column;
+	max-width: 98%;
+	align-items: stretch;
 }
 
 .article-switch-header {

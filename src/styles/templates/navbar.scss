@@ -6,7 +6,7 @@ $navbar-color: #1a1c1e;
 .nav-container {
 	background-color: $navbar-color;
 	width: 100%;
-	padding: 0.5rem 0;
+	padding: 0.25rem 0;
 }
 
 .nav-content {
@@ -31,18 +31,18 @@ $navbar-color: #1a1c1e;
 	img {
 		width: 3rem;
 		height: 3rem;
-		margin-right: 0.5rem;
+		margin-right: 0.25rem;
 	}
 }
 
 .nav-logo-text {
 	font-family: 'Asap', sans-serif;
 	font-weight: 700;
-	font-size: 2.25rem;
-	color: color.adjust(#def, $lightness: -5%);
+	font-size: 2rem;
+	color: color.adjust(#def, $lightness: -7.5%);
 
 	&:hover {
-		color: #def;
+		color: color.adjust(#def, $lightness: -2.5%);
 	}
 }
 

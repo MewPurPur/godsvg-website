@@ -19,7 +19,7 @@ metaTitle: GodSVG - Free and Open Source SVG editor
 {% endblock script %}
 
 {% block body %}
-	<div class="big-gap"></div>
+	<div class="medium-gap"></div>
 	<div class="vicki-container">
 		<img src="/assets/vicki-jump.svg" class="vicki-jump" alt="Vicki character jumping" />
 	</div>
@@ -96,21 +96,21 @@ metaTitle: GodSVG - Free and Open Source SVG editor
 			{% include "carousel.njk" %}
 
 			<h2>Completely free and open source</h2>
-			<p>I don't tolerate user-hostile nonsense. You won't find ads, spyware, data collection, unwanted notifications, subscription models, external dependencies, forced updates, or anything like that in GodSVG.</p>
+			<p>I don't tolerate user-hostile nonsense. You won't find ads, spyware, data collection, unwanted notifications, subscription models, unnecessary accounts, external dependencies, forced updates, or anything like that in GodSVG.</p>
 			<p>Just a tool for you to use when you need it.</p>
 			<p>All of GodSVG's development happens in the open and developers are in the same communities as everyone else. This means you can be assured nothing shady is going on. The license also allows you to modify GodSVG for yourself, in case you have specific needs.</p>
-			<p>If you find GodSVG valuable, consider <a href="https://github.com/MewPurPur/GodSVG">giving it a star on Github</a>. This is an easy way to signal that the project is respected and useful. If you want to go a step further, consider donating.</p>
+			<p>If you find GodSVG valuable, consider <a href="https://github.com/MewPurPur/GodSVG">giving it a star on Github</a>. This is an easy way to signal that the project is respected and useful. If you want to go a step further, consider <a onclick="toggleContent(2)" style="cursor: pointer">donating</a>.</p>
 		</div>
 
 		<div id="faq-content" style="display: none">
 			<h2>Who is making GodSVG?</h2>
-			<p>GodSVG was started in May 2023 by me (MewPurPur) and open-sourced in June 2023. Since the open-sourcing, other people have joined in to help, but I still do the vast majority of the work. Everyone who has made major contributions is listed inside GodSVG's "About" dialog.</p>
+			<p>GodSVG was started in May 2023 by me (MewPurPur) and open-sourced a month later. Since the open-sourcing, other people have joined in to help, but I still do the vast majority of the work. Everyone who has made major contributions is listed inside GodSVG's "About" dialog.</p>
 
 			<h2>GodSVG has been in alpha for so long... Will it ever release?</h2>
-			<p>GodSVG's first development build released in December 2023. As of May 2025, GodSVG still needs a lot more work. Right now, I don't expect a beta until early 2026, most likely even later.</p>
-			<p>GodSVG is a hobby project that I dedicate a lot of effort and time to try and push to the finish line. But of course, I still need to work 8h a day and spend time on things like sleeping, chores, staying healthy. How long the release will take mainly depends on things largely out of my control, including how much support I get.</p>
-			<p>Donations are the best way to help; without them, GodSVG would be far behind where it is now. So if you're able to <a onclick="toggleContent(2)" style="cursor: pointer">donate</a>, I would be very grateful!</p>
-			<p>You can also help by spreading the word, <a href="https://github.com/MewPurPur/GodSVG">giving a star on Github</a> and if you can, implementing features, enhancements, bugfixes, or discussing suggestions.</p>
+			<p>GodSVG's first development build released in December 2023. As of April 2026, GodSVG still needs a little more work. Right now, I'm trying my best to reach beta later this year, but it seems unlikely</p>
+			<p>GodSVG is a hobby project that I dedicate a lot of effort and time to try and push to the finish line. But of course, most of my time goes to having an 8 hours a day job and spending time on things like sleeping, chores, staying healthy.</p>
+			<p>Supporting me is the best way to help; especially without donations, GodSVG would be far behind where it is now. So if you're able to <a onclick="toggleContent(2)" style="cursor: pointer">donate</a>, I would be very grateful!</p>
+			<p>You can also support me by spreading the word, <a href="https://github.com/MewPurPur/GodSVG">giving a star on Github</a> and if you can, implementing features, enhancements, bugfixes, or discussing suggestions.</p>
 
 			<h2>I tried GodSVG and found bugs and shortcomings.</h2>
 			<p>GodSVG is not even in beta yet, so this is to be expected. Report any issues you have <a href="https://github.com/MewPurPur/GodSVG/issues" target="_blank" rel="noopener noreferrer">on Github</a>.</p>
@@ -124,7 +124,7 @@ metaTitle: GodSVG - Free and Open Source SVG editor
 				</li>
 				<li class="no-bullet-point">
 					<img class="img-bullet-point" src="/assets/logo_discord.svg" alt="Discord icon" loading="lazy" />
-					<a href="https://discord.gg/R8pM6vXWTY" target="_blank" rel="noopener noreferrer">Discord server</a> for development and casual chat.
+					<a href="https://discord.gg/R8pM6vXWTY" target="_blank" rel="noopener noreferrer">Discord server</a> for outsourcing our social lives to a proprietary API.
 				</li>
 			</ul>
 
@@ -136,9 +136,9 @@ metaTitle: GodSVG - Free and Open Source SVG editor
 				</li>
 				<li class="no-bullet-point">
 					<img class="img-bullet-point" src="/assets/logo_bluuuusky.webp" alt="Bluesky icon" loading="lazy">
-					<a href="https://bsky.app/profile/mewpurpur.bsky.social" target="_blank" rel="noopener noreferrer">bluuuusky account</a> for the same stuff as twirter.
+					<a href="https://bsky.app/profile/mewpurpur.bsky.social" target="_blank" rel="noopener noreferrer">bluuusky account</a> for the same stuff as twirter.
 				</li>
-				<!-- Yuutub is way too irrelevant, there's nothing GodSVG-related on it right now. I was thinking about tool tutorials, but not at the moment.
+				<!-- Yuutub is way too irrelevant, there's almost nothing GodSVG-related on it right now. I was thinking about tool tutorials, but not at the moment.
 				<li class="no-bullet-point">
 					<img class="img-bullet-point" src="/assets/socials_youtube.webp" alt="YouTube icon" loading="lazy">
 					<a href="https://www.youtube.com/@MewPurPur" target="_blank" rel="noopener noreferrer">yuutub channel</a> for Like, comment, and subscribe!
@@ -147,8 +147,8 @@ metaTitle: GodSVG - Free and Open Source SVG editor
 			</ul>
 
 			<h2>What are your plans for GodSVG?</h2>
-			<p>I have a lot of plans, but only two big things are somewhat blocking the beta stage. The most immediate one is a rework of the handle system. The other one is a rework to the inspector.</p>
-			<p>On a broad level, GodSVG aims to become an assisted SVG code editor that doesn't save anything to the SVGs that's not part of the format itself, like layers. This could change in the future, but I first want to see how far I can push it given this restriction. Also, there are no plans for animation.</p>
+			<p>I have a lot of plans, many of the proposals on the GodSVG repository reflect them. But only two big things are somewhat blocking the beta stage: A rework to the handle system, and a rework to the inspector.</p>
+			<p>On a broad level, GodSVG aims to be an assisted SVG code editor that doesn't save anything to the SVGs that's not part of the format itself. This could change in the future, but I first want to see how far I can push it given these restrictions. Also, there are no plans to integrate animation support at the moment.</p>
 			<p>In my opinion, GodSVG is most useful for teaching the SVG format, creating simple iconography, optimizing existing SVGs, and creating SVGs with code. If your use cases are different, consider using a more artistically-inclined SVG editor.</p>
 
 			<h2>I speak one of Earth's many languages! Do you need help with translation?</h2>
@@ -169,8 +169,7 @@ metaTitle: GodSVG - Free and Open Source SVG editor
 					<a href="https://github.com/sponsors/MewPurPur" target="_blank" rel="noopener noreferrer" style="font-size: 1.25rem">Github Sponsors</a>
 					<ul class="no-bullet-point">
 						<li class="list-pro">Low extra fees</li>
-						<li class="list-pro">Includes all perks</li>
-						<li class="list-pro">Can donate an arbitrary amount</li>
+						<li class="list-pro">Can donate arbitrary amounts</li>
 					</ul>
 				</li>
 				<li>
@@ -178,21 +177,20 @@ metaTitle: GodSVG - Free and Open Source SVG editor
 					<a href="https://ko-fi.com/mewpurpur" target="_blank" rel="noopener noreferrer" style="font-size: 1.25rem">Ko-Fi</a>
 					<ul class="no-bullet-point">
 						<li class="list-pro">Low extra fees</li>
-						<li class="list-pro">Can donate an arbitrary amount</li>
-						<li class="list-con">No perks</li>
+						<li class="list-pro">Can donate arbitrary amounts</li>
 					</ul>
 				</li>
 				<li>
 					<img class="img-bullet-point" src="/assets/logo_patreon.svg" alt="Patreon logo">
 					<a href="https://www.patreon.com/GodSVG" target="_blank" rel="noopener noreferrer" style="font-size: 1.25rem">Patreon</a>
 					<ul class="no-bullet-point">
-						<li class="list-pro">Includes all perks</li>
-						<li class="list-con">Higher extra fees</li>
-						<li class="list-con">Can only donate fixed amounts</li>
+						<li class="list-con">High extra fees</li>
+						<li class="list-con">Can't donate arbitrary amounts</li>
 					</ul>
 				</li>
-				<div class="small-gap"></div>
 			</ul>
+			<div class="small-gap"></div>
+			<p>In all platforms, you can donate a single time or monthly. Monthly subscriptions give some perks, such as as a role in the GodSVG discord server, if you use Discord, and a mention in the "About" of GodSVG. I'd love to give more, but I can't think of much at the moment, and I'm busy enough with GodSVG as is.</p>
 			<p>Thank you so much for considering helping out!</p>
 		</div>
 	</div>

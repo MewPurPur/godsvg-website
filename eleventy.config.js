@@ -21,7 +21,7 @@ export default async function(eleventyConfig) {
 	};
 
 	// Data
-	eleventyConfig.addGlobalData("godsvg.version", "1.0-alpha14")
+	eleventyConfig.addGlobalData("godsvg.version", "1.0-alpha15")
 	eleventyConfig.addGlobalData("site.url", isDebug ? "" : "https://godsvg.com")
 
 	// Plugins
@@ -144,13 +144,15 @@ export default async function(eleventyConfig) {
 		}
 		</script>
 		<div class="article-switch">
-			<div class="article-switch-header">
-				<div class="article-switch-title" id="switch-title-${uniqueId}">${label1}</div>
-				<button class="article-switch-toggle" onclick="toggleSwitch('${uniqueId}')">Switch</button>
-			</div>
-			<div class="article-switch-content">
-				<img id="switch-img1-${uniqueId}" src="/assets/blog/${slug}/${img1}" alt="${alt1}" />
-				<img id="switch-img2-${uniqueId}" src="/assets/blog/${slug}/${img2}" alt="${alt2}" loading="lazy" style="display: none;" />
+			<div class="article-switch-inner">
+				<div class="article-switch-header">
+					<div class="article-switch-title" id="switch-title-${uniqueId}">${label1}</div>
+					<button class="article-switch-toggle" onclick="toggleSwitch('${uniqueId}')">Switch</button>
+				</div>
+				<div class="article-switch-content">
+					<img id="switch-img1-${uniqueId}" src="/assets/blog/${slug}/${img1}" alt="${alt1}" />
+					<img id="switch-img2-${uniqueId}" src="/assets/blog/${slug}/${img2}" alt="${alt2}" loading="lazy" style="display: none;" />
+				</div>
 			</div>
 		</div>
 		`;

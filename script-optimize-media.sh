@@ -6,7 +6,7 @@ done
 
 find src -type f -name "*.mp4" | while read file; do
 	audio_level=$(ffmpeg -i "$file" -af "volumedetect" -f null /dev/null 2>&1 | grep "mean_volume" | awk '{print $5}')
-	AV1_OPTS=(-c:v libaom-av1 -crf 30 -b:v 0 -cpu-used 4 -tile-columns 4 -row-mt 1)
+	AV1_OPTS=(-c:v libaom-av1 -crf 30 -b:v 0 -cpu-used 4 -row-mt 1)
 	ffmpeg -hide_banner -stats -i "$file" "${AV1_OPTS[@]}" -an "${file%.mp4}.webm" && rm "$file"
 done
 
