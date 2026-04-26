@@ -1,58 +1,62 @@
 {
-	"1.0-alpha14": {
-		"date": "February 22nd, 2026",
+    "1.0-alpha15": {
+		"date": "April 26, 2026",
 		"platforms": ["windows", "macos", "linux", "android"]
+	},
+	"1.0-alpha14": {
+		"date": "February 22, 2026",
+		"platforms": ["windows", "macos", "linux_old", "android"]
 	},
 	"1.0-alpha13": {
-		"date": "November 4th, 2025",
-		"platforms": ["windows", "macos", "linux", "android"]
+		"date": "November 4, 2025",
+		"platforms": ["windows", "macos", "linux_old", "android"]
 	},
 	"1.0-alpha12": {
-		"date": "October 31st, 2025",
-		"platforms": ["windows", "macos", "linux", "android"]
+		"date": "October 31, 2025",
+		"platforms": ["windows", "macos", "linux_old", "android"]
 	},
 	"1.0-alpha11": {
 		"date": "September 18, 2025",
-		"platforms": ["windows", "macos", "linux", "android"]
+		"platforms": ["windows", "macos", "linux_old", "android"]
 	},
 	"1.0-alpha10": {
 		"date": "June 8, 2025",
-		"platforms": ["windows", "macos", "linux", "android"]
+		"platforms": ["windows", "macos", "linux_old", "android"]
 	},
 	"1.0-alpha9": {
 		"date": "May 18, 2025",
-		"platforms": ["windows", "macos", "linux", "android"]
+		"platforms": ["windows", "macos", "linux_old", "android"]
 	},
 	"1.0-alpha8": {
 		"date": "March 15, 2025",
-		"platforms": ["windows", "macos", "linux", "android"]
+		"platforms": ["windows", "macos", "linux_old", "android"]
 	},
 	"1.0-alpha7": {
 		"date": "January 12, 2025",
-		"platforms": ["windows", "macos", "linux", "android"]
+		"platforms": ["windows", "macos", "linux_old", "android"]
 	},
 	"1.0-alpha6": {
 		"date": "December 7, 2024",
-		"platforms": ["windows", "macos", "linux"]
+		"platforms": ["windows", "macos", "linux_old"]
 	},
 	"1.0-alpha5": {
 		"date": "September 1, 2024",
-		"platforms": ["windows", "macos", "linux"]
+		"platforms": ["windows", "macos", "linux_old"]
 	},
 	"1.0-alpha4": {
 		"date": "June 6, 2024",
-		"platforms": ["windows", "macos", "linux"]
+		"platforms": ["windows", "macos", "linux_old"]
 	},
 	"1.0-alpha3": {
 		"date": "April 18, 2024",
-		"platforms": ["windows", "macos", "linux"]
+		"platforms": ["windows", "macos", "linux_old"]
 	},
 	"1.0-alpha2": {
 		"date": "December 21, 2023",
-		"platforms": ["windows", "macos", "linux"]
+		"platforms": ["windows", "macos", "linux_old"]
 	},
 	"1.0-alpha1": {
 		"date": "December 5, 2023",
-		"platforms": ["windows", "linux"]
+		"platforms": ["windows", "linux_old"]
 	}
 }

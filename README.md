@@ -4,7 +4,7 @@ This is the source code for the GodSVG website. This is a basic website built wi
 
 ## Contributing
 
-To start working on the project, do the following steps:
+To start working on the project, do the following:
 
 1. Clone the repository: `git clone https://github.com/MewPurPur/godsvg-website.git`
 
@@ -20,4 +20,4 @@ The site is set to be built manually, rather than after each PR, so don't worry 
 
 ## Useful command
 
-The script that can be run from the root folder - `./script-optimize-media.sh` - converts PNG to WebP and MP4 to WebM, this should be run every time new media is added.
+The script that can be run from the root folder - `./script-optimize-media.sh` - converts PNG to WebP and MP4 to WebM, this should be run every time new media is added. Sometimes it generates errors and needs multiple attempts, for some reason.
