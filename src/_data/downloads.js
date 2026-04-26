@@ -13,7 +13,7 @@ export default function(configData) {
             macos_old: `${base}/GodSVG.MacOS.zip`,
             windows_old: `${base}/GodSVG.Windows.zip`,
             android: `${base}/GodSVG_v`+version+`.Android.zip`,
-            linux: `${base}/GodSVG_v`+version+`.LinuxAppImage.zip`,
+            linux: `${base}/GodSVG_v`+version+`.Linux.AppImage.zip`,
             macos: `${base}/GodSVG_v`+version+`.MacOS.zip`,
             windows: `${base}/GodSVG_v`+version+`.Windows.zip`,
         }
