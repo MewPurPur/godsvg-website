@@ -64,7 +64,7 @@ date: Created
 								{% set cleanPlatform = platform.split("_")[0] %}
 								<div class="download-info">
 									<img src="/assets/platforms_{{cleanPlatform}}.svg" alt="{{cleanPlatform}} icon">
-									<p>{{platformInfo.displayNames[platform]}}</p>
+									<p>{{platformInfo.displayNames[cleanPlatform]}}</p>
 									<a href="{{release}}" class="btn btn-download" version="{{release}}">Download</a>
 								</div>
 							{% endfor %}
