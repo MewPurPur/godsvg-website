@@ -61,8 +61,9 @@ date: Created
 						{% include "data/downloads.njk" %}
 						<div class="downloads-container">
 							{% for platform, release in downloads(release) %}
+								{% set cleanPlatform = platform.split("_")[0] %}
 								<div class="download-info">
-									<img src="/assets/platforms_{{platform}}.svg" alt="{{platform}} icon">
+									<img src="/assets/platforms_{{cleanPlatform}}.svg" alt="{{cleanPlatform}} icon">
 									<p>{{platformInfo.displayNames[platform]}}</p>
 									<a href="{{release}}" class="btn btn-download" version="{{release}}">Download</a>
 								</div>
