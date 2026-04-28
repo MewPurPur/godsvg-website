@@ -170,6 +170,7 @@ $content-width: min($max-width, 100% - $padding-size * 2);
 	overflow: hidden;
 
 	img {
+		width: 100%;
 		height: auto;
 		user-select: none;
 		display: block;
