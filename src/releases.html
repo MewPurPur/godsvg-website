@@ -26,7 +26,7 @@ title: Releases - GodSVG
 							{% for platform in release.platforms %}
 								{% set cleanPlatform = platform.split("_")[0] %}
 								<a href="{{downloads(version)[platform]}}" platform="{{platform}}" class="platform-option" download>
-									<img src="/assets/platforms_{{cleanPlatform}}.svg" alt="_" class="solo-platform-icon">
+									<img src="/assets/platforms_{{cleanPlatform}}.svg" alt="{{cleanPlatform}} icon" class="solo-platform-icon">
 									<div class="solo-text">{{platformInfo.displayNames[cleanPlatform]}}</div>
 								</a>
 							{% endfor %}
