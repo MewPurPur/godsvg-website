@@ -31,6 +31,11 @@
 	&:hover {
 		background-color: #3579cf;
 	}
+
+	&:focus-visible {
+		outline: 2px solid $focus;
+		outline-offset: -2px;
+	}
 }
 
 .dropbtn {
@@ -45,6 +50,11 @@
 	list-style: none;
 	min-width: 10rem;
 	height: 100%;
+
+	&:focus-within {
+		outline: 2px solid $focus;
+		outline-offset: -2px;
+	}
 }
 
 .dropdown-content {
@@ -68,6 +78,10 @@
 		&:hover {
 			color: white;
 			background-color: #ffffff1a;
+		}
+
+		&:focus-visible {
+			outline-offset: -2px;
 		}
 
 		.platform-icon {

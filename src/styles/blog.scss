@@ -25,6 +25,10 @@
 		box-shadow: 0 0 8px 8px rgba(255, 255, 255, 0.04);
 	}
 
+	&:has(a:focus-visible) {
+		outline: 2px solid $focus;
+	}
+
 	a {
 		display: block;
 		text-decoration: none;
@@ -34,6 +38,14 @@
 	.blog-card-text {
 		padding: 0.8rem;
 		padding-top: 0.55rem;
+	}
+
+	.blog-thumbnail {
+		opacity: 0.9;
+	}
+
+	&:hover .blog-thumbnail {
+		opacity: 1.0;
 	}
 
 	.date {
@@ -65,14 +77,6 @@
 	height: auto;
 	display: block;
 	transition: opacity 0.2s;
-}
-
-.blog-card .blog-thumbnail {
-	opacity: 0.9;
-}
-
-.blog-card:hover .blog-thumbnail {
-	opacity: 1.0;
 }
 
 @media (max-width: 1080px) {
