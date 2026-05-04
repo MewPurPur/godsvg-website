@@ -23,10 +23,22 @@ a {
 	color: $accent;
 	text-decoration: underline;
 	text-decoration-color: #489ae080;
+	border-radius: 4px;
 
 	&:hover {
 		color: color.adjust($accent, $lightness: 20%, $space: hsl);
 		text-decoration: underline;
+	}
+
+	&:focus-visible {
+		outline: 2px solid $focus;
+	}
+}
+
+button {
+	&:focus-visible {
+		outline: 2px solid $focus;
+		outline-offset: -2px;
 	}
 }
 

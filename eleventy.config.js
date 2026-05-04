@@ -195,7 +195,7 @@ export default async function(eleventyConfig) {
 	eleventyConfig.addShortcode("gh", function(username) {
 		// Strip any leading "@".
 		const clean = username.replace(/^@/, "");
-		return `<a href="https://github.com/${clean}" target="_blank" rel="noopener noreferrer">${clean}</a>`;
+		return `<a href="https://github.com/${clean}">${clean}</a>`;
 	});
 
 	// XML / RSS things
