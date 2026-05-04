@@ -68,14 +68,14 @@ This blog post was written retroactively to document events from GodSVG's early 
 <h2>Rework of attribute defaults</h2>
 <p>Right now, my biggest priority is to massively rework how SVGs are handled internally. I wasn’t able to complete it for this prerelease, but I was able to salvage one small improvement from my attempts: A change to how default values are treated. Attribute fields will no longer have any text if the attribute hasn't been declared. Instead, they will show their default value as dimmed placeholder text.</p>
 <h2>Improved user experience</h2>
-<p>I worked with <a href="https://github.com/Qainguin" target="_blank" rel="noopener noreferrer">Qainguin</a> to improve exporting. Web exports have been fixed, and support for WebP and JPEG formats has been added.</p>
+<p>I worked with <a href="https://github.com/Qainguin">Qainguin</a> to improve exporting. Web exports have been fixed, and support for WebP and JPEG formats has been added.</p>
 <p>I've made popups display their keyboard shortcuts. This is pretty unobtrusive and allows for easier learning.</p>
 <div class="article-image">
 <img src="/assets/blog/1-0-alpha4/context_shortcuts.webp" alt="Image of shortcuts in context popups">
 </div>
-<p>I've also made some speed optimizations for this release, which should make SVGs load ~30% faster on average. Some other changes should allow GodSVG to open much larger SVG files without crashing. <a href="https://github.com/Kiisu-Master" target="_blank" rel="noopener noreferrer">Kiisu-Master</a> and I also worked to fix some memory leaks.</p>
+<p>I've also made some speed optimizations for this release, which should make SVGs load ~30% faster on average. Some other changes should allow GodSVG to open much larger SVG files without crashing. <a href="https://github.com/Kiisu-Master">Kiisu-Master</a> and I also worked to fix some memory leaks.</p>
 <h2>Reference image</h2>
-<p>A common workflow in vector graphics is to vectorize over a background reference image. I worked with <a href="https://github.com/Qainguin" target="_blank" rel="noopener noreferrer">Qainguin</a> to implement this feature for GodSVG on all Desktop platforms. The Web implementation will be a little more difficult, the technology is not there yet. It will be implemented at a later point.</p>
+<p>A common workflow in vector graphics is to vectorize over a background reference image. I worked with <a href="https://github.com/Qainguin">Qainguin</a> to implement this feature for GodSVG on all Desktop platforms. The Web implementation will be a little more difficult, the technology is not there yet. It will be implemented at a later point.</p>
 <div class="article-video">
 <video controls preload="metadata" aria-label="Video of the new reference image functionality">
 <source src="/assets/blog/1-0-alpha4/reference.webm">
@@ -84,13 +84,13 @@ This blog post was written retroactively to document events from GodSVG's early 
 </div>
 <h2>Other goodies</h2>
 <ul>
-<li>Improvements to UI scale logic and settings (by <a href="https://github.com/aaronfranke" target="_blank" rel="noopener noreferrer">aaronfranke</a> and <a href="https://github.com/Kiisu-Master" target="_blank" rel="noopener noreferrer">Kiisu-Master</a>)</li>
-<li>Debug information accessible through F3 (by me and <a href="https://github.com/Kiisu-Master" target="_blank" rel="noopener noreferrer">Kiisu-Master</a>)</li>
-<li>&quot;Show in List&quot; functionality when right-clicking handles in the viewport (by <a href="https://github.com/WeaverSong" target="_blank" rel="noopener noreferrer">WeaverSong</a>)</li>
+<li>Improvements to UI scale logic and settings (by <a href="https://github.com/aaronfranke">aaronfranke</a> and <a href="https://github.com/Kiisu-Master">Kiisu-Master</a>)</li>
+<li>Debug information accessible through F3 (by me and <a href="https://github.com/Kiisu-Master">Kiisu-Master</a>)</li>
+<li>&quot;Show in List&quot; functionality when right-clicking handles in the viewport (by <a href="https://github.com/WeaverSong">WeaverSong</a>)</li>
 <li>More shortcuts for convenience, such as Ctrl+Q (by me)</li>
-<li>Translation updates (by <a href="https://github.com/Vovkiv" target="_blank" rel="noopener noreferrer">Vovkiv</a> and <a href="https://github.com/JinEnMok" target="_blank" rel="noopener noreferrer">JinEnMok</a>)</li>
+<li>Translation updates (by <a href="https://github.com/Vovkiv">Vovkiv</a> and <a href="https://github.com/JinEnMok">JinEnMok</a>)</li>
 <li>Improvements to handling SVGs without specified dimensions (by me)</li>
-<li>A lot of smaller improvements and bugfixes by me, <a href="https://github.com/Qainguin" target="_blank" rel="noopener noreferrer">Qainguin</a>, <a href="https://github.com/ilikefrogs101" target="_blank" rel="noopener noreferrer">ilikefrogs101</a>, <a href="https://github.com/Kiisu-Master" target="_blank" rel="noopener noreferrer">Kiisu-Master</a>... too many to list. Maybe I'll start listing them when GodSVG becomes more stable.</li>
+<li>A lot of smaller improvements and bugfixes by me, <a href="https://github.com/Qainguin">Qainguin</a>, <a href="https://github.com/ilikefrogs101">ilikefrogs101</a>, <a href="https://github.com/Kiisu-Master">Kiisu-Master</a>... too many to list. Maybe I'll start listing them when GodSVG becomes more stable.</li>
 </ul>
 </div>
 <div class="article-bottom">
@@ -132,13 +132,13 @@ This is a prerelease version. Please regularly back up your SVG files to prevent
 <link rel="stylesheet" type="text/css" href="/styles/templates/donation_widget.css">
 <div class="donation-header">Donation platforms</div>
 <div class="donation-buttons">
-<a href="https://github.com/sponsors/MewPurPur" target="_blank" rel="noopener noreferrer" class="donation-button" id="github-btn">
+<a href="https://github.com/sponsors/MewPurPur" class="donation-button" id="github-btn">
 <img class="donation-platform-icon" src="/assets/logo_github.svg" alt="Github Sponsors logo">
 </a>
-<a href="https://ko-fi.com/mewpurpur" target="_blank" rel="noopener noreferrer" class="donation-button" id="kofi-btn">
+<a href="https://ko-fi.com/mewpurpur" class="donation-button" id="kofi-btn">
 <img class="donation-platform-icon" src="/assets/logo_ko_fi.svg" alt="Ko-Fi logo">
 </a>
-<a href="https://www.patreon.com/GodSVG" target="_blank" rel="noopener noreferrer" class="donation-button" id="patreon-btn">
+<a href="https://www.patreon.com/GodSVG" class="donation-button" id="patreon-btn">
 <img class="donation-platform-icon" src="/assets/logo_patreon.svg" alt="Patreon logo">
 </a>
 </div>
@@ -180,10 +180,10 @@ Hover a platform for details
 <span><a href="https://github.com/MewPurPur/godsvg-website">Website source code on Github</a></span>
 </div>
 <div class="footer-socials">
-<a href="https://github.com/MewPurPur/GodSVG" target="_blank" rel="noopener noreferrer">
+<a href="https://github.com/MewPurPur/GodSVG">
 <img src="/assets/logo_github.svg">
 </a>
-<a href="https://discord.gg/R8pM6vXWTY" target="_blank" rel="noopener noreferrer">
+<a href="https://discord.gg/R8pM6vXWTY">
 <img src="/assets/logo_discord.svg">
 </a>
 </div>

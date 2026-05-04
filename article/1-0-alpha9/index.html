@@ -71,13 +71,13 @@ May 18, 2025
 <p>The new default layout has the inspector and the code editor in two separate tabs, which can always be toggled between. If you prefer the old UI, you can easily change back to it through this system.</p>
 <p>Not related to this feature, but on the topic of layouts, I've added a 250% UI scale option, and also made it so GodSVG can go fullscreen. Fullscreen mode can currently only be activated via shortcuts (like F11).</p>
 <h2>Update Checker</h2>
-<p>All the way back in alpha 4, <a href="https://github.com/Swarkin" target="_blank" rel="noopener noreferrer">Swarkin</a> implemented an update checker, but it was unfinished until now. Me and him have done a lot of back and forth on it, and now it's finally functional!</p>
+<p>All the way back in alpha 4, <a href="https://github.com/Swarkin">Swarkin</a> implemented an update checker, but it was unfinished until now. Me and him have done a lot of back and forth on it, and now it's finally functional!</p>
 <p>The update checker can be accessed from the three dots at the top left of the window. Right now, it can only be run manually. So don't forget to do that every now and then to check easily for new updates!</p>
 <h2>Other goodies</h2>
-<p>The tab bar from the previous prerelease got some small refinements. <a href="https://github.com/FlooferLand" target="_blank" rel="noopener noreferrer">FlooferLand</a> and I made it so unsaved tabs will now also display their graphic in their tooltip. And I fixed an issue where upon first starting GodSVG, the active tab would be marked &quot;Unsaved&quot; rather than empty.</p>
-<p><a href="https://github.com/FlooferLand" target="_blank" rel="noopener noreferrer">FlooferLand</a> added support for opening multiple SVGs at once via the CLI, which used to crash. This also means that GodSVG can once again work as a default app for opening SVG files!</p>
-<p>For the experimental Android build, <a href="https://github.com/syntaxerror247" target="_blank" rel="noopener noreferrer">syntaxerror247</a> added support for arm32.</p>
-<p>A button for copying the export SVG or image was implemented in the export menu by <a href="https://github.com/FlooferLand" target="_blank" rel="noopener noreferrer">FlooferLand</a>. This isn't implemented natively in Godot, so the implementation is awkward and may not work everywhere. We hope it's still useful for some of you.</p>
+<p>The tab bar from the previous prerelease got some small refinements. <a href="https://github.com/FlooferLand">FlooferLand</a> and I made it so unsaved tabs will now also display their graphic in their tooltip. And I fixed an issue where upon first starting GodSVG, the active tab would be marked &quot;Unsaved&quot; rather than empty.</p>
+<p><a href="https://github.com/FlooferLand">FlooferLand</a> added support for opening multiple SVGs at once via the CLI, which used to crash. This also means that GodSVG can once again work as a default app for opening SVG files!</p>
+<p>For the experimental Android build, <a href="https://github.com/syntaxerror247">syntaxerror247</a> added support for arm32.</p>
+<p>A button for copying the export SVG or image was implemented in the export menu by <a href="https://github.com/FlooferLand">FlooferLand</a>. This isn't implemented natively in Godot, so the implementation is awkward and may not work everywhere. We hope it's still useful for some of you.</p>
 <p>I've also added a new setting for configuring the viewport's grid color. Aside from this, there are some other small enhancements and features to improve your experience with GodSVG.</p>
 <h2>Bugfixes</h2>
 <p>The biggest bugfixes were to the shortcut system. On MacOS, shortcuts didn't work and the native menu had broken at some point - both of these issues have been fixed. An issue where multiple shortcuts could be triggered at once was also fixed (e.g. how Ctrl+Shift+Tab didn't work before, because Ctrl+Tab would activate at the same time). And buttons can now show their shortcut in the tooltip, as shown below:</p>
@@ -101,7 +101,7 @@ May 18, 2025
 <li>Read-only shortcuts are no longer blocked from working if a duplicate exists.</li>
 </ul>
 <h2>Translations</h2>
-<p>Thanks to <a href="https://github.com/jas31415" target="_blank" rel="noopener noreferrer">jas31415</a>, <a href="https://github.com/JinEnMok" target="_blank" rel="noopener noreferrer">JinEnMok</a>, <a href="https://github.com/Swarkin" target="_blank" rel="noopener noreferrer">Swarkin</a>, and <a href="https://github.com/Kiisu-Master" target="_blank" rel="noopener noreferrer">Kiisu-Master</a> for keeping existing translations up to date!</p>
+<p>Thanks to <a href="https://github.com/jas31415">jas31415</a>, <a href="https://github.com/JinEnMok">JinEnMok</a>, <a href="https://github.com/Swarkin">Swarkin</a>, and <a href="https://github.com/Kiisu-Master">Kiisu-Master</a> for keeping existing translations up to date!</p>
 <p>I've added translation comments to the localization files that help clear up what some strings refer to. So if you wanted to <a href="https://github.com/MewPurPur/GodSVG/tree/main/translations">translate GodSVG to your own language</a>, now's a better time than ever!</p>
 </div>
 <div class="article-bottom">
@@ -148,13 +148,13 @@ This is a prerelease version. Please regularly back up your SVG files to prevent
 <link rel="stylesheet" type="text/css" href="/styles/templates/donation_widget.css">
 <div class="donation-header">Donation platforms</div>
 <div class="donation-buttons">
-<a href="https://github.com/sponsors/MewPurPur" target="_blank" rel="noopener noreferrer" class="donation-button" id="github-btn">
+<a href="https://github.com/sponsors/MewPurPur" class="donation-button" id="github-btn">
 <img class="donation-platform-icon" src="/assets/logo_github.svg" alt="Github Sponsors logo">
 </a>
-<a href="https://ko-fi.com/mewpurpur" target="_blank" rel="noopener noreferrer" class="donation-button" id="kofi-btn">
+<a href="https://ko-fi.com/mewpurpur" class="donation-button" id="kofi-btn">
 <img class="donation-platform-icon" src="/assets/logo_ko_fi.svg" alt="Ko-Fi logo">
 </a>
-<a href="https://www.patreon.com/GodSVG" target="_blank" rel="noopener noreferrer" class="donation-button" id="patreon-btn">
+<a href="https://www.patreon.com/GodSVG" class="donation-button" id="patreon-btn">
 <img class="donation-platform-icon" src="/assets/logo_patreon.svg" alt="Patreon logo">
 </a>
 </div>
@@ -196,10 +196,10 @@ Hover a platform for details
 <span><a href="https://github.com/MewPurPur/godsvg-website">Website source code on Github</a></span>
 </div>
 <div class="footer-socials">
-<a href="https://github.com/MewPurPur/GodSVG" target="_blank" rel="noopener noreferrer">
+<a href="https://github.com/MewPurPur/GodSVG">
 <img src="/assets/logo_github.svg">
 </a>
-<a href="https://discord.gg/R8pM6vXWTY" target="_blank" rel="noopener noreferrer">
+<a href="https://discord.gg/R8pM6vXWTY">
 <img src="/assets/logo_discord.svg">
 </a>
 </div>

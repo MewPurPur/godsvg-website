@@ -75,10 +75,10 @@ Jun 8, 2025
 </video>
 </div>
 <p>The custom file dialog went through a rewrite and received some minor enhancements and bugfixes.</p>
-<p>Surrounding this change, I investigated whether it's a good idea to allow unlimited tabs, as previously, the limit was 50. I've decided to lift this restriction. To make it easier to manage tabs, I've added new actions for closing all empty or all saved tabs, and <a href="https://github.com/Kiisu-Master" target="_blank" rel="noopener noreferrer">Kiisu-Master</a> made scrolling through a lot of tabs work better.</p>
+<p>Surrounding this change, I investigated whether it's a good idea to allow unlimited tabs, as previously, the limit was 50. I've decided to lift this restriction. To make it easier to manage tabs, I've added new actions for closing all empty or all saved tabs, and <a href="https://github.com/Kiisu-Master">Kiisu-Master</a> made scrolling through a lot of tabs work better.</p>
 <h2>Other improvements</h2>
 <p>The default layout has been changed, the inspector is now the first tab by default as I meant it to be. Max UI scale is no longer rounded down to a multiple of 5%, as this was counterproductive.</p>
-<p>The &lt;use&gt; element is now somewhat supported. It will show its &quot;x&quot; and &quot;y&quot; attributes in the inspector, and they also add a handle to the viewport. This element isn't available in the GUI, since it's not that well-supported yet, but if you type it in the code editor or encounter it in existing SVGs, you can now have a smoother experience with it. This was implemented by <a href="https://github.com/Jordyfel" target="_blank" rel="noopener noreferrer">Jordyfel</a>.</p>
+<p>The &lt;use&gt; element is now somewhat supported. It will show its &quot;x&quot; and &quot;y&quot; attributes in the inspector, and they also add a handle to the viewport. This element isn't available in the GUI, since it's not that well-supported yet, but if you type it in the code editor or encounter it in existing SVGs, you can now have a smoother experience with it. This was implemented by <a href="https://github.com/Jordyfel">Jordyfel</a>.</p>
 <p>I've made it so incorrectly nested elements no longer affect aspects of the GUI. For example, incorrectly nested shapes won't show their handles in the editor, and unavailable gradients won't be presented in color pickers.</p>
 <h2>Bugfixes</h2>
 <p>This prerelease's main goal was to quickly address some major bugs:</p>
@@ -87,7 +87,7 @@ Jun 8, 2025
 <li>Fixed an issue that could result in corrupted tabs in various situations</li>
 <li>Fixed an issue where upon first opening GodSVG, the first tab's contents wouldn't save</li>
 <li>Fixed a regression where dimensionless SVGs would crash when edited</li>
-<li>Fixed occasional glitchy handle movement on Android and Web (by <a href="https://github.com/Jordyfel" target="_blank" rel="noopener noreferrer">Jordyfel</a>)</li>
+<li>Fixed occasional glitchy handle movement on Android and Web (by <a href="https://github.com/Jordyfel">Jordyfel</a>)</li>
 <li>Fixed various stability issues at high zoom levels and large coordinates</li>
 </ul>
 <p>Other smaller bugfixes:</p>
@@ -97,9 +97,9 @@ Jun 8, 2025
 <li>Fixed code editor's scrollbar placement</li>
 </ul>
 <h2>Translations</h2>
-<p>The source comments have been tweaked a bit so they can work around a bug in POEdit, thanks to a discovery made by <a href="https://github.com/Kiisu-Master" target="_blank" rel="noopener noreferrer">Kiisu-Master</a>.</p>
-<p>Thanks to <a href="https://github.com/AlejandroMoc" target="_blank" rel="noopener noreferrer">AlejandroMoc</a> for adding a Spanish translation!</p>
-<p>Thanks to <a href="https://github.com/Kiisu-Master" target="_blank" rel="noopener noreferrer">Kiisu-Master</a>, <a href="https://github.com/freeducks-debug" target="_blank" rel="noopener noreferrer">freeducks-debug</a>, <a href="https://github.com/Swarkin" target="_blank" rel="noopener noreferrer">Swarkin</a>, and <a href="https://github.com/Felipe-Sena" target="_blank" rel="noopener noreferrer">Felipe-Sena</a> for keeping existing translations up to date!</p>
+<p>The source comments have been tweaked a bit so they can work around a bug in POEdit, thanks to a discovery made by <a href="https://github.com/Kiisu-Master">Kiisu-Master</a>.</p>
+<p>Thanks to <a href="https://github.com/AlejandroMoc">AlejandroMoc</a> for adding a Spanish translation!</p>
+<p>Thanks to <a href="https://github.com/Kiisu-Master">Kiisu-Master</a>, <a href="https://github.com/freeducks-debug">freeducks-debug</a>, <a href="https://github.com/Swarkin">Swarkin</a>, and <a href="https://github.com/Felipe-Sena">Felipe-Sena</a> for keeping existing translations up to date!</p>
 </div>
 <div class="article-bottom">
 <div class="article-downloads">
@@ -145,13 +145,13 @@ This is a prerelease version. Please regularly back up your SVG files to prevent
 <link rel="stylesheet" type="text/css" href="/styles/templates/donation_widget.css">
 <div class="donation-header">Donation platforms</div>
 <div class="donation-buttons">
-<a href="https://github.com/sponsors/MewPurPur" target="_blank" rel="noopener noreferrer" class="donation-button" id="github-btn">
+<a href="https://github.com/sponsors/MewPurPur" class="donation-button" id="github-btn">
 <img class="donation-platform-icon" src="/assets/logo_github.svg" alt="Github Sponsors logo">
 </a>
-<a href="https://ko-fi.com/mewpurpur" target="_blank" rel="noopener noreferrer" class="donation-button" id="kofi-btn">
+<a href="https://ko-fi.com/mewpurpur" class="donation-button" id="kofi-btn">
 <img class="donation-platform-icon" src="/assets/logo_ko_fi.svg" alt="Ko-Fi logo">
 </a>
-<a href="https://www.patreon.com/GodSVG" target="_blank" rel="noopener noreferrer" class="donation-button" id="patreon-btn">
+<a href="https://www.patreon.com/GodSVG" class="donation-button" id="patreon-btn">
 <img class="donation-platform-icon" src="/assets/logo_patreon.svg" alt="Patreon logo">
 </a>
 </div>
@@ -193,10 +193,10 @@ Hover a platform for details
 <span><a href="https://github.com/MewPurPur/godsvg-website">Website source code on Github</a></span>
 </div>
 <div class="footer-socials">
-<a href="https://github.com/MewPurPur/GodSVG" target="_blank" rel="noopener noreferrer">
+<a href="https://github.com/MewPurPur/GodSVG">
 <img src="/assets/logo_github.svg">
 </a>
-<a href="https://discord.gg/R8pM6vXWTY" target="_blank" rel="noopener noreferrer">
+<a href="https://discord.gg/R8pM6vXWTY">
 <img src="/assets/logo_discord.svg">
 </a>
 </div>

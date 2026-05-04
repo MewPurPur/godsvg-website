@@ -75,10 +75,10 @@ This blog post was written retroactively to document events from GodSVG's early 
 <p>Video of adding and adjusting a shape from the viewport</p>
 </video>
 </div>
-<p><a href="https://github.com/Kiisu-Master" target="_blank" rel="noopener noreferrer">Kiisu-Master</a> and I also improved the viewport controls. Zooming can now be centered on the cursor, and middle mouse is now nicer to use.</p>
+<p><a href="https://github.com/Kiisu-Master">Kiisu-Master</a> and I also improved the viewport controls. Zooming can now be centered on the cursor, and middle mouse is now nicer to use.</p>
 <h2>Functional improvements</h2>
 <p>A number of improvements in this prerelease add new powers to GodSVG.</p>
-<p>The ability to drag and drop in the inspector has been implemented by me, <a href="https://github.com/SeremTitus" target="_blank" rel="noopener noreferrer">SeremTitus</a>, and <a href="https://github.com/Kiisu-Master" target="_blank" rel="noopener noreferrer">Kiisu-Master</a>. This finally enables you to adjust the SVG hierarchy without needing the code editor.</p>
+<p>The ability to drag and drop in the inspector has been implemented by me, <a href="https://github.com/SeremTitus">SeremTitus</a>, and <a href="https://github.com/Kiisu-Master">Kiisu-Master</a>. This finally enables you to adjust the SVG hierarchy without needing the code editor.</p>
 <div class="article-video">
 <video controls preload="metadata" aria-label="Video of using elements drag and drop">
 <source src="/assets/blog/1-0-alpha3/drag_and_drop.webm">
@@ -86,13 +86,13 @@ This blog post was written retroactively to document events from GodSVG's early 
 </video>
 </div>
 <p>I've added the ability to change the type of path commands. I've also added an initial version of an optimizer, which uses this new ability in some limited ways. Unlike attribute formatting, the &quot;Optimize&quot; action must be triggered manually.</p>
-<p>The important transform attribute has been implemented by me and <a href="https://github.com/DevPoodle" target="_blank" rel="noopener noreferrer">DevPoodle</a>. It comes with its own widget for convenience. Handles for editing it from the viewport are planned for the future.</p>
+<p>The important transform attribute has been implemented by me and <a href="https://github.com/DevPoodle">DevPoodle</a>. It comes with its own widget for convenience. Handles for editing it from the viewport are planned for the future.</p>
 <div class="article-image">
 <img src="/assets/blog/1-0-alpha3/transforms.webp" alt="Image of the transform field and its popup">
 </div>
 <p>New elements can now be added in the inspector by right-clicking the empty space.</p>
 <p>The SVG renderer - <a href="https://github.com/thorvg/thorvg">ThorVG</a> - saw a lot of bugfixes in the last four months, improving the accuracy of the presented graphic and the rasterized PNGs on export.</p>
-<p>GodSVG's performance has been greatly improved. Rebuilding an SVG with a large number of paths is much faster now, as I've sped up the construction of pathdata fields considerably. This is a risky change, so I'll watch out for regressions. <a href="https://github.com/Kiisu-Master" target="_blank" rel="noopener noreferrer">Kiisu-Master</a> also fixed an issue that caused a lot of strain on the GPU on some systems.</p>
+<p>GodSVG's performance has been greatly improved. Rebuilding an SVG with a large number of paths is much faster now, as I've sped up the construction of pathdata fields considerably. This is a risky change, so I'll watch out for regressions. <a href="https://github.com/Kiisu-Master">Kiisu-Master</a> also fixed an issue that caused a lot of strain on the GPU on some systems.</p>
 <h2>A lot more configurability</h2>
 <p>I've reworked the UI of the settings menu, which allowed us to expand it with a lot more settings. Attribute formatting settings have been expanded and moved there, and XML formatting settings were added. I've also implemented settings for theming and I made shortcuts configurable (which also serves as documentation!)</p>
 <div class="article-video">
@@ -101,19 +101,19 @@ This blog post was written retroactively to document events from GodSVG's early 
 <p>Video of the new settings menu</p>
 </video>
 </div>
-<p>The scaling approach of GodSVG was changed to reduce the blurriness and give the user more control over the size of the layout, thanks to a new UI scale setting implemented by <a href="https://github.com/Kiisu-Master" target="_blank" rel="noopener noreferrer">Kiisu-Master</a>.</p>
+<p>The scaling approach of GodSVG was changed to reduce the blurriness and give the user more control over the size of the layout, thanks to a new UI scale setting implemented by <a href="https://github.com/Kiisu-Master">Kiisu-Master</a>.</p>
 <h2>UX improvements</h2>
 <p>I've improved the color picker by adding numbers next to the sliders for more precise configuration of colors, as well as Undo/Redo functionality.</p>
 <p>I've also improved the fallback file dialog and added an option to set it as the default. If you like it, you can now choose it over the OS file dialog in the settings.</p>
-<p>And finally, <a href="https://github.com/Kiisu-Master" target="_blank" rel="noopener noreferrer">Kiisu-Master</a> has added a Save functionality with a Ctrl+S shortcut. The implementation is a bit awkward at the moment, but it's still a quicker way to save an SVG than exporting.</p>
+<p>And finally, <a href="https://github.com/Kiisu-Master">Kiisu-Master</a> has added a Save functionality with a Ctrl+S shortcut. The implementation is a bit awkward at the moment, but it's still a quicker way to save an SVG than exporting.</p>
 <h2>Internal improvements</h2>
-<p><a href="https://github.com/Kiisu-Master" target="_blank" rel="noopener noreferrer">Kiisu-Master</a> helped me a lot with some internal improvements. Translations have been moved to the .po format, which is a much better experience for translators. There are now also workflows for continuous integration with Windows and Linux. If you're logged into Github, you can now test the latest development builds. MacOS workflows will be added soon.</p>
+<p><a href="https://github.com/Kiisu-Master">Kiisu-Master</a> helped me a lot with some internal improvements. Translations have been moved to the .po format, which is a much better experience for translators. There are now also workflows for continuous integration with Windows and Linux. If you're logged into Github, you can now test the latest development builds. MacOS workflows will be added soon.</p>
 <h2>Other goodies</h2>
 <ul>
-<li>The &lt;stop&gt; element has been implemented by <a href="https://github.com/RedFurryDemon" target="_blank" rel="noopener noreferrer">RedFurryDemon</a>. Although it can't be added through the GUI, this makes it easier to edit it in imported graphics or ones made through the code editor.</li>
-<li>Translations in Bulgarian and German have been available since the first alpha release, and <a href="https://github.com/Vovkiv" target="_blank" rel="noopener noreferrer">Vovkiv</a> has now also added Russian and Ukrainian.</li>
+<li>The &lt;stop&gt; element has been implemented by <a href="https://github.com/RedFurryDemon">RedFurryDemon</a>. Although it can't be added through the GUI, this makes it easier to edit it in imported graphics or ones made through the code editor.</li>
+<li>Translations in Bulgarian and German have been available since the first alpha release, and <a href="https://github.com/Vovkiv">Vovkiv</a> has now also added Russian and Ukrainian.</li>
 <li>I've refined the &quot;About&quot; dialog.</li>
-<li>A lot of smaller improvements and bugfixes by me, <a href="https://github.com/Qainguin" target="_blank" rel="noopener noreferrer">Qainguin</a>, <a href="https://github.com/ilikefrogs101" target="_blank" rel="noopener noreferrer">ilikefrogs101</a>, <a href="https://github.com/Kiisu-Master" target="_blank" rel="noopener noreferrer">Kiisu-Master</a>... too many to list. I'll start listing them when GodSVG becomes more stable.</li>
+<li>A lot of smaller improvements and bugfixes by me, <a href="https://github.com/Qainguin">Qainguin</a>, <a href="https://github.com/ilikefrogs101">ilikefrogs101</a>, <a href="https://github.com/Kiisu-Master">Kiisu-Master</a>... too many to list. I'll start listing them when GodSVG becomes more stable.</li>
 </ul>
 </div>
 <div class="article-bottom">
@@ -155,13 +155,13 @@ This is a prerelease version. Please regularly back up your SVG files to prevent
 <link rel="stylesheet" type="text/css" href="/styles/templates/donation_widget.css">
 <div class="donation-header">Donation platforms</div>
 <div class="donation-buttons">
-<a href="https://github.com/sponsors/MewPurPur" target="_blank" rel="noopener noreferrer" class="donation-button" id="github-btn">
+<a href="https://github.com/sponsors/MewPurPur" class="donation-button" id="github-btn">
 <img class="donation-platform-icon" src="/assets/logo_github.svg" alt="Github Sponsors logo">
 </a>
-<a href="https://ko-fi.com/mewpurpur" target="_blank" rel="noopener noreferrer" class="donation-button" id="kofi-btn">
+<a href="https://ko-fi.com/mewpurpur" class="donation-button" id="kofi-btn">
 <img class="donation-platform-icon" src="/assets/logo_ko_fi.svg" alt="Ko-Fi logo">
 </a>
-<a href="https://www.patreon.com/GodSVG" target="_blank" rel="noopener noreferrer" class="donation-button" id="patreon-btn">
+<a href="https://www.patreon.com/GodSVG" class="donation-button" id="patreon-btn">
 <img class="donation-platform-icon" src="/assets/logo_patreon.svg" alt="Patreon logo">
 </a>
 </div>
@@ -203,10 +203,10 @@ Hover a platform for details
 <span><a href="https://github.com/MewPurPur/godsvg-website">Website source code on Github</a></span>
 </div>
 <div class="footer-socials">
-<a href="https://github.com/MewPurPur/GodSVG" target="_blank" rel="noopener noreferrer">
+<a href="https://github.com/MewPurPur/GodSVG">
 <img src="/assets/logo_github.svg">
 </a>
-<a href="https://discord.gg/R8pM6vXWTY" target="_blank" rel="noopener noreferrer">
+<a href="https://discord.gg/R8pM6vXWTY">
 <img src="/assets/logo_discord.svg">
 </a>
 </div>

@@ -26,12 +26,12 @@
 &lt;div class=&quot;article-switch&quot;&gt;
 &lt;div class=&quot;article-switch-inner&quot;&gt;
 &lt;div class=&quot;article-switch-header&quot;&gt;
-&lt;div class=&quot;article-switch-title&quot; id=&quot;switch-title-gpeftabna&quot;&gt;Old logo&lt;/div&gt;
-&lt;button class=&quot;article-switch-toggle&quot; onclick=&#39;toggleSwitch(&quot;gpeftabna&quot;)&#39;&gt;Switch&lt;/button&gt;
+&lt;div class=&quot;article-switch-title&quot; id=&quot;switch-title-5l55odixo&quot;&gt;Old logo&lt;/div&gt;
+&lt;button class=&quot;article-switch-toggle&quot; onclick=&#39;toggleSwitch(&quot;5l55odixo&quot;)&#39;&gt;Switch&lt;/button&gt;
 &lt;/div&gt;
 &lt;div class=&quot;article-switch-content&quot;&gt;
-&lt;img id=&quot;switch-img1-gpeftabna&quot; src=&quot;/assets/blog/1-0-alpha15/splash_before.webp&quot; alt=&quot;Image showing the old splash&quot;&gt;
-&lt;img id=&quot;switch-img2-gpeftabna&quot; src=&quot;/assets/blog/1-0-alpha15/splash_after.webp&quot; alt=&quot;Image showing the new splash&quot; loading=&quot;lazy&quot; style=&quot;display:none&quot;&gt;
+&lt;img id=&quot;switch-img1-5l55odixo&quot; src=&quot;/assets/blog/1-0-alpha15/splash_before.webp&quot; alt=&quot;Image showing the old splash&quot;&gt;
+&lt;img id=&quot;switch-img2-5l55odixo&quot; src=&quot;/assets/blog/1-0-alpha15/splash_after.webp&quot; alt=&quot;Image showing the new splash&quot; loading=&quot;lazy&quot; style=&quot;display:none&quot;&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -52,7 +52,7 @@
 &lt;p&gt;In the utilities area, clicking on a swatch no longer instantly picks the color, and the search bar in the palettes view is now always visible. Undo and redo work across the widget.&lt;/p&gt;
 &lt;h2&gt;Other improvements&lt;/h2&gt;
 &lt;p&gt;Focus navigation with the keyboard has been brought back to the widgets for editing pathdata and points.&lt;/p&gt;
-&lt;p&gt;The exporting menu was improved in a number of ways. The final size of the image is now always shown or estimated, thanks to an implementation by me and &lt;a href=&quot;https://github.com/sockeye-d&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;sockeye-d&lt;/a&gt;. I&#39;ve added the ability to add a background color in raster formats (PNG, JPEG, WebP). This color is forced opaque on JPEG, fixing an old issue as JPEGs don&#39;t support transparency.&lt;/p&gt;
+&lt;p&gt;The exporting menu was improved in a number of ways. The final size of the image is now always shown or estimated, thanks to an implementation by me and &lt;a href=&quot;https://github.com/sockeye-d&quot;&gt;sockeye-d&lt;/a&gt;. I&#39;ve added the ability to add a background color in raster formats (PNG, JPEG, WebP). This color is forced opaque on JPEG, fixing an old issue as JPEGs don&#39;t support transparency.&lt;/p&gt;
 &lt;p&gt;SVGs can now be exported with the DDS format, a format used by videogame developers for optimizations.&lt;/p&gt;
 &lt;p&gt;The font customization settings now have visuals.&lt;/p&gt;
 &lt;div class=&quot;article-image&quot;&gt;
@@ -77,7 +77,7 @@
 &lt;/ul&gt;
 &lt;h2&gt;Translations&lt;/h2&gt;
 &lt;p&gt;The .desktop file for Linux is now automatically generated and doesn&#39;t need to be translated separately. Creating a full translation for a locale is once again as simple as finishing its .po file.&lt;/p&gt;
-&lt;p&gt;Thanks to &lt;a href=&quot;https://github.com/williamchange&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;williamchange&lt;/a&gt;, &lt;a href=&quot;https://github.com/JinEnMok&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;JinEnMok&lt;/a&gt;, and &lt;a href=&quot;https://github.com/Kiisu-Master&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Kiisu-Master&lt;/a&gt; for helping to keep existing translations up to date.&lt;/p&gt;
+&lt;p&gt;Thanks to &lt;a href=&quot;https://github.com/williamchange&quot;&gt;williamchange&lt;/a&gt;, &lt;a href=&quot;https://github.com/JinEnMok&quot;&gt;JinEnMok&lt;/a&gt;, and &lt;a href=&quot;https://github.com/Kiisu-Master&quot;&gt;Kiisu-Master&lt;/a&gt; for helping to keep existing translations up to date.&lt;/p&gt;
 
 		</content>
 	</entry>
@@ -118,7 +118,7 @@
 &lt;p&gt;Video showcasing keyboard focus navigation.&lt;/p&gt;
 &lt;/video&gt;
 &lt;/div&gt;
-&lt;p&gt;The logic for copying an export image to clipboard has been improved by &lt;a href=&quot;https://github.com/williamchange&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;williamchange&lt;/a&gt; and &lt;a href=&quot;https://github.com/sockeye-d&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;sockeye-d&lt;/a&gt; and should now work better on Linux and MacOS.&lt;/p&gt;
+&lt;p&gt;The logic for copying an export image to clipboard has been improved by &lt;a href=&quot;https://github.com/williamchange&quot;&gt;williamchange&lt;/a&gt; and &lt;a href=&quot;https://github.com/sockeye-d&quot;&gt;sockeye-d&lt;/a&gt; and should now work better on Linux and MacOS.&lt;/p&gt;
 &lt;p&gt;A new theme preset has been added, &amp;quot;Gray&amp;quot;. It&#39;s a dark theme, but a little less dark than the default. Colored themes create white balance bias, for example the default blue theme makes neutral grays appear yellowish, so this preset is a quick shortcut for people who want to avoid this problem.&lt;/p&gt;
 &lt;h2&gt;Bugfixes&lt;/h2&gt;
 &lt;p&gt;GodSVG&#39;s SVG renderer, ThorVG, has been updated to a newer version, fixing a couple of issues with displaying trickier SVGs.&lt;/p&gt;
@@ -134,7 +134,7 @@
 &lt;/ul&gt;
 &lt;p&gt;There have also been some minor UI/visual tweaks and fixes.&lt;/p&gt;
 &lt;h2&gt;Translations&lt;/h2&gt;
-&lt;p&gt;Thanks to &lt;a href=&quot;https://github.com/williamchange&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;williamchange&lt;/a&gt; and &lt;a href=&quot;https://github.com/Kiisu-Master&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Kiisu-Master&lt;/a&gt; for helping to keep existing translations up to date.&lt;/p&gt;
+&lt;p&gt;Thanks to &lt;a href=&quot;https://github.com/williamchange&quot;&gt;williamchange&lt;/a&gt; and &lt;a href=&quot;https://github.com/Kiisu-Master&quot;&gt;Kiisu-Master&lt;/a&gt; for helping to keep existing translations up to date.&lt;/p&gt;
 
 		</content>
 	</entry>
@@ -155,7 +155,7 @@
 &lt;/div&gt;
 &lt;p&gt;The prerelease also fixes a regression where changing the theme didn&#39;t immediately update some colors. It also slightly tweaks the base color of the default light theme.&lt;/p&gt;
 &lt;h2&gt;Translations&lt;/h2&gt;
-&lt;p&gt;Thanks to &lt;a href=&quot;https://github.com/AlejandroMoc&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;AlejandroMoc&lt;/a&gt; for helping to keep existing translations up to date.&lt;/p&gt;
+&lt;p&gt;Thanks to &lt;a href=&quot;https://github.com/AlejandroMoc&quot;&gt;AlejandroMoc&lt;/a&gt; for helping to keep existing translations up to date.&lt;/p&gt;
 
 		</content>
 	</entry>
@@ -171,7 +171,7 @@
 		<content type="html">
 			&lt;p&gt;The 12th alpha of GodSVG implements a lot of minor improvements and bugfixes. The main things are a rework of dropdown widgets and an implementation of a new area of the layout for presenting your SVGs at various sizes.&lt;/p&gt;
 &lt;h2&gt;An area for SVG previews&lt;/h2&gt;
-&lt;p&gt;Me and &lt;a href=&quot;https://github.com/sockeye-d&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;sockeye-d&lt;/a&gt; implemented a new part of GodSVG&#39;s layout, an area with various size previews of the SVG you&#39;re working on.&lt;/p&gt;
+&lt;p&gt;Me and &lt;a href=&quot;https://github.com/sockeye-d&quot;&gt;sockeye-d&lt;/a&gt; implemented a new part of GodSVG&#39;s layout, an area with various size previews of the SVG you&#39;re working on.&lt;/p&gt;
 &lt;div class=&quot;article-video&quot;&gt;
 &lt;video controls preload=&quot;metadata&quot; aria-label=&quot;Video showcasing the SVG previews area.&quot;&gt;
 &lt;source src=&quot;/assets/blog/1-0-alpha12/previews.webm&quot;&gt;
@@ -214,7 +214,7 @@
 &lt;/ul&gt;
 &lt;p&gt;Other than that, there have been some minor UI/visual tweaks and fixes.&lt;/p&gt;
 &lt;h2&gt;Translations&lt;/h2&gt;
-&lt;p&gt;Thanks to &lt;a href=&quot;https://github.com/williamchange&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;williamchange&lt;/a&gt;, &lt;a href=&quot;https://github.com/Kiisu-Master&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Kiisu-Master&lt;/a&gt;, &lt;a href=&quot;https://github.com/JinEnMok&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;JinEnMok&lt;/a&gt;, and &lt;a href=&quot;https://github.com/Felipe-Sena&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Felipe-Sena&lt;/a&gt; for helping to keep existing translations up to date.&lt;/p&gt;
+&lt;p&gt;Thanks to &lt;a href=&quot;https://github.com/williamchange&quot;&gt;williamchange&lt;/a&gt;, &lt;a href=&quot;https://github.com/Kiisu-Master&quot;&gt;Kiisu-Master&lt;/a&gt;, &lt;a href=&quot;https://github.com/JinEnMok&quot;&gt;JinEnMok&lt;/a&gt;, and &lt;a href=&quot;https://github.com/Felipe-Sena&quot;&gt;Felipe-Sena&lt;/a&gt; for helping to keep existing translations up to date.&lt;/p&gt;
 
 		</content>
 	</entry>
@@ -235,12 +235,12 @@
 &lt;div class=&quot;article-switch&quot;&gt;
 &lt;div class=&quot;article-switch-inner&quot;&gt;
 &lt;div class=&quot;article-switch-header&quot;&gt;
-&lt;div class=&quot;article-switch-title&quot; id=&quot;switch-title-o9czdxglz&quot;&gt;Old theme&lt;/div&gt;
-&lt;button class=&quot;article-switch-toggle&quot; onclick=&#39;toggleSwitch(&quot;o9czdxglz&quot;)&#39;&gt;Switch&lt;/button&gt;
+&lt;div class=&quot;article-switch-title&quot; id=&quot;switch-title-wqpjwcpdk&quot;&gt;Old theme&lt;/div&gt;
+&lt;button class=&quot;article-switch-toggle&quot; onclick=&#39;toggleSwitch(&quot;wqpjwcpdk&quot;)&#39;&gt;Switch&lt;/button&gt;
 &lt;/div&gt;
 &lt;div class=&quot;article-switch-content&quot;&gt;
-&lt;img id=&quot;switch-img1-o9czdxglz&quot; src=&quot;/assets/blog/1-0-alpha11/old_theme.webp&quot; alt=&quot;Image of the old default theme&quot;&gt;
-&lt;img id=&quot;switch-img2-o9czdxglz&quot; src=&quot;/assets/blog/1-0-alpha11/new_dark_theme.webp&quot; alt=&quot;Image of the new dark theme&quot; loading=&quot;lazy&quot; style=&quot;display:none&quot;&gt;
+&lt;img id=&quot;switch-img1-wqpjwcpdk&quot; src=&quot;/assets/blog/1-0-alpha11/old_theme.webp&quot; alt=&quot;Image of the old default theme&quot;&gt;
+&lt;img id=&quot;switch-img2-wqpjwcpdk&quot; src=&quot;/assets/blog/1-0-alpha11/new_dark_theme.webp&quot; alt=&quot;Image of the new dark theme&quot; loading=&quot;lazy&quot; style=&quot;display:none&quot;&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -292,7 +292,7 @@
 &lt;div class=&quot;article-image&quot;&gt;
 &lt;img src=&quot;/assets/blog/1-0-alpha11/focal_gradient.webp&quot; alt=&quot;Image demonstrating a radial gradient with a focal point&quot;&gt;
 &lt;/div&gt;
-&lt;p&gt;When you press &lt;code&gt;Ctrl&lt;/code&gt; while dragging a bezier curve handle, it will now align itself smoothly to an adjacent curve or line. This new utility was implemented by &lt;a href=&quot;https://github.com/Jordyfel&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Jordyfel&lt;/a&gt;. Note that this currently doesn&#39;t work around the ends of subpaths.&lt;/p&gt;
+&lt;p&gt;When you press &lt;code&gt;Ctrl&lt;/code&gt; while dragging a bezier curve handle, it will now align itself smoothly to an adjacent curve or line. This new utility was implemented by &lt;a href=&quot;https://github.com/Jordyfel&quot;&gt;Jordyfel&lt;/a&gt;. Note that this currently doesn&#39;t work around the ends of subpaths.&lt;/p&gt;
 &lt;p&gt;Godot Engine, the tool we use to make GodSVG, just had a new version that we&#39;ve migrated to. This new version finally made it possible to address the blurriness of icons at high UI scales.&lt;/p&gt;
 &lt;div class=&quot;article-compare&quot;&gt;&lt;div class=&quot;article-compare-content&quot;&gt;
 &lt;div class=&quot;article-compare-side&quot;&gt;
@@ -324,7 +324,7 @@
 &lt;p&gt;I reworked the shortcut system, which should result in shortcuts no longer triggering erroneously when dialogs or popups are around. Buttons that are bound to a shortcut also received some fixes - their highlight no longer triggers if the shortcut isn&#39;t accessible, and it triggers properly if the button is hovered. Also, the highlight duration now updates if the shortcut is pressed again during it.&lt;/p&gt;
 &lt;p&gt;Smaller bugfixes:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Fixed undefined behavior with tab tooltips in rare scenarios (by &lt;a href=&quot;https://github.com/HuntJSparra&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;HuntJSparra&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Fixed undefined behavior with tab tooltips in rare scenarios (by &lt;a href=&quot;https://github.com/HuntJSparra&quot;&gt;HuntJSparra&lt;/a&gt;)&lt;/li&gt;
 &lt;li&gt;Various fixes to the selection rectangle&lt;/li&gt;
 &lt;li&gt;Fixed tab navigation not working in the &amp;quot;About&amp;quot; menu and the settings menu&lt;/li&gt;
 &lt;li&gt;Fixed equal sign in the wrong place within an element not triggering error syntax highlighting immediately&lt;/li&gt;
@@ -340,7 +340,7 @@
 &lt;/ul&gt;
 &lt;h2&gt;Translations&lt;/h2&gt;
 &lt;p&gt;In the &amp;quot;About&amp;quot; menu in the app, you can now easily copy translators&#39; emails as you hover them.&lt;/p&gt;
-&lt;p&gt;Thanks to &lt;a href=&quot;https://github.com/freeducks-debug&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;freeducks-debug&lt;/a&gt;, &lt;a href=&quot;https://github.com/williamchange&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;williamchange&lt;/a&gt;, &lt;a href=&quot;https://github.com/Kiisu-Master&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Kiisu-Master&lt;/a&gt;, &lt;a href=&quot;https://github.com/JinEnMok&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;JinEnMok&lt;/a&gt;, and &lt;a href=&quot;https://github.com/jas31415&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;jas31415&lt;/a&gt; for keeping existing translations up to date!&lt;/p&gt;
+&lt;p&gt;Thanks to &lt;a href=&quot;https://github.com/freeducks-debug&quot;&gt;freeducks-debug&lt;/a&gt;, &lt;a href=&quot;https://github.com/williamchange&quot;&gt;williamchange&lt;/a&gt;, &lt;a href=&quot;https://github.com/Kiisu-Master&quot;&gt;Kiisu-Master&lt;/a&gt;, &lt;a href=&quot;https://github.com/JinEnMok&quot;&gt;JinEnMok&lt;/a&gt;, and &lt;a href=&quot;https://github.com/jas31415&quot;&gt;jas31415&lt;/a&gt; for keeping existing translations up to date!&lt;/p&gt;
 
 		</content>
 	</entry>
@@ -370,10 +370,10 @@
 &lt;/video&gt;
 &lt;/div&gt;
 &lt;p&gt;The custom file dialog went through a rewrite and received some minor enhancements and bugfixes.&lt;/p&gt;
-&lt;p&gt;Surrounding this change, I investigated whether it&#39;s a good idea to allow unlimited tabs, as previously, the limit was 50. I&#39;ve decided to lift this restriction. To make it easier to manage tabs, I&#39;ve added new actions for closing all empty or all saved tabs, and &lt;a href=&quot;https://github.com/Kiisu-Master&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Kiisu-Master&lt;/a&gt; made scrolling through a lot of tabs work better.&lt;/p&gt;
+&lt;p&gt;Surrounding this change, I investigated whether it&#39;s a good idea to allow unlimited tabs, as previously, the limit was 50. I&#39;ve decided to lift this restriction. To make it easier to manage tabs, I&#39;ve added new actions for closing all empty or all saved tabs, and &lt;a href=&quot;https://github.com/Kiisu-Master&quot;&gt;Kiisu-Master&lt;/a&gt; made scrolling through a lot of tabs work better.&lt;/p&gt;
 &lt;h2&gt;Other improvements&lt;/h2&gt;
 &lt;p&gt;The default layout has been changed, the inspector is now the first tab by default as I meant it to be. Max UI scale is no longer rounded down to a multiple of 5%, as this was counterproductive.&lt;/p&gt;
-&lt;p&gt;The &amp;lt;use&amp;gt; element is now somewhat supported. It will show its &amp;quot;x&amp;quot; and &amp;quot;y&amp;quot; attributes in the inspector, and they also add a handle to the viewport. This element isn&#39;t available in the GUI, since it&#39;s not that well-supported yet, but if you type it in the code editor or encounter it in existing SVGs, you can now have a smoother experience with it. This was implemented by &lt;a href=&quot;https://github.com/Jordyfel&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Jordyfel&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The &amp;lt;use&amp;gt; element is now somewhat supported. It will show its &amp;quot;x&amp;quot; and &amp;quot;y&amp;quot; attributes in the inspector, and they also add a handle to the viewport. This element isn&#39;t available in the GUI, since it&#39;s not that well-supported yet, but if you type it in the code editor or encounter it in existing SVGs, you can now have a smoother experience with it. This was implemented by &lt;a href=&quot;https://github.com/Jordyfel&quot;&gt;Jordyfel&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;I&#39;ve made it so incorrectly nested elements no longer affect aspects of the GUI. For example, incorrectly nested shapes won&#39;t show their handles in the editor, and unavailable gradients won&#39;t be presented in color pickers.&lt;/p&gt;
 &lt;h2&gt;Bugfixes&lt;/h2&gt;
 &lt;p&gt;This prerelease&#39;s main goal was to quickly address some major bugs:&lt;/p&gt;
@@ -382,7 +382,7 @@
 &lt;li&gt;Fixed an issue that could result in corrupted tabs in various situations&lt;/li&gt;
 &lt;li&gt;Fixed an issue where upon first opening GodSVG, the first tab&#39;s contents wouldn&#39;t save&lt;/li&gt;
 &lt;li&gt;Fixed a regression where dimensionless SVGs would crash when edited&lt;/li&gt;
-&lt;li&gt;Fixed occasional glitchy handle movement on Android and Web (by &lt;a href=&quot;https://github.com/Jordyfel&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Jordyfel&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Fixed occasional glitchy handle movement on Android and Web (by &lt;a href=&quot;https://github.com/Jordyfel&quot;&gt;Jordyfel&lt;/a&gt;)&lt;/li&gt;
 &lt;li&gt;Fixed various stability issues at high zoom levels and large coordinates&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Other smaller bugfixes:&lt;/p&gt;
@@ -392,9 +392,9 @@
 &lt;li&gt;Fixed code editor&#39;s scrollbar placement&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;Translations&lt;/h2&gt;
-&lt;p&gt;The source comments have been tweaked a bit so they can work around a bug in POEdit, thanks to a discovery made by &lt;a href=&quot;https://github.com/Kiisu-Master&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Kiisu-Master&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Thanks to &lt;a href=&quot;https://github.com/AlejandroMoc&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;AlejandroMoc&lt;/a&gt; for adding a Spanish translation!&lt;/p&gt;
-&lt;p&gt;Thanks to &lt;a href=&quot;https://github.com/Kiisu-Master&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Kiisu-Master&lt;/a&gt;, &lt;a href=&quot;https://github.com/freeducks-debug&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;freeducks-debug&lt;/a&gt;, &lt;a href=&quot;https://github.com/Swarkin&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Swarkin&lt;/a&gt;, and &lt;a href=&quot;https://github.com/Felipe-Sena&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Felipe-Sena&lt;/a&gt; for keeping existing translations up to date!&lt;/p&gt;
+&lt;p&gt;The source comments have been tweaked a bit so they can work around a bug in POEdit, thanks to a discovery made by &lt;a href=&quot;https://github.com/Kiisu-Master&quot;&gt;Kiisu-Master&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Thanks to &lt;a href=&quot;https://github.com/AlejandroMoc&quot;&gt;AlejandroMoc&lt;/a&gt; for adding a Spanish translation!&lt;/p&gt;
+&lt;p&gt;Thanks to &lt;a href=&quot;https://github.com/Kiisu-Master&quot;&gt;Kiisu-Master&lt;/a&gt;, &lt;a href=&quot;https://github.com/freeducks-debug&quot;&gt;freeducks-debug&lt;/a&gt;, &lt;a href=&quot;https://github.com/Swarkin&quot;&gt;Swarkin&lt;/a&gt;, and &lt;a href=&quot;https://github.com/Felipe-Sena&quot;&gt;Felipe-Sena&lt;/a&gt; for keeping existing translations up to date!&lt;/p&gt;
 
 		</content>
 	</entry>
@@ -420,13 +420,13 @@
 &lt;p&gt;The new default layout has the inspector and the code editor in two separate tabs, which can always be toggled between. If you prefer the old UI, you can easily change back to it through this system.&lt;/p&gt;
 &lt;p&gt;Not related to this feature, but on the topic of layouts, I&#39;ve added a 250% UI scale option, and also made it so GodSVG can go fullscreen. Fullscreen mode can currently only be activated via shortcuts (like F11).&lt;/p&gt;
 &lt;h2&gt;Update Checker&lt;/h2&gt;
-&lt;p&gt;All the way back in alpha 4, &lt;a href=&quot;https://github.com/Swarkin&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Swarkin&lt;/a&gt; implemented an update checker, but it was unfinished until now. Me and him have done a lot of back and forth on it, and now it&#39;s finally functional!&lt;/p&gt;
+&lt;p&gt;All the way back in alpha 4, &lt;a href=&quot;https://github.com/Swarkin&quot;&gt;Swarkin&lt;/a&gt; implemented an update checker, but it was unfinished until now. Me and him have done a lot of back and forth on it, and now it&#39;s finally functional!&lt;/p&gt;
 &lt;p&gt;The update checker can be accessed from the three dots at the top left of the window. Right now, it can only be run manually. So don&#39;t forget to do that every now and then to check easily for new updates!&lt;/p&gt;
 &lt;h2&gt;Other goodies&lt;/h2&gt;
-&lt;p&gt;The tab bar from the previous prerelease got some small refinements. &lt;a href=&quot;https://github.com/FlooferLand&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;FlooferLand&lt;/a&gt; and I made it so unsaved tabs will now also display their graphic in their tooltip. And I fixed an issue where upon first starting GodSVG, the active tab would be marked &amp;quot;Unsaved&amp;quot; rather than empty.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/FlooferLand&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;FlooferLand&lt;/a&gt; added support for opening multiple SVGs at once via the CLI, which used to crash. This also means that GodSVG can once again work as a default app for opening SVG files!&lt;/p&gt;
-&lt;p&gt;For the experimental Android build, &lt;a href=&quot;https://github.com/syntaxerror247&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;syntaxerror247&lt;/a&gt; added support for arm32.&lt;/p&gt;
-&lt;p&gt;A button for copying the export SVG or image was implemented in the export menu by &lt;a href=&quot;https://github.com/FlooferLand&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;FlooferLand&lt;/a&gt;. This isn&#39;t implemented natively in Godot, so the implementation is awkward and may not work everywhere. We hope it&#39;s still useful for some of you.&lt;/p&gt;
+&lt;p&gt;The tab bar from the previous prerelease got some small refinements. &lt;a href=&quot;https://github.com/FlooferLand&quot;&gt;FlooferLand&lt;/a&gt; and I made it so unsaved tabs will now also display their graphic in their tooltip. And I fixed an issue where upon first starting GodSVG, the active tab would be marked &amp;quot;Unsaved&amp;quot; rather than empty.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/FlooferLand&quot;&gt;FlooferLand&lt;/a&gt; added support for opening multiple SVGs at once via the CLI, which used to crash. This also means that GodSVG can once again work as a default app for opening SVG files!&lt;/p&gt;
+&lt;p&gt;For the experimental Android build, &lt;a href=&quot;https://github.com/syntaxerror247&quot;&gt;syntaxerror247&lt;/a&gt; added support for arm32.&lt;/p&gt;
+&lt;p&gt;A button for copying the export SVG or image was implemented in the export menu by &lt;a href=&quot;https://github.com/FlooferLand&quot;&gt;FlooferLand&lt;/a&gt;. This isn&#39;t implemented natively in Godot, so the implementation is awkward and may not work everywhere. We hope it&#39;s still useful for some of you.&lt;/p&gt;
 &lt;p&gt;I&#39;ve also added a new setting for configuring the viewport&#39;s grid color. Aside from this, there are some other small enhancements and features to improve your experience with GodSVG.&lt;/p&gt;
 &lt;h2&gt;Bugfixes&lt;/h2&gt;
 &lt;p&gt;The biggest bugfixes were to the shortcut system. On MacOS, shortcuts didn&#39;t work and the native menu had broken at some point - both of these issues have been fixed. An issue where multiple shortcuts could be triggered at once was also fixed (e.g. how Ctrl+Shift+Tab didn&#39;t work before, because Ctrl+Tab would activate at the same time). And buttons can now show their shortcut in the tooltip, as shown below:&lt;/p&gt;
@@ -450,7 +450,7 @@
 &lt;li&gt;Read-only shortcuts are no longer blocked from working if a duplicate exists.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;Translations&lt;/h2&gt;
-&lt;p&gt;Thanks to &lt;a href=&quot;https://github.com/jas31415&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;jas31415&lt;/a&gt;, &lt;a href=&quot;https://github.com/JinEnMok&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;JinEnMok&lt;/a&gt;, &lt;a href=&quot;https://github.com/Swarkin&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Swarkin&lt;/a&gt;, and &lt;a href=&quot;https://github.com/Kiisu-Master&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Kiisu-Master&lt;/a&gt; for keeping existing translations up to date!&lt;/p&gt;
+&lt;p&gt;Thanks to &lt;a href=&quot;https://github.com/jas31415&quot;&gt;jas31415&lt;/a&gt;, &lt;a href=&quot;https://github.com/JinEnMok&quot;&gt;JinEnMok&lt;/a&gt;, &lt;a href=&quot;https://github.com/Swarkin&quot;&gt;Swarkin&lt;/a&gt;, and &lt;a href=&quot;https://github.com/Kiisu-Master&quot;&gt;Kiisu-Master&lt;/a&gt; for keeping existing translations up to date!&lt;/p&gt;
 &lt;p&gt;I&#39;ve added translation comments to the localization files that help clear up what some strings refer to. So if you wanted to &lt;a href=&quot;https://github.com/MewPurPur/GodSVG/tree/main/translations&quot;&gt;translate GodSVG to your own language&lt;/a&gt;, now&#39;s a better time than ever!&lt;/p&gt;
 
 		</content>
@@ -465,7 +465,7 @@
 		<link rel="alternate" href="/article/1-0-alpha8" />
 		<link rel="enclosure" type="image/webp" href="https://godsvg.com/assets/blog/1-0-alpha8/cover.webp" />
 		<content type="html">
-			&lt;p&gt;The 8th alpha of GodSVG has arrived! This release introduces tabs in GodSVG and massively improves stability and performance. The features and bugfixes below are not attributed because I was responsible for almost the entirety of the release - except &lt;a href=&quot;https://github.com/Kiisu-Master&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Kiisu-Master&lt;/a&gt; who implemented a &amp;quot;Middle mouse button to close tab&amp;quot; option.&lt;/p&gt;
+			&lt;p&gt;The 8th alpha of GodSVG has arrived! This release introduces tabs in GodSVG and massively improves stability and performance. The features and bugfixes below are not attributed because I was responsible for almost the entirety of the release - except &lt;a href=&quot;https://github.com/Kiisu-Master&quot;&gt;Kiisu-Master&lt;/a&gt; who implemented a &amp;quot;Middle mouse button to close tab&amp;quot; option.&lt;/p&gt;
 &lt;h2&gt;Implemented tabs&lt;/h2&gt;
 &lt;p&gt;One of the most cumbersome aspects of using GodSVG was the inability to edit multiple SVGs at once. I have implemented a tab system to lift this hurdle. This initial implementation is already quite comprehensive and polished, so I don&#39;t expect it to change a lot in the future.&lt;/p&gt;
 &lt;p&gt;Tabs have all the basic functionalities and some extras, like closing multiple tabs, tooltips, and reasonable UX with many tabs. It also now made more sense to split &amp;quot;Save SVG&amp;quot; into two options, &amp;quot;Save SVG&amp;quot; and &amp;quot;Save SVG as...&amp;quot;, so I&#39;ve done that too.&lt;/p&gt;
@@ -552,8 +552,8 @@
 &lt;li&gt;Invalid shortcuts no longer appear in context popups.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;Translations&lt;/h2&gt;
-&lt;p&gt;Thanks to &lt;a href=&quot;https://github.com/Felipe-Sena&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Felipe-Sena&lt;/a&gt; for translating GodSVG in Brazilian Portuguese!&lt;/p&gt;
-&lt;p&gt;Thanks to &lt;a href=&quot;https://github.com/Swarkin&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Swarkin&lt;/a&gt;, &lt;a href=&quot;https://github.com/thatoddshade&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;thatoddshade&lt;/a&gt;, &lt;a href=&quot;https://github.com/JinEnMok&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;JinEnMok&lt;/a&gt; for keeping existing translations up to date.&lt;/p&gt;
+&lt;p&gt;Thanks to &lt;a href=&quot;https://github.com/Felipe-Sena&quot;&gt;Felipe-Sena&lt;/a&gt; for translating GodSVG in Brazilian Portuguese!&lt;/p&gt;
+&lt;p&gt;Thanks to &lt;a href=&quot;https://github.com/Swarkin&quot;&gt;Swarkin&lt;/a&gt;, &lt;a href=&quot;https://github.com/thatoddshade&quot;&gt;thatoddshade&lt;/a&gt;, &lt;a href=&quot;https://github.com/JinEnMok&quot;&gt;JinEnMok&lt;/a&gt; for keeping existing translations up to date.&lt;/p&gt;
 &lt;h2&gt;Known regressions&lt;/h2&gt;
 &lt;p&gt;Be careful when updating to this release from a previous one, as your savefiles will be corrupted (because one of my three config classes was named exactly like a new Godot Engine class - what are the odds!). You can find your savedata by clicking &amp;quot;View savedata&amp;quot; from the three dots at the top left. Palettes can also be copied as XML from the UI and then pasted back after updating&lt;/p&gt;
 &lt;p&gt;For MacOS users, this update isn&#39;t recommended, because shortcuts and the native bar are known not to work on it. I still don&#39;t know if the issue is new to this prerelease.&lt;/p&gt;
@@ -572,13 +572,13 @@
 		<content type="html">
 			&lt;p&gt;GodSVG releases its seventh alpha! This prerelease focuses on stability, setting the stage for bigger changes in the upcoming alphas.&lt;/p&gt;
 &lt;h2&gt;GodSVG on mobile!&lt;/h2&gt;
-&lt;p&gt;GodSVG now has an experimental Android port! &lt;a href=&quot;https://github.com/syntaxerror247&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;syntaxerror247&lt;/a&gt; has led the effort to bring it to mobile, with adaptations for touch controls - including a floating shortcut panel designed to replace desktop keyboard shortcuts.&lt;/p&gt;
+&lt;p&gt;GodSVG now has an experimental Android port! &lt;a href=&quot;https://github.com/syntaxerror247&quot;&gt;syntaxerror247&lt;/a&gt; has led the effort to bring it to mobile, with adaptations for touch controls - including a floating shortcut panel designed to replace desktop keyboard shortcuts.&lt;/p&gt;
 &lt;div class=&quot;article-image&quot;&gt;
 &lt;img src=&quot;/assets/blog/1-0-alpha7/shortcut_panel.webp&quot; alt=&quot;Image of the shortcuts panel on mobile&quot;&gt;
 &lt;/div&gt;
 &lt;p&gt;Other aspects of GodSVG have not yet been optimized for touch input, so the mobile port will remain experimental for the time being. In future versions, we want to improve the touch controls further and implement a native file picker.&lt;/p&gt;
 &lt;p&gt;As you can imagine, maintaining a mobile build is difficult because of how different touchscreens are. I&#39;m worried that limiting my reliance on hovering and keyboards, even when they seem optimal for a UI, may come at the expense of Desktop builds, so it&#39;s possible I will discontinue Android builds in the future. It depends on whether mobile development can proceed without noticeably compromising the desktop experience.&lt;/p&gt;
-&lt;p&gt;Development for mobile will for now continue on another repository that&#39;s not managed by &lt;a href=&quot;https://github.com/syntaxerror247&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;syntaxerror247&lt;/a&gt; and not me: https://github.com/syntaxerror247/GodSVG-Mobile. Riskier features will be implemented there first, but they may eventually be implemented in the main repository too. This will allow me to focus on the big changes I&#39;ve planned for Desktop platforms, without worrying about breaking the app on Android.&lt;/p&gt;
+&lt;p&gt;Development for mobile will for now continue on another repository that&#39;s not managed by &lt;a href=&quot;https://github.com/syntaxerror247&quot;&gt;syntaxerror247&lt;/a&gt; and not me: https://github.com/syntaxerror247/GodSVG-Mobile. Riskier features will be implemented there first, but they may eventually be implemented in the main repository too. This will allow me to focus on the big changes I&#39;ve planned for Desktop platforms, without worrying about breaking the app on Android.&lt;/p&gt;
 &lt;h2&gt;Other new things&lt;/h2&gt;
 &lt;p&gt;This prerelease has a big emphasis on bugfixes, so there aren&#39;t a lot of other new features. Still, there are a few noteworthy additions - let’s take a look.&lt;/p&gt;
 &lt;p&gt;The formatters introduced in the last prerelease have been simplified. Now there are just two: an Editor formatter and an Export formatter, each with separate configurations. This should be more convenient and less confusing for nearly everyone.&lt;/p&gt;
@@ -614,8 +614,8 @@
 &lt;li&gt;MacOS: Fixed &amp;quot;About GodSVG&amp;quot; button in the global menu not working.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;Translations&lt;/h2&gt;
-&lt;p&gt;Thanks to &lt;a href=&quot;https://github.com/thatoddshade&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;thatoddshade&lt;/a&gt; for translating GodSVG in French!&lt;/p&gt;
-&lt;p&gt;Thanks to &lt;a href=&quot;https://github.com/Swarkin&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Swarkin&lt;/a&gt;, &lt;a href=&quot;https://github.com/mikelei8291&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;mikelei8291&lt;/a&gt;, and &lt;a href=&quot;https://github.com/jas31415&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;jas31415&lt;/a&gt; for keeping existing translations up to date.&lt;/p&gt;
+&lt;p&gt;Thanks to &lt;a href=&quot;https://github.com/thatoddshade&quot;&gt;thatoddshade&lt;/a&gt; for translating GodSVG in French!&lt;/p&gt;
+&lt;p&gt;Thanks to &lt;a href=&quot;https://github.com/Swarkin&quot;&gt;Swarkin&lt;/a&gt;, &lt;a href=&quot;https://github.com/mikelei8291&quot;&gt;mikelei8291&lt;/a&gt;, and &lt;a href=&quot;https://github.com/jas31415&quot;&gt;jas31415&lt;/a&gt; for keeping existing translations up to date.&lt;/p&gt;
 
 		</content>
 	</entry>
@@ -641,7 +641,7 @@
 &lt;p&gt;Support for the polygon and polyline elements has been added. These work like a path element with only lines. You can add them from the &amp;quot;Add new element&amp;quot; popup.&lt;/p&gt;
 &lt;p&gt;On web, reference images have finally been implemented. Also, one of the biggest issues on web was clipboard checks failing and triggering intrusive popups - this has now been resolved. Another fix for web, exports now properly respect all configuration options.&lt;/p&gt;
 &lt;h2&gt;Smaller enhancements&lt;/h2&gt;
-&lt;p&gt;Many thanks to &lt;a href=&quot;https://github.com/Vovkiv&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Vovkiv&lt;/a&gt; and &lt;a href=&quot;https://github.com/Swarkin&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Swarkin&lt;/a&gt; for helping with keeping translations up to date.&lt;/p&gt;
+&lt;p&gt;Many thanks to &lt;a href=&quot;https://github.com/Vovkiv&quot;&gt;Vovkiv&lt;/a&gt; and &lt;a href=&quot;https://github.com/Swarkin&quot;&gt;Swarkin&lt;/a&gt; for helping with keeping translations up to date.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;You can now open the currently worked on file via the OS image viewer.&lt;/li&gt;
 &lt;li&gt;The editing of palettes and formatters has been improved.&lt;/li&gt;
@@ -730,12 +730,12 @@
 &lt;li&gt;When dragging element frames around, the drop indicators will now show a warning color if this is an invalid child (for example, dropping anything other than a &amp;lt;stop&amp;gt; element under a gradient).&lt;/li&gt;
 &lt;li&gt;An Eyedropper has been added to the color picker, allowing you to pick any color from within the app.&lt;/li&gt;
 &lt;li&gt;Bounding boxes are now shown visually with an animated rectangle.&lt;/li&gt;
-&lt;li&gt;Native global menu for MacOS (by &lt;a href=&quot;https://github.com/aaronfranke&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;aaronfranke&lt;/a&gt; and me)&lt;/li&gt;
+&lt;li&gt;Native global menu for MacOS (by &lt;a href=&quot;https://github.com/aaronfranke&quot;&gt;aaronfranke&lt;/a&gt; and me)&lt;/li&gt;
 &lt;li&gt;The language options now show their completion percentages&lt;/li&gt;
-&lt;li&gt;Added Simplified Chinese translation (by &lt;a href=&quot;https://github.com/Hamster5295&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Hamster5295&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;Added Dutch translation (by &lt;a href=&quot;https://github.com/Racer911dash1&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Racer911dash1&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;Updates to existing translations (by &lt;a href=&quot;https://github.com/Vovkiv&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Vovkiv&lt;/a&gt;, &lt;a href=&quot;https://github.com/JinEnMok&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;JinEnMok&lt;/a&gt;, and &lt;a href=&quot;https://github.com/Swarkin&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Swarkin&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;A lot of smaller improvements and bugfixes by me and &lt;a href=&quot;https://github.com/Kiisu-Master&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Kiisu-Master&lt;/a&gt;... too many to list. Maybe I&#39;ll start listing them when GodSVG becomes more stable.&lt;/li&gt;
+&lt;li&gt;Added Simplified Chinese translation (by &lt;a href=&quot;https://github.com/Hamster5295&quot;&gt;Hamster5295&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Added Dutch translation (by &lt;a href=&quot;https://github.com/Racer911dash1&quot;&gt;Racer911dash1&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Updates to existing translations (by &lt;a href=&quot;https://github.com/Vovkiv&quot;&gt;Vovkiv&lt;/a&gt;, &lt;a href=&quot;https://github.com/JinEnMok&quot;&gt;JinEnMok&lt;/a&gt;, and &lt;a href=&quot;https://github.com/Swarkin&quot;&gt;Swarkin&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;A lot of smaller improvements and bugfixes by me and &lt;a href=&quot;https://github.com/Kiisu-Master&quot;&gt;Kiisu-Master&lt;/a&gt;... too many to list. Maybe I&#39;ll start listing them when GodSVG becomes more stable.&lt;/li&gt;
 &lt;/ul&gt;
 
 		</content>
@@ -753,14 +753,14 @@
 			&lt;h2&gt;Rework of attribute defaults&lt;/h2&gt;
 &lt;p&gt;Right now, my biggest priority is to massively rework how SVGs are handled internally. I wasn’t able to complete it for this prerelease, but I was able to salvage one small improvement from my attempts: A change to how default values are treated. Attribute fields will no longer have any text if the attribute hasn&#39;t been declared. Instead, they will show their default value as dimmed placeholder text.&lt;/p&gt;
 &lt;h2&gt;Improved user experience&lt;/h2&gt;
-&lt;p&gt;I worked with &lt;a href=&quot;https://github.com/Qainguin&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Qainguin&lt;/a&gt; to improve exporting. Web exports have been fixed, and support for WebP and JPEG formats has been added.&lt;/p&gt;
+&lt;p&gt;I worked with &lt;a href=&quot;https://github.com/Qainguin&quot;&gt;Qainguin&lt;/a&gt; to improve exporting. Web exports have been fixed, and support for WebP and JPEG formats has been added.&lt;/p&gt;
 &lt;p&gt;I&#39;ve made popups display their keyboard shortcuts. This is pretty unobtrusive and allows for easier learning.&lt;/p&gt;
 &lt;div class=&quot;article-image&quot;&gt;
 &lt;img src=&quot;/assets/blog/1-0-alpha4/context_shortcuts.webp&quot; alt=&quot;Image of shortcuts in context popups&quot;&gt;
 &lt;/div&gt;
-&lt;p&gt;I&#39;ve also made some speed optimizations for this release, which should make SVGs load ~30% faster on average. Some other changes should allow GodSVG to open much larger SVG files without crashing. &lt;a href=&quot;https://github.com/Kiisu-Master&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Kiisu-Master&lt;/a&gt; and I also worked to fix some memory leaks.&lt;/p&gt;
+&lt;p&gt;I&#39;ve also made some speed optimizations for this release, which should make SVGs load ~30% faster on average. Some other changes should allow GodSVG to open much larger SVG files without crashing. &lt;a href=&quot;https://github.com/Kiisu-Master&quot;&gt;Kiisu-Master&lt;/a&gt; and I also worked to fix some memory leaks.&lt;/p&gt;
 &lt;h2&gt;Reference image&lt;/h2&gt;
-&lt;p&gt;A common workflow in vector graphics is to vectorize over a background reference image. I worked with &lt;a href=&quot;https://github.com/Qainguin&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Qainguin&lt;/a&gt; to implement this feature for GodSVG on all Desktop platforms. The Web implementation will be a little more difficult, the technology is not there yet. It will be implemented at a later point.&lt;/p&gt;
+&lt;p&gt;A common workflow in vector graphics is to vectorize over a background reference image. I worked with &lt;a href=&quot;https://github.com/Qainguin&quot;&gt;Qainguin&lt;/a&gt; to implement this feature for GodSVG on all Desktop platforms. The Web implementation will be a little more difficult, the technology is not there yet. It will be implemented at a later point.&lt;/p&gt;
 &lt;div class=&quot;article-video&quot;&gt;
 &lt;video controls preload=&quot;metadata&quot; aria-label=&quot;Video of the new reference image functionality&quot;&gt;
 &lt;source src=&quot;/assets/blog/1-0-alpha4/reference.webm&quot;&gt;
@@ -769,13 +769,13 @@
 &lt;/div&gt;
 &lt;h2&gt;Other goodies&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;Improvements to UI scale logic and settings (by &lt;a href=&quot;https://github.com/aaronfranke&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;aaronfranke&lt;/a&gt; and &lt;a href=&quot;https://github.com/Kiisu-Master&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Kiisu-Master&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;Debug information accessible through F3 (by me and &lt;a href=&quot;https://github.com/Kiisu-Master&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Kiisu-Master&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;&amp;quot;Show in List&amp;quot; functionality when right-clicking handles in the viewport (by &lt;a href=&quot;https://github.com/WeaverSong&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;WeaverSong&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Improvements to UI scale logic and settings (by &lt;a href=&quot;https://github.com/aaronfranke&quot;&gt;aaronfranke&lt;/a&gt; and &lt;a href=&quot;https://github.com/Kiisu-Master&quot;&gt;Kiisu-Master&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Debug information accessible through F3 (by me and &lt;a href=&quot;https://github.com/Kiisu-Master&quot;&gt;Kiisu-Master&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&amp;quot;Show in List&amp;quot; functionality when right-clicking handles in the viewport (by &lt;a href=&quot;https://github.com/WeaverSong&quot;&gt;WeaverSong&lt;/a&gt;)&lt;/li&gt;
 &lt;li&gt;More shortcuts for convenience, such as Ctrl+Q (by me)&lt;/li&gt;
-&lt;li&gt;Translation updates (by &lt;a href=&quot;https://github.com/Vovkiv&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Vovkiv&lt;/a&gt; and &lt;a href=&quot;https://github.com/JinEnMok&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;JinEnMok&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Translation updates (by &lt;a href=&quot;https://github.com/Vovkiv&quot;&gt;Vovkiv&lt;/a&gt; and &lt;a href=&quot;https://github.com/JinEnMok&quot;&gt;JinEnMok&lt;/a&gt;)&lt;/li&gt;
 &lt;li&gt;Improvements to handling SVGs without specified dimensions (by me)&lt;/li&gt;
-&lt;li&gt;A lot of smaller improvements and bugfixes by me, &lt;a href=&quot;https://github.com/Qainguin&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Qainguin&lt;/a&gt;, &lt;a href=&quot;https://github.com/ilikefrogs101&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;ilikefrogs101&lt;/a&gt;, &lt;a href=&quot;https://github.com/Kiisu-Master&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Kiisu-Master&lt;/a&gt;... too many to list. Maybe I&#39;ll start listing them when GodSVG becomes more stable.&lt;/li&gt;
+&lt;li&gt;A lot of smaller improvements and bugfixes by me, &lt;a href=&quot;https://github.com/Qainguin&quot;&gt;Qainguin&lt;/a&gt;, &lt;a href=&quot;https://github.com/ilikefrogs101&quot;&gt;ilikefrogs101&lt;/a&gt;, &lt;a href=&quot;https://github.com/Kiisu-Master&quot;&gt;Kiisu-Master&lt;/a&gt;... too many to list. Maybe I&#39;ll start listing them when GodSVG becomes more stable.&lt;/li&gt;
 &lt;/ul&gt;
 
 		</content>
@@ -800,10 +800,10 @@
 &lt;p&gt;Video of adding and adjusting a shape from the viewport&lt;/p&gt;
 &lt;/video&gt;
 &lt;/div&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/Kiisu-Master&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Kiisu-Master&lt;/a&gt; and I also improved the viewport controls. Zooming can now be centered on the cursor, and middle mouse is now nicer to use.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/Kiisu-Master&quot;&gt;Kiisu-Master&lt;/a&gt; and I also improved the viewport controls. Zooming can now be centered on the cursor, and middle mouse is now nicer to use.&lt;/p&gt;
 &lt;h2&gt;Functional improvements&lt;/h2&gt;
 &lt;p&gt;A number of improvements in this prerelease add new powers to GodSVG.&lt;/p&gt;
-&lt;p&gt;The ability to drag and drop in the inspector has been implemented by me, &lt;a href=&quot;https://github.com/SeremTitus&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;SeremTitus&lt;/a&gt;, and &lt;a href=&quot;https://github.com/Kiisu-Master&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Kiisu-Master&lt;/a&gt;. This finally enables you to adjust the SVG hierarchy without needing the code editor.&lt;/p&gt;
+&lt;p&gt;The ability to drag and drop in the inspector has been implemented by me, &lt;a href=&quot;https://github.com/SeremTitus&quot;&gt;SeremTitus&lt;/a&gt;, and &lt;a href=&quot;https://github.com/Kiisu-Master&quot;&gt;Kiisu-Master&lt;/a&gt;. This finally enables you to adjust the SVG hierarchy without needing the code editor.&lt;/p&gt;
 &lt;div class=&quot;article-video&quot;&gt;
 &lt;video controls preload=&quot;metadata&quot; aria-label=&quot;Video of using elements drag and drop&quot;&gt;
 &lt;source src=&quot;/assets/blog/1-0-alpha3/drag_and_drop.webm&quot;&gt;
@@ -811,13 +811,13 @@
 &lt;/video&gt;
 &lt;/div&gt;
 &lt;p&gt;I&#39;ve added the ability to change the type of path commands. I&#39;ve also added an initial version of an optimizer, which uses this new ability in some limited ways. Unlike attribute formatting, the &amp;quot;Optimize&amp;quot; action must be triggered manually.&lt;/p&gt;
-&lt;p&gt;The important transform attribute has been implemented by me and &lt;a href=&quot;https://github.com/DevPoodle&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;DevPoodle&lt;/a&gt;. It comes with its own widget for convenience. Handles for editing it from the viewport are planned for the future.&lt;/p&gt;
+&lt;p&gt;The important transform attribute has been implemented by me and &lt;a href=&quot;https://github.com/DevPoodle&quot;&gt;DevPoodle&lt;/a&gt;. It comes with its own widget for convenience. Handles for editing it from the viewport are planned for the future.&lt;/p&gt;
 &lt;div class=&quot;article-image&quot;&gt;
 &lt;img src=&quot;/assets/blog/1-0-alpha3/transforms.webp&quot; alt=&quot;Image of the transform field and its popup&quot;&gt;
 &lt;/div&gt;
 &lt;p&gt;New elements can now be added in the inspector by right-clicking the empty space.&lt;/p&gt;
 &lt;p&gt;The SVG renderer - &lt;a href=&quot;https://github.com/thorvg/thorvg&quot;&gt;ThorVG&lt;/a&gt; - saw a lot of bugfixes in the last four months, improving the accuracy of the presented graphic and the rasterized PNGs on export.&lt;/p&gt;
-&lt;p&gt;GodSVG&#39;s performance has been greatly improved. Rebuilding an SVG with a large number of paths is much faster now, as I&#39;ve sped up the construction of pathdata fields considerably. This is a risky change, so I&#39;ll watch out for regressions. &lt;a href=&quot;https://github.com/Kiisu-Master&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Kiisu-Master&lt;/a&gt; also fixed an issue that caused a lot of strain on the GPU on some systems.&lt;/p&gt;
+&lt;p&gt;GodSVG&#39;s performance has been greatly improved. Rebuilding an SVG with a large number of paths is much faster now, as I&#39;ve sped up the construction of pathdata fields considerably. This is a risky change, so I&#39;ll watch out for regressions. &lt;a href=&quot;https://github.com/Kiisu-Master&quot;&gt;Kiisu-Master&lt;/a&gt; also fixed an issue that caused a lot of strain on the GPU on some systems.&lt;/p&gt;
 &lt;h2&gt;A lot more configurability&lt;/h2&gt;
 &lt;p&gt;I&#39;ve reworked the UI of the settings menu, which allowed us to expand it with a lot more settings. Attribute formatting settings have been expanded and moved there, and XML formatting settings were added. I&#39;ve also implemented settings for theming and I made shortcuts configurable (which also serves as documentation!)&lt;/p&gt;
 &lt;div class=&quot;article-video&quot;&gt;
@@ -826,19 +826,19 @@
 &lt;p&gt;Video of the new settings menu&lt;/p&gt;
 &lt;/video&gt;
 &lt;/div&gt;
-&lt;p&gt;The scaling approach of GodSVG was changed to reduce the blurriness and give the user more control over the size of the layout, thanks to a new UI scale setting implemented by &lt;a href=&quot;https://github.com/Kiisu-Master&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Kiisu-Master&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The scaling approach of GodSVG was changed to reduce the blurriness and give the user more control over the size of the layout, thanks to a new UI scale setting implemented by &lt;a href=&quot;https://github.com/Kiisu-Master&quot;&gt;Kiisu-Master&lt;/a&gt;.&lt;/p&gt;
 &lt;h2&gt;UX improvements&lt;/h2&gt;
 &lt;p&gt;I&#39;ve improved the color picker by adding numbers next to the sliders for more precise configuration of colors, as well as Undo/Redo functionality.&lt;/p&gt;
 &lt;p&gt;I&#39;ve also improved the fallback file dialog and added an option to set it as the default. If you like it, you can now choose it over the OS file dialog in the settings.&lt;/p&gt;
-&lt;p&gt;And finally, &lt;a href=&quot;https://github.com/Kiisu-Master&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Kiisu-Master&lt;/a&gt; has added a Save functionality with a Ctrl+S shortcut. The implementation is a bit awkward at the moment, but it&#39;s still a quicker way to save an SVG than exporting.&lt;/p&gt;
+&lt;p&gt;And finally, &lt;a href=&quot;https://github.com/Kiisu-Master&quot;&gt;Kiisu-Master&lt;/a&gt; has added a Save functionality with a Ctrl+S shortcut. The implementation is a bit awkward at the moment, but it&#39;s still a quicker way to save an SVG than exporting.&lt;/p&gt;
 &lt;h2&gt;Internal improvements&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/Kiisu-Master&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Kiisu-Master&lt;/a&gt; helped me a lot with some internal improvements. Translations have been moved to the .po format, which is a much better experience for translators. There are now also workflows for continuous integration with Windows and Linux. If you&#39;re logged into Github, you can now test the latest development builds. MacOS workflows will be added soon.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/Kiisu-Master&quot;&gt;Kiisu-Master&lt;/a&gt; helped me a lot with some internal improvements. Translations have been moved to the .po format, which is a much better experience for translators. There are now also workflows for continuous integration with Windows and Linux. If you&#39;re logged into Github, you can now test the latest development builds. MacOS workflows will be added soon.&lt;/p&gt;
 &lt;h2&gt;Other goodies&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;The &amp;lt;stop&amp;gt; element has been implemented by &lt;a href=&quot;https://github.com/RedFurryDemon&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;RedFurryDemon&lt;/a&gt;. Although it can&#39;t be added through the GUI, this makes it easier to edit it in imported graphics or ones made through the code editor.&lt;/li&gt;
-&lt;li&gt;Translations in Bulgarian and German have been available since the first alpha release, and &lt;a href=&quot;https://github.com/Vovkiv&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Vovkiv&lt;/a&gt; has now also added Russian and Ukrainian.&lt;/li&gt;
+&lt;li&gt;The &amp;lt;stop&amp;gt; element has been implemented by &lt;a href=&quot;https://github.com/RedFurryDemon&quot;&gt;RedFurryDemon&lt;/a&gt;. Although it can&#39;t be added through the GUI, this makes it easier to edit it in imported graphics or ones made through the code editor.&lt;/li&gt;
+&lt;li&gt;Translations in Bulgarian and German have been available since the first alpha release, and &lt;a href=&quot;https://github.com/Vovkiv&quot;&gt;Vovkiv&lt;/a&gt; has now also added Russian and Ukrainian.&lt;/li&gt;
 &lt;li&gt;I&#39;ve refined the &amp;quot;About&amp;quot; dialog.&lt;/li&gt;
-&lt;li&gt;A lot of smaller improvements and bugfixes by me, &lt;a href=&quot;https://github.com/Qainguin&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Qainguin&lt;/a&gt;, &lt;a href=&quot;https://github.com/ilikefrogs101&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;ilikefrogs101&lt;/a&gt;, &lt;a href=&quot;https://github.com/Kiisu-Master&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Kiisu-Master&lt;/a&gt;... too many to list. I&#39;ll start listing them when GodSVG becomes more stable.&lt;/li&gt;
+&lt;li&gt;A lot of smaller improvements and bugfixes by me, &lt;a href=&quot;https://github.com/Qainguin&quot;&gt;Qainguin&lt;/a&gt;, &lt;a href=&quot;https://github.com/ilikefrogs101&quot;&gt;ilikefrogs101&lt;/a&gt;, &lt;a href=&quot;https://github.com/Kiisu-Master&quot;&gt;Kiisu-Master&lt;/a&gt;... too many to list. I&#39;ll start listing them when GodSVG becomes more stable.&lt;/li&gt;
 &lt;/ul&gt;
 
 		</content>
@@ -855,17 +855,17 @@
 		<content type="html">
 			&lt;p&gt;It has only been two weeks since the first development build of GodSVG, but thanks to open-source contributions, there are already enough new things for a new alpha build.&lt;/p&gt;
 &lt;h2&gt;New web editor&lt;/h2&gt;
-&lt;p&gt;With help from &lt;a href=&quot;https://github.com/aladvs&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;aladvs&lt;/a&gt;, I managed to test out and export GodSVG for web. This enables you to use GodSVG without having to download it. The web version&#39;s performance is significantly worse and some features are going to be limited, but I&#39;m sure it will be preferred by some users.&lt;/p&gt;
+&lt;p&gt;With help from &lt;a href=&quot;https://github.com/aladvs&quot;&gt;aladvs&lt;/a&gt;, I managed to test out and export GodSVG for web. This enables you to use GodSVG without having to download it. The web version&#39;s performance is significantly worse and some features are going to be limited, but I&#39;m sure it will be preferred by some users.&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;At the time of the release, the web editor was experimental and on a different URL; now it&#39;s stable and can be found at &lt;a href=&quot;https://godsvg.com/editor&quot;&gt;https://godsvg.com/editor&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
 &lt;h2&gt;New MacOS build&lt;/h2&gt;
-&lt;p&gt;With help from &lt;a href=&quot;https://github.com/aaronfranke&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;aaronfranke&lt;/a&gt;, I&#39;ve managed to test out and export GodSVG for MacOS. So if you wanted to use GodSVG on your Mac, now you can!&lt;/p&gt;
+&lt;p&gt;With help from &lt;a href=&quot;https://github.com/aaronfranke&quot;&gt;aaronfranke&lt;/a&gt;, I&#39;ve managed to test out and export GodSVG for MacOS. So if you wanted to use GodSVG on your Mac, now you can!&lt;/p&gt;
 &lt;h2&gt;Automated attribute formatting&lt;/h2&gt;
 &lt;p&gt;Some options have been implemented for formatting attributes. They will be expanded in the future to allow for optimizing SVGs, by using the most compact formatting options. To access them, click the cog button above the code editor.&lt;/p&gt;
 &lt;div class=&quot;article-image&quot;&gt;
 &lt;img src=&quot;/assets/blog/1-0-alpha2/autoformatting.webp&quot; alt=&quot;Image of the autoformatter&quot;&gt;
 &lt;/div&gt;
 &lt;h2&gt;New option for wrap-around panning&lt;/h2&gt;
-&lt;p&gt;In the general settings, a new option was added by &lt;a href=&quot;https://github.com/Kiisu-Master&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Kiisu-Master&lt;/a&gt;. This option is disabled by default, and it&#39;s not available on the web editor as it&#39;s impossible to implement there. When enabled, this setting makes it so when you pan in the viewport, the cursor will now teleport when it reaches the edges. See it in action below:&lt;/p&gt;
+&lt;p&gt;In the general settings, a new option was added by &lt;a href=&quot;https://github.com/Kiisu-Master&quot;&gt;Kiisu-Master&lt;/a&gt;. This option is disabled by default, and it&#39;s not available on the web editor as it&#39;s impossible to implement there. When enabled, this setting makes it so when you pan in the viewport, the cursor will now teleport when it reaches the edges. See it in action below:&lt;/p&gt;
 &lt;div class=&quot;article-video&quot;&gt;
 &lt;video controls preload=&quot;metadata&quot; aria-label=&quot;Video showcasing the Wrap Mouse setting&quot;&gt;
 &lt;source src=&quot;/assets/blog/1-0-alpha2/wrap_mouse.webm&quot;&gt;
@@ -885,9 +885,9 @@
 &lt;/div&gt;
 &lt;/div&gt;&lt;/div&gt;
 &lt;h2&gt;New ways to open files&lt;/h2&gt;
-&lt;p&gt;Thanks to &lt;a href=&quot;https://github.com/ilikefrogs101&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;ilikefrogs101&lt;/a&gt;, SVG files can now be opened through the CLI, which also enables GodSVG to be used in &amp;quot;Open with...&amp;quot; dialogs. Also, thanks to &lt;a href=&quot;https://github.com/Kiisu-Master&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Kiisu-Master&lt;/a&gt;, you can now drag and drop files inside the GodSVG window.&lt;/p&gt;
+&lt;p&gt;Thanks to &lt;a href=&quot;https://github.com/ilikefrogs101&quot;&gt;ilikefrogs101&lt;/a&gt;, SVG files can now be opened through the CLI, which also enables GodSVG to be used in &amp;quot;Open with...&amp;quot; dialogs. Also, thanks to &lt;a href=&quot;https://github.com/Kiisu-Master&quot;&gt;Kiisu-Master&lt;/a&gt;, you can now drag and drop files inside the GodSVG window.&lt;/p&gt;
 &lt;h2&gt;Other improvements&lt;/h2&gt;
-&lt;p&gt;There have also been various improvements to input handling in the viewport thanks to &lt;a href=&quot;https://github.com/Kiisu-Master&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Kiisu-Master&lt;/a&gt;. Also, I have implemented the ability to convert different types of elements, for example converting a circle into an ellipse or a rounded rectangle. Aside from this, various little bugfixes and tweaks have been made to improve the experience of using GodSVG.&lt;/p&gt;
+&lt;p&gt;There have also been various improvements to input handling in the viewport thanks to &lt;a href=&quot;https://github.com/Kiisu-Master&quot;&gt;Kiisu-Master&lt;/a&gt;. Also, I have implemented the ability to convert different types of elements, for example converting a circle into an ellipse or a rounded rectangle. Aside from this, various little bugfixes and tweaks have been made to improve the experience of using GodSVG.&lt;/p&gt;
 
 		</content>
 	</entry>
