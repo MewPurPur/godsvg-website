@@ -15,6 +15,10 @@
 		opacity: 1;
 		transition: opacity 0.3s ease-in-out;
 	}
+	&:has(:focus-visible) .carousel-controls {
+		opacity: 1;
+		pointer-events: auto;
+	}
 }
 
 .carousel-images {
