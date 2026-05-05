@@ -32,17 +32,16 @@
 	a {
 		opacity: 0.6;
 
-		&:hover {
-			opacity: 0.8;
-		}
-
-		&:active {
-			opacity: 1.0;
-		}
-
 		img {
 			width: 2rem;
 			height: 2rem;
+		}
+
+		&:hover {
+			opacity: 0.8;
+		}
+		&:active {
+			opacity: 1.0;
 		}
 	}
 }

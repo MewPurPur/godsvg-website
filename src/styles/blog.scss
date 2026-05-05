@@ -21,14 +21,6 @@
 	transition: box-shadow 0.2s;
 	background-color: color.adjust($background, $lightness: -2%);
 
-	&:hover {
-		box-shadow: 0 0 8px 8px rgba(255, 255, 255, 0.04);
-	}
-
-	&:has(a:focus-visible) {
-		outline: 2px solid $focus;
-	}
-
 	a {
 		display: block;
 		text-decoration: none;
@@ -42,10 +34,6 @@
 
 	.blog-thumbnail {
 		opacity: 0.9;
-	}
-
-	&:hover .blog-thumbnail {
-		opacity: 1.0;
 	}
 
 	.date {
@@ -69,6 +57,16 @@
 		color: color.adjust(#fff, $lightness: -30%);
 		font-weight: 400;
 		font-size: 0.95rem;
+	}
+
+	&:hover {
+		box-shadow: 0 0 8px 8px rgba(255, 255, 255, 0.04);
+	}
+	&:has(a:focus-visible) {
+		outline: 2px solid $focus;
+	}
+	&:hover .blog-thumbnail {
+		opacity: 1.0;
 	}
 }
 
@@ -98,28 +96,25 @@
 	position: absolute;
 	margin-left: 1rem;
 	background-color: $bg;
-
 	padding: 0.2rem 0.2rem;
 	border-radius: 5px;
 	cursor: pointer;
 	user-select: none;
 	text-decoration: none !important;
-
 	display: inline-flex;
 	align-items: start;
 	gap: 0.3rem;
-
-	&:hover {
-		background-color: color.adjust($bg, $lightness: +7.5%);
-	}
-
-	&:active {
-		background-color: color.adjust($bg, $lightness: -5%);
-	}
 
 	img {
 		margin: auto;
 		width: $size;
 		height: $size;
+	}
+
+	&:hover {
+		background-color: color.adjust($bg, $lightness: +7.5%);
+	}
+	&:active {
+		background-color: color.adjust($bg, $lightness: -5%);
 	}
 }

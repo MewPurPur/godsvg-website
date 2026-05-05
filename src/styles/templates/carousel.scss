@@ -6,14 +6,14 @@
 	margin: auto;
 	width: 95%;
 
-	&:hover .carousel-controls {
-		opacity: 1;
-		transition: opacity 0.3s ease-in-out;
-	}
-
 	p {
 		color: #888;
 		text-align: center;
+	}
+
+	&:hover .carousel-controls {
+		opacity: 1;
+		transition: opacity 0.3s ease-in-out;
 	}
 }
 
@@ -67,6 +67,7 @@
 
 	&:hover {
 		background-color: rgba(15, 15, 15, 0.8);
+		
 		img {
 			opacity: 1.0;
 		}
@@ -108,7 +109,6 @@
 	&:hover {
 		background-color: rgba(255, 255, 255, 0.5);
 	}
-
 	&.active {
 		cursor: auto;
 		background-color: rgba(255, 255, 255, 0.9);
