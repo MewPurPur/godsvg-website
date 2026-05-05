@@ -31,7 +31,6 @@
 	&:hover {
 		background-color: #3579cf;
 	}
-
 	&:focus-visible {
 		outline: 2px solid $focus;
 		outline-offset: -2px;
@@ -51,7 +50,7 @@
 	min-width: 10rem;
 	height: 100%;
 
-	&:focus-within {
+	&:focus-visible {
 		outline: 2px solid $focus;
 		outline-offset: -2px;
 	}
@@ -74,15 +73,6 @@
 		text-decoration: none !important;
 		display: flex;
 		align-items: center;
-
-		&:hover {
-			color: white;
-			background-color: #ffffff1a;
-		}
-
-		&:focus-visible {
-			outline-offset: -2px;
-		}
 
 		.platform-icon {
 			margin-right: 0.6rem;
@@ -113,6 +103,14 @@
 		.solo-text {
 			font-size: 1.15rem;
 			font-weight: 700;
+		}
+
+		&:hover {
+			color: white;
+			background-color: #ffffff1a;
+		}
+		&:focus-visible {
+			outline-offset: -2px;
 		}
 	}
 }
@@ -145,12 +143,6 @@
 	padding: 0.5rem;
 	text-decoration: none;
 
-	&:hover {
-		color: #fff;
-		background-color: $button_hover;
-		text-decoration: none;
-	}
-
 	.small-text {
 		font-size: 0.75rem;
 		white-space: nowrap;
@@ -159,6 +151,12 @@
 	.big-text {
 		font-size: 1.25rem;
 		font-weight: 700;
+	}
+
+	&:hover {
+		color: #fff;
+		background-color: $button_hover;
+		text-decoration: none;
 	}
 }
 
@@ -184,16 +182,13 @@
 	&:hover {
 		background-color: color.adjust($background, $lightness: 15%, $space: hsl);
 	}
-
 	&.active {  // Active platform (detectOS)
 		opacity: 1.0 !important;
 	}
-
 	&:first-child {
 		border-top-left-radius: 6px;
 		border-top-right-radius: 6px;
 	}
-
 	&:last-child {
 		border-bottom-left-radius: 6px;
 		border-bottom-right-radius: 6px;
@@ -257,7 +252,6 @@
 	&:hover {
 		background-color: #fff3;
 	}
-
 	&:active {
 		background-color: #fff5;
 	}

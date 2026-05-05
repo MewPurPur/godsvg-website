@@ -29,7 +29,6 @@ a {
 		color: color.adjust($accent, $lightness: 20%, $space: hsl);
 		text-decoration: underline;
 	}
-
 	&:focus-visible {
 		outline: 2px solid $focus;
 	}
@@ -143,6 +142,7 @@ li {
 	display: inline-block;
 	background-color: #333;
 	color: #ddd;
+	border: 0;
 	padding: 0.4rem 0.6rem;
 	border-radius: 5px;
 	cursor: pointer;
@@ -157,6 +157,10 @@ li {
 		background-color: #666;
 		cursor: default;
 		font-weight: 700;
+	}
+	&:focus-visible {
+		outline: 2px solid $focus;
+		outline-offset: -2px;
 	}
 }
 

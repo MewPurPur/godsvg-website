@@ -25,16 +25,15 @@ $navbar-color: #1a1c1e;
 	text-decoration: none;
 	padding-right: 3px;
 
-	&:hover {
-		text-decoration: none;
-	}
-
 	img {
 		width: 3rem;
 		height: 3rem;
 		margin-right: 0.25rem;
 	}
 
+	&:hover {
+		text-decoration: none;
+	}
 	&:focus-visible .nav-logo-text {
 		color: color.adjust(#def, $lightness: -2.5%);
 	}
@@ -70,17 +69,13 @@ $navbar-color: #1a1c1e;
 		color: #fff;
 		text-decoration: none;
 	}
-
 	&:focus-visible {
 		color: #fff;
 	}
-
-	// Current link
-	&.active {
+	&.active {  // Current link
 		color: #fff;
 		background-color: rgba(255, 255, 255, 0.15);
 	}
-
 	&[href~="/editor"] {
 		background-color: color.adjust($accent, $lightness: -20%);
 
@@ -100,6 +95,14 @@ $navbar-color: #1a1c1e;
 	padding: 0.4rem;
 	border-radius: 4px;
 
+	span {
+		display: block;
+		height: 3px;
+		width: 100%;
+		border-radius: 3px;
+		background-color: color.adjust(#fff, $lightness: -10%);
+	}
+
 	&:hover {
 		background-color: color.adjust($navbar-color, $lightness: +7%);
 
@@ -107,17 +110,8 @@ $navbar-color: #1a1c1e;
 			background-color: #fff;
 		}
 	}
-
 	&:active {
 		background-color: color.adjust($navbar-color, $lightness: +18%);
-	}
-
-	span {
-		display: block;
-		height: 3px;
-		width: 100%;
-		border-radius: 3px;
-		background-color: color.adjust(#fff, $lightness: -10%);
 	}
 }
 
