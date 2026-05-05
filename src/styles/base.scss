@@ -19,11 +19,15 @@ body {
 	padding: 0;
 }
 
-a {
+a, .link-like {
 	color: $accent;
 	text-decoration: underline;
 	text-decoration-color: #489ae080;
+	background: none;
+	border: none;
 	border-radius: 4px;
+	font: inherit;
+	padding: 0px;
 
 	&:hover {
 		color: color.adjust($accent, $lightness: 20%, $space: hsl);
@@ -142,7 +146,7 @@ li {
 	display: inline-block;
 	background-color: #333;
 	color: #ddd;
-	border: 0;
+	border: none;
 	padding: 0.4rem 0.6rem;
 	border-radius: 5px;
 	cursor: pointer;
