@@ -1,5 +1,5 @@
 {
-    "1.0-alpha15": {
+	"1.0-alpha15": {
 		"date": "April 26, 2026",
 		"platforms": ["windows", "macos", "linux", "android"]
 	},
