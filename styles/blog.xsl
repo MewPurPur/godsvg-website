@@ -47,7 +47,7 @@
 		<h2>What is a web feed?</h2>
 		<p>
 			A web feed, or alternatively called an RSS feed, is a data format that users can plug into some feed readers <i>(or some browsers)</i> in order to get notifications when new posts are available.
-		</p>    
+		</p>
 		<ul>
 			<li>
 				<strong>Lightweight.</strong> There is no CSS styling or any fancy rendering required when using RSS feeds.
