@@ -1,0 +1,27 @@
+---
+title: Mascot - GodSVG
+---
+{% extends "base.njk" %}
+
+{% block body %}
+	<div class="content">
+		<h2 style="margin-top: 0"> Meet Vicki, the vector fox mascot of GodSVG </h2>
+		<p> Vicki is GodSVG's official mascot - a curious blue fox that represents precision, flexibility, creativity, and a fascination with the inner workings of things. </p>
+		<p> If you want to learn more about GodSVG's mascot, check out her <a href="article/introducing-vicki">introduction blog post</a>.</p>
+		<p> The logo originated from some quick sketches of G-shaped logos I made to replace the early placeholder one. Things clicked when I realized the fox's head could act as the crossbar. <a href="https://github.com/Volts-s">Tom Blackwell</a> iterated on the idea to make the first blue fox logo, from there I iterated a lot more to get the current logo. </p>
+		<img src="/assets/mascot/creation.webp" />
+		<p> A few months after the logo was made, I conceived Vicki is a mascot for the application. </p>
+		<h2> Art gallery </h2>
+		{% set images = [
+			{ src: "/assets/mascot/alpha14_cover.webp", desc: "Created by DotMouse as a gift for me, used as the cover image for the v1.0-alpha14 blog post with their permission, to represent the keyboard focus navigation implemented in that prerelease.\nArtist comment: Lmofa", alt: "" },
+			{ src: "/assets/mascot/alpha15_cover.webp", desc: "Created by me for the v1.0-alpha15 blog post cover image, to represent the improvements to the color picker in that prerelease.\nAfter I worked out the composition of the artwork, I wanted to make it so Vicki's surroundings look ancient compared to her, so I gave them detailed textures and kept the fox simple.", alt: "" },
+			{ src: "/assets/mascot/bugs_everywhere.webp", desc: "Created by me for fun, eventually used in the mascot introduction blog post. Based on the Buzz Lightyear \"X, X everywhere\" meme.", alt: "" },
+			{ src: "/assets/mascot/introducing_vicki_cover.webp", desc: "Created by me for the mascot introduction blog post to represent Vicki's connection to the stars, used as a cover image for it.\nI went for a sepia color pattern to make it feel more dreamy.", alt: "" },
+			{ src: "/assets/mascot/star_artwork_512.webp", desc: "Created by me to celebrate reaching 512 stars on GodSVG's Github repository. It was also used as the cover image for the v1.0-alpha3 blog post.\n", alt: "" },
+			{ src: "/assets/mascot/star_artwork_1024.webp", desc: "Commissioned from CoilleNohy, used in a lot of different ways around GodSVG's social media.\nArtist comment: Lmofa", alt: "" },
+			{ src: "/assets/mascot/vicki_after_dark.webp", desc: "Created by me for the mascot introduction blog post to represent how Vicki's hometown residents thought of her as a dangerous occult figure.\nI went for a grayscale, slightly sepia color to make it eerie, similar to the Limbo videogame.", alt: "" },
+			{ src: "/assets/mascot/vicki_themes.webp", desc: "Created by me as a vector illustration for the cover image of the v1.0-alpha11 blog post, to represent the Light, Dark, and Black theme being added to GodSVG.", alt: "" }
+		] %}
+		{% include "gallery_view.njk" %}
+	</div>
+{% endblock %}
