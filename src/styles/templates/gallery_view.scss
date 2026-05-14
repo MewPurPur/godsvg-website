@@ -1,0 +1,76 @@
+@use "sass:color";
+@use "scss/theme" as *;
+
+.gallery-view {
+    position: relative;
+    margin: auto;
+    width: 95%;
+    .gallery-view-images {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 15px;
+    }
+	.gallery-view-image {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		overflow: hidden;
+		aspect-ratio: 1 / 1;
+		box-shadow: 0 0 0 transparent;
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			display: block;
+		}
+		&:hover {
+			box-shadow: 0 0 8px #fff5;
+			transition: box-shadow 0.2s ease-in-out;
+		}
+	}
+}
+
+.gallery-modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+
+	.gallery-modal-content {
+		display: flex;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		flex-direction: column;
+		background-color: color.adjust($background, $lightness: +3%);
+		padding: 20px;
+		width: 80%;
+		max-width: 900px;
+
+		.gallery-modal-image {
+			width: 100%;
+			max-height: 70vh;
+			object-fit: contain;
+			margin-top: 15px;
+		}
+		.gallery-modal-close {
+			color: #aaa;
+			float: right;
+			font-size: 28px;
+			font-weight: bold;
+
+			&:hover,
+			&:focus {
+				color: black;
+				text-decoration: none;
+				cursor: pointer;
+			}
+		}
+	}
+}

@@ -1,76 +1,46 @@
 {% set imageCount = images.length %}
-<div class="carousel">
+<div class="gallery-view">
 	<script>
 		document.addEventListener("DOMContentLoaded", function() {
-			const images = document.querySelectorAll(".carousel-image");
-			const dots = document.querySelectorAll(".carousel-dot");
-			const leftArrow = document.querySelector(".carousel-arrow-left");
-			const rightArrow = document.querySelector(".carousel-arrow-right");
-			let currentIndex = 0;
-			const totalImages = images.length;
+			const links = document.querySelectorAll(".gallery-view-image a");
+			const modal = document.querySelector(".gallery-modal")
+			const modalClose = document.querySelector(".gallery-modal-close")
+			const modalImage = document.querySelector(".gallery-modal-image")
+			const modalDescription = document.querySelector(".gallery-modal-description")
 
-			// Update active image and dot.
-			function updateCarousel(newIndex) {
-				images[currentIndex].classList.remove("active");
-				dots[currentIndex].classList.remove("active");
-				currentIndex = newIndex;
-				images[currentIndex].classList.add("active");
-				dots[currentIndex].classList.add("active");
-			}
+			links.forEach(function(link) {
+				link.addEventListener("click", function(e) {
+					const image = this.querySelector("img");
+					modal.style.display = "block";
 
-			function goNext() {
-				updateCarousel((currentIndex + 1) % totalImages);
-			}
-
-			function goPrev() {
-				updateCarousel((currentIndex + totalImages - 1) % totalImages);
-			}
-
-			leftArrow.addEventListener("click", goPrev);
-			rightArrow.addEventListener("click", goNext);
-			dots.forEach(dot => {
-				dot.addEventListener("click", function() {
-					updateCarousel(Number(this.getAttribute("data-index")));
-				});
+					modalImage.src = image.src;
+					modalDescription.innerText = image.dataset.desc;
+				})
 			});
-
-			// Touch swipe support for mobile.
-			let touchStartX = 0;
-			let touchEndX = 0;
-
-			const carouselContainer = document.querySelector(".carousel-container");
-			carouselContainer.addEventListener("touchstart", function(e) {
-				touchStartX = e.changedTouches[0].screenX;
-			}, { passive: true });
-			carouselContainer.addEventListener("touchend", function(e) {
-				touchEndX = e.changedTouches[0].screenX;
-				if (touchEndX < touchStartX - 50) {
-					goNext();
-				} else if (touchEndX > touchStartX + 50) {
-					goPrev();
-				}
-			}, { passive: true });
+			modalClose.addEventListener("click", function() {
+				modal.style.display = "none";
+			})
+			window.addEventListener("click", function(event) {
+				if (event.target != modal) return;
+				modal.style.display = "none";
+			})
 		});
 	</script>
-	<link rel="stylesheet" type="text/css" href="/styles/templates/carousel.scss">
-	<p>Hover to navigate through screenshots.</p>
-	<div class="carousel-images">
+	<link rel="stylesheet" type="text/css" href="/styles/templates/gallery_view.scss">
+	<div class="gallery-view-images">
 		{% for image in images %}
-			<img src="{{ image.src }}" class="carousel-image{{ ' active' if loop.index0 == 0 }}" alt="{{ image.alt }}" {% if loop.index0 > 0 %}loading="lazy"{% endif %} />
-		{% endfor %}
-		<div class="carousel-controls">
-			<button class="carousel-arrow carousel-arrow-left">
-				<img src="/assets/arrow_left.svg" alt="Previous" />
-			</button>
-			<button class="carousel-arrow carousel-arrow-right">
-				<img src="/assets/arrow_right.svg" alt="Next" />
-			</button>
-
-			<div class="carousel-dots">
-				{% for image in images %}
-					<span class="carousel-dot{{ ' active' if loop.index0 == 0 }}" data-index="{{ loop.index0 }}"></span>
-				{% endfor %}
+			<div class="gallery-view-image">
+				<a href="javascript:void(0)">
+					<img src="{{ image.src }}" class="gallery-view-image" data-desc="{{ image.desc }}" alt="{{ image.alt }}" loading="lazy" />
+				</a>
 			</div>
-		</div>
+		{% endfor %}
+	</div>
+</div>
+<div class="gallery-modal">
+	<div class="gallery-modal-content">
+		<span class="gallery-modal-close">&times;</span>
+		<img class="gallery-modal-image" src="" alt="" loading="lazy" />
+		<p class="gallery-modal-description"></p>
 	</div>
 </div>
