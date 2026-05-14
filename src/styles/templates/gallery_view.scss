@@ -2,14 +2,13 @@
 @use "scss/theme" as *;
 
 .gallery-view {
-    position: relative;
-    margin: auto;
-    width: 95%;
-    .gallery-view-images {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-        gap: 15px;
-    }
+	position: relative;
+	margin: 1rem;
+	.gallery-view-images {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+		gap: 15px;
+	}
 	.gallery-view-image {
 		display: flex;
 		justify-content: center;
@@ -32,14 +31,14 @@
 }
 
 .gallery-modal {
-    display: none;
-    position: fixed;
-    z-index: 9999;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.85);
+	display: none;
+	position: fixed;
+	z-index: 9999;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.85);
 
 	.gallery-modal-content {
 		display: flex;
@@ -49,6 +48,7 @@
 		transform: translate(-50%, -50%);
 		flex-direction: column;
 		background-color: color.adjust($background, $lightness: +3%);
+		border-radius: 10px;
 		padding: 20px;
 		width: 80%;
 		max-width: 900px;
@@ -65,9 +65,8 @@
 			font-size: 28px;
 			font-weight: bold;
 
-			&:hover,
-			&:focus {
-				color: black;
+			&:hover, &:focus {
+				color: #fff;
 				text-decoration: none;
 				cursor: pointer;
 			}
