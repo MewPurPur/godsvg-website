@@ -11,8 +11,7 @@ $content-width: min($max-width, 100% - $padding-size * 2);
 	margin-top: min(1.25rem, (100vw - $content-width) / 2.0 - $padding-size);
 	padding: $padding-size;
 	background-color: color.adjust($background, $lightness: 2%);
-	border-top-right-radius: 6px;
-	border-top-left-radius: 6px;
+	border-radius: 6px 6px 0 0;
 }
 
 .article-title {
@@ -27,8 +26,7 @@ $content-width: min($max-width, 100% - $padding-size * 2);
 	padding: $padding-size;
 	text-align: left;
 	background-color: color.adjust($background, $lightness: -1.5%);
-	border-bottom-right-radius: 6px;
-	border-bottom-left-radius: 6px;
+	border-radius: 0 0 6px 6px;
 }
 
 .article-cover {
