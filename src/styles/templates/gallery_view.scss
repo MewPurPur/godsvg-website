@@ -4,18 +4,20 @@
 .gallery-view {
 	position: relative;
 	margin: 1rem;
+	
 	.gallery-view-images {
 		display: grid;
 		grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 		gap: 15px;
 	}
+	
 	.gallery-view-image {
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		overflow: hidden;
 		aspect-ratio: 1 / 1;
-		box-shadow: 0 0 0 transparent;
+		transition: box-shadow 0.2s;
 
 		img {
 			width: 100%;
@@ -23,9 +25,9 @@
 			object-fit: cover;
 			display: block;
 		}
+
 		&:hover {
-			box-shadow: 0 0 8px #fff5;
-			transition: box-shadow 0.2s ease-in-out;
+			box-shadow: 0 0 6px 6px rgba(255, 255, 255, 0.08);
 		}
 	}
 }
@@ -52,15 +54,16 @@
 		padding: 20px;
 		width: 80%;
 		max-width: 900px;
+		gap: 12px;
 
 		.gallery-modal-image {
 			width: 100%;
 			max-height: 70vh;
 			object-fit: contain;
-			margin-top: 15px;
 		}
+
 		.gallery-modal-close {
-			color: #aaa;
+			color: #fffa;
 			float: right;
 			font-size: 28px;
 			font-weight: bold;

@@ -4,11 +4,9 @@
 	border-radius: 6px;
 
 	&.info {
-		$info-bg: #0e233d;
-		$info-text-color: #d0e7fd;
 		$info-accent: #437ab1;
-		color: $info-text-color;
-		background-color: $info-bg;
+		color: #d0e7fd;
+		background-color: #0e233d;
 		border: 2px solid $info-accent;
 		.notice-header {
 			background-color: $info-accent;
@@ -16,11 +14,9 @@
 		}
 	}
 	&.warning {
-		$warn-bg: #4c4e10;
-		$warn-text-color: #fffbce;
 		$warn-accent: #b0b83e;
-		color: $warn-text-color;
-		background-color: $warn-bg;
+		color: #fffbce;
+		background-color: #4c4e10;
 		border: 2px solid $warn-accent;
 		.notice-header {
 			background-color: $warn-accent;
@@ -36,8 +32,7 @@
 		top: -2px;
 		left: -2px;
 		padding: 0.1rem 0.5rem;
-		border-bottom-right-radius: 6px;
-		border-top-left-radius: 8px; // Bigger than 6 to avoid anti-aliasing overlaps.
+		border-radius: 8px 0 0 6px;  // Top left radius bigger than 6 to avoid antialiasing overlaps.
 	}
 
 	.notice-message {
