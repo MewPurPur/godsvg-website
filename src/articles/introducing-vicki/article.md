@@ -4,7 +4,7 @@ title: "Introducing Vicki, GodSVG's mascot"
 tagline: You've seen this sprightly blue fox on GodSVG's logo, on its website, in blog illustrations. Let's finally introduce her.
 author: MewPurPur
 tags: misc
-date: 2026-05-15
+date: 2026-05-16
 ---
 
 You've seen this sprightly blue fox on GodSVG's logo, its website, in blog illustrations: Vicki, GodSVG's official mascot. You can call her Vicki, or if you want to be specific, Vicki the vector fox. She isn't here just to be cute, but to represent GodSVG's approach to SVG editing: precision, agility, and curiosity about the inner workings of vector graphics. A trail of paint usually follows Vicki, dripping from her tail like a paintbrush across a canvas.

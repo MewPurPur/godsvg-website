@@ -14,7 +14,7 @@
 					modal.style.display = "block";
 
 					modalImage.src = image.src;
-					modalDescription.innerText = image.dataset.desc;
+					modalDescription.innerHTML = image.dataset.desc;
 				})
 			});
 			modalClose.addEventListener("click", function() {
@@ -39,7 +39,10 @@
 </div>
 <div class="gallery-modal">
 	<div class="gallery-modal-content">
-		<span class="gallery-modal-close">&times;</span>
+		<button class="gallery-modal-close">
+			<span></span>
+			<span></span>
+		</button>
 		<img class="gallery-modal-image" src="" alt="" loading="lazy" />
 		<p class="gallery-modal-description"></p>
 	</div>

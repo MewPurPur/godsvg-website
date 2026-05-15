@@ -34,7 +34,6 @@ $content-width: min($max-width, 100% - $padding-size * 2);
 	width: min($max-width * 0.8, 90vw);
 	margin: auto;
 	box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
-	user-select: none;
 }
 
 .article-metadata {
@@ -60,7 +59,6 @@ $content-width: min($max-width, 100% - $padding-size * 2);
 		width: auto;
 		max-width: 98%;
 		box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
-		user-select: none;
 	}
 
 	video {
@@ -104,7 +102,6 @@ $content-width: min($max-width, 100% - $padding-size * 2);
 	width: 98%;
 	max-width: 100%;
 	height: auto;
-	user-select: none;
 	display: block;
 	margin-bottom: 0.4rem;
 	box-shadow: 0 0 12px rgba(0, 0, 0, 0.24);
@@ -176,7 +173,6 @@ $content-width: min($max-width, 100% - $padding-size * 2);
 	img {
 		width: 100%;
 		height: auto;
-		user-select: none;
 		display: block;
 		box-shadow: none;
 		position: absolute;
