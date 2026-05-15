@@ -15,7 +15,6 @@
 	align-items: center;
 
 	.vicki-jump {
-		user-select: none;
 		width: min(95vw, 34rem);
 		height: auto;
 		margin-bottom: min(calc(-0.04 * 34rem + ((34rem - min(95vw, 34rem)) * 0.2)), 0rem);
@@ -200,7 +199,6 @@
 	font-weight: 500;
 	font-size: 1.25rem;
 	cursor: pointer;
-	user-select: none;
 	text-decoration: none !important;
 	text-align: center;
 	display: inline-block;
