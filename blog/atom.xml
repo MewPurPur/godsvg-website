@@ -6,9 +6,75 @@
 	<link rel="alternate" type="text/html" href="https://godsvg.com" />
 	<link rel="self" type="application/atom+xml" href="https://godsvg.com/blog/atom.xml" />
 	<id>https://godsvg.com/</id>
-	<updated>2026-04-26T00:00:00Z</updated>
+	<updated>2026-05-16T00:00:00Z</updated>
 	<author><name>MewPurPur</name></author>
 	<contributor><name>FlooferLand</name></contributor>
+	<entry>
+		<title>Introducing Vicki, GodSVG&#39;s mascot</title>
+		<summary>You&#39;ve seen this sprightly blue fox on GodSVG&#39;s logo, on its website, in blog illustrations. Let&#39;s finally introduce her.</summary>
+		<author><name>MewPurPur</name></author>
+		<published>2026-05-16T00:00:00Z</published>
+		<updated>2026-05-16T00:00:00Z</updated>
+		<id>tag:godsvg.com,2026:introducing-vicki</id>
+		<link rel="alternate" href="/article/introducing-vicki" />
+		<link rel="enclosure" type="image/webp" href="https://godsvg.com/assets/blog/introducing-vicki/cover.webp" />
+		<content type="html">
+			&lt;p&gt;You&#39;ve seen this sprightly blue fox on GodSVG&#39;s logo, its website, in blog illustrations: Vicki, GodSVG&#39;s official mascot. You can call her Vicki, or if you want to be specific, Vicki the vector fox. She isn&#39;t here just to be cute, but to represent GodSVG&#39;s approach to SVG editing: precision, agility, and curiosity about the inner workings of vector graphics. A trail of paint usually follows Vicki, dripping from her tail like a paintbrush across a canvas.&lt;/p&gt;
+&lt;p&gt;What is Vicki like, and what&#39;s her story? Let&#39;s give her the stage.&lt;/p&gt;
+&lt;h2&gt;What is Vicki like?&lt;/h2&gt;
+&lt;p&gt;When you visit the vast Examelle Forest, it&#39;s hard to miss its lively Vector Valley region. It&#39;s buzzing with strange characters, one of whom is Vicki.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Q:&lt;/strong&gt; So... who exactly are you?&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;A:&lt;/strong&gt; I&#39;m Vicki! Some people call me &amp;quot;the vector fox&amp;quot;, which sounds a little dramatic, but I don&#39;t mind it. There&#39;s &amp;quot;Vicki the vector vixen&amp;quot;, now that&#39;s too over the top for me.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Q:&lt;/strong&gt; I totally agree. Okay, Vicki, please introduce yourself to everyone.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;A:&lt;/strong&gt; Well, I&#39;m a part-time adventurer, part-time artist, full-time nerd! I spend most of my time wandering Vector Valley, exploring places, making things, refining things, occasionally destroying things so I can understand why they worked in the first place. I&#39;m a little shy at first, but I like meeting people who are curious and open-minded.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Q:&lt;/strong&gt; And we should probably mention the bat before everyone starts asking?&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;A:&lt;/strong&gt; We probably shouldn&#39;t.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Q:&lt;/strong&gt; People already see the two of you together everywhere.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;A:&lt;/strong&gt; Fine. He refuses to pick a permanent name. He&#39;s good at hunting bugs. They are a big problem in Vector Valley, by the way, getting everywhere and ruining everything... We explore together sometimes, we even fly around and look for abandoned places, or hide in my den, talk about strange things for hours, stargaze. He&#39;s much better than me at dealing with chaos.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Q:&lt;/strong&gt; Oh you&#39;re making me blush, you...&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;A:&lt;/strong&gt; Shhh, they weren&#39;t supposed to know you&#39;re the interviewer!&lt;/p&gt;
+&lt;div class=&quot;article-image&quot;&gt;
+&lt;img src=&quot;/assets/blog/introducing-vicki/bugs_everywhere.webp&quot; alt=&quot;Image of Vicki the vector fox hugging a bat across the shoulder, with traced text in the Impact font saying: Bugs, bugs everywhere! The duo is in front of a forest backdrop.&quot;&gt;
+&lt;/div&gt;
+&lt;h2&gt;What is Vicki&#39;s story?&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Q:&lt;/strong&gt; Ooops. Ahem. Not everyone in your hometown liked you, did they?&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;A:&lt;/strong&gt; Well, even most of my friends get unsettled by how perfectionist I can be and how often I avoid the trodden path to look for something better. It was much worse in my hometown, since I couldn&#39;t avoid residents who didn&#39;t understand me. As I grew older and stronger, they became uneasy around me. For example, I wanted to study the low-level building blocks of our world, but most of them thought this was dangerous and might result in me corrupting something important...&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Q:&lt;/strong&gt; So the rumors about you altering objects are true?&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;A:&lt;/strong&gt; Yes! If I focus hard enough, I can alter certain attributes of things. I perfected this trade over the years and used it to help those who weren&#39;t scared of me. But I often caused side effects that were hard to undo if nobody caught them early. I&#39;m still trying to improve, after all, no one buys it when I excuse these mistakes on the messy underlying structure of things I didn&#39;t create myself. Like, one time I accidentally colored the river blood-red because it was grouped with my neighbor&#39;s teapot of all things!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Q:&lt;/strong&gt; Is it true that you&#39;re more powerful under starlit skies?&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;A:&lt;/strong&gt; I think so, I feel very connected to the stars. Everything in the valley is made from stardust, including us. People should think about this more... The way I talk about stars actually contributed to residents thinking I&#39;m some kind of dangerous occult figure, or a cosmic beast or something.&lt;/p&gt;
+&lt;div class=&quot;article-image&quot;&gt;
+&lt;img src=&quot;/assets/blog/introducing-vicki/vicki_after_dark.webp&quot; alt=&quot;Image of a grainy background, with Vicki the vector fox standing as an eerie silhouette, with glowing piercing eyes staring at a small star hovering above her raised paw.&quot;&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;Q:&lt;/strong&gt; Why did you leave your hometown?&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;A:&lt;/strong&gt; Someone framed me for destroying a bridge. There wasn&#39;t enough evidence, but I saw the writing on the wall. What really struck me was overhearing some residents who were afraid of getting on my bad side if they punished me wrongly. So I just left for the unrestricted wilderness. I eventually got used to wandering, but maybe someday I&#39;ll be powerful enough to build my own place in Vector Valley, one structured &amp;quot;the right way&amp;quot;, at least according to me. I&#39;ve already told some of my friends about this idea and that they would be welcome.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Q:&lt;/strong&gt; Mmhm, and what are you doing now?&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;A:&lt;/strong&gt; Like, right now? I was preparing to climb Ink mountain and see if I&#39;ll learn something useful on there.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Q:&lt;/strong&gt; Alright, any closing words?&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;A:&lt;/strong&gt; Ummh, I didn&#39;t think about this... I&#39;m still searching for the perfect way to build my place! I don&#39;t think I&#39;ll ever fully fit into Vector Valley, but one can dream. And even if I don&#39;t, that&#39;s alright, I think I&#39;m made to leave paint marks where nobody else would dare to go.&lt;/p&gt;
+&lt;h2&gt;Field notes from Vector Valley&lt;/h2&gt;
+&lt;p&gt;Vicki likes:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Science, nature, clear night skies full of stars&lt;/li&gt;
+&lt;li&gt;Exploring abandoned places&lt;/li&gt;
+&lt;li&gt;Open-minded people&lt;/li&gt;
+&lt;li&gt;Fixing broken things, even when nobody asked her to&lt;/li&gt;
+&lt;li&gt;Pleasant tingly sensations, such as sunbathing and cuddles&lt;/li&gt;
+&lt;li&gt;Fanfics, fanart, and shipping herself with fictional characters.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Vicki dislikes:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Bugs&lt;/li&gt;
+&lt;li&gt;Light pollution&lt;/li&gt;
+&lt;li&gt;Being told &amp;quot;that&#39;s just how things are&amp;quot;&lt;/li&gt;
+&lt;li&gt;Being touched without being asked.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Afterword&lt;/h2&gt;
+&lt;p&gt;If you don&#39;t resonate with Vicki, it&#39;s okay - she is simply one character used to express certain parts of GodSVG&#39;s identity and the passion behind it. You&#39;ll continue to see her in blog illustrations, small easter eggs across the project, and other places.&lt;/p&gt;
+&lt;p&gt;The mascot is now documented on the website at &lt;a href=&quot;/about/mascot&quot;&gt;about/mascot&lt;/a&gt; and the page will be periodically updated with more official artworks.&lt;/p&gt;
+
+		</content>
+	</entry>
 	<entry>
 		<title>New prerelease: GodSVG 1.0-alpha15</title>
 		<summary>This prerelease improves several areas of GodSVG, especially the color picker. It also refines the logo and branding of the application.</summary>
@@ -26,12 +92,12 @@
 &lt;div class=&quot;article-switch&quot;&gt;
 &lt;div class=&quot;article-switch-inner&quot;&gt;
 &lt;div class=&quot;article-switch-header&quot;&gt;
-&lt;div class=&quot;article-switch-title&quot; id=&quot;switch-title-pdb2m4s7f&quot;&gt;Old logo&lt;/div&gt;
-&lt;button class=&quot;article-switch-toggle&quot; onclick=&#39;toggleSwitch(&quot;pdb2m4s7f&quot;)&#39;&gt;Switch&lt;/button&gt;
+&lt;div class=&quot;article-switch-title&quot; id=&quot;switch-title-s0kdr76ft&quot;&gt;Old logo&lt;/div&gt;
+&lt;button class=&quot;article-switch-toggle&quot; onclick=&#39;toggleSwitch(&quot;s0kdr76ft&quot;)&#39;&gt;Switch&lt;/button&gt;
 &lt;/div&gt;
 &lt;div class=&quot;article-switch-content&quot;&gt;
-&lt;img id=&quot;switch-img1-pdb2m4s7f&quot; src=&quot;/assets/blog/1-0-alpha15/splash_before.webp&quot; alt=&quot;Image showing the old splash&quot;&gt;
-&lt;img id=&quot;switch-img2-pdb2m4s7f&quot; src=&quot;/assets/blog/1-0-alpha15/splash_after.webp&quot; alt=&quot;Image showing the new splash&quot; loading=&quot;lazy&quot; style=&quot;display:none&quot;&gt;
+&lt;img id=&quot;switch-img1-s0kdr76ft&quot; src=&quot;/assets/blog/1-0-alpha15/splash_before.webp&quot; alt=&quot;Image showing the old splash&quot;&gt;
+&lt;img id=&quot;switch-img2-s0kdr76ft&quot; src=&quot;/assets/blog/1-0-alpha15/splash_after.webp&quot; alt=&quot;Image showing the new splash&quot; loading=&quot;lazy&quot; style=&quot;display:none&quot;&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -235,12 +301,12 @@
 &lt;div class=&quot;article-switch&quot;&gt;
 &lt;div class=&quot;article-switch-inner&quot;&gt;
 &lt;div class=&quot;article-switch-header&quot;&gt;
-&lt;div class=&quot;article-switch-title&quot; id=&quot;switch-title-yrj4lj4lf&quot;&gt;Old theme&lt;/div&gt;
-&lt;button class=&quot;article-switch-toggle&quot; onclick=&#39;toggleSwitch(&quot;yrj4lj4lf&quot;)&#39;&gt;Switch&lt;/button&gt;
+&lt;div class=&quot;article-switch-title&quot; id=&quot;switch-title-9wjgqv07h&quot;&gt;Old theme&lt;/div&gt;
+&lt;button class=&quot;article-switch-toggle&quot; onclick=&#39;toggleSwitch(&quot;9wjgqv07h&quot;)&#39;&gt;Switch&lt;/button&gt;
 &lt;/div&gt;
 &lt;div class=&quot;article-switch-content&quot;&gt;
-&lt;img id=&quot;switch-img1-yrj4lj4lf&quot; src=&quot;/assets/blog/1-0-alpha11/old_theme.webp&quot; alt=&quot;Image of the old default theme&quot;&gt;
-&lt;img id=&quot;switch-img2-yrj4lj4lf&quot; src=&quot;/assets/blog/1-0-alpha11/new_dark_theme.webp&quot; alt=&quot;Image of the new dark theme&quot; loading=&quot;lazy&quot; style=&quot;display:none&quot;&gt;
+&lt;img id=&quot;switch-img1-9wjgqv07h&quot; src=&quot;/assets/blog/1-0-alpha11/old_theme.webp&quot; alt=&quot;Image of the old default theme&quot;&gt;
+&lt;img id=&quot;switch-img2-9wjgqv07h&quot; src=&quot;/assets/blog/1-0-alpha11/new_dark_theme.webp&quot; alt=&quot;Image of the new dark theme&quot; loading=&quot;lazy&quot; style=&quot;display:none&quot;&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
