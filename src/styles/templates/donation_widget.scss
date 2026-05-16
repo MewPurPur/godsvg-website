@@ -9,8 +9,6 @@ $btn-bg: #2a2e32;
 $btn-hover: #32373c;
 $btn-active: #3a3f44;
 $tab-bg: #2e3236;
-$pro-color: #9e9;
-$con-color: #e99;
 
 .donation-widget {
 	margin-top: 0.4rem;
@@ -94,33 +92,17 @@ $con-color: #e99;
 }
 
 .list-pro {
-	color: $pro-color;
-	margin-bottom: 0.2rem;
-	font-size: 0.9rem;
-	line-height: 1.15 !important;
-	padding-left: 0.4rem;
-
-	&::before {
-		content: "+";
-		font-weight: bold;
-		display: inline-block;
-		width: 0.85rem;
-	}
-}
-
-.list-con {
-	color: $con-color;
 	margin-bottom: 0.3rem;
 	font-size: 0.9rem;
 	line-height: 1.15 !important;
 	padding-left: 0.4rem;
+}
 
-	&::before {
-		content: "–";
-		font-weight: bold;
-		display: inline-block;
-		width: 0.85rem;
-	}
+.list-con {
+	margin-bottom: 0.3rem;
+	font-size: 0.9rem;
+	line-height: 1.15 !important;
+	padding-left: 0.4rem;
 }
 
 .hover-info {
