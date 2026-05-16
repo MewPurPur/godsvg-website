@@ -16,7 +16,12 @@
 		justify-content: center;
 		align-items: center;
 		overflow: hidden;
+		border: none;
+		border-radius: 6px;
 		aspect-ratio: 1 / 1;
+		background-color: transparent;
+		cursor: pointer;
+		padding: 0;
 		transition: box-shadow 0.2s;
 
 		img {
@@ -24,11 +29,13 @@
 			height: 100%;
 			object-fit: cover;
 			display: block;
-			border-radius: 6px;
 		}
 
 		&:hover {
 			box-shadow: 0 0 6px 6px rgba(255, 255, 255, 0.08);
+		}
+		&:focus-visible {
+			outline: 2px solid $focus;
 		}
 	}
 }
