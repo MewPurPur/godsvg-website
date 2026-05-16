@@ -36,6 +36,7 @@ export default async function(eleventyConfig) {
 			return collectionUrl == argUrl;
 		});
 	});
+
 	eleventyConfig.addAsyncShortcode("fetch", async function(url, type="text") {
 		const page = await fetch(url);
 		return await page.text();
@@ -74,9 +75,7 @@ export default async function(eleventyConfig) {
 			// Map dependencies for incremental builds.
 			this.addDependencies(inputPath, result.loadedUrls);
 
-			return async (data) => {
-				return result.css;
-			};
+			return () => result.css;
 		},
 	});
 
@@ -108,8 +107,8 @@ export default async function(eleventyConfig) {
 
 			html += `
 				<div class="article-compare-side">
-				<div class="article-compare-label">${label}</div>
-				<img src="/assets/blog/${slug}/${img}" alt="${alt}" />
+					<div class="article-compare-label">${label}</div>
+					<img src="/assets/blog/${slug}/${img}" alt="${alt}" />
 				</div>
 			`;
 		}
@@ -179,18 +178,12 @@ export default async function(eleventyConfig) {
 		linkify: false,
 	}));
 	eleventyConfig.amendLibrary("md", (mdLib) => mdLib.enable("code"));
+
 	const articlesPath = path.join(returnData.dir.input, "articles");
-	fs.readdirSync(articlesPath)  // Moving over media files.
-		.filter(filename => {
-			filename = path.join(articlesPath, filename);
-			return fs.existsSync(filename) && fs.lstatSync(filename).isDirectory();
-		})
-		.forEach(dir => {
-			const inDir = path.join(articlesPath, dir);
-			const outDir = eleventyConfig.getFilter("slugify")(dir);
-			eleventyConfig.addPassthroughCopy({ [path.join(inDir, "media")]: `/assets/blog/${outDir}` });
-			eleventyConfig.addPassthroughCopy({ [path.join(inDir, "cover.webp")]: `/assets/blog/${outDir}/cover.webp` });
-		});
+	const articleDirs = fs.readdirSync(articlesPath).filter(dir => {
+		const full = path.join(articlesPath, dir);
+		return fs.statSync(full).isDirectory();
+	});
 
 	eleventyConfig.addShortcode("gh", function(username) {
 		// Strip any leading "@".

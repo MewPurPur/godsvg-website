@@ -34,24 +34,17 @@ function setDownloadButtons() {
 }
 
 function toggleContent(tab_idx) {
-	const featuresContent = document.getElementById("features-content");
-	const faqContent = document.getElementById("faq-content");
-	const donateContent = document.getElementById("donate-content");
-	const tabs = document.querySelectorAll(".tab");
+	const content = [
+		document.getElementById("features-content"),
+		document.getElementById("faq-content"),
+		document.getElementById("donate-content")
+	];
 
-	if (tab_idx === 0) {
-		featuresContent.style.display = "block";
-		faqContent.style.display = "none";
-		donateContent.style.display = "none";
-	} else if (tab_idx === 1) {
-		featuresContent.style.display = "none";
-		faqContent.style.display = "block";
-		donateContent.style.display = "none";
-	} else if (tab_idx === 2) {
-		featuresContent.style.display = "none";
-		faqContent.style.display = "none";
-		donateContent.style.display = "block";
+	for (var i = 0; i < 3; i++) {
+		content[i].style.display = (tab_idx === i) ? "block" : "none";
 	}
+
+	const tabs = document.querySelectorAll(".tab");
 
 	tabs.forEach(function(tab, index) {
 		if (index === tab_idx) {
