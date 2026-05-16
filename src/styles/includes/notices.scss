@@ -32,7 +32,7 @@
 		top: -2px;
 		left: -2px;
 		padding: 0.1rem 0.5rem;
-		border-radius: 8px 0 0 6px;  // Top left radius bigger than 6 to avoid antialiasing overlaps.
+		border-radius: 8px 0 6px 0;  // Top left radius bigger than 6 to avoid antialiasing overlaps.
 	}
 
 	.notice-message {

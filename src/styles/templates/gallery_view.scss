@@ -63,6 +63,11 @@
 			object-fit: contain;
 		}
 
+		.gallery-modal-description {
+			margin-top: 0.25rem;
+			margin-bottom: 0;
+		}
+
 		.gallery-modal-close {
 			position: relative;
 			align-self: flex-end;
@@ -98,6 +103,9 @@
 			&:hover, &:focus-visible {
 				background-color: #fff2;
 				opacity: 1.0;
+			}
+			&:active {
+				background-color: #fff4;
 			}
 		}
 	}
