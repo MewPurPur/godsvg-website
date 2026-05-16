@@ -180,10 +180,17 @@ export default async function(eleventyConfig) {
 	eleventyConfig.amendLibrary("md", (mdLib) => mdLib.enable("code"));
 
 	const articlesPath = path.join(returnData.dir.input, "articles");
-	const articleDirs = fs.readdirSync(articlesPath).filter(dir => {
-		const full = path.join(articlesPath, dir);
-		return fs.statSync(full).isDirectory();
-	});
+	fs.readdirSync(articlesPath)  // Moving over media files.
+		.filter(filename => {
+			filename = path.join(articlesPath, filename);
+			return fs.existsSync(filename) && fs.lstatSync(filename).isDirectory();
+		})
+		.forEach(dir => {
+			const inDir = path.join(articlesPath, dir);
+			const outDir = eleventyConfig.getFilter("slugify")(dir);
+			eleventyConfig.addPassthroughCopy({ [path.join(inDir, "media")]: `/assets/blog/${outDir}` });
+			eleventyConfig.addPassthroughCopy({ [path.join(inDir, "cover.webp")]: `/assets/blog/${outDir}/cover.webp` });
+		});
 
 	eleventyConfig.addShortcode("gh", function(username) {
 		// Strip any leading "@".
