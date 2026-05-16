@@ -55,7 +55,7 @@ When you visit the vast Examelle Forest, it's hard to miss its lively Vector Val
 
 **Q:** Why did you leave your hometown?
 
-**A:** Someone framed me for destroying a bridge. There wasn't enough evidence, but I saw the writing on the wall. What really struck me was overhearing some residents being scared of getting on my bad side if they punished me wrongly. So I just left for the unrestricted wilderness. I eventually got used to wandering, but maybe someday I'll be powerful enough to build my own town within Vector Valley, one structured "the right way", at least according to me. I've already told some of my friends about this idea and that they would be welcome.
+**A:** Someone framed me for destroying a bridge. There wasn't enough evidence, but I saw the writing on the wall. What really struck me was overhearing some residents who were afraid of getting on my bad side if they punished me wrongly. So I just left for the unrestricted wilderness. I eventually got used to wandering, but maybe someday I'll be powerful enough to build my own place in Vector Valley, one structured "the right way", at least according to me. I've already told some of my friends about this idea and that they would be welcome.
 
 **Q:** Mmhm, and what are you doing now?
 
