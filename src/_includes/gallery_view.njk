@@ -2,7 +2,7 @@
 <div class="gallery-view">
 	<script>
 		document.addEventListener("DOMContentLoaded", function() {
-			const links = document.querySelectorAll(".gallery-view-image a");
+			const links = document.querySelectorAll(".gallery-view-image");
 			const modal = document.querySelector(".gallery-modal")
 			const modalClose = document.querySelector(".gallery-modal-close")
 			const modalImage = document.querySelector(".gallery-modal-image")
@@ -35,11 +35,9 @@
 	<link rel="stylesheet" type="text/css" href="/styles/templates/gallery_view.scss">
 	<div class="gallery-view-images">
 		{% for image in images %}
-			<div class="gallery-view-image">
-				<a href="javascript:void(0)">
-					<img src="{{ image.src }}" class="gallery-view-image" data-desc="{{ image.desc }}" alt="{{ image.alt }}" loading="lazy" />
-				</a>
-			</div>
+			<button class="gallery-view-image">
+				<img src="{{ image.src }}" class="gallery-view-image" data-desc="{{ image.desc }}" alt="{{ image.alt }}" loading="lazy" />
+			</button>
 		{% endfor %}
 	</div>
 </div>
