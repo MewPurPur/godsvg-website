@@ -33,6 +33,10 @@ $navbar-color: #1a1c1e;
 
 	&:hover {
 		text-decoration: none;
+
+		.nav-logo-text {
+			color: color.adjust(#def, $lightness: -2.5%);
+		}
 	}
 	&:focus-visible .nav-logo-text {
 		color: color.adjust(#def, $lightness: -2.5%);
@@ -44,10 +48,6 @@ $navbar-color: #1a1c1e;
 	font-weight: 700;
 	font-size: 2rem;
 	color: color.adjust(#def, $lightness: -7.5%);
-
-	&:hover {
-		color: color.adjust(#def, $lightness: -2.5%);
-	}
 }
 
 .nav-links {
