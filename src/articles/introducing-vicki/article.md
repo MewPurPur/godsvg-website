@@ -59,7 +59,7 @@ When you visit the vast Examelle Forest, it's hard to miss its lively Vector Val
 
 **Q:** Mmhm, and what are you doing now?
 
-**A:** Like, right now? I was preparing to climb Ink mountain and see if I'll learn something useful on there.
+**A:** Like, right now? I was preparing to climb Ink Mountain and see if I'll learn something useful on there.
 
 **Q:** Alright, any closing words?
 
