@@ -27,7 +27,7 @@ UI Scale has been reworked into a single setting that only allows the valid opti
 
 GodSVG is built in Godot Engine, which recently released a new 4.4 version, and we've moved to it. This resulted in significant performance improvements (some of them thanks to my own contributions!). It also updated the SVG renderer (ThorVG), resulting in significant fixes and improvements to SVG rendering and rasterizing.
 
-{% blogcompare "Reality", "raster_reality.webp", "Image of an SVG without rasterization", "Before", "raster_before.webp", "Image of the old rasterization", "After", "raster_after.webp", "Image of the new rasterization" %}
+{% blogcomparetoswitch "Original", "raster_original.webp", "Image of an SVG without rasterization", "Before", "raster_before.webp", "Image of the old rasterization", "After", "raster_after.webp", "Image of the new rasterization" %}
 
 **And now for a lightning round:**
 - Implemented a "Show SVG in File Manager" option.
@@ -63,9 +63,9 @@ When the viewbox of a graphic was different from its width and height, shapes ad
 - Improved the viewport's stability.
 - Fixed issues with text selection in the SVG text editor.
 - Fixed issue where after importing or pasting a palette XML, subsequent edits to that palette didn't get saved.
-- Fixed selection not updating when clicking a handle of an already selected path/polygon/ polyline.
+- Fixed selection not updating when clicking a handle of an already selected path/polygon/polyline.
 - Fixed issue where changing an "id" attribute didn't create an Undo action.
- - Fixed shortcuts handled incorrectly in the savedata.
+- Fixed shortcuts handled incorrectly in the savedata.
 - Removed "Convert To" option from unrecognized XML nodes.
 - Fixed issue with wrong undo/redo state if the Undo action was created on the same frame that a continuous change to an attribute was started.
 - Fixed issue where clicking outside of read-only single line text fields didn't deselect the text.
