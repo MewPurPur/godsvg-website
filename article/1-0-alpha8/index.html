@@ -79,20 +79,27 @@ This blog post was written retroactively to document events from GodSVG's early 
 <p>GodSVG used to be unusable for some Windows users because of a warning. This has been addressed in this prerelease.</p>
 <p>UI Scale has been reworked into a single setting that only allows the valid options. The UI is now prevented from getting too small. This was a common problem, especially on Web, and unavoidable on itch.io with the old implementation. There is now an &quot;Auto&quot; option (same as &quot;Auto UI Scale&quot; used with the &quot;1.0&quot; UI scale before), a range of appropriate hard-coded values that should be safe, and a &quot;Max&quot; option. For example, if the maximum determined UI scale is 145%, you can now use that instead of being limited to 125%. Custom UI scale will be implemented in the future.</p>
 <p>GodSVG is built in Godot Engine, which recently released a new 4.4 version, and we've moved to it. This resulted in significant performance improvements (some of them thanks to my own contributions!). It also updated the SVG renderer (ThorVG), resulting in significant fixes and improvements to SVG rendering and rasterizing.</p>
-<div class="article-compare"><div class="article-compare-content">
+<script>window.toggleSwitch||(window.toggleSwitch=function(t){const e=document.getElementById("switch-title-"+t),n=document.getElementById("switch-img1-"+t),i=document.getElementById("switch-img2-"+t);"none"===n.style.display?(n.style.display="",i.style.display="none",e.textContent="Before"):(n.style.display="none",i.style.display="",e.textContent="After")})</script>
+<div class="article-compare">
+<div class="article-compare-content">
 <div class="article-compare-side">
-<div class="article-compare-label">Reality</div>
-<img src="/assets/blog/1-0-alpha8/raster_reality.webp" alt="Image of an SVG without rasterization">
+<div class="article-switch-title">Original</div>
+<img src="/assets/blog/1-0-alpha8/raster_original.webp" alt="Image of an SVG without rasterization">
 </div>
-<div class="article-compare-side">
-<div class="article-compare-label">Before</div>
-<img src="/assets/blog/1-0-alpha8/raster_before.webp" alt="Image of the old rasterization">
+<div class="article-switch" style="flex:1;margin:0">
+<div class="article-switch-inner">
+<div class="article-switch-header">
+<div class="article-switch-title" id="switch-title-8illw42k7">Before</div>
+<button class="article-switch-toggle" onclick='toggleSwitch("8illw42k7")'>Switch</button>
 </div>
-<div class="article-compare-side">
-<div class="article-compare-label">After</div>
-<img src="/assets/blog/1-0-alpha8/raster_after.webp" alt="Image of the new rasterization">
+<div class="article-switch-content">
+<img id="switch-img1-8illw42k7" src="/assets/blog/1-0-alpha8/raster_before.webp" alt="Image of the old rasterization">
+<img id="switch-img2-8illw42k7" src="/assets/blog/1-0-alpha8/raster_after.webp" alt="Image of the new rasterization" loading="lazy" style="display:none">
 </div>
-</div></div>
+</div>
+</div>
+</div>
+</div>
 <p><strong>And now for a lightning round:</strong></p>
 <ul>
 <li>Implemented a &quot;Show SVG in File Manager&quot; option.</li>
@@ -123,7 +130,7 @@ This blog post was written retroactively to document events from GodSVG's early 
 <li>Improved the viewport's stability.</li>
 <li>Fixed issues with text selection in the SVG text editor.</li>
 <li>Fixed issue where after importing or pasting a palette XML, subsequent edits to that palette didn't get saved.</li>
-<li>Fixed selection not updating when clicking a handle of an already selected path/polygon/ polyline.</li>
+<li>Fixed selection not updating when clicking a handle of an already selected path/polygon/polyline.</li>
 <li>Fixed issue where changing an &quot;id&quot; attribute didn't create an Undo action.</li>
 <li>Fixed shortcuts handled incorrectly in the savedata.</li>
 <li>Removed &quot;Convert To&quot; option from unrecognized XML nodes.</li>
