@@ -3,6 +3,7 @@ title: GodSVG - SVG Editor
 metaTitle: GodSVG - Free and Open Source SVG editor
 ---
 {% extends "base.njk" %}
+{% from "macros.njk" import socialBulletPoint, donationPlatformProsAndConsList %}
 
 {% block head %}
 	<script type="application/ld+json">
@@ -118,31 +119,26 @@ metaTitle: GodSVG - Free and Open Source SVG editor
 			<h2>Do you have the social media?</h2>
 			<p>You can find the official GodSVG social media on the bottom of every page on this website. But here they are:</p>
 			<ul>
-				<li class="no-bullet-point">
-					<img class="img-bullet-point" src="/assets/logo_github.svg" alt="Github icon" loading="lazy" />
+				{% call socialBulletPoint("/assets/logo_github.svg", "Github icon") %}
 					<a href="https://github.com/MewPurPur/GodSVG">Github repository</a> for general surveillance of developers.
-				</li>
-				<li class="no-bullet-point">
-					<img class="img-bullet-point" src="/assets/logo_discord.svg" alt="Discord icon" loading="lazy" />
-					<a href="https://discord.gg/R8pM6vXWTY">Discord server</a> for outsourcing our social lives to a proprietary API.
-				</li>
+				{% endcall %}
+				{% call socialBulletPoint("/assets/logo_discord.svg", "Discord icon") %}
+					<a href="https://discord.gg/R8pM6vXWTY">Discord server</a> for outsourcing social life to a proprietary API.
+				{% endcall %}
 			</ul>
 
 			<p>And here's some unofficial (personal) social media that's still mostly about GodSVG:</b></p>
 			<ul>
-				<li class="no-bullet-point">
-					<img class="img-bullet-point" src="/assets/logo_tweeter.webp" alt="Twitter icon" loading="lazy">
+				{% call socialBulletPoint("/assets/logo_tweeter.webp", "Twitter icon") %}
 					<a href="https://twitter.com/MewPurPur">tweeter account</a> for hot takes I'll regret later.
-				</li>
-				<li class="no-bullet-point">
-					<img class="img-bullet-point" src="/assets/logo_bluuuusky.webp" alt="Bluesky icon" loading="lazy">
+				{% endcall %}
+				{% call socialBulletPoint("/assets/logo_bluuuusky.webp", "Bluesky icon") %}
 					<a href="https://bsky.app/profile/mewpurpur.bsky.social">bluuusky account</a> for the same stuff as twirter.
-				</li>
+				{% endcall %}
 				<!-- Yuutub is way too irrelevant, there's almost nothing GodSVG-related on it right now. I was thinking about tool tutorials, but not at the moment.
-				<li class="no-bullet-point">
-					<img class="img-bullet-point" src="/assets/socials_youtube.webp" alt="YouTube icon" loading="lazy">
+				{% call socialBulletPoint("/assets/unused_logo_yuutub.webp", "YouTube icon") %}
 					<a href="https://www.youtube.com/@MewPurPur">yuutub channel</a> for Like, comment, and subscribe!
-				</li>
+				{% endcall %}
 				-->
 			</ul>
 
@@ -167,30 +163,9 @@ metaTitle: GodSVG - Free and Open Source SVG editor
 			<p>I have a few donation platforms set up, so you can choose the one you prefer:</p>
 			<div class="small-gap"></div>
 			<ul class="no-bullet-point">
-				<li>
-					<img class="img-bullet-point" src="/assets/logo_github.svg" alt="Github logo">
-					<a href="https://github.com/sponsors/MewPurPur" style="font-size: 1.25rem">Github Sponsors</a>
-					<ul class="no-bullet-point">
-						<li class="list-pro">Low extra fees</li>
-						<li class="list-pro">Can donate arbitrary amounts</li>
-					</ul>
-				</li>
-				<li>
-					<img class="img-bullet-point" src="/assets/logo_ko_fi.svg" alt="Ko-Fi logo">
-					<a href="https://ko-fi.com/mewpurpur" style="font-size: 1.25rem">Ko-Fi</a>
-					<ul class="no-bullet-point">
-						<li class="list-pro">Low extra fees</li>
-						<li class="list-pro">Can donate arbitrary amounts</li>
-					</ul>
-				</li>
-				<li>
-					<img class="img-bullet-point" src="/assets/logo_patreon.svg" alt="Patreon logo">
-					<a href="https://www.patreon.com/GodSVG" style="font-size: 1.25rem">Patreon</a>
-					<ul class="no-bullet-point">
-						<li class="list-con">High extra fees</li>
-						<li class="list-con">Can't donate arbitrary amounts</li>
-					</ul>
-				</li>
+				{{ donationPlatformProsAndConsList("/assets/logo_github.svg", "Github logo", "https://github.com/sponsors/MewPurPur", "Github Sponsors", ["Low extra fees", "Can donate arbitrary amounts"], []) }}
+				{{ donationPlatformProsAndConsList("/assets/logo_ko_fi.svg", "Ko-Fi logo", "https://ko-fi.com/mewpurpur", "Ko-Fi", ["Low extra fees", "Can donate arbitrary amounts"], []) }}
+				{{ donationPlatformProsAndConsList("/assets/logo_patreon.svg", "Patreon logo", "https://www.patreon.com/GodSVG", "Patreon", [], ["High extra fees", "Can't donate arbitrary amounts"]) }}
 			</ul>
 			<div class="small-gap"></div>
 			<p>On all platforms, you can donate a single time or monthly. Monthly subscriptions give some perks, such as as a role in the GodSVG discord server, if you use Discord, and a mention in the "About" of GodSVG. I'd love to give more, but I can't think of much at the moment, and I'm busy enough with GodSVG as is.</p>
