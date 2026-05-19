@@ -27,3 +27,25 @@
 	<meta property="twitter:image" content="{{cover}}" />
 	<meta property="twitter:card" content="summary_large_image" />
 {% endmacro %}
+
+{% macro socialBulletPoint(icon, alt) %}
+	<li class="no-bullet-point">
+		<img class="img-bullet-point" src="{{icon}}" alt="{{alt}}" loading="lazy" />
+		{{ caller() }}
+	</li>
+{% endmacro %}
+
+{% macro donationPlatformProsAndConsList(icon, alt, href, name, pros=[], cons=[]) %}
+	<li>
+		<img class="img-bullet-point" src="{{icon}}" alt="{{alt}}">
+		<a href="{{href}}" class="donation-platform-link">{{name}}</a>
+		<ul class="no-bullet-point">
+			{% for pro in pros %}
+				<li class="list-pro">{{pro}}</li>
+			{% endfor %}
+			{% for con in cons %}
+				<li class="list-con">{{con}}</li>
+			{% endfor %}
+		</ul>
+	</li>
+{% endmacro %}

@@ -3,6 +3,10 @@ title: Releases - GodSVG
 ---
 {% extends "base.njk" %}
 
+{% block style %}
+	<link rel="stylesheet" type="text/css" href="/styles/releases.scss">
+{% endblock %}
+
 {% block body %}
 	<div class="container">
 		<h1>GodSVG Releases</h1>
@@ -37,10 +41,6 @@ title: Releases - GodSVG
 		{% endfor %}
 		</div>
 	</div>
-{% endblock %}
-
-{% block style %}
-	<link rel="stylesheet" type="text/css" href="/styles/releases.scss">
 {% endblock %}
 
 {% block script %}
