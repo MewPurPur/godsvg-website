@@ -189,7 +189,7 @@ export default async function(eleventyConfig) {
 					<div class="article-switch-title">${label1}</div>
 					<img src="/assets/blog/${slug}/${img1}" alt="${alt1}" />
 				</div>
-				<div class="article-switch" style="flex:1;margin:0">
+				<div class="article-switch" style="margin:0">
 					<div class="article-switch-inner">
 						<div class="article-switch-header">
 							<div class="article-switch-title" id="switch-title-${uniqueId}">${label2}</div>
@@ -209,7 +209,7 @@ export default async function(eleventyConfig) {
 
 	eleventyConfig.addShortcode("blogvid", function(name, alt) {
 		const e = this.page.url.split('/').filter(e => e.length > 1);
-		const slug = e[e.length-1];
+		const slug = e[e.length - 1];
 		const url = `/assets/blog/${slug}/${name}`;
 		return `
 			<div class="article-video">
