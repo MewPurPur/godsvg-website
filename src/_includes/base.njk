@@ -1,36 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="stylesheet" type="text/css" href="/styles/base.scss">
-		<link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
-		<link href="https://fonts.googleapis.com/css2?family=Asap:wght@400;500;700&family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
+{% extends "bare.njk" %}
 
-		<!-- Title -->
-		{% if title | length == 0 %}
-			<title>GodSVG</title>
-		{% else %}
-			<title>{{ title }}</title>
-		{% endif %}
+{% block navbar %}
+	{% include "navbar.njk" %}
+{% endblock %}
 
-		{% block metadata %}
-			{% from "macros.njk" import metadata with context %}
-			{{ metadata() }}
-		{% endblock %}
-
-		{% block head %}{% endblock %}
-		{% block style %}{% endblock %}
-
-		<script src="/scripts/base.js" type="application/javascript"></script>
-		{% block script %}{% endblock %}
-	</head>
-
-	<body>
-		{% include "navbar.njk" %}
-		{% block body %}
-			Missing page body
-		{% endblock %}
-		{% include "footer.njk" %}
-	</body>
-</html>
+{% block footer %}
+	{% include "footer.njk" %}
+{% endblock %}

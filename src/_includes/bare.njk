@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="/styles/base.scss">
+		<link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
+		<link href="https://fonts.googleapis.com/css2?family=Asap:wght@400;500;700&family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+		<title>
+			{% if title | length == 0 %}GodSVG{% else %}{{ title }}{% endif %}
+		</title>
+
+		{% block metadata %}
+			{% from "macros.njk" import metadata with context %}
+			{{ metadata() }}
+		{% endblock %}
+
+		{% block head %}{% endblock %}
+		{% block style %}{% endblock %}
+
+		<script src="/scripts/base.js" type="application/javascript"></script>
+		{% block script %}{% endblock %}
+	</head>
+
+	<body>
+		{% block navbar %}{% endblock %}
+
+		{% block body %}
+			Missing page body
+		{% endblock %}
+
+		{% block footer %}{% endblock %}
+	</body>
+</html>

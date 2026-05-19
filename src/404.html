@@ -1,26 +1,23 @@
 ---
 permalink: 404.html
+title: Page not found - GodSVG
 ---
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="stylesheet" type="text/css" href="/styles/base.scss">
-		<link rel="stylesheet" type="text/css" href="/styles/404.scss">
-		<link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
-		<title>Page not found - GodSVG</title>
-	</head>
+{% extends "bare.njk" %}
 
-	<body>
-		<img src="/assets/icon404.svg" alt="Error 404 icon">
-		<h1>404 - Page not found</h1>
-		<div class="panel">
-			<p>Try the following pages:</p>
-			<p><a href="/">Main page</a></p>
-			<p><a href="/editor">Web editor</a></p>
-			<p><a href="/releases">Releases</a></p>
-			<p><a href="/blog">Blog</a></p>
-		</div>
-	</body>
-</html>
+{% block style %}
+	<link rel="stylesheet" type="text/css" href="/styles/404.scss">
+{% endblock %}
+
+{% block body %}
+	<img src="/assets/icon404.svg" alt="Error 404 icon">
+	<h1>404 - Page not found</h1>
+	<div class="panel">
+		<p>Try these pages:</p>
+		<ul>
+			<li><a href="/">Main page</a></li>
+			<li><a href="/editor">Web editor</a></li>
+			<li><a href="/releases">Releases</a></li>
+			<li><a href="/blog">Blog</a></li>
+		</ul>
+	</div>
+{% endblock %}
