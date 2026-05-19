@@ -173,14 +173,12 @@ $content-width: min($max-width, 100% - $padding-size * 2);
 		height: auto;
 		display: block;
 		box-shadow: none;
-		position: absolute;
-		top: 0;
-		left: 0;
-
-		&:not([style*="display: none"]) {
-			position: relative;
-		}
 	}
+}
+
+.article-compare-side, .article-switch {
+	flex: 1 1 0;
+	min-width: 0;
 }
 
 .support-panel {
