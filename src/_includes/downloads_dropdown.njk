@@ -1,0 +1,38 @@
+{% macro downloadsDropdown(version, release, downloads, platformInfo, options = {}) %}
+{% set buttonText = options.buttonText or "Downloads" %}
+{% set buttonClass = options.buttonClass or "btn btn-download dropdown-trigger" %}
+{% set itemClass = options.itemClass or "platform-option" %}
+{% set variant = options.variant or "full" %}
+{% set omittedPlatform = options.omittedPlatform or "" %}
+
+<div class="dropdown">
+	<button type="button" class="{{buttonClass}}" aria-haspopup="true" aria-expanded="false">
+		{{buttonText}}
+		<span class="chevron"></span>
+	</button>
+
+	<div class="dropdown-content">
+		{% for platform in release.platforms %}
+			{% if platform != omittedPlatform %}
+				{% set cleanPlatform = platform.split("_")[0] %}
+
+				<a href="{{downloads[version][platform]}}" platform="{{platform}}" class="{{itemClass}}" download>
+					<img src="/assets/platforms_{{cleanPlatform}}.svg" class="{% if variant == 'compact' %}solo-platform-icon{% else %}platform-icon{% endif %}" alt="">
+					{% if variant == "compact" %}
+						<div class="solo-text">
+							{{platformInfo.displayNames[cleanPlatform]}}
+						</div>
+					{% else %}
+						<div class="text-container">
+							<div class="small-text">Download for</div>
+							<div class="big-text">
+								{{platformInfo.displayNames[cleanPlatform]}}
+							</div>
+						</div>
+					{% endif %}
+				</a>
+			{% endif %}
+		{% endfor %}
+	</div>
+</div>
+{% endmacro %}

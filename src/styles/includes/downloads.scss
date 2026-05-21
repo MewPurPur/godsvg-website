@@ -25,7 +25,11 @@
 	background-color: #2e6cb8;
 	color: #fff;
 	min-width: 10rem;
-	text-decoration: none !important;
+	border: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.45rem;
 
 	&:hover {
 		background-color: #3579cf;
@@ -37,7 +41,7 @@
 }
 
 .dropbtn {
-	background-color: #333;
+	background-color: #6666;
 	color: #ddd;
 	font-size: 1.05rem;
 	border: none;
@@ -49,6 +53,9 @@
 	min-width: 10rem;
 	height: 100%;
 
+	&:hover {
+		background-color: #6668;
+	}
 	&:focus-visible {
 		outline: 2px solid $focus;
 		outline-offset: -1px;
@@ -68,15 +75,15 @@
 
 	a {
 		color: white;
-		padding: 0.6rem 0.7rem;
+		padding: 0.5rem 0.6rem;
 		text-decoration: none !important;
 		display: flex;
 		align-items: center;
 
 		.platform-icon {
 			margin-right: 0.6rem;
-			height: 2.5rem;
-			width: 2.5rem;
+			height: 2rem;
+			width: 2rem;
 		}
 
 		.text-container {
@@ -95,8 +102,8 @@
 
 		.solo-platform-icon {
 			margin-right: 0.5rem;
-			height: 2rem;
-			width: 2rem;
+			height: 1.8rem;
+			width: 1.8rem;
 		}
 
 		.solo-text {
@@ -114,18 +121,14 @@
 	}
 }
 
-.dropdown.active .dropdown-content, .dropdown:hover .dropdown-content {
+.dropdown.open .dropdown-content {
 	display: block;
-}
-
-.dropdown:hover .dropbtn {
-	background-color: #444;
 }
 
 .download-option .platform-icon {
 	margin-right: 0.5rem;
-	height: 2.5rem;
-	width: 2.5rem;
+	height: 2rem;
+	width: 2rem;
 }
 
 .download-button {
@@ -163,8 +166,10 @@
 
 .dropdown .dropbtn {
 	display: flex;
+	gap: 0.4rem;
 	align-items: center;
 	justify-content: center;
+	padding: 0.5rem;
 }
 
 .platform-option {
@@ -173,18 +178,13 @@
 	color: #fff;
 	opacity: 0.5 !important;
 	text-decoration: none !important;
+	border-radius: 6px;
 
 	&:hover {
 		background-color: color.adjust($background, $lightness: 15%, $space: hsl);
 	}
 	&.active {  // Active platform (detectOS)
 		opacity: 1.0 !important;
-	}
-	&:first-child {
-		border-radius: 6px 6px 0 0;
-	}
-	&:last-child {
-		border-radius: 0 0 6px 6px;
 	}
 }
 
@@ -197,7 +197,6 @@
 	cursor: pointer;
 	text-decoration: none !important;
 	text-align: center;
-	display: inline-block;
 	min-width: 0;
 
 	&:hover {

@@ -57,7 +57,7 @@ $navbar-color: #1a1c1e;
 }
 
 .nav-link {
-	color: color.adjust(#fff, $lightness: -10%);
+	color: #ddd;
 	text-decoration: none;
 	font-size: 1.25rem;
 	font-family: 'Asap', sans-serif;
@@ -103,7 +103,7 @@ $navbar-color: #1a1c1e;
 		height: 3px;
 		width: 100%;
 		border-radius: 3px;
-		background-color: color.adjust(#fff, $lightness: -10%);
+		background-color: #ddd;
 	}
 
 	&:hover {

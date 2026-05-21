@@ -4,20 +4,13 @@ metaTitle: GodSVG - Free and Open Source SVG editor
 ---
 {% extends "base.njk" %}
 {% from "macros.njk" import socialBulletPoint, donationPlatformProsAndConsList %}
+{% from "downloads_dropdown.njk" import downloadsDropdown %}
 
 {% block head %}
 	<script type="application/ld+json">
 		{% include "schema.njk" %}
 	</script>
 {% endblock %}
-
-{% block script %}
-	{% include "data/downloads.njk" %}
-	{% include "data/platformInfo.njk" %}
-	{% include "data/releases.njk" %}
-	{% include "data/globalData.njk" %}
-	<script src="/scripts/index.js" type="application/javascript"></script>
-{% endblock script %}
 
 {% block body %}
 	<div class="medium-gap"></div>
@@ -30,24 +23,7 @@ metaTitle: GodSVG - Free and Open Source SVG editor
 		<div class="tall-buttons-container">
 			<!-- The main download button is populated dynamically. -->
 			<div id="main-download"></div>
-			<details class="dropdown">
-				<summary class="dropbtn">
-					<span id="dropbtn-text">Downloads</span>
-					<div class="chevron" style="margin-left: 0.55rem" ></div>
-				</summary>
-				<div class="dropdown-content">
-					{% set release = releases[godsvg.version] %}
-					{% for platform in release.platforms %}
-						<a href="{{downloads()[platform]}}" platform="{{platform}}" class="download-option" download>
-							<img src="/assets/platforms_{{platform}}.svg" class="platform-icon" alt="" />
-							<div class="text-container">
-								<span class="small-text">Download for</span>
-								<span class="big-text">{{platformInfo.displayNames[platform]}}</span>
-							</div>
-						</a>
-					{% endfor %}
-				</div>
-			</details>
+			{{ downloadsDropdown(godsvg.version, releases[godsvg.version], downloads, platformInfo, { buttonText: "Downloads", buttonClass: "dropbtn dropdown-trigger", itemClass: "download-option", variant: "full"}) }}
 		</div>
 	</div>
 
@@ -172,3 +148,12 @@ metaTitle: GodSVG - Free and Open Source SVG editor
 		</div>
 	</div>
 {% endblock %}
+
+{% block script %}
+	{% include "data/downloads.njk" %}
+	{% include "data/platformInfo.njk" %}
+	{% include "data/releases.njk" %}
+	{% include "data/globalData.njk" %}
+	<script src="/scripts/index.js" type="application/javascript"></script>
+	<script src="/scripts/dropdown.js" type="application/javascript"></script>
+{% endblock script %}

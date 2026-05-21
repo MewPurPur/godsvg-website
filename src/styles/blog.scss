@@ -37,7 +37,7 @@
 	}
 
 	.date {
-		color: color.adjust(#fff, $lightness: -50%);
+		color: #888;
 		margin: 0;
 		margin-bottom: 0.3rem;
 		font-size: 0.8rem;
@@ -45,7 +45,7 @@
 
 	.title {
 		margin: 0;
-		color: color.adjust(#fff, $lightness: -10%);
+		color: #eee;
 		font-weight: 700;
 		font-size: 1.3rem;
 	}
@@ -54,7 +54,7 @@
 		line-height: 1.25;
 		margin: 0;
 		margin-top: 0.65rem;
-		color: color.adjust(#fff, $lightness: -30%);
+		color: #aaa;
 		font-weight: 400;
 		font-size: 0.95rem;
 	}

@@ -1,8 +1,7 @@
 function setDownloadButtons() {
 	const platform = detectOS();
 	const mainDownloadDiv = document.getElementById("main-download");
-	const dropBtnText = document.getElementById("dropbtn-text");
-	const dropdownContent = document.querySelector(".tall-buttons-container > * > .dropdown-content");
+	const otherDownloadsDiv = mainDownloadDiv.nextElementSibling;
 
 	if (platform) {
 		mainDownloadDiv.innerHTML = `
@@ -13,24 +12,20 @@ function setDownloadButtons() {
 				<div class="big-text">${platformInfo.displayNames[platform]}</div>
 			</div>
 		</a>`;
-		dropBtnText.innerText = "Other platforms";
-
-		// Remove the current platform
-		dropdownContent.childNodes.forEach(platformButton => {
-			if (platformButton?.tagName?.toLowerCase() != "a") return;
-			if (platformButton.getAttribute("platform") == platform) {
-				platformButton.remove();
-			}
-		});
+		const dropdownButton = otherDownloadsDiv.querySelector(".dropdown-trigger");
+		if (dropdownButton) {
+			dropdownButton.childNodes[0].textContent = "Other downloads";
+		}
 	} else {
 		mainDownloadDiv.style.display = "none";
 	}
 
-	// TODO: Close dropdown when clicking outside.
-	/*const dropdown = document.querySelector("summary.dropbtn");
-	document.addEventListener("click", function() {
-		dropdown.open = !dropdown.open;
-	});*/
+	const links = otherDownloadsDiv.querySelectorAll("[platform]");
+	links.forEach(link => {
+		if (link.getAttribute("platform") === platform) {
+			link.remove();
+		}
+	});
 }
 
 function toggleContent(tab_idx) {

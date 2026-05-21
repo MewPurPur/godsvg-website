@@ -1,4 +1,3 @@
-{% set imageCount = images.length %}
 <div class="gallery-view">
 	<script>
 		document.addEventListener("DOMContentLoaded", function() {
@@ -11,7 +10,8 @@
 			links.forEach(function(link) {
 				link.addEventListener("click", function(e) {
 					const image = this.querySelector("img");
-					modal.style.display = "block";
+					modal.style.display = "flex";
+					document.body.style.overflow = "hidden";
 
 					modalImage.src = image.src;
 					modalDescription.innerHTML = image.dataset.desc;
@@ -19,15 +19,18 @@
 			});
 			modalClose.addEventListener("click", function() {
 				modal.style.display = "none";
+				document.body.style.overflow = "";
 			});
 			window.addEventListener("keydown", function(event) {
 				if (event.key === "Escape") {
 					modal.style.display = "none";
+					document.body.style.overflow = "";
 				}
 			});
-			window.addEventListener("mousedown", function(event) {
+			window.addEventListener("pointerdown", function(event) {
 				if (event.target == modal) {
 					modal.style.display = "none";
+					document.body.style.overflow = "";
 				}
 			});
 		});
@@ -43,11 +46,15 @@
 </div>
 <div class="gallery-modal">
 	<div class="gallery-modal-content">
-		<button class="gallery-modal-close">
-			<span></span>
-			<span></span>
-		</button>
-		<img class="gallery-modal-image" src="" alt="" loading="lazy" />
-		<p class="gallery-modal-description"></p>
+		<div class="gallery-modal-title-bar">
+			<button class="gallery-modal-close">
+				<span></span>
+				<span></span>
+			</button>
+		</div>
+		<div class="gallery-modal-main-content">
+			<img class="gallery-modal-image" src="" alt="" loading="lazy" />
+			<p class="gallery-modal-description"></p>
+		</div>
 	</div>
 </div>

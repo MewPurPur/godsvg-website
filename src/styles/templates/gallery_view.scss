@@ -2,19 +2,15 @@
 @use "scss/theme" as *;
 
 .gallery-view {
-	position: relative;
 	margin: 1rem;
 	
 	.gallery-view-images {
 		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+		grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
 		gap: 15px;
 	}
 	
 	.gallery-view-image {
-		display: flex;
-		justify-content: center;
-		align-items: center;
 		overflow: hidden;
 		border: none;
 		border-radius: 6px;
@@ -43,77 +39,81 @@
 .gallery-modal {
 	display: none;
 	position: fixed;
+	inset: 0;
 	z-index: 9999;
-	left: 0;
-	top: 0;
-	width: 100%;
-	height: 100%;
 	background-color: rgba(0, 0, 0, 0.85);
+	align-items: center;
+	justify-content: center;
+}
 
-	.gallery-modal-content {
-		display: flex;
+.gallery-modal-content {
+	display: flex;
+	flex-direction: column;
+	width: min(80%, 900px);
+	max-height: 90vh;
+}
+
+.gallery-modal-title-bar {
+	background-color: color.adjust($background, $lightness: -1%);
+	padding: 0.3rem 0.6rem;
+	border-radius: 10px 10px 0 0;
+	display: flex;
+	justify-content: flex-end;
+}
+
+.gallery-modal-main-content {
+	padding: 1rem;
+	border-radius: 0 0 10px 10px;
+	background-color: color.adjust($background, $lightness: +3%);
+	min-height: 0;
+	flex: 1;
+	overflow-y: auto;
+}
+
+.gallery-modal-image {
+	width: 100%;
+	max-height: 69vh;
+	object-fit: contain;
+}
+
+.gallery-modal-description {
+	margin-top: 0.5rem;
+	margin-bottom: 0;
+}
+
+.gallery-modal-close {
+	position: relative;
+	width: 32px;
+	height: 32px;
+	background-color: transparent;
+	border-radius: 4px;
+	border: none;
+	cursor: pointer;
+	opacity: 0.8;
+
+	span {
 		position: absolute;
 		top: 50%;
 		left: 50%;
-		transform: translate(-50%, -50%);
-		flex-direction: column;
-		background-color: color.adjust($background, $lightness: +3%);
-		border-radius: 10px;
-		padding: 20px;
-		width: 80%;
-		max-width: 900px;
-		gap: 12px;
+		width: 24px;
+		height: 4px;
+		background-color: #fff;
+		border-radius: 2px;
+		transform-origin: center;
 
-		.gallery-modal-image {
-			width: 100%;
-			max-height: 70vh;
-			object-fit: contain;
+		&:first-child {
+			transform: translate(-50%, -50%) rotate(45deg);
 		}
-
-		.gallery-modal-description {
-			margin-top: 0.25rem;
-			margin-bottom: 0;
+		&:last-child {
+			transform: translate(-50%, -50%) rotate(-45deg);
 		}
+	}
 
-		.gallery-modal-close {
-			position: relative;
-			align-self: flex-end;
-			width: 32px;
-			height: 32px;
-			background-color: transparent;
-			border-radius: 4px;
-			border: none;
-			cursor: pointer;
-			opacity: 0.8;
-
-			span {
-				position: absolute;
-				top: 50%;
-				left: 50%;
-				width: 24px;
-				height: 4px;
-				background-color: #fff;
-				border-radius: 2px;
-				transform-origin: center;
-
-				&:first-child {
-					transform: translate(-50%, -50%) rotate(45deg);
-				}
-				&:last-child {
-					transform: translate(-50%, -50%) rotate(-45deg);
-				}
-				&:hover {
-					background-color: #fff;
-				}
-			}
-
-			&:hover, &:focus-visible {
-				background-color: #fff2;
-				opacity: 1.0;
-			}
-			&:active {
-				background-color: #fff4;
-			}
-		}
+	&:hover, &:focus-visible {
+		background-color: #fff2;
+		opacity: 1.0;
+	}
+	&:active {
+		background-color: #fff4;
 	}
 }
