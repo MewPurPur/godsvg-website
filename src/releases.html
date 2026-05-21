@@ -2,6 +2,7 @@
 title: Releases - GodSVG
 ---
 {% extends "base.njk" %}
+{% from "downloads_dropdown.njk" import downloadsDropdown %}
 
 {% block style %}
 	<link rel="stylesheet" type="text/css" href="/styles/releases.scss">
@@ -21,21 +22,7 @@ title: Releases - GodSVG
 					{% if ("/article/" + (version | slugify)) | pageExists %}
 						<a href="/article/{{version | slugify}}" class="btn btn-notes">Release Notes</a>
 					{% endif %}
-					<details class="dropdown">
-						<summary class="btn btn-download release-download" style="display: flex; align-items: center; justify-content: center; min-width: 7.65rem" version="{{version}}">
-							Downloads
-							<div style="margin-left: 0.4rem" class="chevron" ></div>
-						</summary>
-						<div class="dropdown-content">
-							{% for platform in release.platforms %}
-								{% set cleanPlatform = platform.split("_")[0] %}
-								<a href="{{downloads(version)[platform]}}" platform="{{platform}}" class="platform-option" download>
-									<img src="/assets/platforms_{{cleanPlatform}}.svg" alt="{{cleanPlatform}} icon" class="solo-platform-icon">
-									<div class="solo-text">{{platformInfo.displayNames[cleanPlatform]}}</div>
-								</a>
-							{% endfor %}
-						</div>
-					</details>
+					{{ downloadsDropdown(version, release, downloads, platformInfo, { variant: "compact"}) }}
 				</div>
 			</div>
 		{% endfor %}
@@ -45,5 +32,5 @@ title: Releases - GodSVG
 
 {% block script %}
 	{% include "data/downloads.njk" %}
-	<script src="/scripts/releases.js" type="application/javascript"></script>
+	<script src="/scripts/dropdown.js" type="application/javascript"></script>
 {% endblock %}
