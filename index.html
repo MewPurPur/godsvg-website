@@ -61,6 +61,7 @@ GodSVG - SVG Editor
 <script type="application/javascript">const releases={"1.0-alpha15":{date:"April 26, 2026",platforms:["windows","macos","linux","android"]},"1.0-alpha14":{date:"February 22, 2026",platforms:["windows_old","macos_old","linux_old","android_old"]},"1.0-alpha13":{date:"November 4, 2025",platforms:["windows_old","macos_old","linux_old","android_old"]},"1.0-alpha12":{date:"October 31, 2025",platforms:["windows_old","macos_old","linux_old","android_old"]},"1.0-alpha11":{date:"September 18, 2025",platforms:["windows_old","macos_old","linux_old","android_old"]},"1.0-alpha10":{date:"June 8, 2025",platforms:["windows_old","macos_old","linux_old","android_old"]},"1.0-alpha9":{date:"May 18, 2025",platforms:["windows_old","macos_old","linux_old","android_old"]},"1.0-alpha8":{date:"March 15, 2025",platforms:["windows_old","macos_old","linux_old","android_old"]},"1.0-alpha7":{date:"January 12, 2025",platforms:["windows_old","macos_old","linux_old","android_old"]},"1.0-alpha6":{date:"December 7, 2024",platforms:["windows_old","macos_old","linux_old"]},"1.0-alpha5":{date:"September 1, 2024",platforms:["windows_old","macos_old","linux_old"]},"1.0-alpha4":{date:"June 6, 2024",platforms:["windows_old","macos_old","linux_old"]},"1.0-alpha3":{date:"April 18, 2024",platforms:["windows_old","macos_old","linux_old"]},"1.0-alpha2":{date:"December 21, 2023",platforms:["windows_old","macos_old","linux_old"]},"1.0-alpha1":{date:"December 5, 2023",platforms:["windows_old","linux_old"]}}</script>
 <script type="application/javascript">const godsvg={version:"1.0-alpha15"}</script>
 <script src="/scripts/index.js" type="application/javascript"></script>
+<script src="/scripts/dropdown.js" type="application/javascript"></script>
 </head>
 <body>
 <div class="nav-container">
@@ -89,42 +90,50 @@ GodSVG - SVG Editor
 <div id="download-section">
 <div class="tall-buttons-container">
 <div id="main-download"></div>
-<details class="dropdown">
-<summary class="dropbtn">
-<span id="dropbtn-text">Downloads</span>
-<div class="chevron" style="margin-left:.55rem"></div>
-</summary>
+<div class="dropdown">
+<button type="button" class="dropbtn dropdown-trigger" aria-haspopup="true" aria-expanded="false">
+Downloads
+<span class="chevron"></span>
+</button>
 <div class="dropdown-content">
-<a href="https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha15/GodSVG_v1.0-alpha15.Windows.zip" platform="windows" class="download-option" download="">
+<a href="" platform="windows" class="download-option" download="">
 <img src="/assets/platforms_windows.svg" class="platform-icon" alt="">
 <div class="text-container">
-<span class="small-text">Download for</span>
-<span class="big-text">Windows</span>
+<div class="small-text">Download for</div>
+<div class="big-text">
+Windows
+</div>
 </div>
 </a>
-<a href="https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha15/GodSVG_v1.0-alpha15.MacOS.zip" platform="macos" class="download-option" download="">
+<a href="" platform="macos" class="download-option" download="">
 <img src="/assets/platforms_macos.svg" class="platform-icon" alt="">
 <div class="text-container">
-<span class="small-text">Download for</span>
-<span class="big-text">MacOS</span>
+<div class="small-text">Download for</div>
+<div class="big-text">
+MacOS
+</div>
 </div>
 </a>
-<a href="https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha15/GodSVG_v1.0-alpha15.Linux.AppImage.zip" platform="linux" class="download-option" download="">
+<a href="" platform="linux" class="download-option" download="">
 <img src="/assets/platforms_linux.svg" class="platform-icon" alt="">
 <div class="text-container">
-<span class="small-text">Download for</span>
-<span class="big-text">Linux</span>
+<div class="small-text">Download for</div>
+<div class="big-text">
+Linux
+</div>
 </div>
 </a>
-<a href="https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha15/GodSVG_v1.0-alpha15.Android.apk" platform="android" class="download-option" download="">
+<a href="" platform="android" class="download-option" download="">
 <img src="/assets/platforms_android.svg" class="platform-icon" alt="">
 <div class="text-container">
-<span class="small-text">Download for</span>
-<span class="big-text">Android</span>
+<div class="small-text">Download for</div>
+<div class="big-text">
+Android
+</div>
 </div>
 </a>
 </div>
-</details>
+</div>
 </div>
 </div>
 <div class="big-gap"></div>
