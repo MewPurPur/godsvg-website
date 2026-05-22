@@ -102,6 +102,7 @@ This blog post was written retroactively to document events from GodSVG's early 
 <div class="article-bottom">
 <div class="article-downloads">
 <h2>Downloads</h2>
+<p> 1.0-alpha6 </p>
 <div class="notice-panel warning">
 <div class="notice-header">WARNING:</div>
 <div class="notice-message">
@@ -134,17 +135,17 @@ This is a prerelease version. Please regularly back up your SVG files to prevent
 <div class="support-panel">
 <p class="support-panel-paragraph">Many thanks to everyone who donates to this project! Donations have allowed me to dedicate a lot more time to GodSVG while balancing other responsibilities, and without them, the project would be far behind where it is today. If you find GodSVG valuable and are able to donate, I would be very grateful!</p>
 <div class="donation-widget">
-<script>document.addEventListener("DOMContentLoaded",(function(){const e=document.getElementById("github-btn"),t=document.getElementById("kofi-btn"),n=document.getElementById("patreon-btn"),o=document.getElementById("default-message"),d=document.getElementById("github-details"),l=document.getElementById("kofi-details"),s=document.getElementById("patreon-details");function i(){o.style.display="block",d.style.display="none",l.style.display="none",s.style.display="none"}i(),e.addEventListener("mouseenter",(function(){i(),o.style.display="none",d.style.display="block"})),t.addEventListener("mouseenter",(function(){i(),o.style.display="none",l.style.display="block"})),n.addEventListener("mouseenter",(function(){i(),o.style.display="none",s.style.display="block"}));document.querySelectorAll(".donation-button").forEach((e=>{e.addEventListener("mouseleave",(function(e){const t=e.relatedTarget;t&&t.classList.contains("donation-button")||i()}))}))}))</script>
+<script>document.addEventListener("DOMContentLoaded",(function(){const e=document.getElementById("default-message");function t(){e.style.display="block",document.querySelectorAll(".platform-details").forEach((e=>{e.style.display="none"}))}t(),document.querySelectorAll(".donation-button").forEach((n=>{n.addEventListener("mouseenter",(function(){t(),e.style.display="none";const o=n.id.replace("-btn","-details"),d=document.getElementById(o);d&&(d.style.display="block")})),n.addEventListener("mouseleave",(function(e){const n=e.relatedTarget;n&&n.classList.contains("donation-button")||t()}))}))}))</script>
 <link rel="stylesheet" type="text/css" href="/styles/templates/donation_widget.css">
 <div class="donation-header">Donation platforms</div>
 <div class="donation-buttons">
-<a href="https://github.com/sponsors/MewPurPur" class="donation-button" id="github-btn">
+<a href="https://github.com/sponsors/MewPurPur" class="donation-button" id="Github Sponsors-btn">
 <img class="donation-platform-icon" src="/assets/logo_github.svg" alt="Github Sponsors logo">
 </a>
-<a href="https://ko-fi.com/mewpurpur" class="donation-button" id="kofi-btn">
+<a href="https://ko-fi.com/mewpurpur" class="donation-button" id="Ko-Fi-btn">
 <img class="donation-platform-icon" src="/assets/logo_ko_fi.svg" alt="Ko-Fi logo">
 </a>
-<a href="https://www.patreon.com/GodSVG" class="donation-button" id="patreon-btn">
+<a href="https://www.patreon.com/GodSVG" class="donation-button" id="Patreon-btn">
 <img class="donation-platform-icon" src="/assets/logo_patreon.svg" alt="Patreon logo">
 </a>
 </div>
@@ -152,25 +153,25 @@ This is a prerelease version. Please regularly back up your SVG files to prevent
 <div id="default-message" class="hover-info" style="display:block">
 Hover a platform for details
 </div>
-<div class="platform-details" id="github-details">
+<div class="platform-details" id="Github Sponsors-details">
 <div class="platform-name">Github Sponsors:</div>
 <ul class="platform-points">
 <li class="list-pro">Low extra fees</li>
 <li class="list-pro">Can donate arbitrary amounts</li>
 </ul>
 </div>
-<div class="platform-details" id="kofi-details">
+<div class="platform-details" id="Ko-Fi-details">
 <div class="platform-name">Ko-Fi:</div>
 <ul class="platform-points">
 <li class="list-pro">Low extra fees</li>
 <li class="list-pro">Can donate arbitrary amounts</li>
 </ul>
 </div>
-<div class="platform-details" id="patreon-details">
+<div class="platform-details" id="Patreon-details">
 <div class="platform-name">Patreon:</div>
 <ul class="platform-points">
 <li class="list-con">High extra fees</li>
-<li class="list-con">Can't donate arbitrary amounts</li>
+<li class="list-con">Can&#39;t donate arbitrary amounts</li>
 </ul>
 </div>
 </div>
