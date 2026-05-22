@@ -138,9 +138,9 @@ metaTitle: GodSVG - Free and Open Source SVG editor
 			<p>I have a few donation platforms set up, so you can choose the one you prefer:</p>
 			<div class="small-gap"></div>
 			<ul class="no-bullet-point">
-				{{ donationPlatformProsAndConsList("/assets/logo_github.svg", "Github logo", "https://github.com/sponsors/MewPurPur", "Github Sponsors", ["Low extra fees", "Can donate arbitrary amounts"], []) }}
-				{{ donationPlatformProsAndConsList("/assets/logo_ko_fi.svg", "Ko-Fi logo", "https://ko-fi.com/mewpurpur", "Ko-Fi", ["Low extra fees", "Can donate arbitrary amounts"], []) }}
-				{{ donationPlatformProsAndConsList("/assets/logo_patreon.svg", "Patreon logo", "https://www.patreon.com/GodSVG", "Patreon", [], ["High extra fees", "Can't donate arbitrary amounts"]) }}
+				{% for platformName, platform in donationPlatforms %}
+					{{ donationPlatformProsAndConsList(platformName, platform) }}
+				{% endfor %}
 			</ul>
 			<div class="small-gap"></div>
 			<p>On all platforms, you can donate a single time or monthly. Monthly subscriptions give some perks, such as as a role in the GodSVG discord server, if you use Discord, and a mention in the "About" of GodSVG. I'd love to give more, but I can't think of much at the moment, and I'm busy enough with GodSVG as is.</p>

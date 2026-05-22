@@ -1,0 +1,29 @@
+{
+	"Github Sponsors": {
+		"url": "https://github.com/sponsors/MewPurPur",
+		"icon": "/assets/logo_github.svg",
+		"pros": [
+			"Low extra fees",
+			"Can donate arbitrary amounts"
+		],
+		"cons": []
+	},
+	"Ko-Fi": {
+		"url": "https://ko-fi.com/mewpurpur",
+		"icon": "/assets/logo_ko_fi.svg",
+		"pros": [
+			"Low extra fees",
+			"Can donate arbitrary amounts"
+		],
+		"cons": []
+	},
+	"Patreon": {
+		"url": "https://www.patreon.com/GodSVG",
+		"icon": "/assets/logo_patreon.svg",
+		"pros": [],
+		"cons": [
+			"High extra fees",
+			"Can't donate arbitrary amounts"
+		]
+	}
+}
