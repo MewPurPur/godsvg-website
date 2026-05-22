@@ -35,15 +35,15 @@
 	</li>
 {% endmacro %}
 
-{% macro donationPlatformProsAndConsList(icon, alt, href, name, pros=[], cons=[]) %}
+{% macro donationPlatformProsAndConsList(platformName, platform) %}
 	<li>
-		<img class="img-bullet-point" src="{{icon}}" alt="{{alt}}">
-		<a href="{{href}}" class="donation-platform-link">{{name}}</a>
+		<img class="img-bullet-point" src="{{platform.icon}}" alt="{{platformName}} logo">
+		<a href="{{platform.url}}" class="donation-platform-link">{{platformName}}</a>
 		<ul class="no-bullet-point">
-			{% for pro in pros %}
+			{% for pro in platform.pros %}
 				<li class="list-pro">{{pro}}</li>
 			{% endfor %}
-			{% for con in cons %}
+			{% for con in platform.cons %}
 				<li class="list-con">{{con}}</li>
 			{% endfor %}
 		</ul>
