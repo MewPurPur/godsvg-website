@@ -10,17 +10,24 @@
 				});
 			}
 
+			function showDetails(button) {
+				hideAllDetails();
+				defaultMessage.style.display = "none";
+				const details = document.getElementById(button.id.replace("-btn", "-details"));
+				if (details) {
+					details.style.display = "block";
+				}
+			}
+
 			hideAllDetails();
 
 			document.querySelectorAll(".donation-button").forEach(button => {
 				button.addEventListener("mouseenter", function() {
-					hideAllDetails();
-					defaultMessage.style.display = "none";
-					const detailsId = button.id.replace("-btn", "-details");
-					const details = document.getElementById(detailsId);
-					if (details) {
-						details.style.display = "block";
-					}
+					showDetails(button);
+				});
+
+				button.addEventListener("focus", function() {
+					showDetails(button);
 				});
 
 				button.addEventListener("mouseleave", function(e) {
@@ -28,6 +35,10 @@
 					if (!relatedTarget || !relatedTarget.classList.contains("donation-button")) {
 						hideAllDetails();
 					}
+				});
+
+				button.addEventListener("blur", function() {
+					hideAllDetails();
 				});
 			});
 		});

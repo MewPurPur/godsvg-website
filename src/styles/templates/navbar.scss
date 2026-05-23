@@ -22,7 +22,7 @@ $navbar-color: #1a1c1e;
 .nav-logo {
 	display: flex;
 	align-items: center;
-	text-decoration: none;
+	text-decoration: none !important;
 	padding-right: 3px;
 
 	img {
@@ -31,14 +31,7 @@ $navbar-color: #1a1c1e;
 		margin-right: 0.25rem;
 	}
 
-	&:hover {
-		text-decoration: none;
-
-		.nav-logo-text {
-			color: color.adjust(#def, $lightness: -2.5%);
-		}
-	}
-	&:focus-visible .nav-logo-text {
+	&:hover .nav-logo-text, &:focus-visible .nav-logo-text {
 		color: color.adjust(#def, $lightness: -2.5%);
 	}
 }
@@ -103,18 +96,17 @@ $navbar-color: #1a1c1e;
 		height: 3px;
 		width: 100%;
 		border-radius: 3px;
-		background-color: #ddd;
+		background-color: #ccc;
 	}
 
 	&:hover {
 		background-color: color.adjust($navbar-color, $lightness: +7%);
-
-		span {
-			background-color: #fff;
-		}
 	}
 	&:active {
 		background-color: color.adjust($navbar-color, $lightness: +18%);
+	}
+	&:hover span, &:active span, &:focus-visible span {
+		background-color: #eee;
 	}
 }
 
