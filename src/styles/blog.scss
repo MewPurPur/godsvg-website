@@ -60,10 +60,14 @@
 	}
 
 	&:hover {
-		box-shadow: 0 0 8px 8px rgba(255, 255, 255, 0.04);
+		box-shadow: 0 0 8px 8px #fff1;
 	}
 	&:has(a:focus-visible) {
 		outline: 2px solid $focus;
+
+		.blog-thumbnail {
+			opacity: 1.0;
+		}
 	}
 	&:hover .blog-thumbnail {
 		opacity: 1.0;
@@ -91,7 +95,6 @@
 
 #blog-feed-btn {
 	$bg: #d06915;
-	$size: 1rem;
 
 	position: absolute;
 	margin-left: 1rem;
@@ -106,8 +109,8 @@
 
 	img {
 		margin: auto;
-		width: $size;
-		height: $size;
+		width: 1rem;
+		height: 1rem;
 	}
 
 	&:hover {

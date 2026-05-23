@@ -156,8 +156,8 @@ $content-width: min($max-width, 100% - $padding-size * 2);
 }
 
 .article-switch-content {
-	display: flex;
 	position: relative;
+	display: block;
 	overflow: hidden;
 
 	img {
@@ -165,6 +165,16 @@ $content-width: min($max-width, 100% - $padding-size * 2);
 		height: auto;
 		display: block;
 		box-shadow: none;
+		position: absolute;
+		inset: 0;
+		opacity: 0;
+		pointer-events: none;
+	}
+
+	img.active {
+		opacity: 1.0;
+		position: relative;
+		pointer-events: auto;
 	}
 }
 

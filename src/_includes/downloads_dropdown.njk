@@ -16,7 +16,7 @@
 			{% if platform != omittedPlatform %}
 				{% set cleanPlatform = platform.split("_")[0] %}
 
-				<a href="{{downloads[version][platform]}}" platform="{{platform}}" class="{{itemClass}}" download>
+				<a href="{{downloads[platform]}}" platform="{{platform}}" class="{{itemClass}}" download>
 					<img src="/assets/platforms_{{cleanPlatform}}.svg" class="{% if variant == 'compact' %}solo-platform-icon{% else %}platform-icon{% endif %}" alt="">
 					{% if variant == "compact" %}
 						<div class="solo-text">
