@@ -28,9 +28,9 @@
 	<meta property="twitter:card" content="summary_large_image" />
 {% endmacro %}
 
-{% macro socialBulletPoint(icon, alt) %}
+{% macro socialBulletPoint(icon, platformName) %}
 	<li class="no-bullet-point">
-		<img class="img-bullet-point" src="{{icon}}" alt="{{alt}}" loading="lazy" />
+		<img class="img-bullet-point" src="{{icon}}" alt="{{platformName}} logo" loading="lazy" />
 		{{ caller() }}
 	</li>
 {% endmacro %}
