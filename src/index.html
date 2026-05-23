@@ -23,7 +23,7 @@ metaTitle: GodSVG - Free and Open Source SVG editor
 		<div class="tall-buttons-container">
 			<!-- The main download button is populated dynamically. -->
 			<div id="main-download"></div>
-			{{ downloadsDropdown(godsvg.version, releases[godsvg.version], downloads, platformInfo, { buttonText: "Downloads", buttonClass: "dropbtn dropdown-trigger", itemClass: "download-option", variant: "full"}) }}
+			{{ downloadsDropdown(godsvg.version, releases[godsvg.version], downloads(godsvg.version), platformInfo, { buttonText: "Downloads", buttonClass: "dropbtn dropdown-trigger", itemClass: "download-option", variant: "full"}) }}
 		</div>
 	</div>
 

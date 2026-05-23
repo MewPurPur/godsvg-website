@@ -130,14 +130,14 @@ export default async function(eleventyConfig) {
 				const img1 = document.getElementById('switch-img1-' + id);
 				const img2 = document.getElementById('switch-img2-' + id);
 
-				if (img1.style.display === 'none') {
-					img1.style.display = '';
-					img2.style.display = 'none';
-					title.textContent = '${label1}';
-				} else {
-					img1.style.display = 'none';
-					img2.style.display = '';
+				if (img1.classList.contains('active')) {
+					img1.classList.remove('active');
+					img2.classList.add('active');
 					title.textContent = '${label2}';
+				} else {
+					img2.classList.remove('active');
+					img1.classList.add('active');
+					title.textContent = '${label1}';
 				}
 			};
 		}
@@ -149,8 +149,8 @@ export default async function(eleventyConfig) {
 					<button class="article-switch-toggle" onclick="toggleSwitch('${uniqueId}')">Switch</button>
 				</div>
 				<div class="article-switch-content">
-					<img id="switch-img1-${uniqueId}" src="/assets/blog/${slug}/${img1}" alt="${alt1}" />
-					<img id="switch-img2-${uniqueId}" src="/assets/blog/${slug}/${img2}" alt="${alt2}" loading="lazy" style="display: none;" />
+					<img id="switch-img1-${uniqueId}" class="active" src="/assets/blog/${slug}/${img1}" alt="${alt1}" />
+					<img id="switch-img2-${uniqueId}" src="/assets/blog/${slug}/${img2}" alt="${alt2}" loading="lazy" />
 				</div>
 			</div>
 		</div>
@@ -171,14 +171,14 @@ export default async function(eleventyConfig) {
 				const img1 = document.getElementById('switch-img1-' + id);
 				const img2 = document.getElementById('switch-img2-' + id);
 
-				if (img1.style.display === 'none') {
-					img1.style.display = '';
-					img2.style.display = 'none';
+				if (img1.classList.contains('active')) {
+					img1.classList.remove('active');
+					img2.classList.add('active');
 					title.textContent = '${label2}';
 				} else {
-					img1.style.display = 'none';
-					img2.style.display = '';
-					title.textContent = '${label3}';
+					img2.classList.remove('active');
+					img1.classList.add('active');
+					title.textContent = '${label1}';
 				}
 			};
 		}
@@ -196,8 +196,8 @@ export default async function(eleventyConfig) {
 							<button class="article-switch-toggle" onclick="toggleSwitch('${uniqueId}')">Switch</button>
 						</div>
 						<div class="article-switch-content">
-							<img id="switch-img1-${uniqueId}" src="/assets/blog/${slug}/${img2}" alt="${alt2}" />
-							<img id="switch-img2-${uniqueId}" src="/assets/blog/${slug}/${img3}" alt="${alt3}" loading="lazy" style="display: none;" />
+							<img id="switch-img1-${uniqueId}" class="active" src="/assets/blog/${slug}/${img1}" alt="${alt1}" />
+							<img id="switch-img2-${uniqueId}" src="/assets/blog/${slug}/${img2}" alt="${alt2}" loading="lazy" />
 						</div>
 					</div>
 				</div>

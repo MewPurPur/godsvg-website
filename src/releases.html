@@ -22,7 +22,7 @@ title: Releases - GodSVG
 					{% if ("/article/" + (version | slugify)) | pageExists %}
 						<a href="/article/{{version | slugify}}" class="btn btn-notes">Release Notes</a>
 					{% endif %}
-					{{ downloadsDropdown(version, release, downloads, platformInfo, { variant: "compact"}) }}
+					{{ downloadsDropdown(version, release, downloads(version), platformInfo, { variant: "compact"}) }}
 				</div>
 			</div>
 		{% endfor %}
