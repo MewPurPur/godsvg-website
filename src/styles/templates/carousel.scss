@@ -58,7 +58,7 @@
 	top: 50%;
 	transform: translateY(-50%);
 	padding: 1rem 0.8rem;
-	background-color: rgba(0, 0, 0, 0.6);
+	background-color: #0008;
 	border: none;
 	cursor: pointer;
 	display: flex;
@@ -68,9 +68,16 @@
 		opacity: 0.8;
 	}
 
-	&:hover {
-		background-color: rgba(15, 15, 15, 0.8);
+	&:hover, &:focus-visible {
+		background-color: #000a;
 		
+		img {
+			opacity: 0.9;
+		}
+	}
+	&.active {
+		background-color: #000b;
+
 		img {
 			opacity: 1.0;
 		}
@@ -94,7 +101,7 @@
 	display: flex;
 	gap: 8px;
 	pointer-events: auto;
-	background-color: rgba(0, 0, 0, 0.5);
+	background-color: #0008;
 	padding: 0.5rem 0.9rem;
 	border-radius: 15px;
 }
@@ -103,14 +110,14 @@
 	width: 12px;
 	height: 12px;
 	border-radius: 50%;
-	background-color: rgba(255, 255, 255, 0.4);
+	background-color: #fff6;
 	cursor: pointer;
 
 	&:hover {
-		background-color: rgba(255, 255, 255, 0.5);
+		background-color: #fff8;
 	}
 	&.active {
 		cursor: auto;
-		background-color: rgba(255, 255, 255, 0.9);
+		background-color: #fffd;
 	}
 }
