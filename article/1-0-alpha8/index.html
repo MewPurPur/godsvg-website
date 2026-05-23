@@ -81,7 +81,7 @@ This blog post was written retroactively to document events from GodSVG's early 
 <p>GodSVG used to be unusable for some Windows users because of a warning. This has been addressed in this prerelease.</p>
 <p>UI Scale has been reworked into a single setting that only allows the valid options. The UI is now prevented from getting too small. This was a common problem, especially on Web, and unavoidable on itch.io with the old implementation. There is now an &quot;Auto&quot; option (same as &quot;Auto UI Scale&quot; used with the &quot;1.0&quot; UI scale before), a range of appropriate hard-coded values that should be safe, and a &quot;Max&quot; option. For example, if the maximum determined UI scale is 145%, you can now use that instead of being limited to 125%. Custom UI scale will be implemented in the future.</p>
 <p>GodSVG is built in Godot Engine, which recently released a new 4.4 version, and we've moved to it. This resulted in significant performance improvements (some of them thanks to my own contributions!). It also updated the SVG renderer (ThorVG), resulting in significant fixes and improvements to SVG rendering and rasterizing.</p>
-<script>window.toggleSwitch||(window.toggleSwitch=function(t){const e=document.getElementById("switch-title-"+t),n=document.getElementById("switch-img1-"+t),i=document.getElementById("switch-img2-"+t);"none"===n.style.display?(n.style.display="",i.style.display="none",e.textContent="Before"):(n.style.display="none",i.style.display="",e.textContent="After")})</script>
+<script>window.toggleSwitch||(window.toggleSwitch=function(t){const e=document.getElementById("switch-title-"+t),i=document.getElementById("switch-img1-"+t),c=document.getElementById("switch-img2-"+t);i.classList.contains("active")?(i.classList.remove("active"),c.classList.add("active"),e.textContent="Before"):(c.classList.remove("active"),i.classList.add("active"),e.textContent="Original")})</script>
 <div class="article-compare">
 <div class="article-compare-content">
 <div class="article-compare-side">
@@ -91,12 +91,12 @@ This blog post was written retroactively to document events from GodSVG's early 
 <div class="article-switch" style="margin:0">
 <div class="article-switch-inner">
 <div class="article-switch-header">
-<div class="article-switch-title" id="switch-title-ed2z66j3r">Before</div>
-<button class="article-switch-toggle" onclick='toggleSwitch("ed2z66j3r")'>Switch</button>
+<div class="article-switch-title" id="switch-title-9trxcmgh1">Before</div>
+<button class="article-switch-toggle" onclick='toggleSwitch("9trxcmgh1")'>Switch</button>
 </div>
 <div class="article-switch-content">
-<img id="switch-img1-ed2z66j3r" src="/assets/blog/1-0-alpha8/raster_before.webp" alt="Image of the old rasterization">
-<img id="switch-img2-ed2z66j3r" src="/assets/blog/1-0-alpha8/raster_after.webp" alt="Image of the new rasterization" loading="lazy" style="display:none">
+<img id="switch-img1-9trxcmgh1" class="active" src="/assets/blog/1-0-alpha8/raster_original.webp" alt="Image of an SVG without rasterization">
+<img id="switch-img2-9trxcmgh1" src="/assets/blog/1-0-alpha8/raster_before.webp" alt="Image of the old rasterization" loading="lazy">
 </div>
 </div>
 </div>
@@ -208,7 +208,7 @@ This is a prerelease version. Please regularly back up your SVG files to prevent
 <div class="support-panel">
 <p class="support-panel-paragraph">Many thanks to everyone who donates to this project! Donations have allowed me to dedicate a lot more time to GodSVG while balancing other responsibilities, and without them, the project would be far behind where it is today. If you find GodSVG valuable and are able to donate, I would be very grateful!</p>
 <div class="donation-widget">
-<script>document.addEventListener("DOMContentLoaded",(function(){const e=document.getElementById("default-message");function t(){e.style.display="block",document.querySelectorAll(".platform-details").forEach((e=>{e.style.display="none"}))}t(),document.querySelectorAll(".donation-button").forEach((n=>{n.addEventListener("mouseenter",(function(){t(),e.style.display="none";const o=n.id.replace("-btn","-details"),d=document.getElementById(o);d&&(d.style.display="block")})),n.addEventListener("mouseleave",(function(e){const n=e.relatedTarget;n&&n.classList.contains("donation-button")||t()}))}))}))</script>
+<script>document.addEventListener("DOMContentLoaded",(function(){const e=document.getElementById("default-message");function t(){e.style.display="block",document.querySelectorAll(".platform-details").forEach((e=>{e.style.display="none"}))}function n(n){t(),e.style.display="none";const o=document.getElementById(n.id.replace("-btn","-details"));o&&(o.style.display="block")}t(),document.querySelectorAll(".donation-button").forEach((e=>{e.addEventListener("mouseenter",(function(){n(e)})),e.addEventListener("focus",(function(){n(e)})),e.addEventListener("mouseleave",(function(e){const n=e.relatedTarget;n&&n.classList.contains("donation-button")||t()})),e.addEventListener("blur",(function(){t()}))}))}))</script>
 <link rel="stylesheet" type="text/css" href="/styles/templates/donation_widget.css">
 <div class="donation-header">Donation platforms</div>
 <div class="donation-buttons">

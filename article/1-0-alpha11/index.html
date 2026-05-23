@@ -64,16 +64,16 @@ Sep 18, 2025
 <p>The 11th alpha of GodSVG introduces themes, with &quot;Dark&quot;, &quot;Light&quot;, and &quot;Black (OLED)&quot; presets. There are also many new options, enhancements, and major bugfixes.</p>
 <h2>Configurable themes</h2>
 <p>GodSVG can now be themed through two new settings, &quot;Base color&quot; and &quot;Accent color&quot;. They craft a theme for the whole application. The old default theme is now called the dark theme. Defining themes with just two colors required major changes to the theming logic, so GodSVG's looks have changed slightly across the board, even in the dark theme. In my opinion these changes are all for the better, but you can see a comparison here:</p>
-<script>window.toggleSwitch||(window.toggleSwitch=function(t){const e=document.getElementById("switch-title-"+t),n=document.getElementById("switch-img1-"+t),l=document.getElementById("switch-img2-"+t);"none"===n.style.display?(n.style.display="",l.style.display="none",e.textContent="Old theme"):(n.style.display="none",l.style.display="",e.textContent="New dark theme")})</script>
+<script>window.toggleSwitch||(window.toggleSwitch=function(t){const e=document.getElementById("switch-title-"+t),i=document.getElementById("switch-img1-"+t),c=document.getElementById("switch-img2-"+t);i.classList.contains("active")?(i.classList.remove("active"),c.classList.add("active"),e.textContent="New dark theme"):(c.classList.remove("active"),i.classList.add("active"),e.textContent="Old theme")})</script>
 <div class="article-switch">
 <div class="article-switch-inner">
 <div class="article-switch-header">
-<div class="article-switch-title" id="switch-title-bb9ee4i03">Old theme</div>
-<button class="article-switch-toggle" onclick='toggleSwitch("bb9ee4i03")'>Switch</button>
+<div class="article-switch-title" id="switch-title-0okayk59q">Old theme</div>
+<button class="article-switch-toggle" onclick='toggleSwitch("0okayk59q")'>Switch</button>
 </div>
 <div class="article-switch-content">
-<img id="switch-img1-bb9ee4i03" src="/assets/blog/1-0-alpha11/old_theme.webp" alt="Image of the old default theme">
-<img id="switch-img2-bb9ee4i03" src="/assets/blog/1-0-alpha11/new_dark_theme.webp" alt="Image of the new dark theme" loading="lazy" style="display:none">
+<img id="switch-img1-0okayk59q" class="active" src="/assets/blog/1-0-alpha11/old_theme.webp" alt="Image of the old default theme">
+<img id="switch-img2-0okayk59q" src="/assets/blog/1-0-alpha11/new_dark_theme.webp" alt="Image of the new dark theme" loading="lazy">
 </div>
 </div>
 </div>
@@ -216,7 +216,7 @@ This is a prerelease version. Please regularly back up your SVG files to prevent
 <div class="support-panel">
 <p class="support-panel-paragraph">Many thanks to everyone who donates to this project! Donations have allowed me to dedicate a lot more time to GodSVG while balancing other responsibilities, and without them, the project would be far behind where it is today. If you find GodSVG valuable and are able to donate, I would be very grateful!</p>
 <div class="donation-widget">
-<script>document.addEventListener("DOMContentLoaded",(function(){const e=document.getElementById("default-message");function t(){e.style.display="block",document.querySelectorAll(".platform-details").forEach((e=>{e.style.display="none"}))}t(),document.querySelectorAll(".donation-button").forEach((n=>{n.addEventListener("mouseenter",(function(){t(),e.style.display="none";const o=n.id.replace("-btn","-details"),d=document.getElementById(o);d&&(d.style.display="block")})),n.addEventListener("mouseleave",(function(e){const n=e.relatedTarget;n&&n.classList.contains("donation-button")||t()}))}))}))</script>
+<script>document.addEventListener("DOMContentLoaded",(function(){const e=document.getElementById("default-message");function t(){e.style.display="block",document.querySelectorAll(".platform-details").forEach((e=>{e.style.display="none"}))}function n(n){t(),e.style.display="none";const o=document.getElementById(n.id.replace("-btn","-details"));o&&(o.style.display="block")}t(),document.querySelectorAll(".donation-button").forEach((e=>{e.addEventListener("mouseenter",(function(){n(e)})),e.addEventListener("focus",(function(){n(e)})),e.addEventListener("mouseleave",(function(e){const n=e.relatedTarget;n&&n.classList.contains("donation-button")||t()})),e.addEventListener("blur",(function(){t()}))}))}))</script>
 <link rel="stylesheet" type="text/css" href="/styles/templates/donation_widget.css">
 <div class="donation-header">Donation platforms</div>
 <div class="donation-buttons">
