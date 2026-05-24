@@ -22,7 +22,7 @@
 }
 
 .btn-download {
-	background-color: #2e6cb8;
+	background-color: $button;
 	color: #fff;
 	min-width: 10rem;
 	border: none;
@@ -32,7 +32,10 @@
 	gap: 0.45rem;
 
 	&:hover {
-		background-color: #3579cf;
+		background-color: $button_hover;
+	}
+	&:active {
+		background-color: $button_pressed;
 	}
 	&:focus-visible {
 		outline: 2px solid $focus;
@@ -136,7 +139,7 @@
 	align-items: center;
 	justify-content: center;
 	background-color: $button;
-	color: #fff;
+	color: #eee;
 	border-radius: 5px;
 	padding: 0.5rem;
 	text-decoration: none;
@@ -155,6 +158,10 @@
 		color: #fff;
 		background-color: $button_hover;
 		text-decoration: none;
+	}
+	&:active {
+		color: #fff;
+		background-color: $button_pressed;
 	}
 }
 
@@ -200,17 +207,24 @@
 	min-width: 0;
 
 	&:hover {
-		color: white;
+		color: #fff;
 	}
 }
 
 .btn-notes {
 	background-color: color.adjust($background, $lightness: 15%);
-	color: #fff;
+	color: #eee;
 
 	&:hover {
 		color: #fff;
 		background-color: color.adjust($background, $lightness: 20%);
+	}
+	&:active {
+		color: #fff;
+		background-color: color.adjust($background, $lightness: 25%);
+	}
+	&:focus-visible {
+		color: #fff;
 	}
 }
 

@@ -29,7 +29,7 @@
 			leftArrow.addEventListener("click", goPrev);
 			rightArrow.addEventListener("click", goNext);
 			dots.forEach(dot => {
-				dot.addEventListener("click", function() {
+				dot.addEventListener("pointerdown", function() {
 					updateCarousel(Number(this.getAttribute("data-index")));
 				});
 			});
