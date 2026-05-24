@@ -155,9 +155,9 @@ Android
 </div>
 <div class="content">
 <div class="tab-container" id="tab-container">
-<button class="tab selected" onclick="toggleContent(0)">Features</button>
-<button class="tab" onclick="toggleContent(1)">FAQ</button>
-<button class="tab donate-tab" onclick="toggleContent(2)">Donate</button>
+<button class="tab selected" onpointerdown="toggleContent(0)">Features</button>
+<button class="tab" onpointerdown="toggleContent(1)">FAQ</button>
+<button class="tab donate-tab" onpointerdown="toggleContent(2)">Donate</button>
 </div>
 <div id="features-content" style="display:block">
 <h2>A structured SVG editor</h2>
@@ -169,7 +169,7 @@ Android
 </ul>
 <div class="small-gap"></div>
 <div class="carousel">
-<script>document.addEventListener("DOMContentLoaded",(function(){const e=document.querySelectorAll(".carousel-image"),t=document.querySelectorAll(".carousel-dot"),c=document.querySelector(".carousel-arrow-left"),n=document.querySelector(".carousel-arrow-right");let o=0;const s=e.length;function r(c){e[o].classList.remove("active"),t[o].classList.remove("active"),o=c,e[o].classList.add("active"),t[o].classList.add("active")}function a(){r((o+1)%s)}function i(){r((o+s-1)%s)}c.addEventListener("click",i),n.addEventListener("click",a),t.forEach((e=>{e.addEventListener("click",(function(){r(Number(this.getAttribute("data-index")))}))}));let d=0,u=0;const l=document.querySelector(".carousel-container");l.addEventListener("touchstart",(function(e){d=e.changedTouches[0].screenX}),{passive:!0}),l.addEventListener("touchend",(function(e){u=e.changedTouches[0].screenX,u<d-50?a():u>d+50&&i()}),{passive:!0})}))</script>
+<script>document.addEventListener("DOMContentLoaded",(function(){const e=document.querySelectorAll(".carousel-image"),t=document.querySelectorAll(".carousel-dot"),c=document.querySelector(".carousel-arrow-left"),n=document.querySelector(".carousel-arrow-right");let o=0;const r=e.length;function s(c){e[o].classList.remove("active"),t[o].classList.remove("active"),o=c,e[o].classList.add("active"),t[o].classList.add("active")}function a(){s((o+1)%r)}function i(){s((o+r-1)%r)}c.addEventListener("click",i),n.addEventListener("click",a),t.forEach((e=>{e.addEventListener("pointerdown",(function(){s(Number(this.getAttribute("data-index")))}))}));let d=0,u=0;const l=document.querySelector(".carousel-container");l.addEventListener("touchstart",(function(e){d=e.changedTouches[0].screenX}),{passive:!0}),l.addEventListener("touchend",(function(e){u=e.changedTouches[0].screenX,u<d-50?a():u>d+50&&i()}),{passive:!0})}))</script>
 <link rel="stylesheet" type="text/css" href="/styles/templates/carousel.css">
 <p>Hover to navigate through screenshots.</p>
 <div class="carousel-images">
