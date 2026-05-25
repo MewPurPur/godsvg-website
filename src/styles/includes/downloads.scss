@@ -23,7 +23,7 @@
 
 .btn-download {
 	background-color: $button;
-	color: #fff;
+	color: #fffe;
 	min-width: 10rem;
 	border: none;
 	display: flex;
@@ -41,11 +41,18 @@
 		outline: 2px solid $focus;
 		outline-offset: -1px;
 	}
+	&:hover, &:focus-visible, &:active {
+		color: #fff;
+
+		chevron {
+			opacity: 1.0;
+		}
+	}
 }
 
 .dropbtn {
 	background-color: #6666;
-	color: #ddd;
+	color: #fffc;
 	font-size: 1.05rem;
 	border: none;
 	cursor: pointer;
@@ -63,6 +70,13 @@
 		outline: 2px solid $focus;
 		outline-offset: -1px;
 	}
+	&:hover, &:focus-visible {
+		color: #fffe;
+
+		chevron {
+			opacity: 1.0;
+		}
+	}
 }
 
 .dropdown-content {
@@ -70,14 +84,14 @@
 	position: absolute;
 	background-color: #333;
 	width: 100%;
-	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	box-shadow: 0px 8px 16px 0px #0003;
 	z-index: 1;
 	right: 0;
 	overflow: hidden;
 	border-radius: 5px;
 
 	a {
-		color: white;
+		color: #fff;
 		padding: 0.5rem 0.6rem;
 		text-decoration: none !important;
 		display: flex;
@@ -115,7 +129,7 @@
 		}
 
 		&:hover {
-			color: white;
+			color: #fff;
 			background-color: #ffffff1a;
 		}
 		&:focus-visible {
@@ -139,7 +153,7 @@
 	align-items: center;
 	justify-content: center;
 	background-color: $button;
-	color: #eee;
+	color: #fffe;
 	border-radius: 5px;
 	padding: 0.5rem;
 	text-decoration: none;
@@ -213,17 +227,15 @@
 
 .btn-notes {
 	background-color: color.adjust($background, $lightness: 15%);
-	color: #eee;
+	color: #fffe;
 
 	&:hover {
-		color: #fff;
 		background-color: color.adjust($background, $lightness: 20%);
 	}
 	&:active {
-		color: #fff;
 		background-color: color.adjust($background, $lightness: 25%);
 	}
-	&:focus-visible {
+	&:hover, &:active, &:focus-visible {
 		color: #fff;
 	}
 }

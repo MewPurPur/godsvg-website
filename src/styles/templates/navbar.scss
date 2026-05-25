@@ -50,7 +50,7 @@ $navbar-color: #1a1c1e;
 }
 
 .nav-link {
-	color: #ddd;
+	color: #fffd;
 	text-decoration: none;
 	font-size: 1.25rem;
 	font-family: 'Asap', sans-serif;
@@ -58,7 +58,7 @@ $navbar-color: #1a1c1e;
 	border-radius: 4px;
 
 	&:hover {
-		background-color: rgba(255, 255, 255, 0.05);
+		background-color: #fff1;
 		color: #fff;
 		text-decoration: none;
 	}
@@ -68,7 +68,7 @@ $navbar-color: #1a1c1e;
 	}
 	&.active {  // Current link
 		color: #fff;
-		background-color: rgba(255, 255, 255, 0.15);
+		background-color: #fff2;
 	}
 	&[href~="/editor"] {
 		background-color: color.adjust($accent, $lightness: -20%);
@@ -96,7 +96,7 @@ $navbar-color: #1a1c1e;
 		height: 3px;
 		width: 100%;
 		border-radius: 3px;
-		background-color: #ccc;
+		background-color: #fffb;
 	}
 
 	&:hover {
@@ -106,7 +106,7 @@ $navbar-color: #1a1c1e;
 		background-color: color.adjust($navbar-color, $lightness: +18%);
 	}
 	&:hover span, &:active span, &:focus-visible span {
-		background-color: #eee;
+		background-color: #fffe;
 	}
 }
 
@@ -119,7 +119,7 @@ $navbar-color: #1a1c1e;
 		flex-direction: column;
 		background-color: #25292e;
 		border-radius: 4px;
-		box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.2);
+		box-shadow: 0px 0px 16px 0px #0003;
 		z-index: 1;
 		margin: 0;
 		gap: 0;
