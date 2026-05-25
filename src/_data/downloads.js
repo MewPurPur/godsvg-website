@@ -6,16 +6,16 @@ import path from "node:path"
 export default function(configData) {
 	return function(version=null) {
 		if (version == null) version = configData.godsvg.version;
-		const base = `https://github.com/MewPurPur/GodSVG/releases/download/${version != "latest" ? "v"+version : version}`;
+		const base = `https://github.com/MewPurPur/GodSVG/releases/download/${version != "latest" ? ("v" + version) : version}`;
 		const platformToDownload = {
 			android_old: `${base}/GodSVG.Android.apk`,
 			linux_old: `${base}/GodSVG.Linux.zip`,
 			macos_old: `${base}/GodSVG.MacOS.zip`,
 			windows_old: `${base}/GodSVG.Windows.zip`,
-			android: `${base}/GodSVG_v`+version+`.Android.apk`,
-			linux: `${base}/GodSVG_v`+version+`.Linux.AppImage.zip`,
-			macos: `${base}/GodSVG_v`+version+`.MacOS.zip`,
-			windows: `${base}/GodSVG_v`+version+`.Windows.zip`,
+			android: `${base}/GodSVG_v${version}.Android.apk`,
+			linux: `${base}/GodSVG_v${version}.Linux.AppImage.zip`,
+			macos: `${base}/GodSVG_v${version}.MacOS.zip`,
+			windows: `${base}/GodSVG_v${version}.Windows.zip`,
 		}
 
 		// Reading release data.
