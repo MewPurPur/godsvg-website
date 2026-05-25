@@ -81,7 +81,7 @@ This blog post was written retroactively to document events from GodSVG's early 
 <p>GodSVG used to be unusable for some Windows users because of a warning. This has been addressed in this prerelease.</p>
 <p>UI Scale has been reworked into a single setting that only allows the valid options. The UI is now prevented from getting too small. This was a common problem, especially on Web, and unavoidable on itch.io with the old implementation. There is now an &quot;Auto&quot; option (same as &quot;Auto UI Scale&quot; used with the &quot;1.0&quot; UI scale before), a range of appropriate hard-coded values that should be safe, and a &quot;Max&quot; option. For example, if the maximum determined UI scale is 145%, you can now use that instead of being limited to 125%. Custom UI scale will be implemented in the future.</p>
 <p>GodSVG is built in Godot Engine, which recently released a new 4.4 version, and we've moved to it. This resulted in significant performance improvements (some of them thanks to my own contributions!). It also updated the SVG renderer (ThorVG), resulting in significant fixes and improvements to SVG rendering and rasterizing.</p>
-<script>window.toggleSwitch||(window.toggleSwitch=function(t){const e=document.getElementById("switch-title-"+t),i=document.getElementById("switch-img1-"+t),c=document.getElementById("switch-img2-"+t);i.classList.contains("active")?(i.classList.remove("active"),c.classList.add("active"),e.textContent="Before"):(c.classList.remove("active"),i.classList.add("active"),e.textContent="Original")})</script>
+<script>window.toggleSwitch||(window.toggleSwitch=function(t){const e=document.getElementById("switch-title-"+t),i=document.getElementById("switch-img2-"+t),c=document.getElementById("switch-img3-"+t);i.classList.contains("active")?(i.classList.remove("active"),c.classList.add("active"),e.textContent="After"):(c.classList.remove("active"),i.classList.add("active"),e.textContent="Before")})</script>
 <div class="article-compare">
 <div class="article-compare-content">
 <div class="article-compare-side">
@@ -91,12 +91,12 @@ This blog post was written retroactively to document events from GodSVG's early 
 <div class="article-switch" style="margin:0">
 <div class="article-switch-inner">
 <div class="article-switch-header">
-<div class="article-switch-title" id="switch-title-umb3xgkmg">Before</div>
-<button class="article-switch-toggle" onclick='toggleSwitch("umb3xgkmg")'>Switch</button>
+<div class="article-switch-title" id="switch-title-g8t9owqs3">Before</div>
+<button class="article-switch-toggle" onclick='toggleSwitch("g8t9owqs3")'>Switch</button>
 </div>
 <div class="article-switch-content">
-<img id="switch-img1-umb3xgkmg" class="active" src="/assets/blog/1-0-alpha8/raster_original.webp" alt="Image of an SVG without rasterization">
-<img id="switch-img2-umb3xgkmg" src="/assets/blog/1-0-alpha8/raster_before.webp" alt="Image of the old rasterization" loading="lazy">
+<img id="switch-img2-g8t9owqs3" class="active" src="/assets/blog/1-0-alpha8/raster_before.webp" alt="Image of the old rasterization">
+<img id="switch-img3-g8t9owqs3" src="/assets/blog/1-0-alpha8/raster_after.webp" alt="Image of the new rasterization" loading="lazy">
 </div>
 </div>
 </div>

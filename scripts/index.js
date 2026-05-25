@@ -1,33 +1,3 @@
-function setDownloadButtons() {
-	const platform = detectOS();
-	const mainDownloadDiv = document.getElementById("main-download");
-	const otherDownloadsDiv = mainDownloadDiv.nextElementSibling;
-
-	if (platform) {
-		mainDownloadDiv.innerHTML = `
-		<a href="${downloads[godsvg.version][platform]}" class="download-button">
-			<img src="assets/platforms_${platform}.svg" class="platform-icon" alt="${platform} logo">
-			<div>
-				<div class="small-text">Download for</div>
-				<div class="big-text">${platformInfo.displayNames[platform]}</div>
-			</div>
-		</a>`;
-		const dropdownButton = otherDownloadsDiv.querySelector(".dropdown-trigger");
-		if (dropdownButton) {
-			dropdownButton.childNodes[0].textContent = "Other downloads";
-		}
-	} else {
-		mainDownloadDiv.style.display = "none";
-	}
-
-	const links = otherDownloadsDiv.querySelectorAll("[platform]");
-	links.forEach(link => {
-		if (link.getAttribute("platform") === platform) {
-			link.remove();
-		}
-	});
-}
-
 function toggleContent(tab_idx) {
 	const content = [
 		document.getElementById("features-content"),
@@ -61,9 +31,49 @@ function activateTab(tabIndex) {
 	}
 }
 
-// Initialize when DOM is loaded.
 document.addEventListener("DOMContentLoaded", function() {
-	setDownloadButtons();
+	// Set download buttons.
+	const platform = detectOS();
+	const mainDownloadDiv = document.getElementById("main-download");
+	const otherDownloadsDiv = mainDownloadDiv.nextElementSibling;
+
+	if (platform) {
+		mainDownloadDiv.innerHTML = `
+		<a href="${downloads[godsvg.version][platform]}" class="download-button">
+			<img src="assets/platforms_${platform}.svg" class="platform-icon" alt="${platform} logo">
+			<div>
+				<div class="small-text">Download for</div>
+				<div class="big-text">${platformInfo.displayNames[platform]}</div>
+			</div>
+		</a>`;
+		const dropdownButton = otherDownloadsDiv.querySelector(".dropdown-trigger");
+		if (dropdownButton) {
+			dropdownButton.childNodes[0].textContent = "Other downloads";
+		}
+	} else {
+		mainDownloadDiv.style.display = "none";
+	}
+
+	const links = otherDownloadsDiv.querySelectorAll("[platform]");
+	links.forEach(link => {
+		if (link.getAttribute("platform") === platform) {
+			link.remove();
+		}
+	});
+
+	// Register tab events.
+	const tabs = document.querySelectorAll(".tab");
+	tabs.forEach((tab) => {
+		const index = Number(tab.dataset.tab);
+		tab.addEventListener("mousedown", (e) => {
+			toggleContent(index);
+		});
+		tab.addEventListener("click", (e) => {
+			toggleContent(index);
+		});
+	});
+
+	// Scroll to hash.
 	const hash = window.location.hash.toLowerCase();
 	if (hash === "#features") {
 		activateTab(0);
