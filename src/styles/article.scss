@@ -51,8 +51,7 @@ $content-width: min($max-width, 100% - $padding-size * 2);
 }
 
 .article-image, .article-video {
-	margin-top: 0.65rem;
-	margin-bottom: 0.65rem;
+	margin: 0.65rem 0;
 	text-align: center;
 
 	img, video {
