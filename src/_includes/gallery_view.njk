@@ -7,30 +7,43 @@
 			const modalImage = document.querySelector(".gallery-modal-image")
 			const modalDescription = document.querySelector(".gallery-modal-description")
 
+			function closeModal() {
+				modal.style.display = "none";
+				document.body.style.overflow = "";
+			}
+
 			links.forEach(function(link) {
 				link.addEventListener("click", function(e) {
 					const image = this.querySelector("img");
 					modal.style.display = "flex";
 					document.body.style.overflow = "hidden";
 
-					modalImage.src = image.src;
-					modalDescription.innerHTML = image.dataset.desc;
+					modalImage.removeAttribute("src");
+					modalDescription.innerHTML = "";
+
+					const preload = new Image();
+
+					preload.onload = function() {
+						modalImage.src = preload.src;
+						modalDescription.innerHTML = image.dataset.desc;
+					};
+
+					preload.src = image.src;
 				})
 			});
 			modalClose.addEventListener("click", function() {
-				modal.style.display = "none";
-				document.body.style.overflow = "";
+				closeModal();
 			});
 			window.addEventListener("keydown", function(event) {
 				if (event.key === "Escape") {
-					modal.style.display = "none";
-					document.body.style.overflow = "";
+					closeModal();
 				}
 			});
-			window.addEventListener("pointerdown", function(event) {
+			modal.addEventListener("pointerdown", function(event) {
 				if (event.target == modal) {
-					modal.style.display = "none";
-					document.body.style.overflow = "";
+					event.preventDefault();
+					event.stopPropagation();
+					closeModal();
 				}
 			});
 		});

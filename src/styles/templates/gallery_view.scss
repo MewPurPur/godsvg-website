@@ -49,8 +49,8 @@
 .gallery-modal-content {
 	display: flex;
 	flex-direction: column;
-	width: min(80%, 900px);
-	max-height: 90vh;
+	width: min(900px, calc(100vw - 3rem));
+	max-height: calc(100vh - 3rem);
 }
 
 .gallery-modal-title-bar {
