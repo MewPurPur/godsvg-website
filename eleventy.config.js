@@ -168,17 +168,17 @@ export default async function(eleventyConfig) {
 		if (!window.toggleSwitch) {
 			window.toggleSwitch = function(id) {
 				const title = document.getElementById('switch-title-' + id);
-				const img1 = document.getElementById('switch-img1-' + id);
 				const img2 = document.getElementById('switch-img2-' + id);
+				const img3 = document.getElementById('switch-img3-' + id);
 
-				if (img1.classList.contains('active')) {
-					img1.classList.remove('active');
+				if (img2.classList.contains('active')) {
+					img2.classList.remove('active');
+					img3.classList.add('active');
+					title.textContent = '${label3}';
+				} else {
+					img3.classList.remove('active');
 					img2.classList.add('active');
 					title.textContent = '${label2}';
-				} else {
-					img2.classList.remove('active');
-					img1.classList.add('active');
-					title.textContent = '${label1}';
 				}
 			};
 		}
@@ -196,8 +196,8 @@ export default async function(eleventyConfig) {
 							<button class="article-switch-toggle" onclick="toggleSwitch('${uniqueId}')">Switch</button>
 						</div>
 						<div class="article-switch-content">
-							<img id="switch-img1-${uniqueId}" class="active" src="/assets/blog/${slug}/${img1}" alt="${alt1}" />
-							<img id="switch-img2-${uniqueId}" src="/assets/blog/${slug}/${img2}" alt="${alt2}" loading="lazy" />
+							<img id="switch-img2-${uniqueId}" class="active" src="/assets/blog/${slug}/${img2}" alt="${alt2}" />
+							<img id="switch-img3-${uniqueId}" src="/assets/blog/${slug}/${img3}" alt="${alt3}" loading="lazy" />
 						</div>
 					</div>
 				</div>
