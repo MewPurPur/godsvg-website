@@ -5,6 +5,7 @@ import * as sass from "sass";
 import markdownIt from "markdown-it";
 import fs from "node:fs";
 import htmlmin from "html-minifier-terser";
+import crypto from "node:crypto";
 
 /** @param {import("@11ty/eleventy").UserConfig} eleventyConfig */
 export default async function(eleventyConfig) {
@@ -99,7 +100,6 @@ export default async function(eleventyConfig) {
 		const items = args.length % 3 === 0 ? args : args.slice(0, args.length - 1);
 
 		let html = '<div class="article-compare"><div class="article-compare-content">';
-
 		for (let i = 0; i < items.length; i += 3) {
 			const label = items[i];
 			const img = items[i + 1];
@@ -112,15 +112,14 @@ export default async function(eleventyConfig) {
 				</div>
 			`;
 		}
-
 		html += '</div></div>';
-		return html.replaceAll('\t', "").replaceAll("    ", "");
+		return html.replaceAll('\t', "");
 	});
 
 	eleventyConfig.addShortcode("blogswitch", function(label1, img1, alt1, label2, img2, alt2) {
 		const e = this.page.url.split('/').filter(e => e.length > 1);
 		const slug = e[e.length - 1];
-		const uniqueId = Math.random().toString(36).substr(2, 9);
+		const uniqueId = crypto.randomUUID();
 
 		const html = `
 		<script>
@@ -161,7 +160,7 @@ export default async function(eleventyConfig) {
 	eleventyConfig.addShortcode("blogcomparetoswitch", function(label1, img1, alt1, label2, img2, alt2, label3, img3, alt3) {
 		const e = this.page.url.split('/').filter(e => e.length > 1);
 		const slug = e[e.length - 1];
-		const uniqueId = Math.random().toString(36).substr(2, 9);
+		const uniqueId = crypto.randomUUID();
 
 		const html = `
 		<script>

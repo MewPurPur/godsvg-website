@@ -1,7 +1,7 @@
 // Global script for every page, mainly for utilities.
 
 /**
- * Returns a string if the platform is found, else null. This can't be 100% reliable.
+ * Returns a string if the platform is found, otherwise returns null. This can't be 100% reliable.
  * @returns {string | null}
  */
 function detectOS() {
