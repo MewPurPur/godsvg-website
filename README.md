@@ -1,6 +1,6 @@
 ## GodSVG Website
 
-This is the source code for the GodSVG website. This is a basic website built with Eleventy. It's open source, just like GodSVG, however, potential changes should be discussed in advance by opening an issue on this repository.
+This is the source code for the GodSVG website. This is a basic website built with Eleventy. It's open-source, just like GodSVG, however, potential changes should be discussed in advance by opening an issue on this repository.
 
 ## Contributing
 
