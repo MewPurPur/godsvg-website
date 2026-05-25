@@ -187,7 +187,6 @@ $content-width: min($max-width, 100% - $padding-size * 2);
 
 .support-panel {
 	display: flex;
-	flex-direction: row;
 	align-items: center;
 	gap: 1.25rem;
 	background-color: color.adjust($background, $lightness: +2%);
@@ -208,7 +207,6 @@ $content-width: min($max-width, 100% - $padding-size * 2);
 
 .download-info {
 	display: flex;
-	flex-direction: row;
 	align-items: center;
 
 	img {
