@@ -73,3 +73,7 @@ GodSVG now also provides AppImage builds on Linux, which are downloaded by defau
 The .desktop file for Linux is now automatically generated and doesn't need to be translated separately. Creating a full translation for a locale is once again as simple as finishing its .po file.
 
 Thanks to {% gh "williamchange" %}, {% gh "JinEnMok" %}, and {% gh "Kiisu-Master" %} for helping to keep existing translations up to date.
+
+## Known regressions
+
+Some bugs slipped into this alpha at the last moment, causing issues when editing the color of attributes, and palettes. It sucks that this happened with an alpha focused on improving color editing, but the issues have already been fixed for alpha 16.
