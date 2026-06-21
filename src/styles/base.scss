@@ -11,12 +11,20 @@ html {
 	color: #fff;
 	font-size: clamp(14px, 4.25vw, 18px);
 	font-family: $default_font;
+	min-height: 100vh;
 }
 
 body {
 	background-color: $background;
 	margin: 0 auto;
 	padding: 0;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+.main {
+	flex: 1;
 }
 
 a, .link-like {
@@ -37,6 +45,10 @@ a, .link-like {
 	&:focus-visible {
 		outline: 2px solid $focus;
 	}
+}
+
+hr {
+	margin: 0.75rem 0.25rem;
 }
 
 button {
