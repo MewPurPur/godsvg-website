@@ -6,9 +6,64 @@
 	<link rel="alternate" type="text/html" href="https://godsvg.com" />
 	<link rel="self" type="application/atom+xml" href="https://godsvg.com/blog/atom.xml" />
 	<id>https://godsvg.com/</id>
-	<updated>2026-05-16T00:00:00Z</updated>
+	<updated>2026-06-21T00:00:00Z</updated>
 	<author><name>MewPurPur</name></author>
 	<contributor><name>FlooferLand</name></contributor>
+	<entry>
+		<title>Roadmap to beta-ready GodSVG</title>
+		<summary>Let&#39;s go over why GodSVG is still in alpha after more than 3 years of development. What are the remaining obstacles?</summary>
+		<author><name>MewPurPur</name></author>
+		<published>2026-06-21T00:00:00Z</published>
+		<updated>2026-06-21T00:00:00Z</updated>
+		<id>tag:godsvg.com,2026:roadmap-to-beta</id>
+		<link rel="alternate" href="/article/roadmap-to-beta" />
+		<link rel="enclosure" type="image/webp" href="https://godsvg.com/assets/blog/roadmap-to-beta/cover.webp" />
+		<content type="html">
+			&lt;p&gt;The cover artwork for this blog post was drawn by CoilleNohy.&lt;/p&gt;
+&lt;p&gt;A few days ago marked three years since I open-sourced GodSVG. Despite more than two years of alpha releases, it still isn&#39;t beta-ready. Let&#39;s go over why.&lt;/p&gt;
+&lt;h2&gt;Where we are right now&lt;/h2&gt;
+&lt;p&gt;Most of the last year was spent improving stability, usability, and polish. The UI was refined, themes were added, keyboard focus navigation was introduced, and countless bugs were fixed. While the changes may not be obvious at a glance, they significantly improved the day-to-day experience of using GodSVG. The 16th alpha will release in a few days, fixing more bugs and improving the experience further.&lt;/p&gt;
+&lt;p&gt;If GodSVG is relatively stable now, why is it still in alpha?&lt;/p&gt;
+&lt;p&gt;In short, there are a handful of foundational problems that affect the editor&#39;s future. Once those are addressed, I expect the transition from alpha to beta to be relatively quick. I&#39;ll go over these foundational problems in detail in the rest of the article.&lt;/p&gt;
+&lt;h2&gt;Reason 1: The inspector needs a big rework&lt;/h2&gt;
+&lt;p&gt;GodSVG&#39;s inspector hasn&#39;t been significantly touched since the early alphas. The issues with the current inspector boil down to elements only being able to expose a limited set of attributes. Supporting more attributes currently means making the inspector heftier, so I&#39;ve decided against adding more for the time being. This is why things like stroke-dasharrays are still not accessible through the UI and need to be manually typed into the code editor.&lt;/p&gt;
+&lt;p&gt;I&#39;ve avoided spending much time fixing issues in the current inspector, of which there are many. After considering many reworks and their tradeoffs, I&#39;ve concluded that I need to move away from the current monolithic design and make a more standard inspector, with a hierarchy of elements and a list of attributes for the current selected ones. There are some downsides to this, so my ideas have some non-standard aspects, but I&#39;ll see how they work out in practice.&lt;/p&gt;
+&lt;p&gt;I could make a basic inspector fairly quickly, but I wouldn&#39;t be satisfied with that. I want an implementation that I trust will scale well into the future and support things like:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;More attributes and elements&lt;/li&gt;
+&lt;li&gt;Non-native attributes and elements&lt;/li&gt;
+&lt;li&gt;Proper focus navigation and fast keyboard navigation&lt;/li&gt;
+&lt;li&gt;Editing the same attribute of multiple elements at once&lt;/li&gt;
+&lt;li&gt;Custom inspector widgets, such as GUI for gradients&lt;/li&gt;
+&lt;li&gt;Attribute-specific options, such as baking a transform&lt;/li&gt;
+&lt;li&gt;Element-specific options, such as templates for paths (for example, easy regular shapes and stars)&lt;/li&gt;
+&lt;li&gt;And more&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This rework has been pending for a long time and it blocks a lot of further work.&lt;/p&gt;
+&lt;h2&gt;Reason 2: Handles need a big rework&lt;/h2&gt;
+&lt;p&gt;Unlike the inspector, where I already feel like I have a clear direction, the viewport&#39;s handle system is a more intricate problem. Its shortcomings are obvious, but coming up with a solution that doesn&#39;t introduce new usability issues has proven much harder.&lt;/p&gt;
+&lt;p&gt;The most critical shortcomings I&#39;ve identified are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;New bezier handles have the new point and the controls overlap and also move with the main point if the command is relative, which is extremely inconvenient (can be partially solved without a rework, but I&#39;d rather not complicate the system without fixing it)&lt;/li&gt;
+&lt;li&gt;If multiple handles overlap, you might be simply unable to select the one you want from the viewport&lt;/li&gt;
+&lt;li&gt;There are unexpected behaviors around paths, especially with some relative commands, horizontal or vertical lines, and path closures; moving a handle around can move other ones in very unexpected ways&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;A rework should solve this, which is already a tall order, but there are other problems. The reality is that handles are simply very awkward to use and need more than patchwork.&lt;/p&gt;
+&lt;p&gt;Handles have few convenience utilities and many aspects of them are half-baked. A lot of things are ambiguous, such as horizontal and vertical handles being constrained but looking the same as regular lines, or polygons and polylines looking the same as paths, but lacking shortcuts. Controls are unintuitive, being unable to select multiple handles and move them at once. Transformation mechanics don&#39;t exist. Handles have no viewport navigation, like &amp;quot;View in Inspector&amp;quot; but for handles.&lt;/p&gt;
+&lt;p&gt;This rework has been pending for longer than the inspector rework, but it doesn&#39;t block as many things, so it&#39;s a little less urgent.&lt;/p&gt;
+&lt;h2&gt;Reason 3: Smaller blockers&lt;/h2&gt;
+&lt;p&gt;There isn&#39;t much else blocking a beta release. Only three other things come close, but I might reluctantly publish a beta even if some of them are missing.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Support for numeric units:&lt;/strong&gt; Many SVGs have units like &amp;quot;mm&amp;quot;, &amp;quot;pt&amp;quot;, &amp;quot;px&amp;quot; for some numeric attributes. This is currently unsupported by GodSVG and those units will be wiped, breaking some valid SVGs. And I want to prevent all common cases of GodSVG breaking valid SVGs before entering beta. This has been challenging because not all numeric attributes support units, so many fundamental systems need changing.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Support for text:&lt;/strong&gt; Godot Engine - the tool used to make GodSVG - currently doesn&#39;t support text in its SVGs. Even if text elements become native, they won&#39;t render, and external tools would be required to view the text and and export it to raster formats. An option to bake the text into a path has been considered, but not tried yet - it will always be a good manual option to have and it could be used automatically in the rendering step. This is somewhat blocked by the inspector rework, as it would be contextual for text elements. Since there&#39;s a chance that these issues are resolved on their own by the tools GodSVG is built on top of, I want to delay this as much as possible, as all the other blockers are things I can only solve myself.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Code editor native tooling:&lt;/strong&gt; Aside from adding more standard text editor tooling, such as Search &amp;amp; Replace, I&#39;ve been thinking of integrating the native SVG elements into it more deeply, for example knowing where a circle element starts and ends in the code, so that hovering it inside the text editor is reflected in the whole application. This might require foundational changes, so I think it would be nice to look into it during the alpha phase.&lt;/p&gt;
+&lt;h2&gt;Why am I not focusing more on the blockers?&lt;/h2&gt;
+&lt;p&gt;These blockers have been thought about extensively. I&#39;ve made several unsuccessful attempts to rework handles, the inspector, solve the issue with numeric units, and understand the deal with Godot Engine and its SVG text rendering.&lt;/p&gt;
+&lt;p&gt;These attempts have slowed down over the last year, as every release cycle, I found some quick wins that were unrelated to the reworks and would still improve the workflows of many users. These quick wins are running out, so big reworks should soon return to the forefront.&lt;/p&gt;
+&lt;p&gt;Once the big blockers are lifted, you can expect a few more alphas to realize their potential and make sure they work well. This could be followed by a relatively short beta phase, since most of the polishing work has been already done over the last year. Basically, I&#39;ve traded a longer alpha phase for a shorter beta phase, and I don&#39;t think this was a bad decision, personally.&lt;/p&gt;
+&lt;p&gt;GodSVG is a hobby project that I dedicate a lot of effort and time to try and push to the finish line. But of course, most of my time goes to my day job and spending time on things like sleeping, chores, staying healthy, having some social life. As of now, supporting me by donating is the best way to help me work faster and get the tool beta-ready.&lt;/p&gt;
+
+		</content>
+	</entry>
 	<entry>
 		<title>Introducing Vicki, GodSVG&#39;s mascot</title>
 		<summary>You&#39;ve seen this sprightly blue fox on GodSVG&#39;s logo, on its website, in blog illustrations. Let&#39;s finally introduce her.</summary>
@@ -47,7 +102,7 @@
 &lt;img src=&quot;/assets/blog/introducing-vicki/vicki_after_dark.webp&quot; alt=&quot;Image of a grainy background, with Vicki the vector fox standing as an eerie silhouette, with glowing piercing eyes staring at a small star hovering above her raised paw.&quot;&gt;
 &lt;/div&gt;
 &lt;p&gt;&lt;strong&gt;Q:&lt;/strong&gt; Why did you leave your hometown?&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;A:&lt;/strong&gt; Someone framed me for destroying a bridge. There wasn&#39;t enough evidence, but I saw the writing on the wall. What really struck me was overhearing some residents who were afraid of getting on my bad side if they punished me wrongly. So I just left for the unrestricted wilderness. I eventually got used to wandering, but maybe someday I&#39;ll be powerful enough to build my own place in Vector Valley, one structured &amp;quot;the right way&amp;quot;, at least according to me. I&#39;ve already told some of my friends about this idea and that they would be welcome.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;A:&lt;/strong&gt; Someone framed me for destroying a bridge. There wasn&#39;t enough evidence, but I saw the writing on the wall. I overheard some residents being afraid of getting on my bad side if they punished me wrongly, which really hurt. So I quietly left for the unrestricted wilderness. I eventually got used to wandering, but maybe someday I&#39;ll be powerful enough to build my own place in Vector Valley, one structured &amp;quot;the right way&amp;quot;, at least according to me. I&#39;ve already told some of my friends about this idea and that they would be welcome.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Q:&lt;/strong&gt; Mmhm, and what are you doing now?&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;A:&lt;/strong&gt; Like, right now? I was preparing to climb Ink Mountain and see if I&#39;ll learn something useful on there.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Q:&lt;/strong&gt; Alright, any closing words?&lt;/p&gt;
@@ -92,12 +147,12 @@
 &lt;div class=&quot;article-switch&quot;&gt;
 &lt;div class=&quot;article-switch-inner&quot;&gt;
 &lt;div class=&quot;article-switch-header&quot;&gt;
-&lt;div class=&quot;article-switch-title&quot; id=&quot;switch-title-92af1ff2-2bcf-44a1-9332-08a0f8bf3955&quot;&gt;Old logo&lt;/div&gt;
-&lt;button class=&quot;article-switch-toggle&quot; onclick=&#39;toggleSwitch(&quot;92af1ff2-2bcf-44a1-9332-08a0f8bf3955&quot;)&#39;&gt;Switch&lt;/button&gt;
+&lt;div class=&quot;article-switch-title&quot; id=&quot;switch-title-31533354-dd67-4516-ae2f-70fdb71eaca5&quot;&gt;Old logo&lt;/div&gt;
+&lt;button class=&quot;article-switch-toggle&quot; onclick=&#39;toggleSwitch(&quot;31533354-dd67-4516-ae2f-70fdb71eaca5&quot;)&#39;&gt;Switch&lt;/button&gt;
 &lt;/div&gt;
 &lt;div class=&quot;article-switch-content&quot;&gt;
-&lt;img id=&quot;switch-img1-92af1ff2-2bcf-44a1-9332-08a0f8bf3955&quot; class=&quot;active&quot; src=&quot;/assets/blog/1-0-alpha15/splash_before.webp&quot; alt=&quot;Image showing the old splash&quot;&gt;
-&lt;img id=&quot;switch-img2-92af1ff2-2bcf-44a1-9332-08a0f8bf3955&quot; src=&quot;/assets/blog/1-0-alpha15/splash_after.webp&quot; alt=&quot;Image showing the new splash&quot; loading=&quot;lazy&quot;&gt;
+&lt;img id=&quot;switch-img1-31533354-dd67-4516-ae2f-70fdb71eaca5&quot; class=&quot;active&quot; src=&quot;/assets/blog/1-0-alpha15/splash_before.webp&quot; alt=&quot;Image showing the old splash&quot;&gt;
+&lt;img id=&quot;switch-img2-31533354-dd67-4516-ae2f-70fdb71eaca5&quot; src=&quot;/assets/blog/1-0-alpha15/splash_after.webp&quot; alt=&quot;Image showing the new splash&quot; loading=&quot;lazy&quot;&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -144,6 +199,8 @@
 &lt;h2&gt;Translations&lt;/h2&gt;
 &lt;p&gt;The .desktop file for Linux is now automatically generated and doesn&#39;t need to be translated separately. Creating a full translation for a locale is once again as simple as finishing its .po file.&lt;/p&gt;
 &lt;p&gt;Thanks to &lt;a href=&quot;https://github.com/williamchange&quot;&gt;williamchange&lt;/a&gt;, &lt;a href=&quot;https://github.com/JinEnMok&quot;&gt;JinEnMok&lt;/a&gt;, and &lt;a href=&quot;https://github.com/Kiisu-Master&quot;&gt;Kiisu-Master&lt;/a&gt; for helping to keep existing translations up to date.&lt;/p&gt;
+&lt;h2&gt;Known regressions&lt;/h2&gt;
+&lt;p&gt;Some bugs slipped into this alpha at the last moment, causing issues when editing the color of attributes, and palettes. It sucks that this happened with an alpha focused on improving color editing, but the issues have already been fixed for alpha 16.&lt;/p&gt;
 
 		</content>
 	</entry>
@@ -301,12 +358,12 @@
 &lt;div class=&quot;article-switch&quot;&gt;
 &lt;div class=&quot;article-switch-inner&quot;&gt;
 &lt;div class=&quot;article-switch-header&quot;&gt;
-&lt;div class=&quot;article-switch-title&quot; id=&quot;switch-title-aeb215ec-0839-4674-9738-69664f2afd44&quot;&gt;Old theme&lt;/div&gt;
-&lt;button class=&quot;article-switch-toggle&quot; onclick=&#39;toggleSwitch(&quot;aeb215ec-0839-4674-9738-69664f2afd44&quot;)&#39;&gt;Switch&lt;/button&gt;
+&lt;div class=&quot;article-switch-title&quot; id=&quot;switch-title-571f7d11-876f-4f44-bfdf-7287227f8f77&quot;&gt;Old theme&lt;/div&gt;
+&lt;button class=&quot;article-switch-toggle&quot; onclick=&#39;toggleSwitch(&quot;571f7d11-876f-4f44-bfdf-7287227f8f77&quot;)&#39;&gt;Switch&lt;/button&gt;
 &lt;/div&gt;
 &lt;div class=&quot;article-switch-content&quot;&gt;
-&lt;img id=&quot;switch-img1-aeb215ec-0839-4674-9738-69664f2afd44&quot; class=&quot;active&quot; src=&quot;/assets/blog/1-0-alpha11/old_theme.webp&quot; alt=&quot;Image of the old default theme&quot;&gt;
-&lt;img id=&quot;switch-img2-aeb215ec-0839-4674-9738-69664f2afd44&quot; src=&quot;/assets/blog/1-0-alpha11/new_dark_theme.webp&quot; alt=&quot;Image of the new dark theme&quot; loading=&quot;lazy&quot;&gt;
+&lt;img id=&quot;switch-img1-571f7d11-876f-4f44-bfdf-7287227f8f77&quot; class=&quot;active&quot; src=&quot;/assets/blog/1-0-alpha11/old_theme.webp&quot; alt=&quot;Image of the old default theme&quot;&gt;
+&lt;img id=&quot;switch-img2-571f7d11-876f-4f44-bfdf-7287227f8f77&quot; src=&quot;/assets/blog/1-0-alpha11/new_dark_theme.webp&quot; alt=&quot;Image of the new dark theme&quot; loading=&quot;lazy&quot;&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -555,12 +612,12 @@
 &lt;div class=&quot;article-switch&quot; style=&quot;margin:0&quot;&gt;
 &lt;div class=&quot;article-switch-inner&quot;&gt;
 &lt;div class=&quot;article-switch-header&quot;&gt;
-&lt;div class=&quot;article-switch-title&quot; id=&quot;switch-title-68d60c09-b0a5-4ce3-93fe-b1b2739fa3d4&quot;&gt;Before&lt;/div&gt;
-&lt;button class=&quot;article-switch-toggle&quot; onclick=&#39;toggleSwitch(&quot;68d60c09-b0a5-4ce3-93fe-b1b2739fa3d4&quot;)&#39;&gt;Switch&lt;/button&gt;
+&lt;div class=&quot;article-switch-title&quot; id=&quot;switch-title-31e45b43-2f71-42a6-b758-409610c84003&quot;&gt;Before&lt;/div&gt;
+&lt;button class=&quot;article-switch-toggle&quot; onclick=&#39;toggleSwitch(&quot;31e45b43-2f71-42a6-b758-409610c84003&quot;)&#39;&gt;Switch&lt;/button&gt;
 &lt;/div&gt;
 &lt;div class=&quot;article-switch-content&quot;&gt;
-&lt;img id=&quot;switch-img2-68d60c09-b0a5-4ce3-93fe-b1b2739fa3d4&quot; class=&quot;active&quot; src=&quot;/assets/blog/1-0-alpha8/raster_before.webp&quot; alt=&quot;Image of the old rasterization&quot;&gt;
-&lt;img id=&quot;switch-img3-68d60c09-b0a5-4ce3-93fe-b1b2739fa3d4&quot; src=&quot;/assets/blog/1-0-alpha8/raster_after.webp&quot; alt=&quot;Image of the new rasterization&quot; loading=&quot;lazy&quot;&gt;
+&lt;img id=&quot;switch-img2-31e45b43-2f71-42a6-b758-409610c84003&quot; class=&quot;active&quot; src=&quot;/assets/blog/1-0-alpha8/raster_before.webp&quot; alt=&quot;Image of the old rasterization&quot;&gt;
+&lt;img id=&quot;switch-img3-31e45b43-2f71-42a6-b758-409610c84003&quot; src=&quot;/assets/blog/1-0-alpha8/raster_after.webp&quot; alt=&quot;Image of the new rasterization&quot; loading=&quot;lazy&quot;&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
