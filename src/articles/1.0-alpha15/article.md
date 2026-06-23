@@ -76,4 +76,4 @@ Thanks to {% gh "williamchange" %}, {% gh "JinEnMok" %}, and {% gh "Kiisu-Master
 
 ## Known regressions
 
-Some bugs slipped into this alpha at the last moment, causing issues when editing default color attributes and palettes. It sucks that this happened with an alpha focused on improving color editing, but the issues have already been fixed for alpha 16.
+Editing palettes is impossible in this prerelease due to a regression. Use the XML importing functionality or a previous prerelease.
