@@ -147,12 +147,12 @@
 &lt;div class=&quot;article-switch&quot;&gt;
 &lt;div class=&quot;article-switch-inner&quot;&gt;
 &lt;div class=&quot;article-switch-header&quot;&gt;
-&lt;div class=&quot;article-switch-title&quot; id=&quot;switch-title-9b4c3d89-e4e3-43b1-8ac1-0b7ad92e4301&quot;&gt;Old logo&lt;/div&gt;
-&lt;button class=&quot;article-switch-toggle&quot; onclick=&#39;toggleSwitch(&quot;9b4c3d89-e4e3-43b1-8ac1-0b7ad92e4301&quot;)&#39;&gt;Switch&lt;/button&gt;
+&lt;div class=&quot;article-switch-title&quot; id=&quot;switch-title-fb0671da-9437-462b-ad6a-6b1e53f184ff&quot;&gt;Old logo&lt;/div&gt;
+&lt;button class=&quot;article-switch-toggle&quot; onclick=&#39;toggleSwitch(&quot;fb0671da-9437-462b-ad6a-6b1e53f184ff&quot;)&#39;&gt;Switch&lt;/button&gt;
 &lt;/div&gt;
 &lt;div class=&quot;article-switch-content&quot;&gt;
-&lt;img id=&quot;switch-img1-9b4c3d89-e4e3-43b1-8ac1-0b7ad92e4301&quot; class=&quot;active&quot; src=&quot;/assets/blog/1-0-alpha15/splash_before.webp&quot; alt=&quot;Image showing the old splash&quot;&gt;
-&lt;img id=&quot;switch-img2-9b4c3d89-e4e3-43b1-8ac1-0b7ad92e4301&quot; src=&quot;/assets/blog/1-0-alpha15/splash_after.webp&quot; alt=&quot;Image showing the new splash&quot; loading=&quot;lazy&quot;&gt;
+&lt;img id=&quot;switch-img1-fb0671da-9437-462b-ad6a-6b1e53f184ff&quot; class=&quot;active&quot; src=&quot;/assets/blog/1-0-alpha15/splash_before.webp&quot; alt=&quot;Image showing the old splash&quot;&gt;
+&lt;img id=&quot;switch-img2-fb0671da-9437-462b-ad6a-6b1e53f184ff&quot; src=&quot;/assets/blog/1-0-alpha15/splash_after.webp&quot; alt=&quot;Image showing the new splash&quot; loading=&quot;lazy&quot;&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -200,7 +200,7 @@
 &lt;p&gt;The .desktop file for Linux is now automatically generated and doesn&#39;t need to be translated separately. Creating a full translation for a locale is once again as simple as finishing its .po file.&lt;/p&gt;
 &lt;p&gt;Thanks to &lt;a href=&quot;https://github.com/williamchange&quot;&gt;williamchange&lt;/a&gt;, &lt;a href=&quot;https://github.com/JinEnMok&quot;&gt;JinEnMok&lt;/a&gt;, and &lt;a href=&quot;https://github.com/Kiisu-Master&quot;&gt;Kiisu-Master&lt;/a&gt; for helping to keep existing translations up to date.&lt;/p&gt;
 &lt;h2&gt;Known regressions&lt;/h2&gt;
-&lt;p&gt;Some bugs slipped into this alpha at the last moment, causing issues when editing default color attributes and palettes. It sucks that this happened with an alpha focused on improving color editing, but the issues have already been fixed for alpha 16.&lt;/p&gt;
+&lt;p&gt;Editing palettes is impossible in this prerelease due to a regression. Use the XML importing functionality or a previous prerelease.&lt;/p&gt;
 
 		</content>
 	</entry>
@@ -358,12 +358,12 @@
 &lt;div class=&quot;article-switch&quot;&gt;
 &lt;div class=&quot;article-switch-inner&quot;&gt;
 &lt;div class=&quot;article-switch-header&quot;&gt;
-&lt;div class=&quot;article-switch-title&quot; id=&quot;switch-title-c2c1228b-8272-4e74-8433-f30a118cd4c9&quot;&gt;Old theme&lt;/div&gt;
-&lt;button class=&quot;article-switch-toggle&quot; onclick=&#39;toggleSwitch(&quot;c2c1228b-8272-4e74-8433-f30a118cd4c9&quot;)&#39;&gt;Switch&lt;/button&gt;
+&lt;div class=&quot;article-switch-title&quot; id=&quot;switch-title-8e14d829-27ef-4ca3-b3b4-0697f0784ae4&quot;&gt;Old theme&lt;/div&gt;
+&lt;button class=&quot;article-switch-toggle&quot; onclick=&#39;toggleSwitch(&quot;8e14d829-27ef-4ca3-b3b4-0697f0784ae4&quot;)&#39;&gt;Switch&lt;/button&gt;
 &lt;/div&gt;
 &lt;div class=&quot;article-switch-content&quot;&gt;
-&lt;img id=&quot;switch-img1-c2c1228b-8272-4e74-8433-f30a118cd4c9&quot; class=&quot;active&quot; src=&quot;/assets/blog/1-0-alpha11/old_theme.webp&quot; alt=&quot;Image of the old default theme&quot;&gt;
-&lt;img id=&quot;switch-img2-c2c1228b-8272-4e74-8433-f30a118cd4c9&quot; src=&quot;/assets/blog/1-0-alpha11/new_dark_theme.webp&quot; alt=&quot;Image of the new dark theme&quot; loading=&quot;lazy&quot;&gt;
+&lt;img id=&quot;switch-img1-8e14d829-27ef-4ca3-b3b4-0697f0784ae4&quot; class=&quot;active&quot; src=&quot;/assets/blog/1-0-alpha11/old_theme.webp&quot; alt=&quot;Image of the old default theme&quot;&gt;
+&lt;img id=&quot;switch-img2-8e14d829-27ef-4ca3-b3b4-0697f0784ae4&quot; src=&quot;/assets/blog/1-0-alpha11/new_dark_theme.webp&quot; alt=&quot;Image of the new dark theme&quot; loading=&quot;lazy&quot;&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -612,12 +612,12 @@
 &lt;div class=&quot;article-switch&quot; style=&quot;margin:0&quot;&gt;
 &lt;div class=&quot;article-switch-inner&quot;&gt;
 &lt;div class=&quot;article-switch-header&quot;&gt;
-&lt;div class=&quot;article-switch-title&quot; id=&quot;switch-title-3fecf6fe-faee-4b86-a660-3dba0a2ec03f&quot;&gt;Before&lt;/div&gt;
-&lt;button class=&quot;article-switch-toggle&quot; onclick=&#39;toggleSwitch(&quot;3fecf6fe-faee-4b86-a660-3dba0a2ec03f&quot;)&#39;&gt;Switch&lt;/button&gt;
+&lt;div class=&quot;article-switch-title&quot; id=&quot;switch-title-20ad7f2b-b3f3-40e9-9503-bf906b01d918&quot;&gt;Before&lt;/div&gt;
+&lt;button class=&quot;article-switch-toggle&quot; onclick=&#39;toggleSwitch(&quot;20ad7f2b-b3f3-40e9-9503-bf906b01d918&quot;)&#39;&gt;Switch&lt;/button&gt;
 &lt;/div&gt;
 &lt;div class=&quot;article-switch-content&quot;&gt;
-&lt;img id=&quot;switch-img2-3fecf6fe-faee-4b86-a660-3dba0a2ec03f&quot; class=&quot;active&quot; src=&quot;/assets/blog/1-0-alpha8/raster_before.webp&quot; alt=&quot;Image of the old rasterization&quot;&gt;
-&lt;img id=&quot;switch-img3-3fecf6fe-faee-4b86-a660-3dba0a2ec03f&quot; src=&quot;/assets/blog/1-0-alpha8/raster_after.webp&quot; alt=&quot;Image of the new rasterization&quot; loading=&quot;lazy&quot;&gt;
+&lt;img id=&quot;switch-img2-20ad7f2b-b3f3-40e9-9503-bf906b01d918&quot; class=&quot;active&quot; src=&quot;/assets/blog/1-0-alpha8/raster_before.webp&quot; alt=&quot;Image of the old rasterization&quot;&gt;
+&lt;img id=&quot;switch-img3-20ad7f2b-b3f3-40e9-9503-bf906b01d918&quot; src=&quot;/assets/blog/1-0-alpha8/raster_after.webp&quot; alt=&quot;Image of the new rasterization&quot; loading=&quot;lazy&quot;&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
