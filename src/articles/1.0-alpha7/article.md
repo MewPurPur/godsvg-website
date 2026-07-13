@@ -21,7 +21,7 @@ Other aspects of GodSVG have not yet been optimized for touch input, so the mobi
 
 As you can imagine, maintaining a mobile build is difficult because of how different touchscreens are. I'm worried that limiting my reliance on hovering and keyboards, even when they seem optimal for a UI, may come at the expense of Desktop builds, so it's possible I will discontinue Android builds in the future. It depends on whether mobile development can proceed without noticeably compromising the desktop experience.
 
-Development for mobile will for now continue on another repository that's not managed by {% gh "syntaxerror247" %} and not me: https://github.com/syntaxerror247/GodSVG-Mobile. Riskier features will be implemented there first, but they may eventually be implemented in the main repository too. This will allow me to focus on the big changes I've planned for Desktop platforms, without worrying about breaking the app on Android.
+Development for mobile will for now continue on another repository that's managed by {% gh "syntaxerror247" %} and not me: <https://github.com/syntaxerror247/GodSVG-Mobile>. Riskier features will be implemented there first, but they may eventually be implemented in the main repository too. This will allow me to focus on the big changes I've planned for Desktop platforms, without worrying about breaking the app on Android.
 
 ## Other new things
 
