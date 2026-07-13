@@ -33,7 +33,7 @@ In the general settings, a new option was added by {% gh "Kiisu-Master" %}. This
 
 {% blogvid "wrap_mouse.webm", "Video showcasing the Wrap Mouse setting" %}
 
-## Handles for adjusting circles and ellipse radii, and rect sides
+## Handles for adjusting circles, ellipse radii, and rect sides
 
 In alpha 1, you could only move circles, ellipses, and rectangles around using the handles in the viewport. As shown in the image below, this prerelease implemented a few more handles for adjusting their geometry.
 
