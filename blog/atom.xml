@@ -6,9 +6,75 @@
 	<link rel="alternate" type="text/html" href="https://godsvg.com" />
 	<link rel="self" type="application/atom+xml" href="https://godsvg.com/blog/atom.xml" />
 	<id>https://godsvg.com/</id>
-	<updated>2026-06-21T00:00:00Z</updated>
+	<updated>2026-07-13T00:00:00Z</updated>
 	<author><name>MewPurPur</name></author>
 	<contributor><name>FlooferLand</name></contributor>
+	<entry>
+		<title>New prerelease: GodSVG 1.0-alpha16</title>
+		<summary>Operations that should work on multi-selections now do, while new subpath editing tools make complex vector paths easier to manipulate.</summary>
+		<author><name>MewPurPur</name></author>
+		<published>2026-07-13T00:00:00Z</published>
+		<updated>2026-07-13T00:00:00Z</updated>
+		<id>tag:godsvg.com,2026:1-0-alpha16</id>
+		<link rel="alternate" href="/article/1-0-alpha16" />
+		<link rel="enclosure" type="image/webp" href="https://godsvg.com/assets/blog/1-0-alpha16/cover.webp" />
+		<content type="html">
+			&lt;p&gt;Ever selected multiple things in an application only to find an operation mysteriously unavailable? In this prerelease, operations that should work on multi-selections now do, while new subpath editing tools make complex SVG paths much easier to manipulate.&lt;/p&gt;
+&lt;h2&gt;Subpath actions&lt;/h2&gt;
+&lt;p&gt;A prominent concept in SVGs is that path elements are made out of subpaths, with a new subpath for each new M command (MoveTo) or after a Z command (ClosePath). A lot of changes have been made to accommodate this concept better.&lt;/p&gt;
+&lt;p&gt;M commands (MoveTo) now have square-shaped handles on the canvas to communicate to users where subpaths start.&lt;/p&gt;
+&lt;p&gt;The inspector also now has subtle indicators for where subpaths start and end, to communicate the concept clearly. It appears to the left of path commands.&lt;/p&gt;
+&lt;div class=&quot;article-image&quot;&gt;
+&lt;img src=&quot;/assets/blog/1-0-alpha16/subpath_indicators.webp&quot; alt=&quot;Image showcasing the new subpath indicators.&quot;&gt;
+&lt;/div&gt;
+&lt;p&gt;Selecting whole subpaths now shows some new actions. Firstly, if the selected subpaths aren&#39;t the first ones of the path, you&#39;ll see a &amp;quot;Move up&amp;quot; action, and likewise you&#39;ll see a &amp;quot;Move down&amp;quot; action if they aren&#39;t the last ones. These operations adjust the pathdata to make sure the shape of the path stays the same, even with relative path commands.&lt;/p&gt;
+&lt;p&gt;A more novel new action is reversing a subpath&#39;s order. This can change a clockwise subpath into a counterclockwise one or vice versa. In SVGs, orientation may specify whether a subpath would be carved out as a hole, so this operation would be very useful to fix holes with the wrong orientation.&lt;/p&gt;
+&lt;p&gt;There is also the option to set the initial point of a closed subpath, that is, a subpath that ends with a Z (ClosePath) command. The selected point becomes the new M (MoveTo) command, and all points are rotated around and changed a bit to connect well.&lt;/p&gt;
+&lt;div class=&quot;article-video&quot;&gt;
+&lt;video controls preload=&quot;metadata&quot; aria-label=&quot;Video showcasing the new subpath operations.&quot;&gt;
+&lt;source src=&quot;/assets/blog/1-0-alpha16/subpath_operations.webm&quot;&gt;
+&lt;p&gt;Video showcasing the new subpath operations.&lt;/p&gt;
+&lt;/video&gt;
+&lt;/div&gt;
+&lt;p&gt;You can also use these new operations similarly on polygons and polylines.&lt;/p&gt;
+&lt;h2&gt;Multi actions&lt;/h2&gt;
+&lt;p&gt;It&#39;s unpleasant when you make an exact selection on a software, wanting to apply the same operation on multiple items, only to find that you have to do it one by one. The &amp;quot;Convert to&amp;quot; actions of GodSVG were like that, but not anymore.&lt;/p&gt;
+&lt;p&gt;Multiple elements or even XML nodes can now be converted at once, as long as they have common conversion options. Selected 5 circles and 3 ellipses? You can turn them into 8 paths with one click. Or into 8 ellipses. Or even into 8 circles, if all the ellipses have equal major and minor radii.&lt;/p&gt;
+&lt;p&gt;This also applies to path commands. There were some other improvements to path command conversion - exact conversions are now highlighted on top. A couple of conversion rules were added and even utilized in the optimizer. Quadratic beziers now have an exact conversion to cubic ones, and if a cubic bezier can be converted to an exact quadratic, it won&#39;t be flattened in the conversion. Path closures now also use the contour they had when you convert them. And a few other minor improvements.&lt;/p&gt;
+&lt;div class=&quot;article-video&quot;&gt;
+&lt;video controls preload=&quot;metadata&quot; aria-label=&quot;Video showcasing the new multi conversion functionality.&quot;&gt;
+&lt;source src=&quot;/assets/blog/1-0-alpha16/multi_convert.webm&quot;&gt;
+&lt;p&gt;Video showcasing the new multi conversion functionality.&lt;/p&gt;
+&lt;/video&gt;
+&lt;/div&gt;
+&lt;p&gt;On the popup for inserting a path command, you can now hold &lt;code&gt;Ctrl&lt;/code&gt; or &lt;code&gt;Shift&lt;/code&gt; and it won&#39;t close, allowing you to easily add multiple path commands at once. The popup also has a toggle for enabling this behavior by default. Since polygons and polylines don&#39;t have such a popup, an &amp;quot;Insert Multiple&amp;quot; option was added to them instead, opening a popup that lets you choose how many points to add.&lt;/p&gt;
+&lt;div class=&quot;article-video&quot;&gt;
+&lt;video controls preload=&quot;metadata&quot; aria-label=&quot;Video showcasing the new multi insertion functionality.&quot;&gt;
+&lt;source src=&quot;/assets/blog/1-0-alpha16/multi_insert.webm&quot;&gt;
+&lt;p&gt;Video showcasing the new multi insertion functionality.&lt;/p&gt;
+&lt;/video&gt;
+&lt;/div&gt;
+&lt;p&gt;Selecting multiple subpaths now works when you hold &lt;code&gt;Ctrl&lt;/code&gt; while double-click any command within them, or the corresponding handle. All of the new subpath-related actions also work with multiple selected subpaths.&lt;/p&gt;
+&lt;p&gt;The code editor has been a little neglected, but at least in this release, it gets multi-carets. You can create or destroy carets by holding Alt while clicking to place a caret. Some shortcuts exist around this feature, like &lt;code&gt;Ctrl+Shift+Up/Down&lt;/code&gt; to place carets directly above/below existing ones, or &lt;code&gt;Ctrl+D&lt;/code&gt; to jump to the next instance of a selection and place a caret there. They are undocumented for now and may change in the future.&lt;/p&gt;
+&lt;h2&gt;Other improvements&lt;/h2&gt;
+&lt;p&gt;Adding new elements or XML nodes, as well as moving them up/down in their parent element, now puts them in the viewable area of the inspector. If multiple are selected, the one designated as &amp;quot;pivot&amp;quot; will be scrolled to. This also happens with points and path commands now.&lt;/p&gt;
+&lt;p&gt;On Android, immersive mode was enabled once again, but this time cutouts and corners were taken into consideration, shifting UI elements to avoid obscuring any of them.&lt;/p&gt;
+&lt;h2&gt;Bugfixes&lt;/h2&gt;
+&lt;p&gt;Some of the reworked systems resulted in fixes to minor old bugs.&lt;/p&gt;
+&lt;p&gt;Palettes were broken after last release: There was a crash when trying to edit palette colors, and also an issue that prevented color swatches from being selected until the color attribute gets set. Both were fixed.&lt;/p&gt;
+&lt;p&gt;Other bugfixes:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Fixed issue where clicking context popup options corresponding to an action with a shortcut triggered that action twice&lt;/li&gt;
+&lt;li&gt;Fixed issue where the VSync setting had no effect in new sessions&lt;/li&gt;
+&lt;li&gt;Fixed some issues with pathdata and point list fields&lt;/li&gt;
+&lt;li&gt;Fixed issues with not updating the &amp;quot;pivot&amp;quot; for Shift selections after certain operations&lt;/li&gt;
+&lt;li&gt;Renamed &amp;quot;Show in File Manager&amp;quot; to &amp;quot;Open in File Manager&amp;quot; for folders in the custom file dialog&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Translations&lt;/h2&gt;
+&lt;p&gt;Thanks to &lt;a href=&quot;https://github.com/williamchange&quot;&gt;williamchange&lt;/a&gt;, &lt;a href=&quot;https://github.com/AlejandroMoc&quot;&gt;AlejandroMoc&lt;/a&gt;, and &lt;a href=&quot;https://github.com/Kiisu-Master&quot;&gt;Kiisu-Master&lt;/a&gt; for helping to keep existing translations up to date.&lt;/p&gt;
+
+		</content>
+	</entry>
 	<entry>
 		<title>Roadmap to beta-ready GodSVG</title>
 		<summary>Let&#39;s go over why GodSVG is still in alpha after more than 3 years of development. What are the remaining obstacles?</summary>
@@ -147,12 +213,12 @@
 &lt;div class=&quot;article-switch&quot;&gt;
 &lt;div class=&quot;article-switch-inner&quot;&gt;
 &lt;div class=&quot;article-switch-header&quot;&gt;
-&lt;div class=&quot;article-switch-title&quot; id=&quot;switch-title-5ffd901c-78ff-4c82-8c3f-17f2299c3679&quot;&gt;Old logo&lt;/div&gt;
-&lt;button class=&quot;article-switch-toggle&quot; onclick=&#39;toggleSwitch(&quot;5ffd901c-78ff-4c82-8c3f-17f2299c3679&quot;)&#39;&gt;Switch&lt;/button&gt;
+&lt;div class=&quot;article-switch-title&quot; id=&quot;switch-title-e60333b2-9752-4257-8893-60842d72caed&quot;&gt;Old logo&lt;/div&gt;
+&lt;button class=&quot;article-switch-toggle&quot; onclick=&#39;toggleSwitch(&quot;e60333b2-9752-4257-8893-60842d72caed&quot;)&#39;&gt;Switch&lt;/button&gt;
 &lt;/div&gt;
 &lt;div class=&quot;article-switch-content&quot;&gt;
-&lt;img id=&quot;switch-img1-5ffd901c-78ff-4c82-8c3f-17f2299c3679&quot; class=&quot;active&quot; src=&quot;/assets/blog/1-0-alpha15/splash_before.webp&quot; alt=&quot;Image showing the old splash&quot;&gt;
-&lt;img id=&quot;switch-img2-5ffd901c-78ff-4c82-8c3f-17f2299c3679&quot; src=&quot;/assets/blog/1-0-alpha15/splash_after.webp&quot; alt=&quot;Image showing the new splash&quot; loading=&quot;lazy&quot;&gt;
+&lt;img id=&quot;switch-img1-e60333b2-9752-4257-8893-60842d72caed&quot; class=&quot;active&quot; src=&quot;/assets/blog/1-0-alpha15/splash_before.webp&quot; alt=&quot;Image showing the old splash&quot;&gt;
+&lt;img id=&quot;switch-img2-e60333b2-9752-4257-8893-60842d72caed&quot; src=&quot;/assets/blog/1-0-alpha15/splash_after.webp&quot; alt=&quot;Image showing the new splash&quot; loading=&quot;lazy&quot;&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -358,12 +424,12 @@
 &lt;div class=&quot;article-switch&quot;&gt;
 &lt;div class=&quot;article-switch-inner&quot;&gt;
 &lt;div class=&quot;article-switch-header&quot;&gt;
-&lt;div class=&quot;article-switch-title&quot; id=&quot;switch-title-62833720-ef77-48ff-a31e-db87a5da9a56&quot;&gt;Old theme&lt;/div&gt;
-&lt;button class=&quot;article-switch-toggle&quot; onclick=&#39;toggleSwitch(&quot;62833720-ef77-48ff-a31e-db87a5da9a56&quot;)&#39;&gt;Switch&lt;/button&gt;
+&lt;div class=&quot;article-switch-title&quot; id=&quot;switch-title-9b69be5c-fb51-4d07-9bba-2d73088bfb85&quot;&gt;Old theme&lt;/div&gt;
+&lt;button class=&quot;article-switch-toggle&quot; onclick=&#39;toggleSwitch(&quot;9b69be5c-fb51-4d07-9bba-2d73088bfb85&quot;)&#39;&gt;Switch&lt;/button&gt;
 &lt;/div&gt;
 &lt;div class=&quot;article-switch-content&quot;&gt;
-&lt;img id=&quot;switch-img1-62833720-ef77-48ff-a31e-db87a5da9a56&quot; class=&quot;active&quot; src=&quot;/assets/blog/1-0-alpha11/old_theme.webp&quot; alt=&quot;Image of the old default theme&quot;&gt;
-&lt;img id=&quot;switch-img2-62833720-ef77-48ff-a31e-db87a5da9a56&quot; src=&quot;/assets/blog/1-0-alpha11/new_dark_theme.webp&quot; alt=&quot;Image of the new dark theme&quot; loading=&quot;lazy&quot;&gt;
+&lt;img id=&quot;switch-img1-9b69be5c-fb51-4d07-9bba-2d73088bfb85&quot; class=&quot;active&quot; src=&quot;/assets/blog/1-0-alpha11/old_theme.webp&quot; alt=&quot;Image of the old default theme&quot;&gt;
+&lt;img id=&quot;switch-img2-9b69be5c-fb51-4d07-9bba-2d73088bfb85&quot; src=&quot;/assets/blog/1-0-alpha11/new_dark_theme.webp&quot; alt=&quot;Image of the new dark theme&quot; loading=&quot;lazy&quot;&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -612,12 +678,12 @@
 &lt;div class=&quot;article-switch&quot; style=&quot;margin:0&quot;&gt;
 &lt;div class=&quot;article-switch-inner&quot;&gt;
 &lt;div class=&quot;article-switch-header&quot;&gt;
-&lt;div class=&quot;article-switch-title&quot; id=&quot;switch-title-e36339b0-c047-4ab3-8b09-29831d7ba0d7&quot;&gt;Before&lt;/div&gt;
-&lt;button class=&quot;article-switch-toggle&quot; onclick=&#39;toggleSwitch(&quot;e36339b0-c047-4ab3-8b09-29831d7ba0d7&quot;)&#39;&gt;Switch&lt;/button&gt;
+&lt;div class=&quot;article-switch-title&quot; id=&quot;switch-title-3a4f0e9b-8e6d-4f47-a11c-77bdb0acbdf6&quot;&gt;Before&lt;/div&gt;
+&lt;button class=&quot;article-switch-toggle&quot; onclick=&#39;toggleSwitch(&quot;3a4f0e9b-8e6d-4f47-a11c-77bdb0acbdf6&quot;)&#39;&gt;Switch&lt;/button&gt;
 &lt;/div&gt;
 &lt;div class=&quot;article-switch-content&quot;&gt;
-&lt;img id=&quot;switch-img2-e36339b0-c047-4ab3-8b09-29831d7ba0d7&quot; class=&quot;active&quot; src=&quot;/assets/blog/1-0-alpha8/raster_before.webp&quot; alt=&quot;Image of the old rasterization&quot;&gt;
-&lt;img id=&quot;switch-img3-e36339b0-c047-4ab3-8b09-29831d7ba0d7&quot; src=&quot;/assets/blog/1-0-alpha8/raster_after.webp&quot; alt=&quot;Image of the new rasterization&quot; loading=&quot;lazy&quot;&gt;
+&lt;img id=&quot;switch-img2-3a4f0e9b-8e6d-4f47-a11c-77bdb0acbdf6&quot; class=&quot;active&quot; src=&quot;/assets/blog/1-0-alpha8/raster_before.webp&quot; alt=&quot;Image of the old rasterization&quot;&gt;
+&lt;img id=&quot;switch-img3-3a4f0e9b-8e6d-4f47-a11c-77bdb0acbdf6&quot; src=&quot;/assets/blog/1-0-alpha8/raster_after.webp&quot; alt=&quot;Image of the new rasterization&quot; loading=&quot;lazy&quot;&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -708,7 +774,7 @@
 &lt;/div&gt;
 &lt;p&gt;Other aspects of GodSVG have not yet been optimized for touch input, so the mobile port will remain experimental for the time being. In future versions, we want to improve the touch controls further and implement a native file picker.&lt;/p&gt;
 &lt;p&gt;As you can imagine, maintaining a mobile build is difficult because of how different touchscreens are. I&#39;m worried that limiting my reliance on hovering and keyboards, even when they seem optimal for a UI, may come at the expense of Desktop builds, so it&#39;s possible I will discontinue Android builds in the future. It depends on whether mobile development can proceed without noticeably compromising the desktop experience.&lt;/p&gt;
-&lt;p&gt;Development for mobile will for now continue on another repository that&#39;s not managed by &lt;a href=&quot;https://github.com/syntaxerror247&quot;&gt;syntaxerror247&lt;/a&gt; and not me: https://github.com/syntaxerror247/GodSVG-Mobile. Riskier features will be implemented there first, but they may eventually be implemented in the main repository too. This will allow me to focus on the big changes I&#39;ve planned for Desktop platforms, without worrying about breaking the app on Android.&lt;/p&gt;
+&lt;p&gt;Development for mobile will for now continue on another repository that&#39;s managed by &lt;a href=&quot;https://github.com/syntaxerror247&quot;&gt;syntaxerror247&lt;/a&gt; and not me: &lt;a href=&quot;https://github.com/syntaxerror247/GodSVG-Mobile&quot;&gt;https://github.com/syntaxerror247/GodSVG-Mobile&lt;/a&gt;. Riskier features will be implemented there first, but they may eventually be implemented in the main repository too. This will allow me to focus on the big changes I&#39;ve planned for Desktop platforms, without worrying about breaking the app on Android.&lt;/p&gt;
 &lt;h2&gt;Other new things&lt;/h2&gt;
 &lt;p&gt;This prerelease has a big emphasis on bugfixes, so there aren&#39;t a lot of other new features. Still, there are a few noteworthy additions - let’s take a look.&lt;/p&gt;
 &lt;p&gt;The formatters introduced in the last prerelease have been simplified. Now there are just two: an Editor formatter and an Export formatter, each with separate configurations. This should be more convenient and less confusing for nearly everyone.&lt;/p&gt;
@@ -1002,7 +1068,7 @@
 &lt;p&gt;Video showcasing the Wrap Mouse setting&lt;/p&gt;
 &lt;/video&gt;
 &lt;/div&gt;
-&lt;h2&gt;Handles for adjusting circles and ellipse radii, and rect sides&lt;/h2&gt;
+&lt;h2&gt;Handles for adjusting circles, ellipse radii, and rect sides&lt;/h2&gt;
 &lt;p&gt;In alpha 1, you could only move circles, ellipses, and rectangles around using the handles in the viewport. As shown in the image below, this prerelease implemented a few more handles for adjusting their geometry.&lt;/p&gt;
 &lt;div class=&quot;article-compare&quot;&gt;&lt;div class=&quot;article-compare-content&quot;&gt;
 &lt;div class=&quot;article-compare-side&quot;&gt;

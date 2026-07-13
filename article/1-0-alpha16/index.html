@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" type="text/css" href="/styles/base.css">
+<link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
+<link href="https://fonts.googleapis.com/css2?family=Asap:wght@400;500;700&family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
+<title>
+New prerelease: GodSVG 1.0-alpha16
+</title>
+<meta name="title" content="New prerelease: GodSVG 1.0-alpha16">
+<meta name="description" content="Operations that should work on multi-selections now do, while new subpath editing tools make complex vector paths easier to manipulate.">
+<meta content="#489ae0" data-react-helmet="true" name="theme-color">
+<meta property="og:image" content="https://godsvg.com/assets/blog/1-0-alpha16/cover.webp">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://godsvg.com">
+<meta property="og:title" content="New prerelease: GodSVG 1.0-alpha16">
+<meta property="og:description" content="Operations that should work on multi-selections now do, while new subpath editing tools make complex vector paths easier to manipulate.">
+<meta property="og:icon" content="https://godsvg.com/assets/favicon.ico">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="GodSVG">
+<meta property="twitter:url" content="https://godsvg.com">
+<meta property="twitter:title" content="New prerelease: GodSVG 1.0-alpha16">
+<meta property="twitter:description" content="Operations that should work on multi-selections now do, while new subpath editing tools make complex vector paths easier to manipulate.">
+<meta property="twitter:image" content="https://godsvg.com/assets/blog/1-0-alpha16/cover.webp">
+<meta property="twitter:card" content="summary_large_image">
+<link rel="stylesheet" type="text/css" href="/styles/article.css">
+<link rel="stylesheet" type="text/css" href="/styles/includes/downloads.css">
+<script src="/scripts/base.js" type="application/javascript"></script>
+</head>
+<body>
+<div class="main">
+<div class="nav-container">
+<script type="application/javascript">function toggleMenu(){document.getElementById("nav-links").classList.toggle("show")}</script>
+<link rel="stylesheet" type="text/css" href="/styles/templates/navbar.css">
+<div class="nav-content">
+<a href="/" class="nav-logo">
+<img src="/assets/favicon.ico" alt="GodSVG logo">
+<span class="nav-logo-text">GodSVG</span>
+</a>
+<button class="hamburger" onclick="toggleMenu()">
+<span></span><span></span><span></span>
+</button>
+<div class="nav-links" id="nav-links">
+<a href="/releases" class="nav-link">Releases</a>
+<a href="/blog" class="nav-link">Blog</a>
+<a href="/editor" class="nav-link">Web&nbsp;Editor</a>
+</div>
+</div>
+</div>
+<div class="article-header">
+<img src="/assets/blog/1-0-alpha16/cover.webp" class="article-cover">
+<h2 class="article-title">New prerelease: GodSVG 1.0-alpha16</h2>
+<div class="article-metadata">
+<span class="article-author">By: MewPurPur</span>
+<span class="article-date">
+Jul 13, 2026
+</span>
+</div>
+</div>
+<div class="article-content">
+<div class="article-html">
+<p>Ever selected multiple things in an application only to find an operation mysteriously unavailable? In this prerelease, operations that should work on multi-selections now do, while new subpath editing tools make complex SVG paths much easier to manipulate.</p>
+<h2>Subpath actions</h2>
+<p>A prominent concept in SVGs is that path elements are made out of subpaths, with a new subpath for each new M command (MoveTo) or after a Z command (ClosePath). A lot of changes have been made to accommodate this concept better.</p>
+<p>M commands (MoveTo) now have square-shaped handles on the canvas to communicate to users where subpaths start.</p>
+<p>The inspector also now has subtle indicators for where subpaths start and end, to communicate the concept clearly. It appears to the left of path commands.</p>
+<div class="article-image">
+<img src="/assets/blog/1-0-alpha16/subpath_indicators.webp" alt="Image showcasing the new subpath indicators.">
+</div>
+<p>Selecting whole subpaths now shows some new actions. Firstly, if the selected subpaths aren't the first ones of the path, you'll see a &quot;Move up&quot; action, and likewise you'll see a &quot;Move down&quot; action if they aren't the last ones. These operations adjust the pathdata to make sure the shape of the path stays the same, even with relative path commands.</p>
+<p>A more novel new action is reversing a subpath's order. This can change a clockwise subpath into a counterclockwise one or vice versa. In SVGs, orientation may specify whether a subpath would be carved out as a hole, so this operation would be very useful to fix holes with the wrong orientation.</p>
+<p>There is also the option to set the initial point of a closed subpath, that is, a subpath that ends with a Z (ClosePath) command. The selected point becomes the new M (MoveTo) command, and all points are rotated around and changed a bit to connect well.</p>
+<div class="article-video">
+<video controls preload="metadata" aria-label="Video showcasing the new subpath operations.">
+<source src="/assets/blog/1-0-alpha16/subpath_operations.webm">
+<p>Video showcasing the new subpath operations.</p>
+</video>
+</div>
+<p>You can also use these new operations similarly on polygons and polylines.</p>
+<h2>Multi actions</h2>
+<p>It's unpleasant when you make an exact selection on a software, wanting to apply the same operation on multiple items, only to find that you have to do it one by one. The &quot;Convert to&quot; actions of GodSVG were like that, but not anymore.</p>
+<p>Multiple elements or even XML nodes can now be converted at once, as long as they have common conversion options. Selected 5 circles and 3 ellipses? You can turn them into 8 paths with one click. Or into 8 ellipses. Or even into 8 circles, if all the ellipses have equal major and minor radii.</p>
+<p>This also applies to path commands. There were some other improvements to path command conversion - exact conversions are now highlighted on top. A couple of conversion rules were added and even utilized in the optimizer. Quadratic beziers now have an exact conversion to cubic ones, and if a cubic bezier can be converted to an exact quadratic, it won't be flattened in the conversion. Path closures now also use the contour they had when you convert them. And a few other minor improvements.</p>
+<div class="article-video">
+<video controls preload="metadata" aria-label="Video showcasing the new multi conversion functionality.">
+<source src="/assets/blog/1-0-alpha16/multi_convert.webm">
+<p>Video showcasing the new multi conversion functionality.</p>
+</video>
+</div>
+<p>On the popup for inserting a path command, you can now hold <code>Ctrl</code> or <code>Shift</code> and it won't close, allowing you to easily add multiple path commands at once. The popup also has a toggle for enabling this behavior by default. Since polygons and polylines don't have such a popup, an &quot;Insert Multiple&quot; option was added to them instead, opening a popup that lets you choose how many points to add.</p>
+<div class="article-video">
+<video controls preload="metadata" aria-label="Video showcasing the new multi insertion functionality.">
+<source src="/assets/blog/1-0-alpha16/multi_insert.webm">
+<p>Video showcasing the new multi insertion functionality.</p>
+</video>
+</div>
+<p>Selecting multiple subpaths now works when you hold <code>Ctrl</code> while double-click any command within them, or the corresponding handle. All of the new subpath-related actions also work with multiple selected subpaths.</p>
+<p>The code editor has been a little neglected, but at least in this release, it gets multi-carets. You can create or destroy carets by holding Alt while clicking to place a caret. Some shortcuts exist around this feature, like <code>Ctrl+Shift+Up/Down</code> to place carets directly above/below existing ones, or <code>Ctrl+D</code> to jump to the next instance of a selection and place a caret there. They are undocumented for now and may change in the future.</p>
+<h2>Other improvements</h2>
+<p>Adding new elements or XML nodes, as well as moving them up/down in their parent element, now puts them in the viewable area of the inspector. If multiple are selected, the one designated as &quot;pivot&quot; will be scrolled to. This also happens with points and path commands now.</p>
+<p>On Android, immersive mode was enabled once again, but this time cutouts and corners were taken into consideration, shifting UI elements to avoid obscuring any of them.</p>
+<h2>Bugfixes</h2>
+<p>Some of the reworked systems resulted in fixes to minor old bugs.</p>
+<p>Palettes were broken after last release: There was a crash when trying to edit palette colors, and also an issue that prevented color swatches from being selected until the color attribute gets set. Both were fixed.</p>
+<p>Other bugfixes:</p>
+<ul>
+<li>Fixed issue where clicking context popup options corresponding to an action with a shortcut triggered that action twice</li>
+<li>Fixed issue where the VSync setting had no effect in new sessions</li>
+<li>Fixed some issues with pathdata and point list fields</li>
+<li>Fixed issues with not updating the &quot;pivot&quot; for Shift selections after certain operations</li>
+<li>Renamed &quot;Show in File Manager&quot; to &quot;Open in File Manager&quot; for folders in the custom file dialog</li>
+</ul>
+<h2>Translations</h2>
+<p>Thanks to <a href="https://github.com/williamchange">williamchange</a>, <a href="https://github.com/AlejandroMoc">AlejandroMoc</a>, and <a href="https://github.com/Kiisu-Master">Kiisu-Master</a> for helping to keep existing translations up to date.</p>
+</div>
+<div class="article-bottom">
+<div class="article-downloads">
+<h2>Downloads</h2>
+<div class="notice-panel warning">
+<div class="notice-header">WARNING:</div>
+<div class="notice-message">
+This is a prerelease version. Please regularly back up your SVG files to prevent potential data loss.
+</div>
+</div>
+<div style="margin:1.5rem">
+<script type="application/javascript">const downloads={"1.0-alpha16":{windows:"https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha16/GodSVG_v1.0-alpha16.Windows.zip",macos:"https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha16/GodSVG_v1.0-alpha16.MacOS.zip",linux:"https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha16/GodSVG_v1.0-alpha16.Linux.AppImage.zip",android:"https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha16/GodSVG_v1.0-alpha16.Android.apk"},"1.0-alpha15":{windows:"https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha15/GodSVG_v1.0-alpha15.Windows.zip",macos:"https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha15/GodSVG_v1.0-alpha15.MacOS.zip",linux:"https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha15/GodSVG_v1.0-alpha15.Linux.AppImage.zip",android:"https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha15/GodSVG_v1.0-alpha15.Android.apk"},"1.0-alpha14":{windows_old:"https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha14/GodSVG.Windows.zip",macos_old:"https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha14/GodSVG.MacOS.zip",linux_old:"https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha14/GodSVG.Linux.zip",android_old:"https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha14/GodSVG.Android.apk"},"1.0-alpha13":{windows_old:"https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha13/GodSVG.Windows.zip",macos_old:"https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha13/GodSVG.MacOS.zip",linux_old:"https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha13/GodSVG.Linux.zip",android_old:"https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha13/GodSVG.Android.apk"},"1.0-alpha12":{windows_old:"https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha12/GodSVG.Windows.zip",macos_old:"https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha12/GodSVG.MacOS.zip",linux_old:"https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha12/GodSVG.Linux.zip",android_old:"https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha12/GodSVG.Android.apk"},"1.0-alpha11":{windows_old:"https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha11/GodSVG.Windows.zip",macos_old:"https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha11/GodSVG.MacOS.zip",linux_old:"https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha11/GodSVG.Linux.zip",android_old:"https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha11/GodSVG.Android.apk"},"1.0-alpha10":{windows_old:"https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha10/GodSVG.Windows.zip",macos_old:"https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha10/GodSVG.MacOS.zip",linux_old:"https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha10/GodSVG.Linux.zip",android_old:"https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha10/GodSVG.Android.apk"},"1.0-alpha9":{windows_old:"https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha9/GodSVG.Windows.zip",macos_old:"https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha9/GodSVG.MacOS.zip",linux_old:"https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha9/GodSVG.Linux.zip",android_old:"https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha9/GodSVG.Android.apk"},"1.0-alpha8":{windows_old:"https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha8/GodSVG.Windows.zip",macos_old:"https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha8/GodSVG.MacOS.zip",linux_old:"https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha8/GodSVG.Linux.zip",android_old:"https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha8/GodSVG.Android.apk"},"1.0-alpha7":{windows_old:"https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha7/GodSVG.Windows.zip",macos_old:"https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha7/GodSVG.MacOS.zip",linux_old:"https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha7/GodSVG.Linux.zip",android_old:"https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha7/GodSVG.Android.apk"},"1.0-alpha6":{windows_old:"https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha6/GodSVG.Windows.zip",macos_old:"https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha6/GodSVG.MacOS.zip",linux_old:"https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha6/GodSVG.Linux.zip"},"1.0-alpha5":{windows_old:"https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha5/GodSVG.Windows.zip",macos_old:"https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha5/GodSVG.MacOS.zip",linux_old:"https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha5/GodSVG.Linux.zip"},"1.0-alpha4":{windows_old:"https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha4/GodSVG.Windows.zip",macos_old:"https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha4/GodSVG.MacOS.zip",linux_old:"https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha4/GodSVG.Linux.zip"},"1.0-alpha3":{windows_old:"https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha3/GodSVG.Windows.zip",macos_old:"https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha3/GodSVG.MacOS.zip",linux_old:"https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha3/GodSVG.Linux.zip"},"1.0-alpha2":{windows_old:"https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha2/GodSVG.Windows.zip",macos_old:"https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha2/GodSVG.MacOS.zip",linux_old:"https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha2/GodSVG.Linux.zip"},"1.0-alpha1":{windows_old:"https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha1/GodSVG.Windows.zip",linux_old:"https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha1/GodSVG.Linux.zip"}}</script>
+<div class="downloads-container">
+<div class="download-info">
+<img src="/assets/platforms_windows.svg" alt="windows icon">
+<p>Windows</p>
+<a href="https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha16/GodSVG_v1.0-alpha16.Windows.zip" class="btn btn-download" version="https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha16/GodSVG_v1.0-alpha16.Windows.zip">Download</a>
+</div>
+<div class="download-info">
+<img src="/assets/platforms_macos.svg" alt="macos icon">
+<p>MacOS</p>
+<a href="https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha16/GodSVG_v1.0-alpha16.MacOS.zip" class="btn btn-download" version="https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha16/GodSVG_v1.0-alpha16.MacOS.zip">Download</a>
+</div>
+<div class="download-info">
+<img src="/assets/platforms_linux.svg" alt="linux icon">
+<p>Linux</p>
+<a href="https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha16/GodSVG_v1.0-alpha16.Linux.AppImage.zip" class="btn btn-download" version="https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha16/GodSVG_v1.0-alpha16.Linux.AppImage.zip">Download</a>
+</div>
+<div class="download-info">
+<img src="/assets/platforms_android.svg" alt="android icon">
+<p>Android</p>
+<a href="https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha16/GodSVG_v1.0-alpha16.Android.apk" class="btn btn-download" version="https://github.com/MewPurPur/GodSVG/releases/download/v1.0-alpha16/GodSVG_v1.0-alpha16.Android.apk">Download</a>
+</div>
+</div>
+</div>
+</div>
+<div>
+<h2>Support</h2>
+<div class="support-panel">
+<p class="support-panel-paragraph">Many thanks to everyone who donates to this project! Donations have allowed me to dedicate a lot more time to GodSVG while balancing other responsibilities, and without them, the project would be far behind where it is today. If you find GodSVG valuable and are able to donate, I would be very grateful!</p>
+<div class="donation-widget">
+<script>document.addEventListener("DOMContentLoaded",(function(){const e=document.getElementById("default-message");function t(){e.style.display="block",document.querySelectorAll(".platform-details").forEach((e=>{e.style.display="none"}))}function n(n){t(),e.style.display="none";const o=document.getElementById(n.id.replace("-btn","-details"));o&&(o.style.display="block")}t(),document.querySelectorAll(".donation-button").forEach((e=>{e.addEventListener("mouseenter",(function(){n(e)})),e.addEventListener("focus",(function(){n(e)})),e.addEventListener("mouseleave",(function(e){const n=e.relatedTarget;n&&n.classList.contains("donation-button")||t()})),e.addEventListener("blur",(function(){t()}))}))}))</script>
+<link rel="stylesheet" type="text/css" href="/styles/templates/donation_widget.css">
+<div class="donation-header">Donation platforms</div>
+<div class="donation-buttons">
+<a href="https://github.com/sponsors/MewPurPur" class="donation-button" id="Github Sponsors-btn">
+<img class="donation-platform-icon" src="/assets/logo_github.svg" alt="Github Sponsors logo">
+</a>
+<a href="https://ko-fi.com/mewpurpur" class="donation-button" id="Ko-Fi-btn">
+<img class="donation-platform-icon" src="/assets/logo_ko_fi.svg" alt="Ko-Fi logo">
+</a>
+<a href="https://www.patreon.com/GodSVG" class="donation-button" id="Patreon-btn">
+<img class="donation-platform-icon" src="/assets/logo_patreon.svg" alt="Patreon logo">
+</a>
+</div>
+<div class="platform-details-container">
+<div id="default-message" class="hover-info" style="display:block">
+Hover a platform for details
+</div>
+<div class="platform-details" id="Github Sponsors-details">
+<div class="platform-name">Github Sponsors:</div>
+<ul class="platform-points">
+<li class="list-pro">Low extra fees</li>
+<li class="list-pro">Can donate arbitrary amounts</li>
+</ul>
+</div>
+<div class="platform-details" id="Ko-Fi-details">
+<div class="platform-name">Ko-Fi:</div>
+<ul class="platform-points">
+<li class="list-pro">Low extra fees</li>
+<li class="list-pro">Can donate arbitrary amounts</li>
+</ul>
+</div>
+<div class="platform-details" id="Patreon-details">
+<div class="platform-name">Patreon:</div>
+<ul class="platform-points">
+<li class="list-con">High extra fees</li>
+<li class="list-con">Can&#39;t donate arbitrary amounts</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="footer-container">
+<link rel="stylesheet" type="text/css" href="/styles/templates/footer.css">
+<div class="footer">
+<span>&copy; 2025-present MewPurPur and FlooferLand</span>
+<span><a href="https://github.com/MewPurPur/godsvg-website">Website source code on Github</a></span>
+</div>
+<div class="footer-socials">
+<a href="https://github.com/MewPurPur/GodSVG">
+<img src="/assets/logo_github.svg">
+</a>
+<a href="https://discord.gg/R8pM6vXWTY">
+<img src="/assets/logo_discord.svg">
+</a>
+</div>
+</div>
+</body>
+</html>
