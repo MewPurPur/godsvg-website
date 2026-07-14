@@ -45,7 +45,7 @@ On the popup for inserting a path command, you can now hold `Ctrl` or `Shift` an
 
 {% blogvid "multi_insert.webm", "Video showcasing the new multi insertion functionality." %}
 
-Selecting multiple subpaths now works when you hold `Ctrl` while double-click any command within them, or the corresponding handle. All of the new subpath-related actions also work with multiple selected subpaths.
+Selecting multiple subpaths now works when you hold `Ctrl` while double-clicking any command within them, or the corresponding handle. All of the new subpath-related actions also work with multiple selected subpaths.
 
 The code editor has been a little neglected, but at least in this release, it gets multi-carets. You can create or destroy carets by holding Alt while clicking to place a caret. Some shortcuts exist around this feature, like `Ctrl+Shift+Up/Down` to place carets directly above/below existing ones, or `Ctrl+D` to jump to the next instance of a selection and place a caret there. They are undocumented for now and may change in the future.
 
