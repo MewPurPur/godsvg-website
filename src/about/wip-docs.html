@@ -1,0 +1,88 @@
+---
+title: WIP Docs - GodSVG
+---
+{% extends "base.njk" %}
+
+{% block body %}
+	<div class="content">
+<p>
+
+If you found this, know the link won't persist.
+
+# Introduction
+
+GodSVG is a free and open-source structured SVG editor for creating, inspecting, and editing SVG files end-to-end.
+
+SVG is a text-based format. Although it is commonly edited through graphical tools, an SVG file is ultimately a structured text document, and GodSVG is built around that fact rather than trying to hide it. In GodSVG, you can work with an SVG visually on the canvas, adjust its properties through the inspector, or edit the source directly in the code editor.
+
+This approach has strengths and weaknesses compared to more traditional graphical editors. GodSVG is particularly well suited for simple iconography and types of work where precision and direct control over the SVG output are important. It is also useful when working with existing SVGs where preserving and understanding the underlying structure matters.
+
+On the other hand, GodSVG is not intended to reproduce every feature of a traditional illustration program. Many graphical editors maintain additional information about a document that is not part of the SVG specification, such as their own layer systems, object metadata, or other editor-specific information. GodSVG does not currently have an equivalent for many of these features, and some of them are not planned. This can make it less suitable for workflows that depend heavily on such features, like complex illustrations.
+
+It also means that understanding the SVG format itself can make you more effective with GodSVG.
+
+
+
+# Installation
+
+# Making your first SVG
+
+GodSVG's user interface has a few major parts. The global actions, the tab bar, and the main canvas are currently always visible and in the same location. But the left side can be modified for how it can show the three currently available 
+
+
+
+# Files, Import, and Export
+
+# Using the inspector
+
+# Using the canvas
+
+# Using the code editor
+
+SVG is a text-based format and GodSVG doesn't try to hide this. Since the text is mostly human-readable, it can often be edited without needing the assistance of tools. People who are familiar with what SVGs look like as text might think of certain operations that would be easier to do using a text editor. So GodSVG provides an advanced text editor.
+
+*Note: As of alpha 17, the text editor is actually not that advanced, but making progress on that is in the plans.*
+
+The code editor is straightforward, it has general functionalities like copying and pasting, undo and redo. It also has multi-carets: press `Alt` and left-click to add a caret, or right-click to remove it.
+
+
+
+# Changing GodSVG's layout
+
+GodSVG enables you to change the layout of the editor in certain ways. You can access
+
+# Basic shapes
+
+# Lines, polylines, polygons
+
+# Paths
+
+# Colors and palettes
+
+# Transforms
+
+# Gradients
+
+# The `<use>` element
+
+# Using unsupported features
+
+You can use GodSVG stuff that's not native, just gotta input it as text.
+
+# Previewing the SVG
+
+# Using a reference image
+
+# Formatters and optimizers
+
+# Troubleshooting
+
+Fonts not rendering; other SVG content not rendering; colors with alpha breaking
+
+# SVG reference
+
+# Developer documentation?
+
+</p>
+	</div>
+{% endblock %}

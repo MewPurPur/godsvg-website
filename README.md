@@ -8,11 +8,11 @@ To start working on the project, do the following:
 
 1. Clone the repository: `git clone https://github.com/MewPurPur/godsvg-website.git`
 
-2. Open the repository and check whether you have Node.js installed by running `node --version` in a terminal. If the command is not found or it reports a number lower than 18, you will need to download and install Node.js.
+2. Open the repository and check whether you have Node.js installed by running `node --version` in a terminal. If the command is not found or it reports a number lower than 22, you will need to download and install Node.js.
 
 3. Run `npm install` to intall dependencies.
 
-4. Run `npx @11ty/eleventy --serve` to host a development web server (useful if you want the website to automatically refresh when files change), or alternatively `--watch` to rebuild the files without a web server.
+4. Run `npm run dev` to host a development web server; it automatically refreshes the website when files change.
 
 Using an IDE like VSCode, with an extension for Nunjucks syntax highlighting that parses HTML files, is also recommended, as this website uses nunjucks syntax inside HTML files as opposed to `njk` files in order to improve JS/HTML/CSS completion for inline scripts. For example [Better Nunjucks](https://marketplace.visualstudio.com/items/?itemName=ginfuru.better-nunjucks).
 
