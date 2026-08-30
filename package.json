@@ -4,19 +4,20 @@
 	"description": "This is the source code for the GodSVG website. This is a basic website built with Eleventy. It's open-source, just like GodSVG, however, potential changes should be discussed in advance by opening an issue on this repository.",
 	"main": "index.js",
 	"scripts": {
-		"build": "npx @11ty/eleventy"
+		"build": "eleventy",
+		"dev": "eleventy --serve"
 	},
 	"keywords": [],
 	"author": "",
 	"license": "MIT",
 	"type": "module",
 	"devDependencies": {
-		"@11ty/eleventy": "^3.0.0"
+		"@11ty/eleventy": "^3.1.6"
 	},
 	"dependencies": {
-		"@11ty/eleventy-plugin-rss": "^2.0.4",
+		"@11ty/eleventy-plugin-rss": "^3.0.0",
 		"html-minifier-terser": "^7.2.0",
-		"markdown-it": "^14.1.0",
-		"sass": "^1.87.0"
+		"markdown-it": "^15.0.1",
+		"sass": "^1.103.1"
 	}
 }
