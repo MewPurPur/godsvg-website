@@ -92,4 +92,4 @@ Thanks to {% gh "anderlli0053" %} for adding a Slovenian translation!
 
 There is also an easter egg translation...
 
-Thanks to {% gh "williamchange" %} and {% gh "AlejandroMoc" %} for helping to keep existing translations up to date.
+Thanks to {% gh "williamchange" %}, {% gh "AlejandroMoc" %}, and {% gh "Kiisu-Master" %} for helping to keep existing translations up to date.
