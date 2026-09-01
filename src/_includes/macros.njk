@@ -12,7 +12,7 @@
 	<!-- Open Graph -->
 	<meta property="og:image" content="{{cover}}" />
 	<meta property="og:type" content="website" />
-	<meta property="og:url" content="{{ site.url }}" />
+	<meta property="og:url" content="{{ site.url }}{{ page.url }}" />
 	<meta property="og:title" content="{{ title }}" />
 	<meta property="og:description" content="{{ description }}" />
 	<meta property="og:icon" content="{{ site.url }}/assets/favicon.ico" />
@@ -21,7 +21,7 @@
 	<meta property="og:site_name" content="GodSVG" />
 
 	<!-- Tweeter -->
-	<meta property="twitter:url" content="{{ site.url }}" />
+	<meta property="twitter:url" content="{{ site.url }}{{ page.url }}" />
 	<meta property="twitter:title" content="{{ title }}" />
 	<meta property="twitter:description" content="{{ description }}" />
 	<meta property="twitter:image" content="{{cover}}" />
